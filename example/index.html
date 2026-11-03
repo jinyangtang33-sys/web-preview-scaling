@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="before">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>沿河走一公里 · 视口排版实验</title>
+<style>
+  * { box-sizing: border-box; }
+  :root { color-scheme: light; font-family: system-ui, "Microsoft YaHei", sans-serif; color: #203b35; background: #f5f2e8; }
+  body { margin: 0; }
+  .lab { background: #173832; color: #fff; padding: 12px 20px; font-size: 13px; }
+  .controls, .readings { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 18px; }
+  .controls strong { letter-spacing: .08em; }
+  .switch { display: inline-flex; gap: 3px; border: 1px solid #89a69a; padding: 3px; border-radius: 20px; }
+  .switch a { color: inherit; text-decoration: none; padding: 4px 12px; border-radius: 16px; }
+  .switch a[aria-current="true"] { background: #dfefb1; color: #18352d; }
+  .switch a:focus-visible { outline: 2px solid #edac71; outline-offset: 2px; }
+  .readings { margin-top: 8px; color: #d0e3d7; font-variant-numeric: tabular-nums; }
+  .readings b { color: white; }
+  main { width: calc(100% - 40px); margin: 32px auto; }
+  .imprint, .section-label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .imprint { border-bottom: 2px solid; padding-bottom: 10px; }
+  .imprint strong { letter-spacing: .12em; }
+  .code { font: 12px/1.4 ui-monospace, Consolas, monospace; letter-spacing: .08em; }
+  .kicker { color: #476354; margin: 28px 0 10px; }
+  h1 { font-family: Georgia, "Songti SC", SimSun, serif; font-size: 7vw; line-height: 1.16; margin: 0; }
+  .intro { line-height: 1.75; margin: 12px 0 20px; }
+  figure { margin: 0; background: #dbe7d2; border: 1px solid #9ab39f; }
+  svg { display: block; width: 100%; height: auto; }
+  figcaption { padding: 7px 12px; border-top: 1px solid #a1baa7; font-size: 12px; }
+  .section-label { margin-top: 24px; border-bottom: 1px solid; padding-bottom: 8px; }
+  h2 { margin: 0; font-size: 18px; }
+  .stops { display: grid; gap: 18px; margin: 12px 0; padding: 0; list-style: none; }
+  .stops li { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 8px; }
+  .stops b { color: #966036; }
+  .stops p { margin: 5px 0; font-size: 14px; line-height: 1.6; }
+  @media (min-width: 760px) { .stops { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  /* The reproduction deliberately leaves both desktop dimensions unbounded.
+     The fixed version changes only these two rules. */
+  [data-mode="after"] main { max-width: 960px; }
+  [data-mode="after"] h1 { font-size: clamp(30px, 7vw, 52px); }
+</style>
+<body>
+  <aside class="lab" aria-label="视口排版实验">
+    <div class="controls">
+      <strong>视口排版实验</strong>
+      <nav class="switch" aria-label="样式版本">
+        <a href="#before">修复前</a><a href="#after">修复后</a>
+      </nav>
+      <span>设计目标 · 桌面标题 ≤ 52 px，版心 ≤ 960 px</span>
+    </div>
+    <div class="readings" aria-label="实时测量，单位为 CSS 像素">
+      <span>视口 <b id="viewport"></b></span><span>标题 <b id="size"></b></span>
+      <span>版心 <b id="width"></b></span><span>站点 <b id="columns"></b></span>
+      <span>整页横向溢出 <b id="overflow"></b></span>
+    </div>
+  </aside>
+  <main>
+    <header class="imprint"><strong>岸线手记</strong><span class="code">FIELD NOTES / 03</span></header>
+    <p class="kicker code">WALK 001 &nbsp; / &nbsp; 城市步行档案</p>
+    <h1>沿河走一公里</h1>
+    <p class="intro">从旧渡口出发，沿着石阶向东。用一公里的步行，记下河岸上的三个停留点。</p>
+    <figure>
+      <svg viewBox="0 0 960 180" role="img" aria-label="步行路线示意图，三个停留点由虚线连接">
+        <defs>
+          <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#b4c9b9"/></pattern>
+        </defs>
+        <rect width="960" height="180" fill="url(#grid)"/>
+        <path d="M-30 160 Q120 172 230 111 T445 88 T678 92 T990 25" fill="none" stroke="#91bdb2" stroke-width="70"/>
+        <path d="M-30 160 Q120 172 230 111 T445 88 T678 92 T990 25" fill="none" stroke="#cbe0d4" stroke-width="2"/>
+        <path d="M80 102 Q160 93 220 62 T435 39 Q520 33 603 54 T844 20" fill="none" stroke="#844b2c" stroke-width="4" stroke-dasharray="7 6"/>
+        <g fill="#f9efd4" stroke="#844b2c" stroke-width="4"><circle cx="80" cy="102" r="9"/><circle cx="435" cy="39" r="9"/><circle cx="844" cy="20" r="9"/></g>
+      </svg>
+      <figcaption>图 01　河岸步行路线 · 全长 1.0 km</figcaption>
+    </figure>
+    <div class="section-label"><h2>沿途停留</h2><span class="code">03 STOPS</span></div>
+    <ol class="stops">
+      <li><b class="code">01</b><div><strong>旧渡口</strong><p>台阶尽头，水位线留在第三块青石上。</p></div></li>
+      <li><b class="code">02</b><div><strong>柳树弯</strong><p>顺着树荫绕过河湾，回望来时的桥。</p></div></li>
+      <li><b class="code">03</b><div><strong>东堤桥</strong><p>在桥中央停一会儿，看两岸灯火亮起。</p></div></li>
+    </ol>
+  </main>
+  <script>
+    const main = document.querySelector('main');
+    const title = document.querySelector('h1');
+    const stops = document.querySelector('.stops');
+    function measure() {
+      const root = document.documentElement;
+      const px = value => Number.parseFloat(Number.parseFloat(value).toFixed(2)) + ' px';
+      document.getElementById('viewport').textContent = window.innerWidth + ' × ' + window.innerHeight;
+      document.getElementById('size').textContent = px(getComputedStyle(title).fontSize);
+      document.getElementById('width').textContent = px(main.getBoundingClientRect().width);
+      document.getElementById('columns').textContent = getComputedStyle(stops).gridTemplateColumns.split(' ').length + ' 列';
+      document.getElementById('overflow').textContent = px(root.scrollWidth - root.clientWidth);
+    }
+    function setMode() {
+      const mode = location.hash === '#after' ? 'after' : 'before';
+      document.documentElement.dataset.mode = mode;
+      for (const link of document.querySelectorAll('.switch a')) {
+        link.setAttribute('aria-current', String(link.hash === '#' + mode));
+      }
+      measure();
+    }
+    window.addEventListener('hashchange', setMode);
+    window.addEventListener('resize', measure);
+    setMode();
+    document.fonts.ready.then(measure);
+    new ResizeObserver(measure).observe(main);
+  </script>
+</body>
+</html>
