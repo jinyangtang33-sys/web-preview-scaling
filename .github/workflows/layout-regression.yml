@@ -1,0 +1,29 @@
+name: Layout regression
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  layout:
+    name: Font size and grid breakpoint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Install Playwright Core
+        run: npm install --no-save --no-package-lock --ignore-scripts playwright-core@1.62.1
+      - name: Run layout regression tests in Chrome
+        env:
+          PLAYWRIGHT_CHANNEL: chrome
+        run: node --test tests/layout.test.cjs
