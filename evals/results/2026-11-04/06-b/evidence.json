@@ -1,0 +1,48 @@
+{
+  "evidenceType": "static_source_inference",
+  "source": {
+    "path": "<run-root>/project/page.html",
+    "line": 8,
+    "rule": "h1 { font-size: 6vw; }",
+    "sha256": "dddf69b3f09a5953e2a1b4822942f8c1e3fdd228ddf4ecc422cd5fa163171aed",
+    "modified": false
+  },
+  "targetViewport": {
+    "source": "user_request",
+    "unit": "CSS px",
+    "width": 1440,
+    "height": 900
+  },
+  "staticInference": {
+    "formula": "1440 * 6 / 100",
+    "fontSizePx": 86.4,
+    "designMaximumPx": 48,
+    "excessPx": 38.4,
+    "excessPercent": 80,
+    "exceedsMaximumWhenViewportWidthGreaterThanPx": 800,
+    "otherFontSizeRulesOrExternalStylesOrScriptsInPage": false
+  },
+  "proposedChange": {
+    "rule": "h1 { font-size: min(6vw, 48px); }",
+    "implemented": false,
+    "predictedFontSizeAtTargetPx": 48,
+    "measuredFontSizePx": null
+  },
+  "runtimeEvidence": {
+    "browserUsed": false,
+    "playwrightUsed": false,
+    "screenshotsTaken": false,
+    "actualPreviewViewport": null,
+    "actualIndependentViewport": null,
+    "computedFontSizePx": null,
+    "elementBounds": null,
+    "overflow": null,
+    "visualAcceptance": "pending"
+  },
+  "pendingValidation": [
+    "1440 x 900 CSS px desktop viewport",
+    "Actual preview CSS viewport once accessible",
+    "799, 800, and 801 CSS px widths if the proposed cap is implemented",
+    "Actual computed font size, title wrapping, and overflow"
+  ]
+}

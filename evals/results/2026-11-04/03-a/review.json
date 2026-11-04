@@ -1,0 +1,95 @@
+{
+  "case": "03",
+  "passed": true,
+  "browser": "156.0.8078.80",
+  "samples": [
+    {
+      "source": "independent-headless",
+      "viewport": {
+        "width": 959,
+        "height": 900
+      },
+      "overflowX": 0,
+      "main": {
+        "x": 16,
+        "width": 927,
+        "height": 309.40625,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 927,
+        "scrollWidth": 927
+      },
+      "title": {
+        "x": 16,
+        "width": 927,
+        "height": 51.1875,
+        "fontSize": 32,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 927,
+        "scrollWidth": 927
+      },
+      "grid": {
+        "x": 16,
+        "width": 927,
+        "height": 236.78125,
+        "fontSize": 16,
+        "columns": "927px",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 927,
+        "scrollWidth": 927
+      },
+      "image": null,
+      "table": null,
+      "columnCount": 0
+    },
+    {
+      "source": "independent-headless",
+      "viewport": {
+        "width": 960,
+        "height": 900
+      },
+      "overflowX": 0,
+      "main": {
+        "x": 16,
+        "width": 928,
+        "height": 138.21875,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 928,
+        "scrollWidth": 928
+      },
+      "title": {
+        "x": 16,
+        "width": 928,
+        "height": 51.1875,
+        "fontSize": 32,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 928,
+        "scrollWidth": 928
+      },
+      "grid": {
+        "x": 16,
+        "width": 928,
+        "height": 65.59375,
+        "fontSize": 16,
+        "columns": "296px 296px 296px",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 928,
+        "scrollWidth": 928
+      },
+      "image": null,
+      "table": null,
+      "columnCount": 0
+    }
+  ]
+}

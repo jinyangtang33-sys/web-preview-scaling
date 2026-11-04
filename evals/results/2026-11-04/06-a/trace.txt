@@ -1,0 +1,48 @@
+# 操作、命令、失败与重试记录
+
+范围：仅本次 06-a/request.txt、06-a/skill/SKILL.md、06-a/project/page.html 及本次输出文件。未读取其他运行目录或原仓库评测文件。
+
+1. 读取任务与指定技能（成功，退出码 0）。
+```powershell
+Get-Content -LiteralPath '<06-a>/request.txt'
+Get-Content -LiteralPath '<06-a>/skill/SKILL.md'
+```
+遵从任务的“无法使用浏览器、截图或 Playwright，只能读源码”；采用技能中无法运行浏览器时的静态检查与待验收报告分支。
+
+2. 列出本次目录及 project 文件（成功，退出码 0）。
+```powershell
+Get-ChildItem -LiteralPath '<06-a>' -Force
+rg --files '<06-a>/project'
+```
+project 中仅发现 page.html。
+
+3. 带行号读取整个 page.html，计算 SHA256（成功，退出码 0）。
+```powershell
+$taskPage = '<06-a>/project/page.html'
+$lineNumber = 0
+Get-Content -LiteralPath $taskPage | ForEach-Object { $lineNumber++; '{0,4}: {1}' -f $lineNumber, $_ }
+Get-FileHash -LiteralPath $taskPage -Algorithm SHA256
+```
+发现第 8 行 h1 使用 6vw；全文没有媒体查询、外链样式或脚本。初始 SHA256：DDDF69B3F09A5953E2A1B4822942F8C1E3FDD228DDF4ECC422CD5FA163171AED。
+
+4. 读取 CSS 并做纯算术校验（成功，退出码 0）。
+```powershell
+$taskSource = Get-Content -LiteralPath '<06-a>/project/page.html' -Raw
+$taskMatch = [regex]::Match($taskSource, 'h1\s*\{\s*font-size:\s*([0-9.]+)vw;\s*\}')
+if (-not $taskMatch.Success) { throw 'Static h1 font-size rule not found.' }
+$vwFactor = [double]$taskMatch.Groups[1].Value
+$targetFont = 1440 * $vwFactor / 100
+$limit = 48
+# 输出 source、rule、目标尺寸、推算字号、设计上限、超出值与阈值的 JSON。
+```
+结果：86.4px，超出 38.4px / 80%，阈值 800px。PowerShell 双精度原始输出 excess_px 为 38.400000000000006，报告正常按一位小数记为 38.4。此过程没有执行页面或读取 DOM。
+
+5. 使用 PowerShell Set-Content -Encoding utf8 写入 report.md、evidence.json、trace.md（成功）。evidence.json 通过 ConvertTo-Json -Depth 8 生成。未改源码；仅提供 min(6vw, 48px) 建议。
+
+6. 静态复核输出（命令在产出后执行）：ConvertFrom-Json 解析 evidence.json，核对推算值、非实测标记和建议未应用状态；重新计算页面 SHA256 确认未改动；确认三份输出文件存在。
+
+路径缩写 <06-a> = <run-root>。
+
+失败与重试：无。浏览器、截图、Playwright、页面服务、Git 提交：均未执行。实际视口、计算样式、边界和视觉效果均未测量，视觉验收待完成。
+
+第 6 步复核结果：成功，退出码 0；JSON 可解析，静态标记与 86.4px 推算值一致，页面 SHA256 与初始值一致，三份产出均存在。

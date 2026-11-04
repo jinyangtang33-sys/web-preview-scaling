@@ -1,0 +1,326 @@
+{
+  "before": {
+    "capturedAt": "2026-11-04T05:52:28.474Z",
+    "browser": "Chrome (Playwright channel chrome, headless)",
+    "results": [
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "dom": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "documentClientWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "main": {
+            "rect": {
+              "x": 16,
+              "y": 57.875,
+              "width": 1408,
+              "height": 187.15625,
+              "right": 1424,
+              "bottom": 245.03125
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "1408px",
+              "maxWidth": "none",
+              "marginLeft": "16px",
+              "marginRight": "16px"
+            },
+            "clientWidth": 1408,
+            "scrollWidth": 1408
+          },
+          "heading": {
+            "rect": {
+              "x": 16,
+              "y": 57.875,
+              "width": 1408,
+              "height": 103.6875,
+              "right": 1424,
+              "bottom": 161.5625
+            },
+            "computed": {
+              "fontSize": "86.4px",
+              "lineHeight": "103.68px",
+              "width": "1408px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 1408,
+            "scrollWidth": 1408
+          },
+          "paragraph": {
+            "rect": {
+              "x": 16,
+              "y": 219.4375,
+              "width": 1408,
+              "height": 25.59375,
+              "right": 1424,
+              "bottom": 245.03125
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "1408px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 1408,
+            "scrollWidth": 1408
+          }
+        },
+        "checks": {
+          "heading": false,
+          "content": false,
+          "noHorizontalOverflow": true
+        }
+      },
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "dom": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "documentClientWidth": 390,
+          "documentScrollWidth": 390,
+          "bodyScrollWidth": 390,
+          "main": {
+            "rect": {
+              "x": 16,
+              "y": 40,
+              "width": 358,
+              "height": 69.671875,
+              "right": 374,
+              "bottom": 109.671875
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "358px",
+              "maxWidth": "none",
+              "marginLeft": "16px",
+              "marginRight": "16px"
+            },
+            "clientWidth": 358,
+            "scrollWidth": 358
+          },
+          "heading": {
+            "rect": {
+              "x": 16,
+              "y": 40,
+              "width": 358,
+              "height": 28.078125,
+              "right": 374,
+              "bottom": 68.078125
+            },
+            "computed": {
+              "fontSize": "23.4px",
+              "lineHeight": "28.08px",
+              "width": "358px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 358,
+            "scrollWidth": 358
+          },
+          "paragraph": {
+            "rect": {
+              "x": 16,
+              "y": 84.078125,
+              "width": 358,
+              "height": 25.59375,
+              "right": 374,
+              "bottom": 109.671875
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "358px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 358,
+            "scrollWidth": 358
+          }
+        },
+        "checks": {
+          "heading": false,
+          "content": true,
+          "noHorizontalOverflow": true
+        }
+      }
+    ]
+  },
+  "after": {
+    "capturedAt": "2026-11-04T05:52:37.532Z",
+    "browser": "Chrome (Playwright channel chrome, headless)",
+    "results": [
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "dom": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "documentClientWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "main": {
+            "rect": {
+              "x": 200,
+              "y": 40,
+              "width": 1040,
+              "height": 115.34375,
+              "right": 1240,
+              "bottom": 155.34375
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "1040px",
+              "maxWidth": "1040px",
+              "marginLeft": "200px",
+              "marginRight": "200px"
+            },
+            "clientWidth": 1040,
+            "scrollWidth": 1040
+          },
+          "heading": {
+            "rect": {
+              "x": 200,
+              "y": 40,
+              "width": 1040,
+              "height": 57.59375,
+              "right": 1240,
+              "bottom": 97.59375
+            },
+            "computed": {
+              "fontSize": "48px",
+              "lineHeight": "57.6px",
+              "width": "1040px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 1040,
+            "scrollWidth": 1040
+          },
+          "paragraph": {
+            "rect": {
+              "x": 200,
+              "y": 129.75,
+              "width": 1040,
+              "height": 25.59375,
+              "right": 1240,
+              "bottom": 155.34375
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "1040px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 1040,
+            "scrollWidth": 1040
+          }
+        },
+        "checks": {
+          "heading": true,
+          "content": true,
+          "noHorizontalOverflow": true
+        }
+      },
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "dom": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "documentClientWidth": 390,
+          "documentScrollWidth": 390,
+          "bodyScrollWidth": 390,
+          "main": {
+            "rect": {
+              "x": 16,
+              "y": 40,
+              "width": 358,
+              "height": 85.421875,
+              "right": 374,
+              "bottom": 125.421875
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "358px",
+              "maxWidth": "1040px",
+              "marginLeft": "16px",
+              "marginRight": "16px"
+            },
+            "clientWidth": 358,
+            "scrollWidth": 358
+          },
+          "heading": {
+            "rect": {
+              "x": 16,
+              "y": 40,
+              "width": 358,
+              "height": 38.390625,
+              "right": 374,
+              "bottom": 78.390625
+            },
+            "computed": {
+              "fontSize": "32px",
+              "lineHeight": "38.4px",
+              "width": "358px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 358,
+            "scrollWidth": 358
+          },
+          "paragraph": {
+            "rect": {
+              "x": 16,
+              "y": 99.828125,
+              "width": 358,
+              "height": 25.59375,
+              "right": 374,
+              "bottom": 125.421875
+            },
+            "computed": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "width": "358px",
+              "maxWidth": "none",
+              "marginLeft": "0px",
+              "marginRight": "0px"
+            },
+            "clientWidth": 358,
+            "scrollWidth": 358
+          }
+        },
+        "checks": {
+          "heading": true,
+          "content": true,
+          "noHorizontalOverflow": true
+        }
+      }
+    ]
+  }
+}

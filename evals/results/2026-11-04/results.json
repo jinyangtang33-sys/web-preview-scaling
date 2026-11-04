@@ -1,0 +1,699 @@
+{
+  "date": "2026-11-04",
+  "base_commit": "da5311321c68ddc25f0ca22d9aa1d62bcecd5b32",
+  "content_fingerprint": "SHA-256 of UTF-8 text after CRLF -> LF; no BOM stripping in candidate input hashes",
+  "candidate_inputs": {
+    "SKILL.md": "b1e42e68f3b96a52ffc856f706281381305ce16b4eb3964bd669cd5640e199e4",
+    "scripts/measure.cjs": "0fd45bbac761a01e333753574adfc007c7165ac9c2cdc636c3a28821046d5fa9",
+    "evals/cases.json": "eecd28ebb847a96b895c39dde58a084378b5f1b17b6eadba69f5c93ed17234c0",
+    "evals/verify-output.cjs": "a6f481b6d3c434838f399d738c8afc2c9253271920a07da07c35f0eb2302ad3f",
+    "evals/fixtures/01/host.html": "52dc2c52164165a23224231a4596f73ad77a4ab5a1075c814f54d185dc224e22",
+    "evals/fixtures/01/page.html": "25b5aa82284206b3b311b19247ba3b60f3fd456f6e83649814abb95ec2a69c78",
+    "evals/fixtures/02/page.html": "83d25ae04f25d73be478381ee4628191ae967f69182c0e4f0db5b3869341dc57",
+    "evals/fixtures/03/page.html": "9b661f3c2358c53e2dd25e4185b828a0bbe06e9184177c04ed00130b8385bf45",
+    "evals/fixtures/04/page.html": "28f21673d93f18de736f26cf1f8fd0f930ba4a742f6eb3148f890147ccbb2b40",
+    "evals/fixtures/04/scene.svg": "00bce6d94ea0d93f16fc330976627df222973874e05677a6f02f8ec9c56b15d5",
+    "evals/fixtures/05/page.html": "3b61b4848867b83a06099080a779500d8815e6e857bfd5a73436c3afe230cb99",
+    "evals/fixtures/06/page.html": "dddf69b3f09a5953e2a1b4822942f8c1e3fdd228ddf4ecc422cd5fa163171aed",
+    "evals/fixtures/07/page.html": "2eb39f0c701caaac36bffeae1cac201a14016b1417704f111491a310b95416be"
+  },
+  "environment": {
+    "os": "Windows (win32 x64)",
+    "node": "24.20.0",
+    "playwright": "1.62.1",
+    "browser": "Chrome 156.0.8078.80 headless",
+    "model": "继承当前宿主配置；精确模型版本、采样参数未提供",
+    "sessions": "fresh subagents, fork_turns=none; shared host, isolated task directories; not OS sandbox isolation"
+  },
+  "evaluation_method": "开发会话按预先确定的cases逐项审查执行者报告、日志、源码差异及原始读数，并独立运行verify-output.cjs。非第三方盲审，执行日志为执行者整理的记录，不是平台逐条工具审计导出。",
+  "results": [
+    {
+      "run": "01-a",
+      "case": "01",
+      "agent_session": "/root/acceptance_01a",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "复核 iframe 与独立页同为 1280×800，h1=48px、main=1000px；源码未改；报告明确模拟宿主。",
+      "checks": [
+        {
+          "check": "读取 iframe 内部视口和独立页面的 DOM 尺寸",
+          "status": "pass",
+          "evidence": [
+            "01-a/report.txt",
+            "01-a/trace.txt",
+            "01-a/evidence.json"
+          ]
+        },
+        {
+          "check": "两端 h1 均为 48px，main 均为 1000px",
+          "status": "pass",
+          "evidence": [
+            "01-a/report.txt",
+            "01-a/trace.txt",
+            "01-a/evidence.json"
+          ]
+        },
+        {
+          "check": "识别宿主缩小展示并保留 page.html",
+          "status": "pass",
+          "evidence": [
+            "01-a/report.txt",
+            "01-a/trace.txt",
+            "01-a/evidence.json"
+          ]
+        },
+        {
+          "check": "将来源标为模拟宿主，避免称为实际 Codex 预览",
+          "status": "pass",
+          "evidence": [
+            "01-a/report.txt",
+            "01-a/trace.txt",
+            "01-a/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "因宿主缩放而修改页面字号或宽度",
+          "observed": false
+        },
+        {
+          "condition": "把宿主视口或截图尺寸当作 iframe 内部视口",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "host.html": "52dc2c52164165a23224231a4596f73ad77a4ab5a1075c814f54d185dc224e22",
+        "page.html": "25b5aa82284206b3b311b19247ba3b60f3fd456f6e83649814abb95ec2a69c78"
+      }
+    },
+    {
+      "run": "02-a",
+      "case": "02",
+      "agent_session": "/root/acceptance_02a",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "前测86.4px/1408px；后测桌面48px/1040px，手机32px/358px、左右16px、根溢出0。只改容器和h1。",
+      "checks": [
+        {
+          "check": "修改前读取真实字号和正文宽度",
+          "status": "pass",
+          "evidence": [
+            "02-a/report.txt",
+            "02-a/trace.txt",
+            "02-a/evidence.json"
+          ]
+        },
+        {
+          "check": "1440 下字号为 48px、正文不超过 1040px",
+          "status": "pass",
+          "evidence": [
+            "02-a/report.txt",
+            "02-a/trace.txt",
+            "02-a/evidence.json"
+          ]
+        },
+        {
+          "check": "390 下字号至少 32px、正文不超过 358px且页面无横向溢出",
+          "status": "pass",
+          "evidence": [
+            "02-a/report.txt",
+            "02-a/trace.txt",
+            "02-a/evidence.json"
+          ]
+        },
+        {
+          "check": "修复来自元素或容器规则，并提供修改后读数",
+          "status": "pass",
+          "evidence": [
+            "02-a/report.txt",
+            "02-a/trace.txt",
+            "02-a/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "用页面 zoom、transform 或根节点 overflow-x:hidden 掩盖问题",
+          "observed": false
+        },
+        {
+          "condition": "仅声称修复而没有浏览器复测",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "99ee54d48c28bce4744c9185fc3f57791da84a41c9e8262d4313240d22d947d1"
+      }
+    },
+    {
+      "run": "03-a",
+      "case": "03",
+      "agent_session": "/root/acceptance_03a",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "959px一列、960px三列；源码未改；未把窄视口模拟称为真实预览。",
+      "checks": [
+        {
+          "check": "至少实测 959px 与 960px 两侧",
+          "status": "pass",
+          "evidence": [
+            "03-a/report.txt",
+            "03-a/trace.txt",
+            "03-a/evidence.json"
+          ]
+        },
+        {
+          "check": "列数分别为一列和三列",
+          "status": "pass",
+          "evidence": [
+            "03-a/report.txt",
+            "03-a/trace.txt",
+            "03-a/evidence.json"
+          ]
+        },
+        {
+          "check": "正确解释设计预期并保留源码",
+          "status": "pass",
+          "evidence": [
+            "03-a/report.txt",
+            "03-a/trace.txt",
+            "03-a/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "为让两端列数相同而删除或移动正确断点",
+          "observed": false
+        },
+        {
+          "condition": "没有测量就宣布断点通过",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "9b661f3c2358c53e2dd25e4185b828a0bbe06e9184177c04ed00130b8385bf45"
+      }
+    },
+    {
+      "run": "04-a",
+      "case": "04",
+      "agent_session": "/root/acceptance_04a",
+      "mode": "explicit-skill",
+      "status": "invalid-fixture",
+      "review_note": "旧SVG默认保持内部比例，未制造预期的图像拉扁。执行者准确指出该差异；该轮不计入最终通过数。保留报告及旧素材，修正fixture后另开04-b。",
+      "checks": [
+        {
+          "check": "读取图片固有尺寸和实际边界",
+          "status": "pass",
+          "evidence": [
+            "04-a/report.txt",
+            "04-a/trace.txt",
+            "04-a/evidence.json"
+          ]
+        },
+        {
+          "check": "识别 800×400 原图被固定高度拉伸",
+          "status": "untested",
+          "evidence": [
+            "04-a/report.txt",
+            "04-a/trace.txt",
+            "04-a/evidence.json"
+          ]
+        },
+        {
+          "check": "修复后两个视口中的图片边界宽高比均为 2",
+          "status": "pass",
+          "evidence": [
+            "04-a/report.txt",
+            "04-a/trace.txt",
+            "04-a/evidence.json"
+          ]
+        },
+        {
+          "check": "图片完整显示，页面无横向溢出",
+          "status": "pass",
+          "evidence": [
+            "04-a/report.txt",
+            "04-a/trace.txt",
+            "04-a/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "通过裁掉图片内容或隐藏溢出来假装恢复比例",
+          "observed": false
+        },
+        {
+          "condition": "只改桌面而留下窄屏变形",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "28b406827e76747e69352c8265fed4957025f12db46d1ef06870f54c12b9d64e",
+        "scene.svg": "640b9b2e9ef6db0d7b7e05615a2f5b26c1708e2d44d4bf84e6072c2d852f531c"
+      }
+    },
+    {
+      "run": "04-b",
+      "case": "04",
+      "agent_session": "/root/acceptance_04b",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "真实变形素材经 height:auto 修复；复核桌面960×480、手机358×179，原图800×400，完整显示且根溢出0。",
+      "checks": [
+        {
+          "check": "读取图片固有尺寸和实际边界",
+          "status": "pass",
+          "evidence": [
+            "04-b/report.txt",
+            "04-b/trace.txt",
+            "04-b/evidence.json"
+          ]
+        },
+        {
+          "check": "识别 800×400 原图被固定高度拉伸",
+          "status": "pass",
+          "evidence": [
+            "04-b/report.txt",
+            "04-b/trace.txt",
+            "04-b/evidence.json"
+          ]
+        },
+        {
+          "check": "修复后两个视口中的图片边界宽高比均为 2",
+          "status": "pass",
+          "evidence": [
+            "04-b/report.txt",
+            "04-b/trace.txt",
+            "04-b/evidence.json"
+          ]
+        },
+        {
+          "check": "图片完整显示，页面无横向溢出",
+          "status": "pass",
+          "evidence": [
+            "04-b/report.txt",
+            "04-b/trace.txt",
+            "04-b/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "通过裁掉图片内容或隐藏溢出来假装恢复比例",
+          "observed": false
+        },
+        {
+          "condition": "只改桌面而留下窄屏变形",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "28b406827e76747e69352c8265fed4957025f12db46d1ef06870f54c12b9d64e",
+        "scene.svg": "00bce6d94ea0d93f16fc330976627df222973874e05677a6f02f8ec9c56b15d5"
+      }
+    },
+    {
+      "run": "05-a",
+      "case": "05",
+      "agent_session": "/root/acceptance_05a",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "根溢出0；表格容器358px、scrollWidth900px，实际可滚动542px；四列与源码保留。",
+      "checks": [
+        {
+          "check": "区分根节点与表格容器的 scrollWidth/clientWidth",
+          "status": "pass",
+          "evidence": [
+            "05-a/report.txt",
+            "05-a/trace.txt",
+            "05-a/evidence.json"
+          ]
+        },
+        {
+          "check": "整页横向溢出为 0，表格内部可滚动",
+          "status": "pass",
+          "evidence": [
+            "05-a/report.txt",
+            "05-a/trace.txt",
+            "05-a/evidence.json"
+          ]
+        },
+        {
+          "check": "保留表格和源码",
+          "status": "pass",
+          "evidence": [
+            "05-a/report.txt",
+            "05-a/trace.txt",
+            "05-a/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "把组件内部滚动判成整页故障",
+          "observed": false
+        },
+        {
+          "condition": "删除列、隐藏列或给根节点隐藏横向溢出",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "3b61b4848867b83a06099080a779500d8815e6e857bfd5a73436c3afe230cb99"
+      }
+    },
+    {
+      "run": "06-a",
+      "case": "06",
+      "agent_session": "/root/acceptance_06a",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "仅源码及公式推算86.4px；未运行浏览器、未改页面，列出后续取数方法，视觉验收待完成。",
+      "checks": [
+        {
+          "check": "遵守本轮只能静态检查的约束",
+          "status": "pass",
+          "evidence": [
+            "06-a/report.txt",
+            "06-a/trace.txt",
+            "06-a/evidence.json"
+          ]
+        },
+        {
+          "check": "指出 vw 字号为候选原因并给出可执行的后续测量方法",
+          "status": "pass",
+          "evidence": [
+            "06-a/report.txt",
+            "06-a/trace.txt",
+            "06-a/evidence.json"
+          ]
+        },
+        {
+          "check": "区分 CSS 推算与实测，视觉验收保留待验证",
+          "status": "pass",
+          "evidence": [
+            "06-a/report.txt",
+            "06-a/trace.txt",
+            "06-a/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "声称已打开页面、实测或完成视觉验收",
+          "observed": false
+        },
+        {
+          "condition": "违反环境约束启动浏览器",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "dddf69b3f09a5953e2a1b4822942f8c1e3fdd228ddf4ecc422cd5fa163171aed"
+      }
+    },
+    {
+      "run": "07-a",
+      "case": "07",
+      "agent_session": "/root/acceptance_07a",
+      "mode": "metadata-only",
+      "status": "pass",
+      "review_note": "只替换指定页脚文字；独立源码比较通过；执行记录未加载skill或浏览器。",
+      "checks": [
+        {
+          "check": "只改变指定文案",
+          "status": "pass",
+          "evidence": [
+            "07-a/report.txt",
+            "07-a/trace.txt"
+          ]
+        },
+        {
+          "check": "按可用 skill 描述判断任务与视口排查无关",
+          "status": "pass",
+          "evidence": [
+            "07-a/report.txt",
+            "07-a/trace.txt"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "修改布局、加载测量依赖或执行不必要的布局修复",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "f14f2f698c219cda123c3407bc4265c132fa46180fdb48ddbf78ffca38669e1c"
+      }
+    },
+    {
+      "run": "01-b",
+      "case": "01",
+      "agent_session": "/root/acceptance_01b",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "第二个独立会话得到同样读数并保留源码，明确未访问真实 Codex 侧栏。",
+      "checks": [
+        {
+          "check": "读取 iframe 内部视口和独立页面的 DOM 尺寸",
+          "status": "pass",
+          "evidence": [
+            "01-b/report.txt",
+            "01-b/trace.txt",
+            "01-b/evidence.json"
+          ]
+        },
+        {
+          "check": "两端 h1 均为 48px，main 均为 1000px",
+          "status": "pass",
+          "evidence": [
+            "01-b/report.txt",
+            "01-b/trace.txt",
+            "01-b/evidence.json"
+          ]
+        },
+        {
+          "check": "识别宿主缩小展示并保留 page.html",
+          "status": "pass",
+          "evidence": [
+            "01-b/report.txt",
+            "01-b/trace.txt",
+            "01-b/evidence.json"
+          ]
+        },
+        {
+          "check": "将来源标为模拟宿主，避免称为实际 Codex 预览",
+          "status": "pass",
+          "evidence": [
+            "01-b/report.txt",
+            "01-b/trace.txt",
+            "01-b/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "因宿主缩放而修改页面字号或宽度",
+          "observed": false
+        },
+        {
+          "condition": "把宿主视口或截图尺寸当作 iframe 内部视口",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "host.html": "52dc2c52164165a23224231a4596f73ad77a4ab5a1075c814f54d185dc224e22",
+        "page.html": "25b5aa82284206b3b311b19247ba3b60f3fd456f6e83649814abb95ec2a69c78"
+      }
+    },
+    {
+      "run": "06-b",
+      "case": "06",
+      "agent_session": "/root/acceptance_06b",
+      "mode": "explicit-skill",
+      "status": "pass",
+      "review_note": "独立复测同样仅静态推算并明确未实测；页面哈希与原始fixture一致。",
+      "checks": [
+        {
+          "check": "遵守本轮只能静态检查的约束",
+          "status": "pass",
+          "evidence": [
+            "06-b/report.txt",
+            "06-b/trace.txt",
+            "06-b/evidence.json"
+          ]
+        },
+        {
+          "check": "指出 vw 字号为候选原因并给出可执行的后续测量方法",
+          "status": "pass",
+          "evidence": [
+            "06-b/report.txt",
+            "06-b/trace.txt",
+            "06-b/evidence.json"
+          ]
+        },
+        {
+          "check": "区分 CSS 推算与实测，视觉验收保留待验证",
+          "status": "pass",
+          "evidence": [
+            "06-b/report.txt",
+            "06-b/trace.txt",
+            "06-b/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "声称已打开页面、实测或完成视觉验收",
+          "observed": false
+        },
+        {
+          "condition": "违反环境约束启动浏览器",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "dddf69b3f09a5953e2a1b4822942f8c1e3fdd228ddf4ecc422cd5fa163171aed"
+      }
+    },
+    {
+      "run": "01-control",
+      "case": "01",
+      "agent_session": "/root/acceptance_01control",
+      "mode": "no-skill-control",
+      "status": "pass",
+      "review_note": "无skill同样正确判断宿主缩放并保留源码。HTTP导航被环境拒绝后改file URL成功；失败未隐去。",
+      "checks": [
+        {
+          "check": "读取 iframe 内部视口和独立页面的 DOM 尺寸",
+          "status": "pass",
+          "evidence": [
+            "01-control/report.txt",
+            "01-control/trace.txt",
+            "01-control/evidence.json"
+          ]
+        },
+        {
+          "check": "两端 h1 均为 48px，main 均为 1000px",
+          "status": "pass",
+          "evidence": [
+            "01-control/report.txt",
+            "01-control/trace.txt",
+            "01-control/evidence.json"
+          ]
+        },
+        {
+          "check": "识别宿主缩小展示并保留 page.html",
+          "status": "pass",
+          "evidence": [
+            "01-control/report.txt",
+            "01-control/trace.txt",
+            "01-control/evidence.json"
+          ]
+        },
+        {
+          "check": "将来源标为模拟宿主，避免称为实际 Codex 预览",
+          "status": "pass",
+          "evidence": [
+            "01-control/report.txt",
+            "01-control/trace.txt",
+            "01-control/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "因宿主缩放而修改页面字号或宽度",
+          "observed": false
+        },
+        {
+          "condition": "把宿主视口或截图尺寸当作 iframe 内部视口",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "host.html": "52dc2c52164165a23224231a4596f73ad77a4ab5a1075c814f54d185dc224e22",
+        "page.html": "25b5aa82284206b3b311b19247ba3b60f3fd456f6e83649814abb95ec2a69c78"
+      }
+    },
+    {
+      "run": "02-control",
+      "case": "02",
+      "agent_session": "/root/acceptance_02control",
+      "mode": "no-skill-control",
+      "status": "pass",
+      "review_note": "无skill同样满足指定双视口指标；采用clamp(32px,4vw,48px)，有skill版本为6vw，两者目标尺寸均达标。",
+      "checks": [
+        {
+          "check": "修改前读取真实字号和正文宽度",
+          "status": "pass",
+          "evidence": [
+            "02-control/report.txt",
+            "02-control/trace.txt",
+            "02-control/evidence.json"
+          ]
+        },
+        {
+          "check": "1440 下字号为 48px、正文不超过 1040px",
+          "status": "pass",
+          "evidence": [
+            "02-control/report.txt",
+            "02-control/trace.txt",
+            "02-control/evidence.json"
+          ]
+        },
+        {
+          "check": "390 下字号至少 32px、正文不超过 358px且页面无横向溢出",
+          "status": "pass",
+          "evidence": [
+            "02-control/report.txt",
+            "02-control/trace.txt",
+            "02-control/evidence.json"
+          ]
+        },
+        {
+          "check": "修复来自元素或容器规则，并提供修改后读数",
+          "status": "pass",
+          "evidence": [
+            "02-control/report.txt",
+            "02-control/trace.txt",
+            "02-control/evidence.json"
+          ]
+        }
+      ],
+      "hard_fail": [
+        {
+          "condition": "用页面 zoom、transform 或根节点 overflow-x:hidden 掩盖问题",
+          "observed": false
+        },
+        {
+          "condition": "仅声称修复而没有浏览器复测",
+          "observed": false
+        }
+      ],
+      "project_sha256_lf": {
+        "page.html": "879e91aadb5ce4c29e30aa575979af02acf8e7292992a88904e354b328a92ec8"
+      }
+    }
+  ],
+  "summary": {
+    "primary_cases_passed": 7,
+    "primary_cases_total": 7,
+    "repeat_runs_passed": 2,
+    "control_runs_passed": 2,
+    "invalid_fixture_runs_excluded": 1,
+    "observed_hard_failures": 0,
+    "local_automated_tests": "7/7 pass",
+    "skill_format_validation": "pass",
+    "real_project_acceptance": "untested",
+    "stable_release_ready": false,
+    "maintainer_approval": "pending"
+  },
+  "control_conclusion": "两组无skill对照也通过。此小样本未证明skill带来额外效果或效率提升；未做可靠成本/耗时对比。",
+  "publication": "报告和命令记录以txt保留原文，个人绝对路径统一为占位符；JSON数值和判断未改动。最终页面和独立复核JSON可重查。图片用例保留原始前后截图；其他临时截图和执行者临时测量脚本未发布，原报告中的这些名称属于执行记录。所有最终DOM结果可用仓库verify-output.cjs重新采集。"
+}

@@ -1,0 +1,27 @@
+预览缩小来自宿主 `host.html:8` 的 `transform: scale(.5)`。页面字号和布局正常，无需修改 `page.html`，本次保留两个 HTML 文件原样。
+
+在 headless Chrome 中以 **1280 × 800 CSS 像素**视口、devicePixelRatio = 1 实测：
+
+| 检查项 | 独立页面 | 嵌入页面内部 |
+| --- | --- | --- |
+| innerWidth × innerHeight | 1280 × 800 | 1280 × 800 |
+| visualViewport.scale | 1 | 1 |
+| 正文字号 | 16px | 16px |
+| 标题字号 | 48px | 48px |
+| 主内容区域宽度 | 1000px | 1000px |
+| 页面元素 transform / zoom | none / 1 | none / 1 |
+
+宿主 iframe 的布局尺寸是 1280 × 800，`getBoundingClientRect()` 的显示尺寸是 640 × 400；其计算样式为 `matrix(0.5, 0, 0, 0.5, 0, 0)`。宽高比均为 **0.5**。因此正文看起来相当于 8px、标题相当于 24px，是整个预览的等比例缩放，并非页面自身字号变小。iframe 子页面的 DOM 测量仍使用内部 CSS 坐标，必须结合宿主 iframe 的变换判断实际显示大小。
+
+独立页面与嵌入页面的 html、body、main、h1、p、footer 的全部采样尺寸及样式一致。独立页面无横向溢出，未出现页面脚本错误；两张截图也已检查。修改页面字体会同时放大独立页面，不适合作为此问题的修复。需要原尺寸查看时，直接打开 page.html；若以后需要宿主也按 1:1 显示，应在宿主调整缩放与预览容器尺寸。
+
+验证方式：初次本地 HTTP 访问被环境拒绝，随后通过本地 file:// 地址完成检查。本次检查仅涉及这两个静态页面。源码前后 SHA-256 完全一致。
+
+产物：
+
+- report.md：本报告。
+- evidence.json：独立页、嵌入页、宿主的原始 DOM 读数、浏览器参数、检查结果和源码哈希。
+- trace.md：执行命令、失败及重试记录。
+- standalone.png：1280 × 800 独立页面截图。
+- embedded.png：同视口下的宿主预览截图。
+- verify.cjs：可重复执行的 Playwright 核验脚本。

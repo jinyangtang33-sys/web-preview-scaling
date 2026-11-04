@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>街区清单</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 sans-serif; }
+  main { width: calc(100% - 32px); margin: 24px auto; }
+  .places { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  article { padding: 20px; background: #edf3e9; }
+  @media (min-width: 960px) { .places { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>
+<main><h1>周末逛街区</h1><div class="places"><article>树荫街</article><article>河边巷</article><article>旧书店</article></div></main>
+</html>

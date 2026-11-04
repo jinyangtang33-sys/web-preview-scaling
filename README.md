@@ -2,7 +2,9 @@
 
 **简体中文** | [English](README.en.md)
 
-[![布局回归测试](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
+[![基础检查](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
+
+**当前为实验版。** 已完成七类合成任务验收与两组无 skill 对照，真实项目验收尚未完成。CI 覆盖测量脚本、示例布局与产物检查器。[测试范围与发布标准](evals/README.md) · [验收记录](evals/results/2026-11-04/README.md)
 
 网页在 Codex 侧边预览里看着刚好，换到浏览器却觉得标题太大、正文太宽？这个 skill 让 Codex 在相同的 CSS 视口下测量同一个元素，再拉宽窗口，找出差异来自滚动条、字号规则还是响应式断点。
 

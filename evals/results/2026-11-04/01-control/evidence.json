@@ -1,0 +1,367 @@
+{
+  "capturedAt": "2026-11-04T05:52:05.195Z",
+  "environment": {
+    "browser": "156.0.8078.80",
+    "channel": "chrome",
+    "headless": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "deviceScaleFactor": 1
+  },
+  "standalone": {
+    "url": "<run-root>/project/page.html",
+    "innerWidth": 1280,
+    "innerHeight": 800,
+    "outerWidth": 1280,
+    "outerHeight": 800,
+    "devicePixelRatio": 1,
+    "visualViewport": {
+      "width": 1280,
+      "height": 800,
+      "scale": 1
+    },
+    "document": {
+      "clientWidth": 1280,
+      "scrollWidth": 1280,
+      "clientHeight": 800,
+      "scrollHeight": 800
+    },
+    "elements": {
+      "html": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 236.9375
+        },
+        "clientWidth": 1280,
+        "clientHeight": 800,
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "width": "1280px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "0px"
+      },
+      "body": {
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "width": 1280,
+          "height": 156.9375
+        },
+        "clientWidth": 1280,
+        "clientHeight": 157,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1280px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "0px"
+      },
+      "main": {
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 156.9375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 157,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "1000px",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "40px 140px"
+      },
+      "h1": {
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 57.59375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 58,
+        "fontSize": "48px",
+        "lineHeight": "57.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "32.16px 0px"
+      },
+      "p": {
+        "rect": {
+          "x": 140,
+          "y": 129.75,
+          "width": 1000,
+          "height": 25.59375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 26,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "16px 0px"
+      },
+      "footer": {
+        "rect": {
+          "x": 140,
+          "y": 171.34375,
+          "width": 1000,
+          "height": 25.59375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 26,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "0px"
+      }
+    }
+  },
+  "embeddedPage": {
+    "url": "<run-root>/project/page.html",
+    "innerWidth": 1280,
+    "innerHeight": 800,
+    "outerWidth": 1280,
+    "outerHeight": 800,
+    "devicePixelRatio": 1,
+    "visualViewport": {
+      "width": 1280,
+      "height": 800,
+      "scale": 1
+    },
+    "document": {
+      "clientWidth": 1280,
+      "scrollWidth": 1280,
+      "clientHeight": 800,
+      "scrollHeight": 800
+    },
+    "elements": {
+      "html": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 236.9375
+        },
+        "clientWidth": 1280,
+        "clientHeight": 800,
+        "fontSize": "16px",
+        "lineHeight": "normal",
+        "width": "1280px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "0px"
+      },
+      "body": {
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "width": 1280,
+          "height": 156.9375
+        },
+        "clientWidth": 1280,
+        "clientHeight": 157,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1280px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "0px"
+      },
+      "main": {
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 156.9375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 157,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "1000px",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "40px 140px"
+      },
+      "h1": {
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 57.59375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 58,
+        "fontSize": "48px",
+        "lineHeight": "57.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "32.16px 0px"
+      },
+      "p": {
+        "rect": {
+          "x": 140,
+          "y": 129.75,
+          "width": 1000,
+          "height": 25.59375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 26,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "16px 0px"
+      },
+      "footer": {
+        "rect": {
+          "x": 140,
+          "y": 171.34375,
+          "width": 1000,
+          "height": 25.59375
+        },
+        "clientWidth": 1000,
+        "clientHeight": 26,
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "zoom": "1",
+        "transform": "none",
+        "margin": "0px"
+      }
+    }
+  },
+  "host": {
+    "url": "<run-root>/project/host.html",
+    "innerWidth": 1280,
+    "innerHeight": 800,
+    "devicePixelRatio": 1,
+    "visualViewport": {
+      "width": 1280,
+      "height": 800,
+      "scale": 1
+    },
+    "html": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 506.875
+      },
+      "clientWidth": 1280,
+      "clientHeight": 800,
+      "offsetWidth": 1280,
+      "offsetHeight": 507,
+      "width": "1280px",
+      "height": "506.875px",
+      "transform": "none",
+      "transformOrigin": "640px 253.438px",
+      "zoom": "1",
+      "overflow": "visible",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "body": {
+      "rect": {
+        "x": 20,
+        "y": 21.4375,
+        "width": 1240,
+        "height": 465.4375
+      },
+      "clientWidth": 1240,
+      "clientHeight": 465,
+      "offsetWidth": 1240,
+      "offsetHeight": 465,
+      "width": "1240px",
+      "height": "465.438px",
+      "transform": "none",
+      "transformOrigin": "620px 232.719px",
+      "zoom": "1",
+      "overflow": "visible",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "preview": {
+      "rect": {
+        "x": 20,
+        "y": 84.875,
+        "width": 642,
+        "height": 402
+      },
+      "clientWidth": 640,
+      "clientHeight": 400,
+      "offsetWidth": 642,
+      "offsetHeight": 402,
+      "width": "640px",
+      "height": "400px",
+      "transform": "none",
+      "transformOrigin": "321px 201px",
+      "zoom": "1",
+      "overflow": "hidden",
+      "border": "1px solid rgb(187, 187, 187)"
+    },
+    "iframe": {
+      "rect": {
+        "x": 21,
+        "y": 85.875,
+        "width": 640,
+        "height": 400
+      },
+      "clientWidth": 1280,
+      "clientHeight": 800,
+      "offsetWidth": 1280,
+      "offsetHeight": 800,
+      "width": "1280px",
+      "height": "800px",
+      "transform": "matrix(0.5, 0, 0, 0.5, 0, 0)",
+      "transformOrigin": "0px 0px",
+      "zoom": "1",
+      "overflow": "clip",
+      "border": "0px none rgb(0, 0, 0)"
+    }
+  },
+  "checks": {
+    "standaloneViewport1280x800": true,
+    "embeddedViewport1280x800": true,
+    "identicalContentMeasurements": true,
+    "iframeVisualScaleX": 0.5,
+    "iframeVisualScaleY": 0.5,
+    "standaloneNoHorizontalOverflow": true,
+    "filesUnchanged": true,
+    "noPageErrors": true
+  },
+  "errors": [],
+  "fileHashes": {
+    "before": {
+      "host.html": "52dc2c52164165a23224231a4596f73ad77a4ab5a1075c814f54d185dc224e22",
+      "page.html": "25b5aa82284206b3b311b19247ba3b60f3fd456f6e83649814abb95ec2a69c78"
+    },
+    "after": {
+      "host.html": "52dc2c52164165a23224231a4596f73ad77a4ab5a1075c814f54d185dc224e22",
+      "page.html": "25b5aa82284206b3b311b19247ba3b60f3fd456f6e83649814abb95ec2a69c78"
+    }
+  }
+}

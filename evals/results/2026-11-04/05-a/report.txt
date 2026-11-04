@@ -1,0 +1,13 @@
+结论：未发现整页横向溢出，页面无需修复，project/page.html 保持原样。设计允许的表格内部横向滚动工作正常，四列（街区、树木、步行距离、开放时间）完整保留。
+
+验证来源：独立无头 Chrome 156.0.8078.80，属于“独立浏览器模拟”，未访问 Codex 实际预览。通过 file:// 打开本次 project/page.html，等待页面与字体加载完成。视口来自页面的 window.innerWidth / innerHeight；devicePixelRatio = 1，visualViewport.scale = 1。
+
+目标视口 390 × 844：document.documentElement.clientWidth 和 scrollWidth 均为 390px，整页横向溢出为 0px。表格容器左边界 16px、右边界 374px，clientWidth = 358px、scrollWidth = 900px；内部最大滚动距离为 542px。将表格滚动到右端后，scrollLeft = 542px，最后一列完整可见；页面 scrollWidth / clientWidth 仍为 390 / 390px。尝试将窗口水平滚动到 10000px 后 window.scrollX 仍为 0。截图已核查，标题和页边距保持不动，仅表格内容水平移动。
+
+补测 375 × 812：根节点 scrollWidth / clientWidth = 375 / 375px，表格内部为 900 / 343px，能滚动至 557px。补测桌面 1440 × 900：根节点为 1440 / 1440px，表格与容器均为 1000px，无需横向滚动。三种尺寸均保留全部四列；所有验证检查通过。
+
+相关 CSS：main 的 width: calc(100% - 32px)、max-width: 1000px 限定版心；.table-scroll 的 overflow-x: auto 将滚动限制在表格容器内；table 的 min-width: 900px 保留列的可读宽度。这些规则符合本次设计要求，不应仅因表格可滚动就改为隐藏内容或删除列。
+
+没有修复前后差异，因为未修改页面。evidence.json 中 beforeScroll / afterScroll 表示组件滚动前后，不是修改前后；sourceSha256Before / sourceSha256After 一致也确认了源文件未变。
+
+新增文件：report.md（本报告）、evidence.json（原始 DOM 读数）、trace.md（命令与执行结果）、verify.cjs（可重复运行的验证脚本），以及 screenshot-390-start.png、screenshot-390-end.png、screenshot-375-start.png、screenshot-375-end.png、screenshot-1440-start.png、screenshot-1440-end.png。所有产物均位于本次 05-a 目录。没有修改项目文件，没有提交 Git。

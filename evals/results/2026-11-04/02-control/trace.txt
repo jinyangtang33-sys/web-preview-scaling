@@ -1,0 +1,56 @@
+# 执行记录
+
+工作范围：<run-root>。
+未加载 skill，未读取 skill/、其他运行目录或原仓库评测文件。Playwright 仅使用指示的既有只读依赖。
+
+1. 读取任务并查看项目目录。
+
+```powershell
+Get-Content -LiteralPath '<run-root>/request.txt'
+Get-ChildItem -Force -LiteralPath '<run-root>/project'
+```
+
+结果：退出码 0；项目包含 page.html。
+
+2. 读取页面。
+
+```powershell
+Get-Content -LiteralPath '<run-root>/project/page.html'
+```
+
+结果：退出码 0；发现 h1 为 6vw，main 无最大宽度。
+
+3. 以 PowerShell 单引号 here-string 和 Set-Content -Encoding utf8 写入 verify.cjs（完整可执行代码见同名文件），随后执行基线采集。
+
+```powershell
+node '<run-root>/verify.cjs' before
+```
+
+结果：退出码 0。DOM 采集成功；基线桌面标题 86.4px、正文 1408px，移动端标题 23.4px，不满足设计要求。基线检查失败为已重现的页面问题，并非工具运行错误。
+
+4. 使用 apply_patch 修改 project/page.html 的两条 CSS 规则。
+
+```diff
+-  main { width: calc(100% - 32px); margin: 40px auto; }
+-  h1 { font-size: 6vw; line-height: 1.2; }
++  main { width: calc(100% - 32px); max-width: 1040px; margin: 40px auto; }
++  h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.2; }
+```
+
+结果：补丁成功。
+
+5. 执行修复后的验证。
+
+```powershell
+node '<run-root>/verify.cjs' after
+```
+
+结果：退出码 0。1440 × 900 与 390 × 844 下三类断言均通过。原始读数保存在 evidence.json。
+
+6. 使用 view_image 查看 after-1440.png 与 after-390.png。
+
+结果：均成功；正文与标题完整显示，目视未见截断或横向溢出。
+
+7. 使用 PowerShell 单引号 here-string 和 Set-Content -Encoding utf8 写入 report.md 与 trace.md。
+
+失败/重试：无工具或命令失败；无重试。

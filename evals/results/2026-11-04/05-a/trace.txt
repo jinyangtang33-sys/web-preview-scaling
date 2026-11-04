@@ -1,0 +1,26 @@
+本次操作范围：<run-root>。仅额外只读使用任务指定的 Playwright 依赖及已安装 Chrome。未读取其他执行目录或原仓库评测文件，未提交 Git。
+
+1. 读取请求与 skill（PowerShell；exit 0）：
+```
+Get-Content -LiteralPath '<run-root>/request.txt'
+Get-Content -LiteralPath '<run-root>/skill/SKILL.md'
+```
+2. 枚举本次项目、skill，并读取页面（PowerShell；exit 0）：
+```
+rg --files '<run-root>/project' '<run-root>/skill'
+Get-Content -LiteralPath '<run-root>/project/page.html'
+```
+3. 读取 skill 附带的测量脚本（PowerShell；exit 0）：
+```
+Get-Content -LiteralPath '<run-root>/skill/scripts/measure.cjs'
+```
+4. 用 PowerShell 单引号 here-string + Set-Content -Encoding utf8 写入 verify.cjs，其完整源码保存在本目录。脚本扩充了 skill 所需的 DOM 读数，记录根节点与容器的 clientWidth / scrollWidth / 边界及计算样式，并验证滚动末端与四列完整性。依赖通过绝对路径 require；没有安装依赖或启动服务。
+5. 执行（PowerShell；exit 0，首次成功）：
+```
+node '<run-root>/verify.cjs'
+```
+浏览器：Chrome 156.0.8078.80，headless。URL 由 pathToFileURL 指向本次 project/page.html。视口依次为 390×844、375×812、1440×900。等待 document.fonts.ready；每个视口记录滚动前后 DOM，保存两个截图。输出 pass: true，sourceUnchanged: true，各视口所有检查为 true。原始数据写入 evidence.json。没有执行失败或重试。
+6. 调用 view_image 查看 screenshot-390-start.png 与 screenshot-390-end.png（两次均成功），确认页面页边距、标题和最右列显示符合 DOM 结果。
+7. 用 PowerShell 单引号 here-string + Set-Content -Encoding utf8 写入 report.md 和 trace.md。没有改写 project/page.html。
+
+复查方式：执行步骤 5 的 node 命令，会重生成 evidence.json 及六张截图。beforeScroll / afterScroll 是滚动状态对照，不是修复前后对照。当前检查已通过，无需修改 CSS。

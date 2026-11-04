@@ -1,0 +1,29 @@
+检查结论：页面本身没有字号或布局偏差，无需修改 `project/page.html` 或 `project/host.html`。预览看起来小一半，由模拟宿主对 iframe 使用 `transform: scale(.5)` 引起。
+
+实际用 Chrome 无头浏览器打开本目录的 `project/host.html`，在承载 `page.html` 的 iframe 内采集 DOM；独立浏览器标签页直接打开同一份 `page.html`，视口设为用户指定的 1280 × 800 CSS 像素。两处均等到字体加载完成，保持同样内容和零滚动，deviceScaleFactor 为 1、visualViewport.scale 为 1。这里的预览来源是给定模拟宿主的实际 iframe，不是 Codex 产品侧栏，也不是窄视口模拟。
+
+| 同一指标 | 模拟宿主 iframe 内 | 独立浏览器 |
+| --- | --- | --- |
+| window.innerWidth × innerHeight | 1280 × 800 | 1280 × 800 |
+| 根节点 clientWidth / scrollWidth | 1280 / 1280 | 1280 / 1280 |
+| h1 计算字号 / 行高 | 48px / 57.6px | 48px / 57.6px |
+| h1 边界 x, y, width, height | 140, 40, 1000, 57.59375 | 140, 40, 1000, 57.59375 |
+| main 边界 x, y, width, height | 140, 40, 1000, 156.9375 | 140, 40, 1000, 156.9375 |
+| 标题文字范围 | 单行，336 × 64px | 单行，336 × 64px |
+| 正文字号 / 行高 | 16px / 25.6px | 16px / 25.6px |
+
+`host.html` 第 8 行定义 iframe 的布局尺寸为 `width:1280px; height:800px`，同时设定 `transform:scale(.5); transform-origin:top left`。DOM 实测其 clientWidth/clientHeight 是 1280 × 800，而宿主中的 getBoundingClientRect 是 640 × 400，transform 矩阵为 `matrix(0.5, 0, 0, 0.5, 0, 0)`。宿主 `.preview` 内容框也恰好为 640 × 400（边框外尺寸 642 × 402），所以这是整幅画面按一半展示。
+
+由这一缩放推导，标题在宿主中的显示尺寸相当于 24px，主容器显示宽度相当于 500px，但页面内部仍分别是 48px 和 1000px。`page.html` 第 9 行的 `main { width:calc(100% - 32px); max-width:1000px; margin:40px auto }` 和第 10 行的 `h1 { font-size:48px; line-height:1.2 }` 正常生效。两侧 main、h1、p、footer 的全部采集字段一致，无横向溢出；截图也确认字号、间距和换行只是整体同比例缩小。
+
+本次没有样式修改，因此不存在修复前后不同版本，以上数据即为最终保留版本的验收结果。未引入 zoom、页面 transform 或根节点 overflow 补偿。预览对应的真实 CSS 视口已等于交付视口，无需把外观上的 640 × 400 误当作页面窄视口测试。验收覆盖该静态页面在上述两个来源和当前内容状态下的表现。
+
+复查材料均在本次运行目录：
+
+- 原始 DOM 读数：[evidence.json](<run-root>/evidence.json)
+- 可重复执行的测量脚本：[measure.cjs](<run-root>/measure.cjs)
+- 执行记录：[trace.md](<run-root>/trace.md)
+- 模拟宿主截图：[host-preview.png](<run-root>/host-preview.png)
+- 独立浏览器截图：[standalone-1280x800.png](<run-root>/standalone-1280x800.png)
+
+未提交 Git，项目文件保持原样。

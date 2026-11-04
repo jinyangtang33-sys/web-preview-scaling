@@ -1,0 +1,22 @@
+页面的列数切换符合设计，属于预期响应式行为，无需修改 `project/page.html`。
+
+原有 CSS 在第 10 行设 `.places { grid-template-columns: 1fr; }`，第 12 行通过 `@media (min-width: 960px)` 切换为 `repeat(3, minmax(0, 1fr))`，因此 960px 本身已属于三列范围。
+
+独立 Chrome 156.0.8078.80（headless、干净会话、默认 100% 缩放、deviceScaleFactor=1）直接打开同一 `project/page.html`，等待页面和字体就绪后读取页面自身 DOM：
+
+| 实测 innerWidth × innerHeight（CSS px） | .places 宽度 | gridTemplateColumns | 列数 | 横向溢出 |
+| --- | ---: | --- | ---: | ---: |
+| 390 × 844 | 358 | 358px | 1 | 0 |
+| 800 × 900 | 768 | 768px | 1 | 0 |
+| 959 × 900 | 927 | 927px | 1 | 0 |
+| 960 × 900 | 928 | 296px 296px 296px | 3 | 0 |
+| 961 × 900 | 929 | 296.328px 296.328px 296.344px | 3 | 0 |
+| 1440 × 900 | 1408 | 456px 456px 456px | 3 | 0 |
+
+所有样本的根节点 clientWidth 与 innerWidth 相同；标题均为 32px，正文均为 16px。已查看 959px 和 960px 的原始截图，确认三张卡片分别纵向排列和横向三列，文字完整可见。
+
+本次没有提供实际右侧预览的可访问页面或 frame，因此窄视口均标记为“独立浏览器模拟”，800px 是测试选择，不是实测预览宽度。不能仅从面板外观推断实际预览的 CSS 视口。当预览页面自身视口小于 960px、独立浏览器视口至少为 960px 时，一列与三列的差异正是设计行为。若实际预览在至少 960px 时仍为一列，需在该预览 frame 内读取 innerWidth 和计算样式进一步核查；当前文件和已测尺寸未发现缺陷。
+
+未做样式修复，因此没有虚构修改前后对比；以上读数对应最终保留的原始页面。未提交 Git。
+
+交付文件：`evidence.json` 为原始 DOM 读数；`trace.md` 记录命令和执行结果；`screenshots/viewport-zz8PIf/` 保存六个尺寸的截图。仅新增上述证据和报告文件，`project/page.html`、skill 和依赖目录未修改。

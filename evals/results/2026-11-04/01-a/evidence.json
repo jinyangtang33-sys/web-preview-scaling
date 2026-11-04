@@ -1,0 +1,505 @@
+{
+  "measuredAt": "2026-11-04T05:43:28.197Z",
+  "browser": {
+    "version": "156.0.8078.80",
+    "channel": "chrome",
+    "headless": true,
+    "deviceScaleFactor": 1
+  },
+  "sources": {
+    "preview": "Actual iframe in supplied host.html, opened in headless Chrome",
+    "independent": "Supplied page.html opened directly in independent browser tab"
+  },
+  "host": {
+    "viewport": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "devicePixelRatio": 1
+    },
+    "elements": [
+      {
+        "selector": ".preview",
+        "rect": {
+          "x": 20,
+          "y": 84.875,
+          "width": 642,
+          "height": 402
+        },
+        "offsetWidth": 642,
+        "offsetHeight": 402,
+        "clientWidth": 640,
+        "clientHeight": 400,
+        "style": {
+          "width": "640px",
+          "height": "400px",
+          "transform": "none",
+          "transformOrigin": "321px 201px",
+          "overflow": "hidden",
+          "border": "1px solid rgb(187, 187, 187)"
+        }
+      },
+      {
+        "selector": "iframe",
+        "rect": {
+          "x": 21,
+          "y": 85.875,
+          "width": 640,
+          "height": 400
+        },
+        "offsetWidth": 1280,
+        "offsetHeight": 800,
+        "clientWidth": 1280,
+        "clientHeight": 800,
+        "style": {
+          "width": "1280px",
+          "height": "800px",
+          "transform": "matrix(0.5, 0, 0, 0.5, 0, 0)",
+          "transformOrigin": "0px 0px",
+          "overflow": "clip",
+          "border": "0px none rgb(0, 0, 0)"
+        }
+      }
+    ]
+  },
+  "preview": {
+    "url": "<run-root>/project/page.html",
+    "viewport": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "devicePixelRatio": 1,
+      "visualViewport": {
+        "width": 1280,
+        "height": 800,
+        "scale": 1
+      }
+    },
+    "root": {
+      "clientWidth": 1280,
+      "clientHeight": 800,
+      "scrollWidth": 1280,
+      "scrollHeight": 800
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "fontsStatus": "loaded",
+    "elements": [
+      {
+        "selector": "main",
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "fontSize": "16px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "400",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "1000px",
+        "margin": "40px 140px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 57.59375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 97.59375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 129.75,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 129.75,
+            "right": 1140,
+            "bottom": 155.34375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 171.34375,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 171.34375,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      {
+        "selector": "h1",
+        "text": "沿着街道看城市",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 57.59375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 97.59375,
+          "left": 140
+        },
+        "fontSize": "48px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "700",
+        "lineHeight": "57.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "margin": "32.16px 0px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          }
+        ]
+      },
+      {
+        "selector": "p",
+        "text": "记录建筑、树木与行人共同组成的街道。",
+        "rect": {
+          "x": 140,
+          "y": 129.75,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 129.75,
+          "right": 1140,
+          "bottom": 155.34375,
+          "left": 140
+        },
+        "fontSize": "16px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "400",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "margin": "16px 0px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          }
+        ]
+      },
+      {
+        "selector": "footer",
+        "text": "联系团队",
+        "rect": {
+          "x": 140,
+          "y": 171.34375,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 171.34375,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "fontSize": "16px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "400",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "margin": "0px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      }
+    ]
+  },
+  "independent": {
+    "url": "<run-root>/project/page.html",
+    "viewport": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "devicePixelRatio": 1,
+      "visualViewport": {
+        "width": 1280,
+        "height": 800,
+        "scale": 1
+      }
+    },
+    "root": {
+      "clientWidth": 1280,
+      "clientHeight": 800,
+      "scrollWidth": 1280,
+      "scrollHeight": 800
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "fontsStatus": "loaded",
+    "elements": [
+      {
+        "selector": "main",
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "fontSize": "16px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "400",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "1000px",
+        "margin": "40px 140px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 57.59375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 97.59375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 129.75,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 129.75,
+            "right": 1140,
+            "bottom": 155.34375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 171.34375,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 171.34375,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      {
+        "selector": "h1",
+        "text": "沿着街道看城市",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 57.59375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 97.59375,
+          "left": 140
+        },
+        "fontSize": "48px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "700",
+        "lineHeight": "57.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "margin": "32.16px 0px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          }
+        ]
+      },
+      {
+        "selector": "p",
+        "text": "记录建筑、树木与行人共同组成的街道。",
+        "rect": {
+          "x": 140,
+          "y": 129.75,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 129.75,
+          "right": 1140,
+          "bottom": 155.34375,
+          "left": 140
+        },
+        "fontSize": "16px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "400",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "margin": "16px 0px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          }
+        ]
+      },
+      {
+        "selector": "footer",
+        "text": "联系团队",
+        "rect": {
+          "x": 140,
+          "y": 171.34375,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 171.34375,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "fontSize": "16px",
+        "fontFamily": "sans-serif",
+        "fontWeight": "400",
+        "lineHeight": "25.6px",
+        "width": "1000px",
+        "maxWidth": "none",
+        "margin": "0px",
+        "transform": "none",
+        "zoom": "1",
+        "textRects": [
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "allMeasuredPageGeometryAndStylesEqual": true,
+    "iframeDisplayScale": 0.5,
+    "titleCssFontSize": "48px",
+    "titleEffectiveHostDisplaySizePx": 24,
+    "mainCssWidth": 1000,
+    "mainEffectiveHostDisplayWidthPx": 500
+  },
+  "pageChanges": []
+}

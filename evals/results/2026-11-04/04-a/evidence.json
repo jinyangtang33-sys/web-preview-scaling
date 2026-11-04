@@ -1,0 +1,412 @@
+{
+  "source": "independent-headless-chrome",
+  "preview": "Actual side preview unavailable; 390x844 is an independent browser simulation.",
+  "browser": "156.0.8078.80",
+  "zoom": "100%; deviceScaleFactor 1",
+  "measurements": {
+    "before": [
+      {
+        "url": "<run-root>/project/page.html",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "devicePixelRatio": 1,
+        "visualViewport": {
+          "width": 1280,
+          "height": 800,
+          "scale": 1
+        },
+        "document": {
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "clientHeight": 800,
+          "scrollHeight": 800
+        },
+        "image": {
+          "complete": true,
+          "currentSrc": "<run-root>/project/scene.svg",
+          "naturalWidth": 800,
+          "naturalHeight": 400,
+          "intrinsicRatio": 2,
+          "renderedRatio": 5.333333333333333
+        },
+        "elements": [
+          {
+            "selector": "main",
+            "rect": {
+              "x": 160,
+              "y": 24,
+              "width": 960,
+              "height": 252.625,
+              "top": 24,
+              "right": 1120,
+              "bottom": 276.625,
+              "left": 160
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "960px",
+              "height": "252.625px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "selector": "h1",
+            "rect": {
+              "x": 160,
+              "y": 24,
+              "width": 960,
+              "height": 51.1875,
+              "top": 24,
+              "right": 1120,
+              "bottom": 75.1875,
+              "left": 160
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "960px",
+              "height": "51.1875px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "32px"
+            }
+          },
+          {
+            "selector": "img",
+            "rect": {
+              "x": 160,
+              "y": 96.625,
+              "width": 960,
+              "height": 180,
+              "top": 96.625,
+              "right": 1120,
+              "bottom": 276.625,
+              "left": 160
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "960px",
+              "height": "180px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "clip",
+              "overflowY": "clip",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "screenshot": "before-1280x800.png",
+        "pageErrors": []
+      },
+      {
+        "url": "<run-root>/project/page.html",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "devicePixelRatio": 1,
+        "visualViewport": {
+          "width": 390,
+          "height": 844,
+          "scale": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "clientHeight": 844,
+          "scrollHeight": 844
+        },
+        "image": {
+          "complete": true,
+          "currentSrc": "<run-root>/project/scene.svg",
+          "naturalWidth": 800,
+          "naturalHeight": 400,
+          "intrinsicRatio": 2,
+          "renderedRatio": 1.988888888888889
+        },
+        "elements": [
+          {
+            "selector": "main",
+            "rect": {
+              "x": 16,
+              "y": 24,
+              "width": 358,
+              "height": 252.625,
+              "top": 24,
+              "right": 374,
+              "bottom": 276.625,
+              "left": 16
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "358px",
+              "height": "252.625px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "selector": "h1",
+            "rect": {
+              "x": 16,
+              "y": 24,
+              "width": 358,
+              "height": 51.1875,
+              "top": 24,
+              "right": 374,
+              "bottom": 75.1875,
+              "left": 16
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "358px",
+              "height": "51.1875px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "32px"
+            }
+          },
+          {
+            "selector": "img",
+            "rect": {
+              "x": 16,
+              "y": 96.625,
+              "width": 358,
+              "height": 180,
+              "top": 96.625,
+              "right": 374,
+              "bottom": 276.625,
+              "left": 16
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "358px",
+              "height": "180px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "clip",
+              "overflowY": "clip",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "screenshot": "before-390x844.png",
+        "pageErrors": []
+      }
+    ],
+    "after": [
+      {
+        "url": "<run-root>/project/page.html",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "devicePixelRatio": 1,
+        "visualViewport": {
+          "width": 1280,
+          "height": 800,
+          "scale": 1
+        },
+        "document": {
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "clientHeight": 800,
+          "scrollHeight": 800
+        },
+        "image": {
+          "complete": true,
+          "currentSrc": "<run-root>/project/scene.svg",
+          "naturalWidth": 800,
+          "naturalHeight": 400,
+          "intrinsicRatio": 2,
+          "renderedRatio": 2
+        },
+        "elements": [
+          {
+            "selector": "main",
+            "rect": {
+              "x": 160,
+              "y": 24,
+              "width": 960,
+              "height": 552.625,
+              "top": 24,
+              "right": 1120,
+              "bottom": 576.625,
+              "left": 160
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "960px",
+              "height": "552.625px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "selector": "h1",
+            "rect": {
+              "x": 160,
+              "y": 24,
+              "width": 960,
+              "height": 51.1875,
+              "top": 24,
+              "right": 1120,
+              "bottom": 75.1875,
+              "left": 160
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "960px",
+              "height": "51.1875px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "32px"
+            }
+          },
+          {
+            "selector": "img",
+            "rect": {
+              "x": 160,
+              "y": 96.625,
+              "width": 960,
+              "height": 480,
+              "top": 96.625,
+              "right": 1120,
+              "bottom": 576.625,
+              "left": 160
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "960px",
+              "height": "480px",
+              "objectFit": "contain",
+              "objectPosition": "50% 50%",
+              "overflowX": "clip",
+              "overflowY": "clip",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "screenshot": "after-1280x800.png",
+        "pageErrors": []
+      },
+      {
+        "url": "<run-root>/project/page.html",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "devicePixelRatio": 1,
+        "visualViewport": {
+          "width": 390,
+          "height": 844,
+          "scale": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "clientHeight": 844,
+          "scrollHeight": 844
+        },
+        "image": {
+          "complete": true,
+          "currentSrc": "<run-root>/project/scene.svg",
+          "naturalWidth": 800,
+          "naturalHeight": 400,
+          "intrinsicRatio": 2,
+          "renderedRatio": 2
+        },
+        "elements": [
+          {
+            "selector": "main",
+            "rect": {
+              "x": 16,
+              "y": 24,
+              "width": 358,
+              "height": 251.625,
+              "top": 24,
+              "right": 374,
+              "bottom": 275.625,
+              "left": 16
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "358px",
+              "height": "251.625px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "selector": "h1",
+            "rect": {
+              "x": 16,
+              "y": 24,
+              "width": 358,
+              "height": 51.1875,
+              "top": 24,
+              "right": 374,
+              "bottom": 75.1875,
+              "left": 16
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "358px",
+              "height": "51.1875px",
+              "objectFit": "fill",
+              "objectPosition": "50% 50%",
+              "overflowX": "visible",
+              "overflowY": "visible",
+              "fontSize": "32px"
+            }
+          },
+          {
+            "selector": "img",
+            "rect": {
+              "x": 16,
+              "y": 96.625,
+              "width": 358,
+              "height": 179,
+              "top": 96.625,
+              "right": 374,
+              "bottom": 275.625,
+              "left": 16
+            },
+            "computedStyle": {
+              "display": "block",
+              "width": "358px",
+              "height": "179px",
+              "objectFit": "contain",
+              "objectPosition": "50% 50%",
+              "overflowX": "clip",
+              "overflowY": "clip",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "screenshot": "after-390x844.png",
+        "pageErrors": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+# Commands and retries
+
+Working directory: `<run-root>`.
+
+1. Read `request.txt` and `skill/SKILL.md` with PowerShell `Get-Content -LiteralPath`.
+2. Listed this task's files only using `rg --files -g AGENTS.md -g page.html -g '*.css' -g '*.svg' -g '*.png' -g '*.jpg' -g '*.cjs' <task-directory>`. No AGENTS.md found in the task directory.
+3. Read `project/page.html`, `skill/scripts/measure.cjs`, and `project/scene.svg` with `Get-Content -LiteralPath`; listed the task directory with `Get-ChildItem -Force`.
+4. Created `audit.cjs` with `Set-Content` (script retained for reproduction). Uses the authorized, existing Playwright installation read-only; Chrome `channel: chrome`, headless, device scale 1, fresh contexts. Opens the same local `project/page.html`, waits for fonts and image decode, reads actual CSS viewport and geometry, and captures full-page PNGs.
+
+No actual Codex preview surface was supplied; the mobile view is independent-browser simulation. No browser zoom override, page zoom, transform, or hidden root overflow is used.
+
+## Browser measurement: before
+
+Command: `node "<run-root>\audit.cjs" before`
+
+Result: passed; measured CSS viewports 1280 x 800 and 390 x 844; screenshots and raw DOM readings saved.
+
+## CSS repair
+
+Command: PowerShell `[System.IO.File]::ReadAllText($taskPage)`, literal `.Replace('height: 180px; object-fit: fill;', 'height: auto; object-fit: contain;')`, then `[System.IO.File]::WriteAllText` (UTF-8 without BOM).
+
+Only `project/page.html` is modified. The image retains its 100% container width, derives height from intrinsic 800:400 dimensions, and uses `contain` for full-image fitting. The source SVG remains unchanged.
+
+## Browser measurement: after
+
+Command: `node "<run-root>\audit.cjs" after`
+
+Result: passed; measured CSS viewports 1280 x 800 and 390 x 844; screenshots and raw DOM readings saved.
+
+## Screenshot inspection and retries
+
+First `view_image` call failed because its path was mistyped as `web-preview-eval-4f248dfa9dab456f818622205ea5a5` (missing `05`), reporting file not found. No page or browser test failed. Retried with the correct task directory `web-preview-eval-4f248dfa9dab456f81862220505ea5a5` and successfully inspected `before-1280x800.png`, `after-1280x800.png`, and `after-390x844.png`. The original desktop screenshot shows flattened circles; corrected desktop and mobile screenshots show round circles and the entire scene.
+
+Created `report.md` using PowerShell `Set-Content`, and appended these records with `Add-Content`. Final `Get-Content project/page.html` confirms the CSS rule; `Get-ChildItem -File` inventories the delivered report, evidence, script, and PNGs. Browser runs both exited 0. No Git commands or commits were performed.
