@@ -4,7 +4,7 @@
 
 [![Base checks](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**Experimental.** Seven synthetic task scenarios and two no-skill controls have been evaluated; real-project acceptance is still pending. CI covers the measurement script, example layout and output checker. [Test scope and release criteria (Chinese)](evals/README.md) · [Evaluation record (Chinese)](evals/results/2026-11-04/README.md)
+**Experimental.** Seven synthetic scenarios passed. A comparison on an existing project's frontend showed more complete measurements but missed a visibility issue; an improvement in task outcomes has not been demonstrated. CI covers the measurement script, example layout and output checker. [Test scope and release criteria (Chinese)](evals/README.md) · [Real-project comparison (Chinese)](evals/results/2026-11-04-real-project/README.md)
 
 Does your page look right in Codex's side preview, but feel oversized or too wide in a standalone browser? This skill guides Codex to measure the same elements at matching CSS viewport sizes, then widen the viewport to identify differences caused by scrollbars, font-size rules, or responsive breakpoints.
 

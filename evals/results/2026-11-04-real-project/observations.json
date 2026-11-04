@@ -1,0 +1,296 @@
+{
+  "date": "2026-11-04",
+  "skill_candidate_commit": "15b07a5678be3e68b6655d310c3dc1a9fed7ec1c",
+  "project": "Existing internal asset-management frontend prototype; local working snapshot, not production",
+  "snapshot_file_count": 40,
+  "snapshot_manifest_sha256": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+  "fault_injection": false,
+  "protocol_prepared_before_runs": true,
+  "request": "这是正在开发的公司素材库前端。请验收它在 Codex 实际预览和独立浏览器中的布局表现，重点检查首页、搜索结果、照片详情与放大预览。桌面交付尺寸为 1440×900，手机为 390×844。发现确实影响使用的字号、布局、裁切或图片比例问题时，请在当前副本中修复并验证；没有问题就保留现有设计。搜索、筛选、打开详情、收藏和关闭放大预览应继续可用。请交付发现的问题、实际改动、验证证据和未验证的范围。",
+  "method": {
+    "sessions": 4,
+    "per_condition": 2,
+    "model": "Same inherited host configuration; exact model/sampling parameters not provided",
+    "history": "fork_turns=none",
+    "tools": "Same CUA IAB, Playwright and Chrome; only treatment receives skill instructions and bundled script",
+    "order": [
+      "run-a",
+      "run-b",
+      "run-c",
+      "run-d"
+    ],
+    "schedule": "First three concurrent, fourth after run-a; elapsed time is not an efficiency measure",
+    "judge": "Development agent reviewed artifacts; not external or blinded; private source is not an independently reproducible public benchmark"
+  },
+  "baseline": {
+    "touch_asset_names_visible": 0,
+    "touch_asset_names_total": 10,
+    "core_flows": "pass before any changes",
+    "portrait_painted_size": [
+      111.87152777777777,
+      199.375
+    ]
+  },
+  "runs": [
+    {
+      "run": "run-a",
+      "condition": "without-skill",
+      "fresh_session": true,
+      "changed_css_file_count": 2,
+      "same_viewport_and_scrollbar_comparison": false,
+      "touch_asset_names": {
+        "width": 390,
+        "height": 844,
+        "hover_none": true,
+        "visible": 10,
+        "total": 10,
+        "resolved": true
+      },
+      "portrait_design_choice": {
+        "painted_width": 260.4607638888889,
+        "painted_height": 464.1875,
+        "download_top": 750.53125,
+        "download_bottom": 794.53125,
+        "scored_as_defect_fix": false
+      },
+      "independent_functional_recheck": {
+        "completed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "flows": [
+          "search",
+          "type_filter",
+          "open_photo",
+          "favorite_toggle_and_list",
+          "lightbox_open_and_close"
+        ],
+        "samples_without_root_overflow": 12,
+        "page_errors": 0
+      },
+      "breakpoint_recheck": {
+        "widths": [
+          390,
+          739,
+          740,
+          741,
+          1440
+        ],
+        "root_overflow": 0
+      }
+    },
+    {
+      "run": "run-b",
+      "condition": "with-skill",
+      "fresh_session": true,
+      "changed_css_file_count": 1,
+      "same_viewport_and_scrollbar_comparison": true,
+      "touch_asset_names": {
+        "width": 390,
+        "height": 844,
+        "hover_none": true,
+        "visible": 0,
+        "total": 10,
+        "resolved": false
+      },
+      "portrait_design_choice": {
+        "painted_width": 307.8220486111111,
+        "painted_height": 548.59375,
+        "download_top": 834.9375,
+        "download_bottom": 878.9375,
+        "scored_as_defect_fix": false
+      },
+      "independent_functional_recheck": {
+        "completed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "flows": [
+          "search",
+          "type_filter",
+          "open_photo",
+          "favorite_toggle_and_list",
+          "lightbox_open_and_close"
+        ],
+        "samples_without_root_overflow": 12,
+        "page_errors": 0
+      },
+      "breakpoint_recheck": {
+        "widths": [
+          390,
+          739,
+          740,
+          741,
+          1440
+        ],
+        "root_overflow": 0
+      }
+    },
+    {
+      "run": "run-c",
+      "condition": "with-skill",
+      "fresh_session": true,
+      "changed_css_file_count": 0,
+      "same_viewport_and_scrollbar_comparison": true,
+      "touch_asset_names": {
+        "width": 390,
+        "height": 844,
+        "hover_none": true,
+        "visible": 0,
+        "total": 10,
+        "resolved": false
+      },
+      "portrait_design_choice": {
+        "painted_width": 111.87152777777777,
+        "painted_height": 199.375,
+        "download_top": 485.71875,
+        "download_bottom": 529.71875,
+        "scored_as_defect_fix": false
+      },
+      "independent_functional_recheck": {
+        "completed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "flows": [
+          "search",
+          "type_filter",
+          "open_photo",
+          "favorite_toggle_and_list",
+          "lightbox_open_and_close"
+        ],
+        "samples_without_root_overflow": 12,
+        "page_errors": 0
+      },
+      "breakpoint_recheck": {
+        "widths": [
+          390,
+          739,
+          740,
+          741,
+          1440
+        ],
+        "root_overflow": 0
+      }
+    },
+    {
+      "run": "run-d",
+      "condition": "without-skill",
+      "fresh_session": true,
+      "changed_css_file_count": 2,
+      "same_viewport_and_scrollbar_comparison": false,
+      "touch_asset_names": {
+        "width": 390,
+        "height": 844,
+        "hover_none": true,
+        "visible": 10,
+        "total": 10,
+        "resolved": true
+      },
+      "portrait_design_choice": {
+        "painted_width": 307.8220486111111,
+        "painted_height": 548.59375,
+        "download_top": 834.9375,
+        "download_bottom": 878.9375,
+        "scored_as_defect_fix": false
+      },
+      "independent_functional_recheck": {
+        "completed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "flows": [
+          "search",
+          "type_filter",
+          "open_photo",
+          "favorite_toggle_and_list",
+          "lightbox_open_and_close"
+        ],
+        "samples_without_root_overflow": 12,
+        "page_errors": 0
+      },
+      "breakpoint_recheck": {
+        "widths": [
+          390,
+          739,
+          740,
+          741,
+          1440
+        ],
+        "root_overflow": 0
+      }
+    }
+  ],
+  "summary": {
+    "with_skill": {
+      "runs": 2,
+      "complete_host_comparisons": 2,
+      "touch_name_issue_resolved": 0,
+      "functional_rechecks_passed": 2
+    },
+    "without_skill": {
+      "runs": 2,
+      "complete_host_comparisons": 0,
+      "touch_name_issue_resolved": 2,
+      "functional_rechecks_passed": 2
+    },
+    "extra_defect_detection_benefit_demonstrated": false,
+    "observed_process_benefit": "More complete viewport and scrollbar comparisons",
+    "stable_release_ready": false,
+    "original_project_changed": false
+  },
+  "limits": [
+    "One existing development frontend and two runs per condition; no statistical or causal generalization",
+    "Phone testing is Chrome touch emulation, not physical hardware",
+    "Execution agents used file URLs after HTTP sandbox failures; all disclosed file-vs-HTTP differences",
+    "Parent evaluator separately ran HTTP-based rechecks against all four final copies",
+    "Portrait enlargement changes information priority and scroll distance; excluded from objective defect-fix score",
+    "Tokens and costs unavailable; concurrent machine use prevents reliable wall-time efficiency comparison",
+    "No production/backend/video/upload/download acceptance"
+  ],
+  "evidence": "Full snapshot, reports, source diffs, JSON, scripts and screenshots retained only in ignored .local-evals/2026-11-04-real-project. Public record contains deidentified observations."
+}
