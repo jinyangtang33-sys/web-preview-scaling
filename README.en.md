@@ -6,9 +6,16 @@
 
 Does your page look right in Codex's side preview, but feel oversized or too wide in a standalone browser? This skill guides Codex to measure the same elements at matching CSS viewport sizes, then widen the viewport to identify differences caused by scrollbars, font-size rules, or responsive breakpoints.
 
-![Measured comparison. At 1280 × 720 CSS px, the side preview has a 15 px scrollbar and a 1225 px content area. Standalone headless Chrome has no scrollbar width and a 1240 px content area. Both titles are 89.6 px.](docs/viewport-comparison.svg)
+![Before and after screenshots at 1440 × 900 CSS px. Before the fix, the title is 100.8 px and the content is 1400 px wide. After the fix, the title is 52 px and the content is 960 px wide.](docs/example-before-after.en.png)
 
-The diagram shows one measurement of the example page before the fix, at **1280 × 720 CSS px**. The top bar is Codex's side preview, with a **1225 px** content area and a **15 px** scrollbar. The bottom bar is standalone headless Chrome, with a **1240 px** content area and no width reserved for a scrollbar. Both leave 20 px on each side of the content. Both titles use `7vw`, which resolves to **89.6 px** at this viewport size. **This width difference alone calls for no font-size change.** Compare `window.innerWidth` with `document.documentElement.clientWidth` to measure the scrollbar space in your own environment.
+Both panels are actual first-viewport captures of the example in standalone headless Chrome, at **1440 × 900 CSS px**, displayed at the same scale. On the left, the `7vw` title grows to **100.8 px** and the content spans **1400 px**. On the right, upper limits bring the title to **52 px** and the content width to **960 px**. These limits are the example's design targets. Use your project's own design specifications when applying the skill.
+
+The fix consists of two CSS rules. Switch between **修复前 (Before)** and **修复后 (After)** at the top of the example to reproduce it.
+
+```css
+main { max-width: 960px; }
+h1 { font-size: clamp(30px, 7vw, 52px); }
+```
 
 ## Get started in Codex
 
@@ -35,3 +42,12 @@ The example is a riverside walking-route page. Download and extract the reposito
 2. Change the viewport width from **759 px** to **760 px**. The section labeled **沿途停留 (Stops along the way)** changes from one column to three. Both the Before and After versions should switch at the same width.
 
 On pushes to `main` and pull requests targeting `main`, GitHub Actions uses Chrome to check the title font sizes and column counts around the breakpoint in both versions. [Example source](example/index.html) · [Regression tests](tests/layout.test.cjs) · [CI runs](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
+
+<details>
+<summary>Another case · How can a scrollbar change content width at the same viewport size?</summary>
+
+![At 1280 × 720 CSS px, the side preview reserves 15 px for a scrollbar and has a 1225 px content area. Standalone headless Chrome has a 1240 px content area. Both titles are 89.6 px.](docs/viewport-comparison.svg)
+
+This is another measurement of the example before the fix. The top bar is Codex's side preview, with a **1225 px** content area and a **15 px** scrollbar. The bottom bar is standalone headless Chrome, with a **1240 px** content area and no width reserved for a scrollbar. Both leave 20 px on each side of the content. Both titles use `7vw`, which resolves to **89.6 px** at this viewport size. This width difference alone calls for no font-size change. Compare `window.innerWidth` with `document.documentElement.clientWidth` to measure the scrollbar space in your own environment.
+
+</details>

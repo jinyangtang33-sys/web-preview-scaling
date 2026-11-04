@@ -6,9 +6,16 @@
 
 网页在 Codex 侧边预览里看着刚好，换到浏览器却觉得标题太大、正文太宽？这个 skill 让 Codex 在相同的 CSS 视口下测量同一个元素，再拉宽窗口，找出差异来自滚动条、字号规则还是响应式断点。
 
-![示例实测示意。视口同为 1280 × 720，侧边预览的滚动条占 15 px，正文宽 1225 px。独立无头 Chrome 的滚动条不占宽，正文宽 1240 px。两边标题都是 89.6 px。](docs/viewport-comparison.svg)
+![同一页面在 1440 × 900 CSS 像素下的修复前后截图。左侧标题为 100.8 px、正文宽 1400 px，右侧标题为 52 px、正文宽 960 px。](docs/example-before-after.png)
 
-图中是示例页「修复前」的一次实测。正文两侧各留 20 px，预览滚动条又占了 15 px，因此正文恰好窄了 15 px。标题在两处都是 `7vw`，同一视口下算出来都是 89.6 px。**仅凭这次宽度差，无需调整字号。** 你可以在自己的环境里比较 `window.innerWidth` 和 `document.documentElement.clientWidth`，查看滚动条实际占了多少空间。
+两张图都来自示例页在独立无头 Chrome 中的真实首屏截图，CSS 视口均为 **1440 × 900**，按相同比例展示。左侧的 `7vw` 标题长到 **100.8 px**，正文铺到 **1400 px**；右侧为标题和正文加上上限，分别收至 **52 px** 和 **960 px**。这两个上限是示例的设计目标，实际项目应沿用自己的设计规范。
+
+对应的修复只有两条 CSS 规则，可以在示例顶部切换「修复前 / 修复后」复现。
+
+```css
+main { max-width: 960px; }
+h1 { font-size: clamp(30px, 7vw, 52px); }
+```
 
 ## 在 Codex 里开始用
 
@@ -35,3 +42,12 @@ Codex 可以用已有浏览器工具读取页面。若要批量采样或保存�
 2. 将视口宽度从 **759 px** 调到 **760 px**。「沿途停留」会从一列变为三列。切换修复前后，两种样式都应在同一个宽度换列。
 
 推送到 `main` 或向 `main` 提交 PR 时，GitHub Actions 会用 Chrome 核对两个版本的标题字号和断点列数。[示例源码](example/index.html) · [回归测试](tests/layout.test.cjs) · [CI 运行记录](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
+
+<details>
+<summary>补充案例 · 同一视口下，滚动条为什么会影响正文宽度？</summary>
+
+![视口同为 1280 × 720，侧边预览的滚动条占 15 px，正文宽 1225 px。独立无头 Chrome 的正文宽 1240 px。两边标题都是 89.6 px。](docs/viewport-comparison.svg)
+
+这是示例页「修复前」的另一次实测。正文两侧各留 20 px，预览滚动条又占了 15 px，因此正文恰好窄了 15 px。标题在两处都是 `7vw`，同一视口下算出来都是 89.6 px。仅凭这次宽度差，无需调整字号。比较 `window.innerWidth` 和 `document.documentElement.clientWidth`，可以查看自己环境中的滚动条占宽。
+
+</details>
