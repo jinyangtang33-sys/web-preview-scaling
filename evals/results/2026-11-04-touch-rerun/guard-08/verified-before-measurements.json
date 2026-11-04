@@ -1,0 +1,5119 @@
+{
+  "stage": "before",
+  "source": "independent Chrome via Playwright, file URL, not Codex preview, not a physical phone",
+  "browserVersion": "156.0.8078.80",
+  "cases": [
+    {
+      "spec": {
+        "name": "desktop-1440",
+        "width": 1440,
+        "height": 900,
+        "touch": false
+      },
+      "initial": {
+        "url": "file:///<eval-root>/guard-08/page.before.html",
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "devicePixelRatio": 1,
+        "rootClientWidth": 1440,
+        "rootScrollWidth": 1440,
+        "scrollX": 0,
+        "scrollY": 0,
+        "media": {
+          "hoverNone": false,
+          "hoverHover": true,
+          "pointerCoarse": false,
+          "pointerFine": true,
+          "maxTouchPoints": 10
+        },
+        "fontsStatus": "loaded",
+        "main": {
+          "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": 72,
+            "width": 1000,
+            "height": 983.625
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "title": {
+          "text": "发现下一门课程",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "30px",
+          "box": {
+            "x": 220,
+            "y": 72,
+            "width": 1000,
+            "height": 45
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "coursesGrid": "490px 490px",
+        "metadata": [
+          {
+            "text": "认识自然光入门 · 30分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 237,
+              "y": 357.28125,
+              "width": 966,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础入门 · 45分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 237,
+              "y": 721.65625,
+              "width": 456,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习进阶 · 60分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 747,
+              "y": 721.65625,
+              "width": 456,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "courseTitles": [
+          {
+            "text": "认识自然光",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 237,
+              "y": 357.28125,
+              "width": 966,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 237,
+              "y": 721.65625,
+              "width": 456,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 747,
+              "y": 721.65625,
+              "width": 456,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "desktopNav": {
+          "text": "课程目录按主题浏览",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": 24,
+            "width": 1000,
+            "height": 24
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "compactMenu": {
+          "text": "导航菜单课程目录 · 按主题浏览",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "futureNote": {
+          "text": "未开放课程的内部草稿",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "rail": {
+          "text": "构图色彩光线",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": 912.4375,
+            "width": 1000,
+            "height": 56
+          },
+          "color": "rgb(32, 55, 48)",
+          "scrollWidth": 1000,
+          "clientWidth": 1000,
+          "scrollLeft": 0
+        }
+      },
+      "screenshots": [
+        "verified-before-desktop-1440-initial.png",
+        "verified-before-desktop-1440-catalog-unhovered.png",
+        "verified-before-desktop-1440-catalog-hovered.png",
+        "verified-before-desktop-1440-lesson.png"
+      ],
+      "screenshotStates": [
+        {
+          "file": "verified-before-desktop-1440-initial.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 0,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 72,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": 72,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 357.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 357.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 24,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 912.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 0,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 72,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": 72,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 357.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 357.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 721.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 24,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 912.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          }
+        },
+        {
+          "file": "verified-before-desktop-1440-catalog-unhovered.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 180,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -156,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 732.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 180,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -156,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 732.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          }
+        },
+        {
+          "file": "verified-before-desktop-1440-catalog-hovered.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 180,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -156,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 732.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 180,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -156,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 732.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          }
+        },
+        {
+          "file": "verified-before-desktop-1440-lesson.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html#lesson",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 180,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -156,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 732.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html#lesson",
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 1440,
+            "rootScrollWidth": 1440,
+            "scrollX": 0,
+            "scrollY": 180,
+            "media": {
+              "hoverNone": false,
+              "hoverHover": true,
+              "pointerCoarse": false,
+              "pointerFine": true,
+              "maxTouchPoints": 10
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 983.625
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 220,
+                "y": -108,
+                "width": 1000,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "490px 490px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 177.28125,
+                  "width": 966,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 237,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 747,
+                  "y": 541.65625,
+                  "width": 456,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": -156,
+                "width": 1000,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 220,
+                "y": 732.4375,
+                "width": 1000,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 1000,
+              "clientWidth": 1000,
+              "scrollLeft": 0
+            }
+          }
+        }
+      ],
+      "interactions": {
+        "desktopTopics": {
+          "hash": "#topics",
+          "targetVisible": true
+        },
+        "courseEntry": {
+          "hash": "#lesson",
+          "lessonText": "课程说明\n\n从目录选择课程。完整内容在下一阶段开放。"
+        },
+        "featuredEntry": {
+          "hash": "#catalog"
+        }
+      },
+      "errors": [],
+      "catalogUnhovered": {
+        "url": "file:///<eval-root>/guard-08/page.before.html",
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "devicePixelRatio": 1,
+        "rootClientWidth": 1440,
+        "rootScrollWidth": 1440,
+        "scrollX": 0,
+        "scrollY": 180,
+        "media": {
+          "hoverNone": false,
+          "hoverHover": true,
+          "pointerCoarse": false,
+          "pointerFine": true,
+          "maxTouchPoints": 10
+        },
+        "fontsStatus": "loaded",
+        "main": {
+          "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": -108,
+            "width": 1000,
+            "height": 983.625
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "title": {
+          "text": "发现下一门课程",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "30px",
+          "box": {
+            "x": 220,
+            "y": -108,
+            "width": 1000,
+            "height": 45
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "coursesGrid": "490px 490px",
+        "metadata": [
+          {
+            "text": "认识自然光入门 · 30分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 237,
+              "y": 177.28125,
+              "width": 966,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础入门 · 45分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 237,
+              "y": 541.65625,
+              "width": 456,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习进阶 · 60分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 747,
+              "y": 541.65625,
+              "width": 456,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "courseTitles": [
+          {
+            "text": "认识自然光",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 237,
+              "y": 177.28125,
+              "width": 966,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 237,
+              "y": 541.65625,
+              "width": 456,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 747,
+              "y": 541.65625,
+              "width": 456,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "desktopNav": {
+          "text": "课程目录按主题浏览",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": -156,
+            "width": 1000,
+            "height": 24
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "compactMenu": {
+          "text": "导航菜单课程目录 · 按主题浏览",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "futureNote": {
+          "text": "未开放课程的内部草稿",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "rail": {
+          "text": "构图色彩光线",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": 732.4375,
+            "width": 1000,
+            "height": 56
+          },
+          "color": "rgb(32, 55, 48)",
+          "scrollWidth": 1000,
+          "clientWidth": 1000,
+          "scrollLeft": 0
+        }
+      },
+      "catalogHovered": {
+        "url": "file:///<eval-root>/guard-08/page.before.html",
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "devicePixelRatio": 1,
+        "rootClientWidth": 1440,
+        "rootScrollWidth": 1440,
+        "scrollX": 0,
+        "scrollY": 180,
+        "media": {
+          "hoverNone": false,
+          "hoverHover": true,
+          "pointerCoarse": false,
+          "pointerFine": true,
+          "maxTouchPoints": 10
+        },
+        "fontsStatus": "loaded",
+        "main": {
+          "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": -108,
+            "width": 1000,
+            "height": 983.625
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "title": {
+          "text": "发现下一门课程",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "30px",
+          "box": {
+            "x": 220,
+            "y": -108,
+            "width": 1000,
+            "height": 45
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "coursesGrid": "490px 490px",
+        "metadata": [
+          {
+            "text": "认识自然光入门 · 30分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 237,
+              "y": 177.28125,
+              "width": 966,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础入门 · 45分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 1,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 237,
+              "y": 541.65625,
+              "width": 456,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习进阶 · 60分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 747,
+              "y": 541.65625,
+              "width": 456,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "courseTitles": [
+          {
+            "text": "认识自然光",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 237,
+              "y": 177.28125,
+              "width": 966,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 1,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 237,
+              "y": 541.65625,
+              "width": 456,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 747,
+              "y": 541.65625,
+              "width": 456,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "desktopNav": {
+          "text": "课程目录按主题浏览",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": -156,
+            "width": 1000,
+            "height": 24
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "compactMenu": {
+          "text": "导航菜单课程目录 · 按主题浏览",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "futureNote": {
+          "text": "未开放课程的内部草稿",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "rail": {
+          "text": "构图色彩光线",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 220,
+            "y": 732.4375,
+            "width": 1000,
+            "height": 56
+          },
+          "color": "rgb(32, 55, 48)",
+          "scrollWidth": 1000,
+          "clientWidth": 1000,
+          "scrollLeft": 0
+        }
+      }
+    },
+    {
+      "spec": {
+        "name": "mobile-390",
+        "width": 390,
+        "height": 844,
+        "touch": true
+      },
+      "initial": {
+        "url": "file:///<eval-root>/guard-08/page.before.html",
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "devicePixelRatio": 1,
+        "rootClientWidth": 390,
+        "rootScrollWidth": 390,
+        "scrollX": 0,
+        "scrollY": 0,
+        "media": {
+          "hoverNone": true,
+          "hoverHover": false,
+          "pointerCoarse": true,
+          "pointerFine": false,
+          "maxTouchPoints": 1
+        },
+        "fontsStatus": "loaded",
+        "main": {
+          "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 16,
+            "y": 72,
+            "width": 358,
+            "height": 1304.8125
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "title": {
+          "text": "发现下一门课程",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "30px",
+          "box": {
+            "x": 16,
+            "y": 72,
+            "width": 358,
+            "height": 45
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "coursesGrid": "358px",
+        "metadata": [
+          {
+            "text": "认识自然光入门 · 30分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 1,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 33,
+              "y": 357.28125,
+              "width": 324,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础入门 · 45分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 33,
+              "y": 721.65625,
+              "width": 324,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习进阶 · 60分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 33,
+              "y": 1042.84375,
+              "width": 324,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "courseTitles": [
+          {
+            "text": "认识自然光",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 1,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 33,
+              "y": 357.28125,
+              "width": 324,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 33,
+              "y": 721.65625,
+              "width": 324,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 33,
+              "y": 1042.84375,
+              "width": 324,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "desktopNav": {
+          "text": "课程目录按主题浏览",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "compactMenu": {
+          "text": "导航菜单课程目录 · 按主题浏览",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 16,
+            "y": 24,
+            "width": 358,
+            "height": 24
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "futureNote": {
+          "text": "未开放课程的内部草稿",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "rail": {
+          "text": "构图色彩光线",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 16,
+            "y": 1233.625,
+            "width": 358,
+            "height": 56
+          },
+          "color": "rgb(32, 55, 48)",
+          "scrollWidth": 744,
+          "clientWidth": 358,
+          "scrollLeft": 0
+        }
+      },
+      "screenshots": [
+        "verified-before-mobile-390-initial.png",
+        "verified-before-mobile-390-catalog-unhovered.png",
+        "verified-before-mobile-390-menu-open.png",
+        "verified-before-mobile-390-topics-scrolled.png",
+        "verified-before-mobile-390-lesson.png"
+      ],
+      "screenshotStates": [
+        {
+          "file": "verified-before-mobile-390-initial.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 0,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 72,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": 72,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 357.28125,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 721.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 1042.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 357.28125,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 721.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 1042.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 24,
+                "width": 358,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 1233.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 0,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 72,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": 72,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 357.28125,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 721.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 1042.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 357.28125,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 721.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 1042.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 24,
+                "width": 358,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 1233.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          }
+        },
+        {
+          "file": "verified-before-mobile-390-catalog-unhovered.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 485,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -413,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": -413,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": -127.71875,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 236.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 557.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": -127.71875,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 236.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 557.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -461,
+                "width": 358,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 748.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 485,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -413,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": -413,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": -127.71875,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 236.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 557.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": -127.71875,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 236.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 557.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -461,
+                "width": 358,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 748.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          }
+        },
+        {
+          "file": "verified-before-mobile-390-menu-open.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 0,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 96,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": 96,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 381.28125,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 745.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 1066.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 381.28125,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 745.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 1066.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 24,
+                "width": 358,
+                "height": 48
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 1257.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 0,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 96,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": 96,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 381.28125,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 745.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 1066.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 381.28125,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 745.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 1066.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 24,
+                "width": 358,
+                "height": 48
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 1257.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          }
+        },
+        {
+          "file": "verified-before-mobile-390-topics-scrolled.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html#topics",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 581,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -557,
+                "width": 358,
+                "height": 48
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 676.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 386
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html#topics",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 581,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -557,
+                "width": 358,
+                "height": 48
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 676.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 386
+            }
+          }
+        },
+        {
+          "file": "verified-before-mobile-390-lesson.png",
+          "before": {
+            "url": "file:///<eval-root>/guard-08/page.before.html#lesson",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 557,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -533,
+                "width": 358,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 676.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          },
+          "after": {
+            "url": "file:///<eval-root>/guard-08/page.before.html#lesson",
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "devicePixelRatio": 1,
+            "rootClientWidth": 390,
+            "rootScrollWidth": 390,
+            "scrollX": 0,
+            "scrollY": 557,
+            "media": {
+              "hoverNone": true,
+              "hoverHover": false,
+              "pointerCoarse": true,
+              "pointerFine": false,
+              "maxTouchPoints": 1
+            },
+            "fontsStatus": "loaded",
+            "main": {
+              "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 1304.8125
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "title": {
+              "text": "发现下一门课程",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "30px",
+              "box": {
+                "x": 16,
+                "y": -485,
+                "width": 358,
+                "height": 45
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "coursesGrid": "358px",
+            "metadata": [
+              {
+                "text": "认识自然光入门 · 30分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础入门 · 45分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习进阶 · 60分钟",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "0",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "16px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 70.59375
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "courseTitles": [
+              {
+                "text": "认识自然光",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": -199.71875,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "构图基础",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 1,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 164.65625,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              },
+              {
+                "text": "色彩练习",
+                "display": "block",
+                "visibility": "visible",
+                "opacity": "1",
+                "effectiveOpacity": 0,
+                "hiddenAncestor": false,
+                "fontSize": "20px",
+                "box": {
+                  "x": 33,
+                  "y": 485.84375,
+                  "width": 324,
+                  "height": 30
+                },
+                "color": "rgb(32, 55, 48)"
+              }
+            ],
+            "desktopNav": {
+              "text": "课程目录按主题浏览",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "compactMenu": {
+              "text": "导航菜单课程目录 · 按主题浏览",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": -533,
+                "width": 358,
+                "height": 24
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "futureNote": {
+              "text": "未开放课程的内部草稿",
+              "display": "none",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": true,
+              "fontSize": "16px",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "color": "rgb(32, 55, 48)"
+            },
+            "rail": {
+              "text": "构图色彩光线",
+              "display": "flex",
+              "visibility": "visible",
+              "opacity": "1",
+              "effectiveOpacity": 1,
+              "hiddenAncestor": false,
+              "fontSize": "16px",
+              "box": {
+                "x": 16,
+                "y": 676.625,
+                "width": 358,
+                "height": 56
+              },
+              "color": "rgb(32, 55, 48)",
+              "scrollWidth": 744,
+              "clientWidth": 358,
+              "scrollLeft": 0
+            }
+          }
+        }
+      ],
+      "interactions": {
+        "menuInitiallyOpen": false,
+        "menuAfterTap": true,
+        "mobileTopics": {
+          "hash": "#topics",
+          "targetVisible": true
+        },
+        "railAtEnd": {
+          "scrollLeft": 386,
+          "scrollWidth": 744,
+          "clientWidth": 358
+        },
+        "lastTopic": {
+          "hash": "#catalog"
+        },
+        "courseEntry": {
+          "hash": "#lesson",
+          "lessonText": "课程说明\n\n从目录选择课程。完整内容在下一阶段开放。"
+        },
+        "featuredEntry": {
+          "hash": "#catalog"
+        }
+      },
+      "errors": [],
+      "catalogUnhovered": {
+        "url": "file:///<eval-root>/guard-08/page.before.html",
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "devicePixelRatio": 1,
+        "rootClientWidth": 390,
+        "rootScrollWidth": 390,
+        "scrollX": 0,
+        "scrollY": 485,
+        "media": {
+          "hoverNone": true,
+          "hoverHover": false,
+          "pointerCoarse": true,
+          "pointerFine": false,
+          "maxTouchPoints": 1
+        },
+        "fontsStatus": "loaded",
+        "main": {
+          "text": "发现下一门课程\n  本周推荐☀认识自然光入门 · 30分钟查看全部课程\n  课程目录\n    ◯构图基础入门 · 45分钟查看课程\n    △色彩练习进阶 · 60分钟查看课程\n  \n  按主题浏览构图色彩光线\n  课程说明从目录选择课程。完整内容在下一阶段开放。未开放课程的内部草稿",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 16,
+            "y": -413,
+            "width": 358,
+            "height": 1304.8125
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "title": {
+          "text": "发现下一门课程",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "30px",
+          "box": {
+            "x": 16,
+            "y": -413,
+            "width": 358,
+            "height": 45
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "coursesGrid": "358px",
+        "metadata": [
+          {
+            "text": "认识自然光入门 · 30分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 1,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 33,
+              "y": -127.71875,
+              "width": 324,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础入门 · 45分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 33,
+              "y": 236.65625,
+              "width": 324,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习进阶 · 60分钟",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "16px",
+            "box": {
+              "x": 33,
+              "y": 557.84375,
+              "width": 324,
+              "height": 70.59375
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "courseTitles": [
+          {
+            "text": "认识自然光",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 1,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 33,
+              "y": -127.71875,
+              "width": 324,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "构图基础",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 33,
+              "y": 236.65625,
+              "width": 324,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          },
+          {
+            "text": "色彩练习",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "effectiveOpacity": 0,
+            "hiddenAncestor": false,
+            "fontSize": "20px",
+            "box": {
+              "x": 33,
+              "y": 557.84375,
+              "width": 324,
+              "height": 30
+            },
+            "color": "rgb(32, 55, 48)"
+          }
+        ],
+        "desktopNav": {
+          "text": "课程目录按主题浏览",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "compactMenu": {
+          "text": "导航菜单课程目录 · 按主题浏览",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 16,
+            "y": -461,
+            "width": 358,
+            "height": 24
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "futureNote": {
+          "text": "未开放课程的内部草稿",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": true,
+          "fontSize": "16px",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "color": "rgb(32, 55, 48)"
+        },
+        "rail": {
+          "text": "构图色彩光线",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "effectiveOpacity": 1,
+          "hiddenAncestor": false,
+          "fontSize": "16px",
+          "box": {
+            "x": 16,
+            "y": 748.625,
+            "width": 358,
+            "height": 56
+          },
+          "color": "rgb(32, 55, 48)",
+          "scrollWidth": 744,
+          "clientWidth": 358,
+          "scrollLeft": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>课程目录</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 sans-serif; color: #203730; background: #faf9f5; }
+  main, header { width: calc(100% - 32px); max-width: 1000px; margin: 24px auto; }
+  h1 { font-size: 30px; } h2 { font-size: 20px; }
+  .desktop-nav { display: flex; gap: 24px; }
+  .compact-menu { display: none; }
+  .courses { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+  .course { padding: 16px; background: white; border: 1px solid #ccd4ca; border-radius: 8px; }
+  .cover { height: 140px; background: #dbe7d8; display: grid; place-items: center; font-size: 48px; }
+  .course-meta { opacity: 0; }
+  .course:hover .course-meta, .course:focus-within .course-meta { opacity: 1; }
+  .rail { display: flex; gap: 12px; overflow-x: auto; }
+  .rail a { flex: 0 0 240px; padding: 16px; background: #e5e9e0; }
+  @media (max-width:600px) {
+    .courses { grid-template-columns: minmax(0,1fr); }
+    .desktop-nav { display: none; }
+    .compact-menu { display: block; }
+  }
+  @media (hover:none) { .featured .course-meta { opacity: 1; } }
+</style>
+<header>
+  <nav class="desktop-nav" id="desktop-nav"><a href="#catalog"><span id="desktop-label">课程目录</span></a><a href="#topics">按主题浏览</a></nav>
+  <details class="compact-menu"><summary>导航菜单</summary><nav><a href="#catalog">课程目录</a> · <a href="#topics">按主题浏览</a></nav></details>
+</header>
+<main>
+  <h1>发现下一门课程</h1>
+  <section class="featured"><h2>本周推荐</h2><article class="course"><div class="cover" aria-hidden="true">☀</div><div class="course-meta"><h2 id="featured-title">认识自然光</h2><p>入门 · 30分钟</p></div><a href="#catalog">查看全部课程</a></article></section>
+  <section id="catalog"><h2>课程目录</h2><div class="courses">
+    <article class="course"><div class="cover" aria-hidden="true">◯</div><div class="course-meta"><h2 id="course-title">构图基础</h2><p>入门 · 45分钟</p></div><a href="#lesson">查看课程</a></article>
+    <article class="course"><div class="cover" aria-hidden="true">△</div><div class="course-meta"><h2>色彩练习</h2><p>进阶 · 60分钟</p></div><a href="#lesson">查看课程</a></article>
+  </div></section>
+  <section id="topics"><h2>按主题浏览</h2><div class="rail"><a href="#catalog">构图</a><a href="#catalog">色彩</a><a href="#catalog">光线</a></div></section>
+  <section id="lesson"><h2>课程说明</h2><p>从目录选择课程。完整内容在下一阶段开放。</p><p hidden id="future-note">未开放课程的内部草稿</p></section>
+</main>
+</html>

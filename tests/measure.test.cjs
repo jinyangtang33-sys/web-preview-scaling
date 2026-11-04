@@ -37,6 +37,34 @@ test('invalid inputs fail before producing a measurement', () => {
   }
 });
 
+test('touch samples expose input media and hidden ancestors without declaring visual success', () => {
+  const fixture = pathToFileURL(path.resolve(__dirname, '../evals/fixtures/08/page.html')).href;
+  for (const touch of [false, true]) {
+    const args = [fixture, '--viewport', '390x844', '--selector', '#course-title',
+      '--selector', '#featured-title', '--selector', '#desktop-label'];
+    if (touch) args.push('--touch');
+    if (process.env.PLAYWRIGHT_CHANNEL) args.push('--channel', process.env.PLAYWRIGHT_CHANNEL);
+    const result = run(args);
+    assert.equal(result.status, 0, result.stderr);
+    const sample = JSON.parse(result.stdout).samples[0];
+    if (touch) {
+      assert.equal(sample.input.hoverNone, true);
+      assert.equal(sample.input.pointerCoarse, true);
+      assert.ok(sample.input.maxTouchPoints > 0);
+    }
+    assert.ok(Number.isInteger(sample.input.maxTouchPoints) && sample.input.maxTouchPoints >= 0);
+    const [course, featured, desktop] = sample.elements;
+    assert.ok(course.width > 0 && course.height > 0);
+    assert.equal(course.visibility, 'visible');
+    assert.equal(course.opacity, 1);
+    assert.equal(course.effectiveOpacity, 0);
+    assert.equal(featured.effectiveOpacity, sample.input.hoverNone ? 1 : 0);
+    assert.equal(desktop.ancestorDisplayNone, true);
+    assert.equal(desktop.width, 0);
+    assert.equal(sample.overflowX, 0);
+  }
+});
+
 test('measurements report selector ambiguity and save separate viewport screenshots', () => {
   const output = mkdtempSync(path.join(tmpdir(), 'measure-contract-'));
   try {

@@ -5,8 +5,8 @@ const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 
 const [id, projectArg] = process.argv.slice(2);
-if (!['01', '02', '03', '04', '05', '07'].includes(id) || !projectArg) {
-  console.error('Usage: node evals/verify-output.cjs 01|02|03|04|05|07 <completed-project-dir>');
+if (!['01', '02', '03', '04', '05', '07', '08'].includes(id) || !projectArg) {
+  console.error('Usage: node evals/verify-output.cjs 01|02|03|04|05|07|08 <completed-project-dir>');
   process.exit(1);
 }
 const project = path.resolve(projectArg);
@@ -53,9 +53,11 @@ async function main() {
   }
   try {
     const sizes = { '01': [[1280, 800]], '02': [[1440, 900], [390, 844]],
-      '03': [[959, 900], [960, 900]], '04': [[1280, 800], [390, 844]], '05': [[390, 844]] }[id];
+      '03': [[959, 900], [960, 900]], '04': [[1280, 800], [390, 844]], '05': [[390, 844]],
+      '08': [[390, 844], [1440, 900]] }[id];
     for (const [width, height] of sizes) {
-      const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
+      const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1,
+        hasTouch: id === '08' && width === 390 });
       await page.goto(pathToFileURL(path.join(project, 'page.html')).href);
       const data = await read(page);
       samples.push({ source: 'independent-headless', ...data });
@@ -89,6 +91,50 @@ async function main() {
         });
         assert.ok(scrolled.left > 0); assert.equal(scrolled.overflowX, 0);
         samples.at(-1).afterScroll = scrolled;
+      } else if (id === '08') {
+        const inspectContent = () => {
+          const style = selector => getComputedStyle(document.querySelector(selector));
+          const names = [...document.querySelectorAll('#catalog .course-meta')].map(node => {
+            let opacity = 1;
+            for (let e = node; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity);
+            return { opacity, visibility: getComputedStyle(node).visibility, height: node.getBoundingClientRect().height };
+          });
+          const rail = document.querySelector('.rail');
+          return { names, hoverNone: matchMedia('(hover:none)').matches,
+            pointerCoarse: matchMedia('(pointer:coarse)').matches,
+            desktopDisplay: style('.desktop-nav').display, menuDisplay: style('.compact-menu').display,
+            menuOpen: document.querySelector('.compact-menu').open,
+            draftDisplay: style('#future-note').display,
+            rail: { clientWidth: rail.clientWidth, scrollWidth: rail.scrollWidth, overflow: getComputedStyle(rail).overflowX } };
+        };
+        const initial = await page.evaluate(inspectContent);
+        assert.equal(initial.names.length, 2);
+        assert.equal(initial.menuOpen, false);
+        assert.equal(initial.draftDisplay, 'none');
+        if (width === 390) {
+          assert.ok(initial.hoverNone && initial.pointerCoarse);
+          for (const name of initial.names) {
+            assert.equal(name.opacity, 1, 'Necessary course information is invisible on touch');
+            assert.equal(name.visibility, 'visible'); assert.ok(name.height > 0);
+          }
+          assert.equal(initial.desktopDisplay, 'none'); assert.notEqual(initial.menuDisplay, 'none');
+          assert.equal(initial.rail.overflow, 'auto');
+          assert.ok(initial.rail.scrollWidth > initial.rail.clientWidth);
+          const scrollLeft = await page.locator('.rail').evaluate(e => { e.scrollLeft = 10000; return e.scrollLeft; });
+          assert.ok(scrollLeft > 0);
+          await page.locator('.compact-menu summary').click();
+          assert.equal(await page.locator('.compact-menu').evaluate(e => e.open), true);
+          await page.locator('.compact-menu a[href="#catalog"]').click();
+          await page.waitForURL(/#catalog$/);
+        } else {
+          assert.notEqual(initial.desktopDisplay, 'none'); assert.equal(initial.menuDisplay, 'none');
+          if (!initial.hoverNone) for (const name of initial.names) assert.equal(name.opacity, 0);
+          await page.locator('#catalog .course').first().hover();
+          assert.equal((await page.evaluate(inspectContent)).names[0].opacity, 1);
+        }
+        await page.locator('#catalog a[href="#lesson"]').first().click();
+        await page.waitForURL(/#lesson$/);
+        samples.at(-1).contentChecks = { initial, navigationPassed: true };
       }
       await page.close();
     }

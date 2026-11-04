@@ -1,0 +1,656 @@
+{
+  "date": "2026-11-04",
+  "base_commit": "00e3eaaddc6423ccfd3533e2162366b52a90765e",
+  "candidate_fingerprints": "inputs.sha256.json",
+  "project": "Existing private asset-management frontend prototype; same 40-file working snapshot as previous round",
+  "same_snapshot_as_previous": true,
+  "fault_injection": false,
+  "protocol_prepared_before_runs": true,
+  "request": "这是正在开发的公司素材库前端。请验收它在 Codex 实际预览和独立浏览器中的布局表现，重点检查首页、搜索结果、照片详情与放大预览。桌面交付尺寸为 1440×900，手机为 390×844。发现确实影响使用的字号、布局、裁切或图片比例问题时，请在当前副本中修复并验证；没有问题就保留现有设计。搜索、筛选、打开详情、收藏和关闭放大预览应继续可用。请交付发现的问题、实际改动、验证证据和未验证的范围。",
+  "method": {
+    "per_condition": 2,
+    "fresh_sessions": true,
+    "history": "fork_turns=none",
+    "model": "Same inherited host configuration; exact model and sampling parameters not provided",
+    "tool_conditions": "Same standalone Playwright/Chrome and HTTP access. All execution agents unable to start IAB (Windows 1909); parent separately reviews all outputs in its existing IAB session.",
+    "schedule": "First A/B/C concurrent, D after B; no elapsed-time efficiency claim.",
+    "judge": "Developer review; neither external nor blinded. Private project is not a publicly reproducible benchmark."
+  },
+  "environment": {
+    "os": "Windows-11-10.0.22631-SP0",
+    "node": "24.20.0",
+    "chrome": "156.0.8078.80",
+    "touch": "Chromium simulation, not a physical device"
+  },
+  "baseline": {
+    "home_names_visible": 9,
+    "home_names_total": 9,
+    "search_names_visible": 0,
+    "search_names_total": 10,
+    "related_names_visible": 0,
+    "related_names_total": 4
+  },
+  "runs": [
+    {
+      "run": "run-a",
+      "condition": "with-updated-skill",
+      "changed_files": [
+        "src/styles/main.css"
+      ],
+      "touch_visibility_resolved": true,
+      "visibility_counts": [
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "home",
+          "total": 9,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "search",
+          "total": 10,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "detail",
+          "total": 4,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        }
+      ],
+      "desktop_hover_preserved": true,
+      "closed_dialogs_preserved": true,
+      "executor_actual_preview": "untested: Windows 1909",
+      "parent_actual_preview": {
+        "source": "actual Codex IAB",
+        "viewport": [
+          1280,
+          720
+        ],
+        "states": 5,
+        "same_viewport_standalone_with_scrollbars": "pass; measured geometry matches within 0.1 CSS px",
+        "counts_as_executor_work": false
+      },
+      "common_functional_recheck": {
+        "passed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "states": 12,
+        "flow_groups_per_viewport": 5,
+        "js_errors": 0
+      },
+      "portrait_design_choice": {
+        "changed": false,
+        "painted_width": 111.87152777777777,
+        "painted_height": 199.375,
+        "download_top": 485.71875,
+        "scored_as_defect_fix": false
+      }
+    },
+    {
+      "run": "run-b",
+      "condition": "without-skill",
+      "changed_files": [
+        "src/styles/detail.css",
+        "src/styles/main.css"
+      ],
+      "touch_visibility_resolved": true,
+      "visibility_counts": [
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "home",
+          "total": 9,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "search",
+          "total": 10,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "detail",
+          "total": 4,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        }
+      ],
+      "desktop_hover_preserved": true,
+      "closed_dialogs_preserved": true,
+      "executor_actual_preview": "untested: Windows 1909",
+      "parent_actual_preview": {
+        "source": "actual Codex IAB",
+        "viewport": [
+          1280,
+          720
+        ],
+        "states": 5,
+        "same_viewport_standalone_with_scrollbars": "pass; measured geometry matches within 0.1 CSS px",
+        "counts_as_executor_work": false
+      },
+      "common_functional_recheck": {
+        "passed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "states": 12,
+        "flow_groups_per_viewport": 5,
+        "js_errors": 0
+      },
+      "portrait_design_choice": {
+        "changed": true,
+        "painted_width": 303.0876736111111,
+        "painted_height": 540.15625,
+        "download_top": 826.5,
+        "scored_as_defect_fix": false
+      }
+    },
+    {
+      "run": "run-c",
+      "condition": "without-skill",
+      "changed_files": [
+        "src/styles/detail.css",
+        "src/styles/main.css"
+      ],
+      "touch_visibility_resolved": true,
+      "visibility_counts": [
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "home",
+          "total": 9,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "search",
+          "total": 10,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "detail",
+          "total": 4,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        }
+      ],
+      "desktop_hover_preserved": true,
+      "closed_dialogs_preserved": true,
+      "executor_actual_preview": "untested: Windows 1909",
+      "parent_actual_preview": {
+        "source": "actual Codex IAB",
+        "viewport": [
+          1280,
+          720
+        ],
+        "states": 5,
+        "same_viewport_standalone_with_scrollbars": "pass; measured geometry matches within 0.1 CSS px",
+        "counts_as_executor_work": false
+      },
+      "common_functional_recheck": {
+        "passed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "states": 12,
+        "flow_groups_per_viewport": 5,
+        "js_errors": 0
+      },
+      "portrait_design_choice": {
+        "changed": true,
+        "painted_width": 307.8220486111111,
+        "painted_height": 548.59375,
+        "download_top": 834.9375,
+        "scored_as_defect_fix": false
+      }
+    },
+    {
+      "run": "run-d",
+      "condition": "with-updated-skill",
+      "changed_files": [
+        "src/styles/main.css"
+      ],
+      "touch_visibility_resolved": true,
+      "visibility_counts": [
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "home",
+          "total": 9,
+          "visible": 9,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "search",
+          "total": 10,
+          "visible": 10,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": true,
+          "route": "detail",
+          "total": 4,
+          "visible": 4,
+          "hover_none": true,
+          "pointer_coarse": true,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "home",
+          "total": 9,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "search",
+          "total": 10,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "route": "detail",
+          "total": 4,
+          "visible": 0,
+          "hover_none": false,
+          "pointer_coarse": false,
+          "root_overflow": 0
+        }
+      ],
+      "desktop_hover_preserved": true,
+      "closed_dialogs_preserved": true,
+      "executor_actual_preview": "untested: Windows 1909",
+      "parent_actual_preview": {
+        "source": "actual Codex IAB",
+        "viewport": [
+          1280,
+          720
+        ],
+        "states": 5,
+        "same_viewport_standalone_with_scrollbars": "pass; measured geometry matches within 0.1 CSS px",
+        "counts_as_executor_work": false
+      },
+      "common_functional_recheck": {
+        "passed": true,
+        "viewports": [
+          [
+            971,
+            1244
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "states": 12,
+        "flow_groups_per_viewport": 5,
+        "js_errors": 0
+      },
+      "portrait_design_choice": {
+        "changed": false,
+        "painted_width": 111.87152777777777,
+        "painted_height": 199.375,
+        "download_top": 485.71875,
+        "scored_as_defect_fix": false
+      }
+    }
+  ],
+  "automated_checks": {
+    "passed": 10,
+    "failed": 0,
+    "command": "PLAYWRIGHT_CHANNEL=chrome node --test tests/*.test.cjs",
+    "skill_format": "pass"
+  },
+  "limitations": [
+    "Known development-feedback case: regression recovery, not independent generalization.",
+    "Two runs per condition do not estimate population success rates or establish causality.",
+    "Previous round execution environment differed: current elevated processes reach HTTP, new IAB sessions cannot initialize.",
+    "No physical devices, Safari/Firefox, production data/login or upload/download acceptance.",
+    "Old behavioral cases 01-05 and repeat runs not re-certified for the updated candidate."
+  ],
+  "comparison": {
+    "previous_skill_resolved": 0,
+    "previous_skill_runs": 2,
+    "updated_skill_resolved": 2,
+    "updated_skill_runs": 2,
+    "current_without_skill_resolved": 2,
+    "current_without_skill_runs": 2,
+    "conclusion": "Known omission recovered; current with/without outcomes tie. Incremental acceptance benefit over no skill not demonstrated.",
+    "stable_release": false
+  }
+}

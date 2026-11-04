@@ -4,7 +4,7 @@
 
 [![基础检查](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**当前为实验版。** 七类合成任务已通过；真实项目前端对照中，测量流程更完整，但出现可见性漏检，尚未证明额外的效果收益。CI 覆盖测量脚本、示例布局与产物检查器。[测试范围与发布标准](evals/README.md) · [真实项目对照](evals/results/2026-11-04-real-project/README.md)
+**当前为实验版。** 针对真实项目的触屏文字漏检，已补充内容可见性检查。新一轮有 skill 与无 skill 各两次执行都修复了问题：已知漏检已补回，尚未证明相对无 skill 的额外收益。CI 覆盖触屏测量、示例布局及产物检查器正反例。[测试范围与发布标准](evals/README.md) · [最新对照复测](evals/results/2026-11-04-touch-rerun/README.md)
 
 网页在 Codex 侧边预览里看着刚好，换到浏览器却觉得标题太大、正文太宽？这个 skill 让 Codex 在相同的 CSS 视口下测量同一个元素，再拉宽窗口，找出差异来自滚动条、字号规则还是响应式断点。
 

@@ -1,0 +1,23 @@
+{
+  "normalization": "UTF-8, LF line endings",
+  "base_commit": "00e3eaaddc6423ccfd3533e2162366b52a90765e",
+  "files": {
+    "SKILL.md": "1d314f4c321f2d028c7323816c8edfdf34d305272dc9422919e36ab93dc4d6ca",
+    "evals/cases.json": "d03c32f50398ecf1fdda9e61c79b9ec90122ff12e0490f6aad2d43201771f573",
+    "evals/fixtures/01/host.html": "52dc2c52164165a23224231a4596f73ad77a4ab5a1075c814f54d185dc224e22",
+    "evals/fixtures/01/page.html": "25b5aa82284206b3b311b19247ba3b60f3fd456f6e83649814abb95ec2a69c78",
+    "evals/fixtures/02/page.html": "83d25ae04f25d73be478381ee4628191ae967f69182c0e4f0db5b3869341dc57",
+    "evals/fixtures/03/page.html": "9b661f3c2358c53e2dd25e4185b828a0bbe06e9184177c04ed00130b8385bf45",
+    "evals/fixtures/04/page.html": "28f21673d93f18de736f26cf1f8fd0f930ba4a742f6eb3148f890147ccbb2b40",
+    "evals/fixtures/04/scene.svg": "00bce6d94ea0d93f16fc330976627df222973874e05677a6f02f8ec9c56b15d5",
+    "evals/fixtures/05/page.html": "3b61b4848867b83a06099080a779500d8815e6e857bfd5a73436c3afe230cb99",
+    "evals/fixtures/06/page.html": "dddf69b3f09a5953e2a1b4822942f8c1e3fdd228ddf4ecc422cd5fa163171aed",
+    "evals/fixtures/07/page.html": "2eb39f0c701caaac36bffeae1cac201a14016b1417704f111491a310b95416be",
+    "evals/fixtures/08/page.html": "c67d90639d2e2b3897a5f8c6dc1c59c3e6ec8de2b79a488669b5ffaea2b87883",
+    "evals/verify-output.cjs": "a8b6d2f9239630ebeed9f9d323086450787e2c3a040199deb072e2201305e60a",
+    "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+    "tests/eval-output.test.cjs": "6de75618caf928fd974683f7816ab681ec8e184265b19330fe8cdfa47f620fef",
+    "tests/layout.test.cjs": "07d783a9f12d623e263f041092891eb377231d320f984c6055970ed8a0d9a6bb",
+    "tests/measure.test.cjs": "d7feed4a9c46b14db4549480a2e0aa9f40be6614b0e2043726cdf0c0987f65d3"
+  }
+}

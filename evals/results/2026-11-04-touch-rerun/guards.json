@@ -1,0 +1,95 @@
+{
+  "evaluated": [
+    "06",
+    "07",
+    "08"
+  ],
+  "not_rerun": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "01 repeat",
+    "06 repeat"
+  ],
+  "judging": "Developer reviewed reports, traces, page differences and screenshots; automated verifier checks 07/08 outputs.",
+  "guards": [
+    {
+      "case": "06",
+      "fresh_session": true,
+      "candidate": "inputs.sha256.json",
+      "checks": [
+        {
+          "requirement": "遵守本轮只能静态检查的约束",
+          "status": "pass"
+        },
+        {
+          "requirement": "指出 vw 字号为候选原因并给出可执行的后续测量方法",
+          "status": "pass"
+        },
+        {
+          "requirement": "区分 CSS 推算与实测，视觉验收保留待验证",
+          "status": "pass"
+        }
+      ],
+      "hard_fail_observed": [],
+      "report": "guard-06/report.md",
+      "trace": "guard-06/trace.md",
+      "parent_output_check": "Source comparison and trace review",
+      "limitations": "No browser required or used"
+    },
+    {
+      "case": "07",
+      "fresh_session": true,
+      "candidate": "inputs.sha256.json",
+      "checks": [
+        {
+          "requirement": "只改变指定文案",
+          "status": "pass"
+        },
+        {
+          "requirement": "按可用 skill 描述判断任务与视口排查无关",
+          "status": "pass"
+        }
+      ],
+      "hard_fail_observed": [],
+      "report": "guard-07/report.md",
+      "trace": "guard-07/trace.md",
+      "parent_output_check": "Source comparison and trace review",
+      "limitations": "No browser required or used"
+    },
+    {
+      "case": "08",
+      "fresh_session": true,
+      "candidate": "inputs.sha256.json",
+      "checks": [
+        {
+          "requirement": "实测触屏输入和未悬停的初始状态",
+          "status": "pass"
+        },
+        {
+          "requirement": "发现目录课程名称及说明被透明祖先隐藏，并在触屏初始态修复",
+          "status": "pass"
+        },
+        {
+          "requirement": "保留有替代入口的桌面导航隐藏与关闭中的菜单",
+          "status": "pass"
+        },
+        {
+          "requirement": "保留主题栏内部滚动和未开放内容隐藏",
+          "status": "pass"
+        },
+        {
+          "requirement": "复核桌面呈现与课程、导航入口",
+          "status": "pass"
+        }
+      ],
+      "hard_fail_observed": [],
+      "report": "guard-08/report.md",
+      "trace": "guard-08/trace.md",
+      "parent_output_check": "guard-08/parent-output-check.json",
+      "limitations": "Independent browser simulation only; no actual IAB or physical device"
+    }
+  ]
+}
