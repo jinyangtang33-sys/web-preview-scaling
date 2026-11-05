@@ -1,6 +1,6 @@
 const assert = require('node:assert/strict');
 const { spawnSync } = require('node:child_process');
-const { mkdtempSync, readFileSync, writeFileSync, rmSync } = require('node:fs');
+const { mkdtempSync, readFileSync, writeFileSync, copyFileSync, rmSync } = require('node:fs');
 const { tmpdir } = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
@@ -24,6 +24,29 @@ test('outcome checker rejects unfixed typography, image, copy and touch tasks', 
     assert.equal(result.status, 1);
     assert.equal(result.stdout, '');
     assert.ok(result.stderr.trim());
+  }
+});
+
+test('image outcome checker accepts uncropped cover and rejects a cropped cover frame', () => {
+  const project = mkdtempSync(path.join(tmpdir(), 'image-geometry-'));
+  try {
+    const fixture = path.resolve(__dirname, '../evals/fixtures/04');
+    const original = readFileSync(path.join(fixture, 'page.html'), 'utf8');
+    copyFileSync(path.join(fixture, 'scene.svg'), path.join(project, 'scene.svg'));
+    for (const [rule, accepted] of [
+      ['img { width:100%; height:auto; object-fit:cover; }', true],
+      ['img { width:100%; height:auto; object-fit:contain; }', true],
+      ['img { width:300px; height:300px; object-fit:cover; }', false],
+    ]) {
+      writeFileSync(path.join(project, 'page.html'), original.replace('</style>', rule + '\n</style>'));
+      const result = verify('04', project);
+      assert.equal(result.status, accepted ? 0 : 1, result.stderr);
+      if (accepted) assert.equal(JSON.parse(result.stdout).passed, true);
+      else assert.equal(result.stdout, '');
+    }
+  } finally {
+    assert.equal(path.dirname(project), path.resolve(tmpdir()));
+    rmSync(project, { recursive: true, force: true });
   }
 });
 

@@ -78,8 +78,9 @@ async function main() {
         assert.equal(data.grid.columns.split(/\s+/).length, width === 959 ? 1 : 3);
       } else if (id === '04') {
         assert.equal(data.image.naturalWidth, 800); assert.equal(data.image.naturalHeight, 400);
+        // This fixture has no image border/padding: matching its natural aspect
+        // ratio also permits cover without cropping. The keyword alone is not a defect.
         near(data.image.width / data.image.height, 2);
-        assert.notEqual(data.image.objectFit, 'cover');
       } else if (id === '05') {
         assert.equal(data.columnCount, 4);
         assert.ok(data.table.scrollWidth > data.table.clientWidth);

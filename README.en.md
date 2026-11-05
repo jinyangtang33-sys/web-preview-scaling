@@ -52,7 +52,7 @@ The [example](example/index.html) checks measurements: at 1440×900, its two CSS
 
 The [scrollbar case](docs/viewport-comparison.svg) records different usable widths at the same 1280×720 viewport with a 15px scrollbar; title sizes are equal. It demonstrates interpretation of measurements.
 
-On pushes to main and PRs targeting main, [CI](.github/workflows/layout-regression.yml) runs 13 browser checks and replays archived public proposals and fingerprints. **It does not judge aesthetics, call models to rerun experiments or certify arbitrary pages.** See [validation scope (Chinese)](evals/README.md).
+On pushes to main and PRs targeting main, [CI](.github/workflows/layout-regression.yml) runs 14 browser checks and replays archived public proposals and fingerprints. **It does not judge aesthetics, call models to rerun experiments or certify arbitrary pages.** See [validation scope (Chinese)](evals/README.md).
 
 ## Why the experiments remain
 

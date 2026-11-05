@@ -52,7 +52,7 @@ $web-preview-scaling 请诊断 http://localhost:3000/ 的标题为何在侧边�
 
 [滚动条案例](docs/viewport-comparison.svg)记录同为1280×720时可用宽度因15px滚动条而不同，标题字号相同。它演示如何解释读数，不是网页效果增益证明。
 
-推送 main 或向 main 提 PR 时，[CI](.github/workflows/layout-regression.yml)运行13项浏览器基础检查，并重放公开实验的补丁与指纹。**CI不评判美观、不调用模型复做实验，也不证明任意页面已通过验收。** [诊断验证范围](evals/README.md)。
+推送 main 或向 main 提 PR 时，[CI](.github/workflows/layout-regression.yml)运行14项浏览器基础检查，并重放公开实验的补丁与指纹。**CI不评判美观、不调用模型复做实验，也不证明任意页面已通过验收。** [诊断验证范围](evals/README.md)。
 
 ## 为什么保留实验记录
 
