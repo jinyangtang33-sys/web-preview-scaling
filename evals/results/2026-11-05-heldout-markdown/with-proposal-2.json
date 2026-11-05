@@ -1,0 +1,50 @@
+{
+  "patches": [
+    {
+      "path": "index.css",
+      "old": " .nightmode #in {\n     filter: invert(100%);\n }\n\n .nightmode #out {\n     filter: invert(100%);\n }\n\n .nightmode #navbar {\n     filter: invert(0%);\n }\n\n .nightmode img {\n    filter: invert(100%);\n    background: black; /* to deal with inverting transparent images */\n }",
+      "new": ""
+    },
+    {
+      "path": "index.css",
+      "old": " #in .CodeMirror { background: #f6f7f4; }",
+      "new": " .workspace { --ink: #212b25; --surface: #f6f7f4; --list: #286079; --quote: #516637; --string: #875026; --keyword: #80405e; }\n #in .CodeMirror { background: var(--surface); color: var(--ink); }\n #in :where(span[class*=\"cm-\"]) { color: inherit; }\n #in .cm-variable-2, #in .cm-property, #in .cm-tag { color: var(--list); }\n #in .cm-quote, #in .cm-comment, #in .cm-variable, #in .cm-def { color: var(--quote); }\n #in .cm-string, #in .cm-string-2, #in .cm-url, #in .cm-atom, #in .cm-number { color: var(--string); }\n #in .cm-keyword, #in .cm-link, #in .cm-attribute, #in .cm-builtin, #in .cm-error { color: var(--keyword); }"
+    },
+    {
+      "path": "index.css",
+      "old": " .nightmode { background: #181c19; }",
+      "new": " .nightmode { background: #121915; color-scheme: dark; }\n .nightmode .workspace { --ink: #e0e8e2; --surface: #1b251f; --list: #95ccdd; --quote: #b5cc99; --string: #e6be95; --keyword: #e5acc7; }\n .nightmode .source-pane { border-color: #415147; }\n .nightmode #in .CodeMirror-cursor { border-left-color: #e0e8e2; }\n .nightmode #in .CodeMirror-selected { background: #405b4c; }\n .nightmode #out { background: #18201b; color: var(--ink); }\n .nightmode #out h1, .nightmode #out h2 { color: #ebf3e8; border-color: #46564b; }\n .nightmode #out a { color: #9bddb8; }\n .nightmode #out blockquote { color: #b9c8bf; border-color: #526b59; }\n .nightmode #out pre, .nightmode #out code { background: #29362e; color: var(--ink); }\n .nightmode #out pre span { color: inherit; }\n .nightmode #out pre .hljs-string { color: var(--string); }\n .nightmode #out pre .hljs-keyword { color: var(--keyword); }\n .nightmode #out pre .hljs-comment { color: var(--quote); }\n .nightmode #out table tr { background: #18201b; }\n .nightmode #out table tr:nth-child(even) { background: #232e27; }\n .nightmode #out :is(tr, th, td, hr) { border-color: #46564b; }"
+    },
+    {
+      "path": "index.js",
+      "old": "function setOutput(val) {",
+      "new": "function firstChangedElement(before, after) {\n    var previous = before.firstChild;\n    var current = after.firstChild;\n    while (previous && current && previous.isEqualNode(current)) {\n        previous = previous.nextSibling;\n        current = current.nextSibling;\n    }\n    if (!current) return previous ? after.lastElementChild || after : after;\n    if (current.nodeType !== 1) return after;\n    if (previous && previous.nodeName === current.nodeName) {\n        return firstChangedElement(previous, current);\n    }\n    return current;\n}\n\nfunction setOutput(val) {"
+    },
+    {
+      "path": "index.js",
+      "old": "    out.innerHTML = md.render(val);\n    emojify.run(out);\n    console.log(out.innerHTML);\n    // Checks if there are any task-list present in out.innerHTML\n    out.innerHTML = render_tasklist(out.innerHTML);\n\n    var allold = old.getElementsByTagName(\"*\");\n    if (allold === undefined) return;\n\n    var allnew = out.getElementsByTagName(\"*\");\n    if (allnew === undefined) return;\n\n    for (var i = 0, max = Math.min(allold.length, allnew.length); i < max; i++) {\n        if (!allold[i].isEqualNode(allnew[i])) {\n            out.scrollTop = allnew[i].offsetTop;\n            return;\n        }\n    }",
+      "new": "    out.innerHTML = render_tasklist(md.render(val));\n    emojify.run(out);\n    if (!out.clientHeight) return;\n\n    var changed = firstChangedElement(old, out);\n    if (changed === out) return;\n    var block = changed.getBoundingClientRect();\n    var pane = out.getBoundingClientRect();\n    if (block.bottom <= pane.top || block.top >= pane.bottom) {\n        out.scrollTop += block.top - pane.top - parseFloat(getComputedStyle(out).paddingTop);\n    }"
+    },
+    {
+      "path": "index.js",
+      "old": "    document.getElementById('out').classList.toggle('focused');\n    var reading = document.getElementById('in').classList.toggle('hidden');",
+      "new": "    var out = document.getElementById('out');\n    var sourceScroll = out.clientHeight ? null : editor.getScrollInfo();\n    out.classList.toggle('focused');\n    var reading = document.getElementById('in').classList.toggle('hidden');\n    if (!reading) document.body.classList.remove('view');"
+    },
+    {
+      "path": "index.js",
+      "old": "    if (!reading) editor.refresh();",
+      "new": "    if (reading && sourceScroll) {\n        var progress = sourceScroll.top / Math.max(1, sourceScroll.height - sourceScroll.clientHeight);\n        out.scrollTop = progress * (out.scrollHeight - out.clientHeight);\n    }\n    if (!reading) editor.refresh();"
+    },
+    {
+      "path": "index.js",
+      "old": "    var params = window.location.search.split('?')[1];\n    if (window.location.hash) {\n        document.getElementById('readbutton').click(); // Show reading view\n    }\n    if (params) {\n        var obj = {};\n        params.split('&').forEach(function(elem) {\n            obj[elem.split('=')[0]] = elem.split('=')[1];\n        });\n        if (obj.reading === 'false') {\n            document.getElementById('readbutton').click(); // Hide reading view\n        }\n        if (obj.dark === 'true') {\n            document.getElementById('nightbutton').click(); // Show night view\n        }\n    }",
+      "new": "    var params = new URLSearchParams(window.location.search);\n    if (window.location.hash && params.get('reading') !== 'false') {\n        document.getElementById('readbutton').click();\n    }\n    if (params.get('dark') === 'true') document.getElementById('nightbutton').click();"
+    },
+    {
+      "path": "index.js",
+      "old": "            setOutput(decodeURIComponent(escape(RawDeflate.inflate(atob(h.slice(5))))));\n            document.body.className = 'view';\n        } else {\n            editor.setValue(\n                decodeURIComponent(escape(\n                    RawDeflate.inflate(\n                        atob(\n                            h\n                        )\n                    )\n                ))\n            );\n        }\n    } else if (localStorage.getItem('content')) {",
+      "new": "            h = h.slice(5);\n            document.body.classList.toggle('view', document.body.classList.contains('reading'));\n        }\n        editor.setValue(decodeURIComponent(escape(RawDeflate.inflate(atob(h)))));\n    } else if (localStorage.getItem('content') !== null) {"
+    }
+  ],
+  "notes": "The screenshots show faint list and link text, especially in night mode. The proposal assigns explicit syntax colors in both themes. It keeps visible edits in place in the live preview and uses relative scroll position to open a phone preview near the writing location. Legacy view links load their content into the editor so Back to editor can recover it. Contrast, scroll transitions and shared-link behavior await browser verification."
+}

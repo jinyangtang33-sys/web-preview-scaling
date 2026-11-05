@@ -29,3 +29,5 @@ jobs:
         run: node --test tests/*.test.cjs
       - name: Verify published holdout proposals and budget ledger
         run: python3 evals/results/2026-11-05-heldout-todomvc/verify-proposals.py
+      - name: Verify slim candidate holdout proposals and vendors
+        run: python3 evals/results/2026-11-05-heldout-markdown/verify-proposals.py

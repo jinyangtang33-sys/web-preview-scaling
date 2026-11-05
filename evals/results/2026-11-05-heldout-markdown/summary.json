@@ -1,0 +1,69 @@
+{
+  "candidate_commit": "78c53863050ac71050916c2cf637b2a117e1289d",
+  "resource_match_valid": true,
+  "rows": [
+    {
+      "judge": "judge-1",
+      "with_skill": {
+        "scores": [
+          3,
+          3,
+          3,
+          4,
+          3,
+          3
+        ],
+        "total": 19
+      },
+      "without_skill": {
+        "scores": [
+          3,
+          3,
+          3,
+          2,
+          3,
+          3
+        ],
+        "total": 17
+      },
+      "preferred": "with_skill",
+      "difference": 2
+    },
+    {
+      "judge": "judge-2",
+      "with_skill": {
+        "scores": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "total": 18
+      },
+      "without_skill": {
+        "scores": [
+          3,
+          3,
+          3,
+          2,
+          3,
+          3
+        ],
+        "total": 17
+      },
+      "preferred": "with_skill",
+      "difference": 1
+    }
+  ],
+  "average_paired_difference": 1.5,
+  "threshold": 2,
+  "visual_gate": false,
+  "hard_gates": {
+    "5312": "pass",
+    "5313": "pass"
+  },
+  "complete_gate": false,
+  "interpretation": "New editor project after simplification. Mild preference but frozen advantage threshold missed. No tuning or rerating; not a within-project old-vs-new skill experiment."
+}

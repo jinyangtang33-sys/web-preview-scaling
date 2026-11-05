@@ -1,0 +1,2345 @@
+{
+  "scope": "Independent functional acceptance of frozen local products only. Original source/request read; no skills, model replies, protocol groups, or other evaluations read. No product modified.",
+  "status": "pass",
+  "baseline": {
+    "origin": "http://127.0.0.1:5311/",
+    "effectiveChecks": 48,
+    "effectivePasses": 45,
+    "originalLimitations": [
+      {
+        "id": "baseline-phone-viewport",
+        "details": "390x844 touch outer viewport yields actual CSS innerWidth/clientWidth=980 and innerHeight=2121 because original page lacks viewport meta."
+      },
+      {
+        "id": "baseline-phone-download-overlay",
+        "details": "Phone writing pane overlays download dialog and intercepts Markdown/HTML/close taps; switching to reading mode enables both downloads."
+      },
+      {
+        "id": "baseline-phone-preview-overlap",
+        "details": "Phone writing pane covers preview; reading entry exposes it."
+      },
+      {
+        "id": "baseline-saved-shortcut-download",
+        "details": "Ctrl+Shift+S does not open download menu when content equals browser-saved content."
+      },
+      {
+        "id": "baseline-online-dictionary",
+        "details": "Original spell-check library requests jsDelivr en_US.aff/dic; all external network blocked in this review."
+      }
+    ],
+    "calibration": "Raw baseline/results.json retained. SweetAlert adds visible after 500ms; early overwrite confirmation was an automation-readiness issue. baseline-overwrite/results.json uses the actual visible state and passes both targets; baseline-effective.json substitutes these corrected checks."
+  },
+  "products": [
+    {
+      "port": 5312,
+      "status": "pass",
+      "baselineWorkingFunctionsPreserved": true,
+      "newRegressions": [],
+      "mainCheckCount": 48,
+      "supplementCheckCount": 12,
+      "viewports": [
+        {
+          "target": "desktop",
+          "requested": {
+            "width": 1440,
+            "height": 900,
+            "touch": false
+          },
+          "actual": {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "clientWidth": 1440,
+            "scrollWidth": 1440,
+            "screenWidth": 1440,
+            "hover": true,
+            "pointerCoarse": false,
+            "viewportMeta": "width=device-width, initial-scale=1, interactive-widget=resizes-content"
+          }
+        },
+        {
+          "target": "phone",
+          "requested": {
+            "width": 390,
+            "height": 844,
+            "touch": true
+          },
+          "actual": {
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "screenWidth": 390,
+            "hover": false,
+            "pointerCoarse": true,
+            "viewportMeta": "width=device-width, initial-scale=1, interactive-widget=resizes-content"
+          }
+        }
+      ],
+      "renderedHtmlExportExactlyMatchesBaseline": true,
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://cdn.jsdelivr.net/codemirror.spell-checker/latest/en_US.aff",
+        "https://cdn.jsdelivr.net/codemirror.spell-checker/latest/en_US.dic"
+      ],
+      "checks": [
+        {
+          "target": "desktop",
+          "name": "initial-layout",
+          "status": "pass",
+          "evidence": {
+            "viewport": {
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "clientWidth": 1440,
+              "scrollWidth": 1440,
+              "screenWidth": 1440,
+              "hover": true,
+              "pointerCoarse": false,
+              "viewportMeta": "width=device-width, initial-scale=1, interactive-widget=resizes-content"
+            },
+            "panes": [
+              {
+                "id": "in",
+                "x": 20,
+                "y": 87,
+                "width": 692,
+                "height": 795,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "out",
+                "x": 729,
+                "y": 132,
+                "width": 690,
+                "height": 749,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "navbar",
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 69,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "menu",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              }
+            ],
+            "actions": [
+              {
+                "id": "openbutton",
+                "text": "open_in_browserOpen",
+                "title": "Open from Disk",
+                "x": 238.640625,
+                "y": 12,
+                "width": 83.296875,
+                "height": 42,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "savebutton",
+                "text": "file_downloadDownload",
+                "title": "Download",
+                "x": 325.9375,
+                "y": 12,
+                "width": 114.71875,
+                "height": 42,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "browsersavebutton",
+                "text": "saveSave",
+                "title": "Browser Save (Experimental)",
+                "x": 444.65625,
+                "y": 12,
+                "width": 78.265625,
+                "height": 42,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "sharebutton",
+                "text": "shareShare",
+                "title": "Generate Shareable Link",
+                "x": 526.921875,
+                "y": 12,
+                "width": 84.734375,
+                "height": 42,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "nightbutton",
+                "text": "invert_colorsNight",
+                "title": "Night Mode",
+                "x": 1120.6875,
+                "y": 12,
+                "width": 85.296875,
+                "height": 42,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "readbutton",
+                "text": "chrome_reader_modeReading",
+                "title": "Reading Mode",
+                "x": 1209.984375,
+                "y": 12,
+                "width": 101.359375,
+                "height": 42,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "spellbutton",
+                "text": "spellcheckSpelling",
+                "title": "Spell Check",
+                "x": 1315.34375,
+                "y": 12,
+                "width": 100.65625,
+                "height": 42,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "newbutton",
+                "text": "Clear",
+                "title": "",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              },
+              {
+                "id": "close-share",
+                "text": "×",
+                "title": "",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "inline-block",
+                "visibility": "visible"
+              }
+            ],
+            "preview": "Functional document 中文\n\nA bold phrase, italic and code.\n\nfirst\nsecond\nName\tValue\nalpha\t42\n\nquoted text\n\nconst answer = 42;\n\n complete\n pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "typing-live-preview",
+          "status": "pass",
+          "evidence": {
+            "value": "# Typed heading\n\nTyped **strong** 中文.",
+            "preview": "<h1>Typed heading</h1>\n<p>Typed <strong>strong</strong> 中文.</p>\n"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-b",
+          "status": "pass",
+          "evidence": {
+            "value": "**selected**"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-i",
+          "status": "pass",
+          "evidence": {
+            "value": "_selected_"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-k",
+          "status": "pass",
+          "evidence": {
+            "value": "`selected`"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-l",
+          "status": "pass",
+          "evidence": {
+            "value": "<kbd>selected</kbd>"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-list-enter",
+          "status": "pass",
+          "evidence": {
+            "value": "- first\n- "
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "import-file-entry",
+          "status": "pass",
+          "evidence": {
+            "value": "# Imported 中文\n\nImported **content** Ω.",
+            "preview": "<h1>Imported 中文</h1>\n<p>Imported <strong>content</strong> Ω.</p>\n"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true,
+            "content": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true,
+            "content": "<h1>Functional document 中文</h1>\n<p>A <strong>bold</strong> phrase, <em>italic</em> and <code>code</code>.</p>\n<ul>\n<li>first</li>\n<li>second</li>\n</ul>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>alpha</td>\n<td>42</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p>quoted text</p>\n</blockquote>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> answer = <span class=\"hljs-number\">42</span>;\n</code></pre>\n<ul>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" checked=\"\" style=\"list-style-type: none; \n          margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> complete</li>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" style=\"list-style-type: none; \n            margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> pending</li>\n</ul>\n<p>End marker Ω.</p>\n"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "download-close-escape",
+          "status": "pass",
+          "evidence": {
+            "escape": true,
+            "close": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "browser-save-reload",
+          "status": "pass",
+          "evidence": {
+            "restored": true,
+            "value": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-save",
+          "status": "pass",
+          "evidence": {
+            "saved": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "browser-save-overwrite",
+          "status": "pass",
+          "evidence": {
+            "warning": "Existing Data Detected\n\nYou will overwrite the data previously saved!\n\n! \n\nNot valid!\n\nCancel Yes, overwrite!",
+            "restoredRevision": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "saved-shortcut-download-observation",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true,
+            "note": "Observation: baseline suppresses Ctrl+Shift+S when content equals saved content."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-download",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "share-restore",
+          "status": "pass",
+          "evidence": {
+            "fragmentLength": 256,
+            "restored": true,
+            "reading": true,
+            "preview": "Functional document 中文\n\nA bold phrase, italic and code.\n\nfirst\nsecond\nName\tValue\nalpha\t42\n\nquoted text\n\nconst answer = 42;\n\n complete\n pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-toggle",
+          "status": "pass",
+          "evidence": {
+            "reading": {
+              "x": 296,
+              "y": 132,
+              "width": 848,
+              "height": 749
+            },
+            "valuePreserved": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "night-toggle",
+          "status": "pass",
+          "evidence": {
+            "initial": null,
+            "enabled": "nightmode",
+            "restored": ""
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "spell-toggle",
+          "status": "pass",
+          "evidence": {
+            "disabledAndRestored": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "long-document-scroll",
+          "status": "pass",
+          "evidence": {
+            "before": {
+              "root": 1440,
+              "client": 1440,
+              "in": {
+                "left": 0,
+                "top": 15458,
+                "height": 16231,
+                "width": 690,
+                "clientHeight": 719,
+                "clientWidth": 690
+              },
+              "out": {
+                "height": 19584,
+                "client": 749
+              }
+            },
+            "after": {
+              "top": 16459,
+              "scrollHeight": 17208,
+              "clientHeight": 749,
+              "last": " comfortable reading comfortable reading\n\nFINAL_LONG_MARKER EDITED_END"
+            },
+            "scrollReachedBottom": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "touch-scroll-gesture",
+          "status": "pass",
+          "evidence": {
+            "notApplicable": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "initial-layout",
+          "status": "pass",
+          "evidence": {
+            "viewport": {
+              "innerWidth": 390,
+              "innerHeight": 844,
+              "clientWidth": 390,
+              "scrollWidth": 390,
+              "screenWidth": 390,
+              "hover": false,
+              "pointerCoarse": true,
+              "viewportMeta": "width=device-width, initial-scale=1, interactive-widget=resizes-content"
+            },
+            "panes": [
+              {
+                "id": "in",
+                "x": 8,
+                "y": 110,
+                "width": 374,
+                "height": 359,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "out",
+                "x": 9,
+                "y": 513,
+                "width": 372,
+                "height": 322,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "navbar",
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 102,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "menu",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              }
+            ],
+            "actions": [
+              {
+                "id": "openbutton",
+                "text": "open_in_browserOpen",
+                "title": "Open from Disk",
+                "x": 8,
+                "y": 51,
+                "width": 93.5,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "savebutton",
+                "text": "file_downloadDownload",
+                "title": "Download",
+                "x": 101.5,
+                "y": 51,
+                "width": 93.5,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "browsersavebutton",
+                "text": "saveSave",
+                "title": "Browser Save (Experimental)",
+                "x": 195,
+                "y": 51,
+                "width": 93.484375,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "sharebutton",
+                "text": "shareShare",
+                "title": "Generate Shareable Link",
+                "x": 288.484375,
+                "y": 51,
+                "width": 93.5,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "nightbutton",
+                "text": "invert_colorsNight",
+                "title": "Night Mode",
+                "x": 196,
+                "y": 4,
+                "width": 60.328125,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "readbutton",
+                "text": "chrome_reader_modeReading",
+                "title": "Reading Mode",
+                "x": 258.328125,
+                "y": 4,
+                "width": 60.328125,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "spellbutton",
+                "text": "spellcheckSpelling",
+                "title": "Spell Check",
+                "x": 320.65625,
+                "y": 4,
+                "width": 60.328125,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "newbutton",
+                "text": "Clear",
+                "title": "",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              },
+              {
+                "id": "close-share",
+                "text": "×",
+                "title": "",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "inline-block",
+                "visibility": "visible"
+              }
+            ],
+            "preview": "Functional document 中文\n\nA bold phrase, italic and code.\n\nfirst\nsecond\nName\tValue\nalpha\t42\n\nquoted text\n\nconst answer = 42;\n\n complete\n pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "typing-live-preview",
+          "status": "pass",
+          "evidence": {
+            "value": "# Typed heading\n\nTyped **strong** 中文.",
+            "preview": "<h1>Typed heading</h1>\n<p>Typed <strong>strong</strong> 中文.</p>\n"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-b",
+          "status": "pass",
+          "evidence": {
+            "value": "**selected**"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-i",
+          "status": "pass",
+          "evidence": {
+            "value": "_selected_"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-k",
+          "status": "pass",
+          "evidence": {
+            "value": "`selected`"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-l",
+          "status": "pass",
+          "evidence": {
+            "value": "<kbd>selected</kbd>"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-list-enter",
+          "status": "pass",
+          "evidence": {
+            "value": "- first\n- "
+          }
+        },
+        {
+          "target": "phone",
+          "name": "import-file-entry",
+          "status": "pass",
+          "evidence": {
+            "value": "# Imported 中文\n\nImported **content** Ω.",
+            "preview": "<h1>Imported 中文</h1>\n<p>Imported <strong>content</strong> Ω.</p>\n"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true,
+            "content": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true,
+            "content": "<h1>Functional document 中文</h1>\n<p>A <strong>bold</strong> phrase, <em>italic</em> and <code>code</code>.</p>\n<ul>\n<li>first</li>\n<li>second</li>\n</ul>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>alpha</td>\n<td>42</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p>quoted text</p>\n</blockquote>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> answer = <span class=\"hljs-number\">42</span>;\n</code></pre>\n<ul>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" checked=\"\" style=\"list-style-type: none; \n          margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> complete</li>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" style=\"list-style-type: none; \n            margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> pending</li>\n</ul>\n<p>End marker Ω.</p>\n"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "download-close-escape",
+          "status": "pass",
+          "evidence": {
+            "escape": true,
+            "close": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "browser-save-reload",
+          "status": "pass",
+          "evidence": {
+            "restored": true,
+            "value": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-save",
+          "status": "pass",
+          "evidence": {
+            "saved": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "browser-save-overwrite",
+          "status": "pass",
+          "evidence": {
+            "warning": "Existing Data Detected\n\nYou will overwrite the data previously saved!\n\n! \n\nNot valid!\n\nCancel Yes, overwrite!",
+            "restoredRevision": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "saved-shortcut-download-observation",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true,
+            "note": "Observation: baseline suppresses Ctrl+Shift+S when content equals saved content."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-download",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "share-restore",
+          "status": "pass",
+          "evidence": {
+            "fragmentLength": 256,
+            "restored": true,
+            "reading": true,
+            "preview": "Functional document 中文\n\nA bold phrase, italic and code.\n\nfirst\nsecond\nName\tValue\nalpha\t42\n\nquoted text\n\nconst answer = 42;\n\n complete\n pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-toggle",
+          "status": "pass",
+          "evidence": {
+            "reading": {
+              "x": 9,
+              "y": 146,
+              "width": 372,
+              "height": 689
+            },
+            "valuePreserved": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "night-toggle",
+          "status": "pass",
+          "evidence": {
+            "initial": null,
+            "enabled": "nightmode",
+            "restored": ""
+          }
+        },
+        {
+          "target": "phone",
+          "name": "spell-toggle",
+          "status": "pass",
+          "evidence": {
+            "disabledAndRestored": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "long-document-scroll",
+          "status": "pass",
+          "evidence": {
+            "before": {
+              "root": 390,
+              "client": 390,
+              "in": {
+                "left": 0,
+                "top": 23869,
+                "height": 24197,
+                "width": 372,
+                "clientHeight": 292,
+                "clientWidth": 372
+              },
+              "out": {
+                "height": 26665,
+                "client": 322
+              }
+            },
+            "after": {
+              "top": 25976,
+              "scrollHeight": 26665,
+              "clientHeight": 689,
+              "last": " comfortable reading comfortable reading\n\nFINAL_LONG_MARKER EDITED_END"
+            },
+            "scrollReachedBottom": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "touch-scroll-gesture",
+          "status": "pass",
+          "evidence": {
+            "scrollTop": 1952
+          }
+        }
+      ],
+      "supplement": [
+        {
+          "target": "desktop",
+          "name": "api-contract",
+          "status": "pass",
+          "evidence": {
+            "globals": [
+              {
+                "name": "update",
+                "type": "function"
+              },
+              {
+                "name": "setOutput",
+                "type": "function"
+              },
+              {
+                "name": "saveAsMarkdown",
+                "type": "function"
+              },
+              {
+                "name": "saveAsHtml",
+                "type": "function"
+              },
+              {
+                "name": "save",
+                "type": "function"
+              },
+              {
+                "name": "showMenu",
+                "type": "function"
+              },
+              {
+                "name": "hideMenu",
+                "type": "function"
+              },
+              {
+                "name": "openFile",
+                "type": "function"
+              },
+              {
+                "name": "clearEditor",
+                "type": "function"
+              },
+              {
+                "name": "saveInBrowser",
+                "type": "function"
+              },
+              {
+                "name": "toggleNightMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleReadMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleSpellCheck",
+                "type": "function"
+              },
+              {
+                "name": "updateHash",
+                "type": "function"
+              },
+              {
+                "name": "processQueryParams",
+                "type": "function"
+              },
+              {
+                "name": "start",
+                "type": "function"
+              }
+            ],
+            "editorMethods": [
+              {
+                "name": "getValue",
+                "type": "function"
+              },
+              {
+                "name": "setValue",
+                "type": "function"
+              },
+              {
+                "name": "focus",
+                "type": "function"
+              },
+              {
+                "name": "replaceSelection",
+                "type": "function"
+              },
+              {
+                "name": "getSelection",
+                "type": "function"
+              },
+              {
+                "name": "setSelection",
+                "type": "function"
+              },
+              {
+                "name": "getScrollInfo",
+                "type": "function"
+              }
+            ]
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-return-edit",
+          "status": "pass",
+          "evidence": {
+            "retained": true,
+            "livePreview": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "share-panel-new-entry",
+          "status": "pass",
+          "evidence": {
+            "urlMatches": true,
+            "close": true,
+            "escape": true,
+            "box": {
+              "x": 0,
+              "y": 66,
+              "width": 1440,
+              "height": 55
+            }
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "keyboard-download-entry",
+          "status": "pass",
+          "evidence": {
+            "tabEntry": true,
+            "enterDownload": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "wide-content-root-containment",
+          "status": "pass",
+          "evidence": {
+            "viewport": 1440,
+            "root": 1440,
+            "client": 1440,
+            "out": {
+              "width": 848,
+              "scroll": 848
+            },
+            "hasEnd": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "touch-writing-scroll",
+          "status": "not_applicable",
+          "evidence": {
+            "notApplicable": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "api-contract",
+          "status": "pass",
+          "evidence": {
+            "globals": [
+              {
+                "name": "update",
+                "type": "function"
+              },
+              {
+                "name": "setOutput",
+                "type": "function"
+              },
+              {
+                "name": "saveAsMarkdown",
+                "type": "function"
+              },
+              {
+                "name": "saveAsHtml",
+                "type": "function"
+              },
+              {
+                "name": "save",
+                "type": "function"
+              },
+              {
+                "name": "showMenu",
+                "type": "function"
+              },
+              {
+                "name": "hideMenu",
+                "type": "function"
+              },
+              {
+                "name": "openFile",
+                "type": "function"
+              },
+              {
+                "name": "clearEditor",
+                "type": "function"
+              },
+              {
+                "name": "saveInBrowser",
+                "type": "function"
+              },
+              {
+                "name": "toggleNightMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleReadMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleSpellCheck",
+                "type": "function"
+              },
+              {
+                "name": "updateHash",
+                "type": "function"
+              },
+              {
+                "name": "processQueryParams",
+                "type": "function"
+              },
+              {
+                "name": "start",
+                "type": "function"
+              }
+            ],
+            "editorMethods": [
+              {
+                "name": "getValue",
+                "type": "function"
+              },
+              {
+                "name": "setValue",
+                "type": "function"
+              },
+              {
+                "name": "focus",
+                "type": "function"
+              },
+              {
+                "name": "replaceSelection",
+                "type": "function"
+              },
+              {
+                "name": "getSelection",
+                "type": "function"
+              },
+              {
+                "name": "setSelection",
+                "type": "function"
+              },
+              {
+                "name": "getScrollInfo",
+                "type": "function"
+              }
+            ]
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-return-edit",
+          "status": "pass",
+          "evidence": {
+            "retained": true,
+            "livePreview": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "share-panel-new-entry",
+          "status": "pass",
+          "evidence": {
+            "urlMatches": true,
+            "close": true,
+            "escape": true,
+            "box": {
+              "x": 0,
+              "y": 99,
+              "width": 390,
+              "height": 55
+            }
+          }
+        },
+        {
+          "target": "phone",
+          "name": "keyboard-download-entry",
+          "status": "pass",
+          "evidence": {
+            "tabEntry": true,
+            "enterDownload": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "wide-content-root-containment",
+          "status": "pass",
+          "evidence": {
+            "viewport": 390,
+            "root": 390,
+            "client": 390,
+            "out": {
+              "width": 372,
+              "scroll": 372
+            },
+            "hasEnd": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "touch-writing-scroll",
+          "status": "pass",
+          "evidence": {
+            "before": 0,
+            "after": 1089,
+            "box": {
+              "x": 9,
+              "y": 146,
+              "width": 372,
+              "height": 322
+            }
+          }
+        }
+      ],
+      "untested": [
+        "Actual dictionary-based spelling error detection: original en_US.aff/dic requests were blocked; only spell-check UI/style state tested.",
+        "Native phone OS keyboard, native browser chrome, and physical-device behavior: touch emulation/CDP used."
+      ]
+    },
+    {
+      "port": 5313,
+      "status": "pass",
+      "baselineWorkingFunctionsPreserved": true,
+      "newRegressions": [],
+      "mainCheckCount": 48,
+      "supplementCheckCount": 12,
+      "viewports": [
+        {
+          "target": "desktop",
+          "requested": {
+            "width": 1440,
+            "height": 900,
+            "touch": false
+          },
+          "actual": {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "clientWidth": 1440,
+            "scrollWidth": 1440,
+            "screenWidth": 1440,
+            "hover": true,
+            "pointerCoarse": false,
+            "viewportMeta": "width=device-width, initial-scale=1"
+          }
+        },
+        {
+          "target": "phone",
+          "requested": {
+            "width": 390,
+            "height": 844,
+            "touch": true
+          },
+          "actual": {
+            "innerWidth": 390,
+            "innerHeight": 844,
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "screenWidth": 390,
+            "hover": false,
+            "pointerCoarse": true,
+            "viewportMeta": "width=device-width, initial-scale=1"
+          }
+        }
+      ],
+      "renderedHtmlExportExactlyMatchesBaseline": true,
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://cdn.jsdelivr.net/codemirror.spell-checker/latest/en_US.aff",
+        "https://cdn.jsdelivr.net/codemirror.spell-checker/latest/en_US.dic"
+      ],
+      "checks": [
+        {
+          "target": "desktop",
+          "name": "initial-layout",
+          "status": "pass",
+          "evidence": {
+            "viewport": {
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "clientWidth": 1440,
+              "scrollWidth": 1440,
+              "screenWidth": 1440,
+              "hover": true,
+              "pointerCoarse": false,
+              "viewportMeta": "width=device-width, initial-scale=1"
+            },
+            "panes": [
+              {
+                "id": "in",
+                "x": 0,
+                "y": 109,
+                "width": 719,
+                "height": 791,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "out",
+                "x": 720,
+                "y": 109,
+                "width": 720,
+                "height": 791,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "navbar",
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 64,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "menu",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              }
+            ],
+            "actions": [
+              {
+                "id": "openbutton",
+                "text": "open_in_browserOpen",
+                "title": "Open from Disk",
+                "x": 689.375,
+                "y": 10,
+                "width": 85.015625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "savebutton",
+                "text": "file_downloadDownload",
+                "title": "Download",
+                "x": 778.390625,
+                "y": 10,
+                "width": 118.859375,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "browsersavebutton",
+                "text": "saveSave",
+                "title": "Browser Save (Experimental)",
+                "x": 901.25,
+                "y": 10,
+                "width": 79.59375,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "sharebutton",
+                "text": "shareShare",
+                "title": "Generate Shareable Link",
+                "x": 984.84375,
+                "y": 10,
+                "width": 86.5625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "nightbutton",
+                "text": "invert_colorsNight",
+                "title": "Night Mode",
+                "x": 1075.40625,
+                "y": 10,
+                "width": 87.15625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "spellbutton",
+                "text": "spellcheckSpelling",
+                "title": "Spell Check",
+                "x": 1166.5625,
+                "y": 10,
+                "width": 103.703125,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "readbutton",
+                "text": "chrome_reader_modeRead preview",
+                "title": "Reading Mode",
+                "x": 1274.265625,
+                "y": 10,
+                "width": 143.734375,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "newbutton",
+                "text": "Clear",
+                "title": "",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              }
+            ],
+            "preview": "Functional document 中文\n\nA bold phrase, italic and code.\n\nfirst\nsecond\nName\tValue\nalpha\t42\n\nquoted text\n\nconst answer = 42;\n\n complete\n pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "typing-live-preview",
+          "status": "pass",
+          "evidence": {
+            "value": "# Typed heading\n\nTyped **strong** 中文.",
+            "preview": "<h1>Typed heading</h1>\n<p>Typed <strong>strong</strong> 中文.</p>\n"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-b",
+          "status": "pass",
+          "evidence": {
+            "value": "**selected**"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-i",
+          "status": "pass",
+          "evidence": {
+            "value": "_selected_"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-k",
+          "status": "pass",
+          "evidence": {
+            "value": "`selected`"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-ctrl-l",
+          "status": "pass",
+          "evidence": {
+            "value": "<kbd>selected</kbd>"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-list-enter",
+          "status": "pass",
+          "evidence": {
+            "value": "- first\n- "
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "import-file-entry",
+          "status": "pass",
+          "evidence": {
+            "value": "# Imported 中文\n\nImported **content** Ω.",
+            "preview": "<h1>Imported 中文</h1>\n<p>Imported <strong>content</strong> Ω.</p>\n"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true,
+            "content": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true,
+            "content": "<h1>Functional document 中文</h1>\n<p>A <strong>bold</strong> phrase, <em>italic</em> and <code>code</code>.</p>\n<ul>\n<li>first</li>\n<li>second</li>\n</ul>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>alpha</td>\n<td>42</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p>quoted text</p>\n</blockquote>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> answer = <span class=\"hljs-number\">42</span>;\n</code></pre>\n<ul>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" checked=\"\" style=\"list-style-type: none; \n          margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> complete</li>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" style=\"list-style-type: none; \n            margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> pending</li>\n</ul>\n<p>End marker Ω.</p>\n"
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "download-close-escape",
+          "status": "pass",
+          "evidence": {
+            "escape": true,
+            "close": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "browser-save-reload",
+          "status": "pass",
+          "evidence": {
+            "restored": true,
+            "value": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-save",
+          "status": "pass",
+          "evidence": {
+            "saved": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "browser-save-overwrite",
+          "status": "pass",
+          "evidence": {
+            "warning": "Existing Data Detected\n\nYou will overwrite the data previously saved!\n\n! \n\nNot valid!\n\nCancel Yes, overwrite!",
+            "restoredRevision": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "saved-shortcut-download-observation",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true,
+            "note": "Observation: baseline suppresses Ctrl+Shift+S when content equals saved content."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "shortcut-download",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "share-restore",
+          "status": "pass",
+          "evidence": {
+            "fragmentLength": 256,
+            "restored": true,
+            "reading": true,
+            "preview": "Functional document 中文\n\nA bold phrase, italic and code.\n\nfirst\nsecond\nName\tValue\nalpha\t42\n\nquoted text\n\nconst answer = 42;\n\n complete\n pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-toggle",
+          "status": "pass",
+          "evidence": {
+            "reading": {
+              "x": 300,
+              "y": 109,
+              "width": 840,
+              "height": 791
+            },
+            "valuePreserved": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "night-toggle",
+          "status": "pass",
+          "evidence": {
+            "initial": null,
+            "enabled": "nightmode",
+            "restored": ""
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "spell-toggle",
+          "status": "pass",
+          "evidence": {
+            "disabledAndRestored": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "long-document-scroll",
+          "status": "pass",
+          "evidence": {
+            "before": {
+              "root": 1440,
+              "client": 1440,
+              "in": {
+                "left": 0,
+                "top": 16513,
+                "height": 17274,
+                "width": 719,
+                "clientHeight": 761,
+                "clientWidth": 719
+              },
+              "out": {
+                "height": 17580,
+                "client": 791
+              }
+            },
+            "after": {
+              "top": 14414,
+              "scrollHeight": 15205,
+              "clientHeight": 791,
+              "last": " comfortable reading comfortable reading\n\nFINAL_LONG_MARKER EDITED_END"
+            },
+            "scrollReachedBottom": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "touch-scroll-gesture",
+          "status": "pass",
+          "evidence": {
+            "notApplicable": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "initial-layout",
+          "status": "pass",
+          "evidence": {
+            "viewport": {
+              "innerWidth": 390,
+              "innerHeight": 844,
+              "clientWidth": 390,
+              "scrollWidth": 390,
+              "screenWidth": 390,
+              "hover": false,
+              "pointerCoarse": true,
+              "viewportMeta": "width=device-width, initial-scale=1"
+            },
+            "panes": [
+              {
+                "id": "in",
+                "x": 0,
+                "y": 141,
+                "width": 390,
+                "height": 703,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "out",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "navbar",
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 104,
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "id": "menu",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              }
+            ],
+            "actions": [
+              {
+                "id": "openbutton",
+                "text": "open_in_browserOpen",
+                "title": "Open from Disk",
+                "x": 10,
+                "y": 54,
+                "width": 55.015625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "savebutton",
+                "text": "file_downloadDownload",
+                "title": "Download",
+                "x": 69.015625,
+                "y": 54,
+                "width": 74.90625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "browsersavebutton",
+                "text": "saveSave",
+                "title": "Browser Save (Experimental)",
+                "x": 147.921875,
+                "y": 54,
+                "width": 55.015625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "sharebutton",
+                "text": "shareShare",
+                "title": "Generate Shareable Link",
+                "x": 206.9375,
+                "y": 54,
+                "width": 55.015625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "nightbutton",
+                "text": "invert_colorsNight",
+                "title": "Night Mode",
+                "x": 265.953125,
+                "y": 54,
+                "width": 55.015625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "spellbutton",
+                "text": "spellcheckSpelling",
+                "title": "Spell Check",
+                "x": 324.96875,
+                "y": 54,
+                "width": 55.015625,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "readbutton",
+                "text": "chrome_reader_modeRead preview",
+                "title": "Reading Mode",
+                "x": 236.25,
+                "y": 6,
+                "width": 143.734375,
+                "height": 44,
+                "display": "flex",
+                "visibility": "visible"
+              },
+              {
+                "id": "newbutton",
+                "text": "Clear",
+                "title": "",
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "display": "none",
+                "visibility": "visible"
+              }
+            ],
+            "preview": "Functional document 中文\nA bold phrase, italic and code.\n\nfirst\nsecond\n\n\n\n\nName\nValue\n\n\n\n\nalpha\n42\n\n\n\n\nquoted text\n\nconst answer = 42;\n\n\n complete\n pending\n\nEnd marker Ω.\n"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "typing-live-preview",
+          "status": "pass",
+          "evidence": {
+            "value": "# Typed heading\n\nTyped **strong** 中文.",
+            "preview": "<h1>Typed heading</h1>\n<p>Typed <strong>strong</strong> 中文.</p>\n"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-b",
+          "status": "pass",
+          "evidence": {
+            "value": "**selected**"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-i",
+          "status": "pass",
+          "evidence": {
+            "value": "_selected_"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-k",
+          "status": "pass",
+          "evidence": {
+            "value": "`selected`"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-ctrl-l",
+          "status": "pass",
+          "evidence": {
+            "value": "<kbd>selected</kbd>"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-list-enter",
+          "status": "pass",
+          "evidence": {
+            "value": "- first\n- "
+          }
+        },
+        {
+          "target": "phone",
+          "name": "import-file-entry",
+          "status": "pass",
+          "evidence": {
+            "value": "# Imported 中文\n\nImported **content** Ω.",
+            "preview": "<h1>Imported 中文</h1>\n<p>Imported <strong>content</strong> Ω.</p>\n"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true,
+            "content": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true,
+            "content": "<h1>Functional document 中文</h1>\n<p>A <strong>bold</strong> phrase, <em>italic</em> and <code>code</code>.</p>\n<ul>\n<li>first</li>\n<li>second</li>\n</ul>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>alpha</td>\n<td>42</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p>quoted text</p>\n</blockquote>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> answer = <span class=\"hljs-number\">42</span>;\n</code></pre>\n<ul>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" checked=\"\" style=\"list-style-type: none; \n          margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> complete</li>\n<li style=\"list-style-type: none;\"><input type=\"checkbox\" style=\"list-style-type: none; \n            margin: 0 0.2em 0 -1.3em;\" disabled=\"\"> pending</li>\n</ul>\n<p>End marker Ω.</p>\n"
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-download-markdown",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.md",
+            "bytes": 225,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-download-html",
+          "status": "pass",
+          "evidence": {
+            "filename": "Functionaldocument中文.html",
+            "bytes": 813,
+            "exactMatch": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "download-close-escape",
+          "status": "pass",
+          "evidence": {
+            "escape": true,
+            "close": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "browser-save-reload",
+          "status": "pass",
+          "evidence": {
+            "restored": true,
+            "value": "# Functional document 中文\n\nA **bold** phrase, _italic_ and `code`.\n\n- first\n- second\n\n| Name | Value |\n| --- | --- |\n| alpha | 42 |\n\n> quoted text\n\n```js\nconst answer = 42;\n```\n\n- [x] complete\n- [ ] pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-save",
+          "status": "pass",
+          "evidence": {
+            "saved": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "browser-save-overwrite",
+          "status": "pass",
+          "evidence": {
+            "warning": "Existing Data Detected\n\nYou will overwrite the data previously saved!\n\n! \n\nNot valid!\n\nCancel Yes, overwrite!",
+            "restoredRevision": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "saved-shortcut-download-observation",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true,
+            "note": "Observation: baseline suppresses Ctrl+Shift+S when content equals saved content."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "shortcut-download",
+          "status": "pass",
+          "evidence": {
+            "menuVisible": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "share-restore",
+          "status": "pass",
+          "evidence": {
+            "fragmentLength": 256,
+            "restored": true,
+            "reading": true,
+            "preview": "Functional document 中文\n\nA bold phrase, italic and code.\n\nfirst\nsecond\nName\tValue\nalpha\t42\n\nquoted text\n\nconst answer = 42;\n\n complete\n pending\n\nEnd marker Ω."
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-toggle",
+          "status": "pass",
+          "evidence": {
+            "reading": {
+              "x": 0,
+              "y": 141,
+              "width": 390,
+              "height": 703
+            },
+            "valuePreserved": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "night-toggle",
+          "status": "pass",
+          "evidence": {
+            "initial": null,
+            "enabled": "nightmode",
+            "restored": ""
+          }
+        },
+        {
+          "target": "phone",
+          "name": "spell-toggle",
+          "status": "pass",
+          "evidence": {
+            "disabledAndRestored": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "long-document-scroll",
+          "status": "pass",
+          "evidence": {
+            "before": {
+              "root": 390,
+              "client": 390,
+              "in": {
+                "left": 0,
+                "top": 23617,
+                "height": 24290,
+                "width": 390,
+                "clientHeight": 673,
+                "clientWidth": 390
+              },
+              "out": {
+                "height": 0,
+                "client": 0
+              }
+            },
+            "after": {
+              "top": 23978,
+              "scrollHeight": 24681,
+              "clientHeight": 703,
+              "last": " comfortable reading comfortable reading\n\nFINAL_LONG_MARKER EDITED_END"
+            },
+            "scrollReachedBottom": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "touch-scroll-gesture",
+          "status": "pass",
+          "evidence": {
+            "scrollTop": 1743
+          }
+        }
+      ],
+      "supplement": [
+        {
+          "target": "desktop",
+          "name": "api-contract",
+          "status": "pass",
+          "evidence": {
+            "globals": [
+              {
+                "name": "update",
+                "type": "function"
+              },
+              {
+                "name": "setOutput",
+                "type": "function"
+              },
+              {
+                "name": "saveAsMarkdown",
+                "type": "function"
+              },
+              {
+                "name": "saveAsHtml",
+                "type": "function"
+              },
+              {
+                "name": "save",
+                "type": "function"
+              },
+              {
+                "name": "showMenu",
+                "type": "function"
+              },
+              {
+                "name": "hideMenu",
+                "type": "function"
+              },
+              {
+                "name": "openFile",
+                "type": "function"
+              },
+              {
+                "name": "clearEditor",
+                "type": "function"
+              },
+              {
+                "name": "saveInBrowser",
+                "type": "function"
+              },
+              {
+                "name": "toggleNightMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleReadMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleSpellCheck",
+                "type": "function"
+              },
+              {
+                "name": "updateHash",
+                "type": "function"
+              },
+              {
+                "name": "processQueryParams",
+                "type": "function"
+              },
+              {
+                "name": "start",
+                "type": "function"
+              }
+            ],
+            "editorMethods": [
+              {
+                "name": "getValue",
+                "type": "function"
+              },
+              {
+                "name": "setValue",
+                "type": "function"
+              },
+              {
+                "name": "focus",
+                "type": "function"
+              },
+              {
+                "name": "replaceSelection",
+                "type": "function"
+              },
+              {
+                "name": "getSelection",
+                "type": "function"
+              },
+              {
+                "name": "setSelection",
+                "type": "function"
+              },
+              {
+                "name": "getScrollInfo",
+                "type": "function"
+              }
+            ]
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "reading-return-edit",
+          "status": "pass",
+          "evidence": {
+            "retained": true,
+            "livePreview": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "share-panel-new-entry",
+          "status": "not_applicable",
+          "evidence": {
+            "notApplicable": true,
+            "existingHashShare": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "keyboard-download-entry",
+          "status": "pass",
+          "evidence": {
+            "tabEntry": true,
+            "enterDownload": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "wide-content-root-containment",
+          "status": "pass",
+          "evidence": {
+            "viewport": 1440,
+            "root": 1440,
+            "client": 1440,
+            "out": {
+              "width": 840,
+              "scroll": 840
+            },
+            "hasEnd": true
+          }
+        },
+        {
+          "target": "desktop",
+          "name": "touch-writing-scroll",
+          "status": "not_applicable",
+          "evidence": {
+            "notApplicable": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "api-contract",
+          "status": "pass",
+          "evidence": {
+            "globals": [
+              {
+                "name": "update",
+                "type": "function"
+              },
+              {
+                "name": "setOutput",
+                "type": "function"
+              },
+              {
+                "name": "saveAsMarkdown",
+                "type": "function"
+              },
+              {
+                "name": "saveAsHtml",
+                "type": "function"
+              },
+              {
+                "name": "save",
+                "type": "function"
+              },
+              {
+                "name": "showMenu",
+                "type": "function"
+              },
+              {
+                "name": "hideMenu",
+                "type": "function"
+              },
+              {
+                "name": "openFile",
+                "type": "function"
+              },
+              {
+                "name": "clearEditor",
+                "type": "function"
+              },
+              {
+                "name": "saveInBrowser",
+                "type": "function"
+              },
+              {
+                "name": "toggleNightMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleReadMode",
+                "type": "function"
+              },
+              {
+                "name": "toggleSpellCheck",
+                "type": "function"
+              },
+              {
+                "name": "updateHash",
+                "type": "function"
+              },
+              {
+                "name": "processQueryParams",
+                "type": "function"
+              },
+              {
+                "name": "start",
+                "type": "function"
+              }
+            ],
+            "editorMethods": [
+              {
+                "name": "getValue",
+                "type": "function"
+              },
+              {
+                "name": "setValue",
+                "type": "function"
+              },
+              {
+                "name": "focus",
+                "type": "function"
+              },
+              {
+                "name": "replaceSelection",
+                "type": "function"
+              },
+              {
+                "name": "getSelection",
+                "type": "function"
+              },
+              {
+                "name": "setSelection",
+                "type": "function"
+              },
+              {
+                "name": "getScrollInfo",
+                "type": "function"
+              }
+            ]
+          }
+        },
+        {
+          "target": "phone",
+          "name": "reading-return-edit",
+          "status": "pass",
+          "evidence": {
+            "retained": true,
+            "livePreview": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "share-panel-new-entry",
+          "status": "not_applicable",
+          "evidence": {
+            "notApplicable": true,
+            "existingHashShare": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "keyboard-download-entry",
+          "status": "pass",
+          "evidence": {
+            "tabEntry": true,
+            "enterDownload": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "wide-content-root-containment",
+          "status": "pass",
+          "evidence": {
+            "viewport": 390,
+            "root": 390,
+            "client": 390,
+            "out": {
+              "width": 390,
+              "scroll": 390
+            },
+            "hasEnd": true
+          }
+        },
+        {
+          "target": "phone",
+          "name": "touch-writing-scroll",
+          "status": "pass",
+          "evidence": {
+            "before": 0,
+            "after": 1457,
+            "box": {
+              "x": 0,
+              "y": 141,
+              "width": 390,
+              "height": 703
+            }
+          }
+        }
+      ],
+      "untested": [
+        "Actual dictionary-based spelling error detection: original en_US.aff/dic requests were blocked; only spell-check UI/style state tested.",
+        "Native phone OS keyboard, native browser chrome, and physical-device behavior: touch emulation/CDP used."
+      ]
+    }
+  ],
+  "scriptHashes": {
+    "functional.cjs": "a6c99cad0207c904629e26cfbe3e6d2d8773f7aa5821f433fda92d4f9dbaeb96",
+    "supplement.cjs": "6560f6649d0f07b9aa02dc620b941064565e800575ce4719da8c735c3dbead57"
+  },
+  "artifacts": {
+    "baseline": "baseline-effective.json",
+    "main": [
+      "candidate-5312/results.json",
+      "candidate-5313/results.json"
+    ],
+    "supplement": "supplement-results.json",
+    "screenshots": "baseline/*.png and candidate-5312/*.png and candidate-5313/*.png"
+  }
+}

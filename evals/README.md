@@ -1,8 +1,10 @@
 # Skill 验收与发布标准
 
+最新：[精简候选在新 Markdown Editor 上的等预算验证](results/2026-11-05-heldout-markdown/README.md)。仍为+1.5/24，未达+2门槛；与TodoMVC不是同项目的新版/旧版对照。候选改动及观察依据见[分析](skill-revision-2026-11-05.md)。
+
 当前发布等级为实验版。示例截图、格式检查和布局 CI 提供基础证据，稳定版还需要完成以下行为验收。网页效果的增益另按[真实页面对照协议](visual-outcomes.md)验证，以相同任务下的最终页面和原有功能为对象。
 
-最新未见项目验证：[TodoMVC 相同回复次数和时间上限](results/2026-11-05-heldout-todomvc/README.md)。两边各三次代码回复、十五分钟上限，功能均通过，盲评平均差 +1.5/24，未过预设 +2 分门槛。包括两次无效执行的记录；完整源码和截图可公开复查，未据此调整 skill。
+此前的未见项目验证：[TodoMVC 相同回复次数和时间上限](results/2026-11-05-heldout-todomvc/README.md)。两边各三次代码回复、十五分钟上限，功能均通过，盲评平均差 +1.5/24，未过预设 +2 分门槛。包括两次无效执行的记录；完整源码和截图可公开复查，未据此调整 skill。
 
 最新记录：[真实网页效果对照](results/2026-11-04-visual-outcomes/README.md)，以两项真实前端任务比较最终页面并保留全部开发轮次。此前的[触屏可见性修订与对照复测](results/2026-11-04-touch-rerun/README.md)、[首次真实项目对照](results/2026-11-04-real-project/README.md)和[首次合成任务验收](results/2026-11-04/README.md)作为历史批次保留，不自动适用于新候选版本。
 

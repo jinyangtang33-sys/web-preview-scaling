@@ -1,0 +1,35 @@
+{
+  "patches": [
+    {
+      "path": "index.css",
+      "old": "@media screen and (max-width: 720px) {",
+      "new": "@media screen and (min-width: 375px) and (max-width: 1060px) {\n #navcontent { grid-template-columns: repeat(6,minmax(max-content,1fr)); }\n #navbar #logo { grid-column: 1 / 4; }\n #navbar #readbutton { grid-column: 4 / -1; justify-self: end; white-space: nowrap; }\n #navbar .navbutton:not(#readbutton) { font-size: 13px; }\n}\n@media screen and (max-width: 720px) {"
+    },
+    {
+      "path": "index.html",
+      "old": "<div id=\"out\" class=\"markdown-body\"></div>",
+      "new": "<div id=\"out\" class=\"markdown-body\" tabindex=\"-1\" role=\"region\" aria-label=\"Rendered document\"></div>"
+    },
+    {
+      "path": "index.css",
+      "old": " #out h1, #out h2 { font-family:",
+      "new": " #out:focus-visible { outline: 2px solid #648b72; outline-offset: -2px; }\n #out h1, #out h2 { font-family:"
+    },
+    {
+      "path": "index.js",
+      "old": "    if (!reading) editor.refresh();",
+      "new": "    if (reading) {\n        out.focus({preventScroll: true});\n    } else {\n        editor.refresh();\n        if (window.matchMedia('(pointer: fine)').matches) editor.focus();\n    }"
+    },
+    {
+      "path": "index.js",
+      "old": "    if (menuVisible) return;\n    menu.showModal();\n    menuVisible = true;\n    menu.style.display = 'block';",
+      "new": "    if (menu.open) return;\n    menu.style.display = 'block';\n    menu.showModal();\n    menuVisible = true;"
+    },
+    {
+      "path": "index.js",
+      "old": "document.getElementById('close-menu').addEventListener",
+      "new": "menu.addEventListener('cancel', function(event) {\n    event.preventDefault();\n    hideMenu();\n});\n\ndocument.getElementById('close-menu').addEventListener"
+    }
+  ],
+  "notes": "The 390px screenshots show both reading-mode labels wrapping. The proposal gives the switch room for one line and enlarges the six action labels. Entering reading mode focuses the document for keyboard scrolling. Returning on desktop restores editor focus. The download dialog also routes native dismissal through its existing close handler so it can reopen. Phone layout, keyboard scrolling and dialog reopening await browser verification."
+}

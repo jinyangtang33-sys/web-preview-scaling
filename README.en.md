@@ -4,9 +4,11 @@
 
 [![Base checks](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**Experimental; the workflow improved two real frontend development cases.** The mobile asset library showed four complete item names on the first screen (none without the skill); the booking list showed three complete records (one without it). In the final confirmation, two new blind reviewers preferred the skill on both projects, with a mean paired advantage of 4.25 points out of 24. All four pages passed independent functional checks. The workflow used extra implementation and review effort; these are development cases, not a cost-matched or held-out trial. [Results and limitations (Chinese)](evals/results/2026-11-04-visual-outcomes/README.md) · [Test scope and release criteria (Chinese)](evals/README.md) · [Touch omission retest (Chinese)](evals/results/2026-11-04-touch-rerun/README.md)
+**Experimental; the slim candidate still missed the new-project advantage threshold.** The design guides were shortened by about 73%, then frozen before testing a previously unused Markdown Editor. Both arms received three code replies and a 15-minute limit. Blind scores were 19/17 and 18/17: +1.5/24 versus the +2 threshold. Both passed functional checks. [Revision rationale](evals/skill-revision-2026-11-05.md) · [Latest results and pages](evals/results/2026-11-05-heldout-markdown/README.md). Shorter instructions do not establish a substantial independent benefit.
 
-**Latest: the new-project matched-budget test missed the advantage threshold.** Both TodoMVC arms received three code replies, a 15-minute limit and no model tool calls. Both blind reviewers mildly preferred the skill, but the mean difference was 1.5/24, below the frozen 2-point threshold. Both outputs passed functional checks; the skill was not retuned. [Source, screenshots, usage and results (Chinese)](evals/results/2026-11-05-heldout-todomvc/README.md). This does not establish a stable, substantial independent benefit on new projects.
+**Historical development cases using the earlier candidate.** The mobile asset library showed four complete item names on the first screen (none without the skill); the booking list showed three complete records (one without it). In the final confirmation, two new blind reviewers preferred the skill on both projects, with a mean paired advantage of 4.25 points out of 24. All four pages passed independent functional checks. The workflow used extra implementation and review effort; these are development cases, not a cost-matched or held-out trial. [Results and limitations (Chinese)](evals/results/2026-11-04-visual-outcomes/README.md) · [Test scope and release criteria (Chinese)](evals/README.md) · [Touch omission retest (Chinese)](evals/results/2026-11-04-touch-rerun/README.md)
+
+**Earlier TodoMVC matched-budget test.** Both TodoMVC arms received three code replies, a 15-minute limit and no model tool calls. Both blind reviewers mildly preferred the skill, but the mean difference was 1.5/24, below the frozen 2-point threshold. Both outputs passed functional checks; the skill was not retuned. [Source, screenshots, usage and results (Chinese)](evals/results/2026-11-05-heldout-todomvc/README.md). This does not establish a stable, substantial independent benefit on new projects.
 
 This skill helps Codex improve hierarchy, content sizing, and responsive layout around the task a page serves: scanning lists, inspecting a subject, or completing and correcting a form. It calls for reviewing before-and-after renders in matching states and checking the original interactions. It also retains viewport-matched diagnosis of preview differences.
 
@@ -31,7 +33,7 @@ Send this installation request to Codex.
 $skill-installer Install the skill from the main branch of https://github.com/jinyangtang33-sys/web-preview-scaling. SKILL.md is at the repository root (--path .). Use web-preview-scaling as the installation name (--name web-preview-scaling).
 ```
 
-To reproduce the skill version used in the comparison, replace `main` in the installation request with [candidate commit 059335f](https://github.com/jinyangtang33-sys/web-preview-scaling/commit/059335f9667d9777ca5d6e0cd67477f4d96100de). The default branch may differ from the evaluated candidate.
+To try the frozen slim candidate, replace `main` in the installation request with [candidate commit 78c5386](https://github.com/jinyangtang33-sys/web-preview-scaling/commit/78c53863050ac71050916c2cf637b2a117e1289d). The default branch may differ from the evaluated candidate.
 
 After installation, start your project's development server and open the page you want to check. Replace the URL below with your own, then send this request to Codex.
 
@@ -47,7 +49,7 @@ $web-preview-scaling Improve the desktop and mobile experience at http://localho
 
 The [task-path guide (Chinese)](references/render-quality.md) focuses on one or two consequential obstacles. [Layout boundaries](references/layout-patterns.md) and [form boundaries](references/form-decisions.md) are conditional references. Multiple full implementations or agent reviews are no longer the default. The [revision rationale (Chinese)](evals/skill-revision-2026-11-05.md) distinguishes observations from hypotheses. [Preview diagnostics](references/preview-diagnostics.md) remain available when needed; measurements do not rank page quality.
 
-Codex can inspect the page with its existing browser tools. For measurements across multiple viewports or saved screenshots, run the bundled script from a project that has Playwright installed. [Script instructions (Chinese)](SKILL.md#采集可复查的读数) · [OpenAI skill guide](https://learn.chatgpt.com/docs/build-skills)
+Codex can inspect the page with its existing browser tools. For measurements across multiple viewports or saved screenshots, run the bundled script from a project that has Playwright installed. [Script instructions (Chinese)](references/preview-diagnostics.md) · [OpenAI skill guide](https://learn.chatgpt.com/docs/build-skills)
 
 ## Try the example
 

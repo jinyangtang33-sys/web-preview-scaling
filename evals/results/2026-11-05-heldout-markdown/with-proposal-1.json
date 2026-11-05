@@ -1,0 +1,80 @@
+{
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "<meta charset=\"UTF-8\">",
+      "new": "<meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+    },
+    {
+      "path": "index.html",
+      "old": "<div id=\"in\"><form><textarea id=\"code\"># New Document</textarea></form></div>\n    <div id=\"out\" class=\"markdown-body\"></div>\n    <div id=\"menu\">",
+      "new": "<main class=\"workspace\">\n      <section class=\"source-pane\" aria-label=\"Markdown source\"><header class=\"pane-label\">Markdown source</header><div id=\"in\"><form><textarea id=\"code\"># New Document</textarea></form></div></section>\n      <section class=\"preview-pane\" aria-label=\"Live preview\"><header class=\"pane-label\">Live preview</header><div id=\"out\" class=\"markdown-body\"></div></section>\n    </main>\n    <dialog id=\"menu\" aria-label=\"Save As\">"
+    },
+    {
+      "path": "index.html",
+      "old": "<div id=\"saveas-markdown\">",
+      "new": "<button id=\"saveas-markdown\">"
+    },
+    {
+      "path": "index.html",
+      "old": "</div>\n      <div id=\"saveas-html\">",
+      "new": "</button>\n      <button id=\"saveas-html\">"
+    },
+    {
+      "path": "index.html",
+      "old": "</div>\n      <a id=\"close-menu\">&times;</a>\n    </div>",
+      "new": "</button>\n      <button id=\"close-menu\" aria-label=\"Close download options\">&times;</button>\n    </dialog>"
+    },
+    {
+      "path": "index.html",
+      "old": "<p id=\"openbutton\" title=\"Open from Disk\" class=\"navbutton left\" onclick=\"document.getElementById('fileInput').click();\"><i class=\"material-icons\">open_in_browser</i></p>\n        <input id=\"fileInput\" type=\"file\" class=\"hidden\" accept=\".md,.mdown,.txt,.markdown\"/>\n        <p id=\"savebutton\" title=\"Download\" class=\"navbutton left\" onclick=\"showMenu()\"><i class=\"material-icons\">file_download</i></p>\n        <p id=\"browsersavebutton\" title=\"Browser Save (Experimental)\" class=\"navbutton left\" onclick=\"saveInBrowser()\"><i class=\"material-icons\">save</i></p>\n        <p id=\"sharebutton\" title=\"Generate Shareable Link\" class=\"navbutton left\" onclick=\"updateHash()\"><i class=\"material-icons\">share</i></p>\n        <p id=\"nightbutton\" title=\"Night Mode\" class=\"navbutton left\" onclick=\"toggleNightMode(this)\"><i class=\"material-icons\">invert_colors</i></p>\n        <p id=\"readbutton\" title=\"Reading Mode\" class=\"navbutton left\" onclick=\"toggleReadMode(this)\"><i class=\"material-icons\">chrome_reader_mode</i></p>\n        <p id=\"spellbutton\" title=\"Spell Check\" class=\"navbutton left selected\" onclick=\"toggleSpellCheck(this)\"><i class=\"material-icons\">spellcheck</i></p>",
+      "new": "<button id=\"openbutton\" title=\"Open from Disk\" class=\"navbutton left\" onclick=\"document.getElementById('fileInput').click()\"><i aria-hidden=\"true\" class=\"material-icons\">open_in_browser</i>Open</button>\n        <input id=\"fileInput\" type=\"file\" class=\"hidden\" accept=\".md,.mdown,.txt,.markdown\"/>\n        <button id=\"savebutton\" title=\"Download\" class=\"navbutton left\" onclick=\"showMenu()\"><i aria-hidden=\"true\" class=\"material-icons\">file_download</i>Download</button>\n        <button id=\"browsersavebutton\" title=\"Browser Save (Experimental)\" class=\"navbutton left\" onclick=\"saveInBrowser()\"><i aria-hidden=\"true\" class=\"material-icons\">save</i>Save</button>\n        <button id=\"sharebutton\" title=\"Generate Shareable Link\" class=\"navbutton left\" onclick=\"updateHash()\"><i aria-hidden=\"true\" class=\"material-icons\">share</i>Share</button>\n        <button id=\"nightbutton\" title=\"Night Mode\" aria-pressed=\"false\" class=\"navbutton left\" onclick=\"toggleNightMode(this)\"><i aria-hidden=\"true\" class=\"material-icons\">invert_colors</i>Night</button>\n        <button id=\"spellbutton\" title=\"Spell Check\" aria-pressed=\"true\" class=\"navbutton left selected\" onclick=\"toggleSpellCheck(this)\"><i aria-hidden=\"true\" class=\"material-icons\">spellcheck</i>Spelling</button>\n        <button id=\"readbutton\" title=\"Reading Mode\" aria-pressed=\"false\" class=\"navbutton left\" onclick=\"toggleReadMode(this)\"><i aria-hidden=\"true\" class=\"material-icons\">chrome_reader_mode</i><span>Read preview</span></button>"
+    },
+    {
+      "path": "index.css",
+      "old": " @media print {",
+      "new": "#menu { inset: 0; margin: auto; width: min(310px, 90vw); height: fit-content; box-sizing: border-box; border: 1px solid #46534e; border-radius: 12px; padding: 20px; background: #202925; font: 16px system-ui,sans-serif; box-shadow: 0 14px 54px #0004; }\n#menu::backdrop { background: #16201d66; }\n#menu > span { margin: 0 0 16px; }\n#menu button { background: #34403a; color: white; border: 0; border-radius: 6px; padding: 6px 12px 12px; font: inherit; cursor: pointer; }\n#menu button:hover { background: #47564e; }\n#menu button:not(#close-menu) { width: 46%; }\n#menu #close-menu { background: transparent; width: 44px; height: 44px; padding: 0; right: 2px; top: 0; font-size: 22px; }\n@media screen {\n body { height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; background: #e4e8e4; }\n #navbar { position: relative; order: -1; flex: none; height: auto; background: #17211d; box-shadow: none; }\n #navcontent { display: flex; align-items: center; gap: 4px; padding: 10px 22px; }\n #navbar #logo { display: block; margin-right: auto; text-decoration: none; }\n #title { padding: 0; margin: 0; color: #f7faf7 !important; font: bold 23px/44px monospace; letter-spacing: -.065em; }\n #title::first-letter { color: #a5d5b7; }\n #navbar .navbutton { display: inline-flex; align-items: center; justify-content: center; gap: 6px; float: none; min-height: 44px; margin: 0 !important; padding: 0 11px; background: transparent; color: #e4eae6; border: 0; border-radius: 5px; font: 600 14px system-ui,sans-serif; }\n #navbar .material-icons { font-size: 19px; }\n #navbar .navbutton:hover { background: #354039; }\n #navbar .selected { background: #33483c; color: #c1ebcb; }\n #navbar #readbutton { border: 1px solid #65776b; }\n button:focus-visible, a:focus-visible { outline: 2px solid #8acda5; outline-offset: 1px; }\n .workspace { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }\n .workspace section { display: flex; min-height: 0; min-width: 0; flex-direction: column; }\n .source-pane { border-right: 1px solid #cbd3cd; }\n .pane-label { flex: none; padding: 14px 32px; border-bottom: 1px solid #d8dfd9; background: #eff3ef; color: #415549; font: 600 12px/16px monospace; letter-spacing: .075em; text-transform: uppercase; }\n .preview-pane .pane-label { background: #f8faf7; }\n #in, #out, #out.focused { position: relative; inset: auto; flex: 1; width: auto; min-height: 0; margin: 0; border: 0; box-shadow: none; z-index: auto; }\n #in { font-size: 16px; overflow: hidden; }\n .CodeMirror-scroll { padding: 0; }\n .CodeMirror-lines { padding: 26px 0; }\n .CodeMirror pre { padding: 0 32px; line-height: 1.65; }\n #in .CodeMirror { background: #f6f7f4; }\n .cm-header-1 { font-size: 1.55em; }\n .cm-header-2 { font-size: 1.32em; }\n #out { padding: 26px 36px 64px; line-height: 1.65; overflow-wrap: anywhere; }\n #out h1, #out h2 { font-family: Georgia,serif; color: #23372c; }\n #out a { color: #21664c; }\n #out table { max-width: 100%; overflow-x: auto; }\n .reading .workspace, .view .workspace { grid-template-columns: minmax(0,840px); justify-content: center; }\n .reading .source-pane, .view .source-pane { display: none; }\n .nightmode { background: #181c19; }\n .nightmode .pane-label { background: #202823; color: #c3d2c6; border-color: #3c453e; }\n}\n@media screen and (max-width: 1060px) {\n #navcontent { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 4px; padding: 6px 10px; }\n #navbar #logo { grid-column: 1 / 5; }\n #navbar #readbutton { grid-column: 5 / 7; grid-row: 1; }\n #navbar .navbutton:not(#readbutton) { flex-direction: column; gap: 2px; padding: 3px 0; font-size: 12px; }\n #title { font-size: 20px; }\n}\n@media screen and (max-width: 720px) {\n .workspace { grid-template-columns: minmax(0,1fr); }\n .workspace .preview-pane { display: none; }\n .reading .preview-pane, .view .preview-pane { display: flex; }\n .source-pane { border: 0; }\n .pane-label { padding: 10px 18px; }\n .CodeMirror-lines { padding: 18px 0; }\n .CodeMirror pre { padding: 0 18px; }\n #out { padding: 18px 20px 48px; }\n}\n @media print {\n     .pane-label { display: none; }"
+    },
+    {
+      "path": "index.js",
+      "old": "editor.on('change', update);",
+      "new": "editor.getInputField().setAttribute('aria-label', 'Markdown source');\neditor.on('change', update);"
+    },
+    {
+      "path": "index.js",
+      "old": "    menuVisible = true;",
+      "new": "    if (menuVisible) return;\n    menu.showModal();\n    menuVisible = true;"
+    },
+    {
+      "path": "index.js",
+      "old": "    menuVisible = false;",
+      "new": "    menu.close();\n    menuVisible = false;"
+    },
+    {
+      "path": "index.js",
+      "old": "if ( localStorage.getItem('content') == editor.getValue() )",
+      "new": "if (!e.shiftKey && localStorage.getItem('content') == editor.getValue())"
+    },
+    {
+      "path": "index.js",
+      "old": "document.getElementById('toplevel').classList.toggle('nightmode');",
+      "new": "button.setAttribute('aria-pressed', document.body.classList.toggle('nightmode'));"
+    },
+    {
+      "path": "index.js",
+      "old": "document.getElementById('in').classList.toggle('hidden');",
+      "new": "var reading = document.getElementById('in').classList.toggle('hidden');\n    document.body.classList.toggle('reading', reading);\n    button.setAttribute('aria-pressed', reading);\n    button.querySelector('span').textContent = reading ? 'Back to editor' : 'Read preview';\n    if (!reading) editor.refresh();"
+    },
+    {
+      "path": "index.js",
+      "old": "document.body.classList.toggle('no-spellcheck');",
+      "new": "button.setAttribute('aria-pressed', !document.body.classList.toggle('no-spellcheck'));"
+    },
+    {
+      "path": "index.js",
+      "old": "    editor.focus();",
+      "new": "    if (window.matchMedia('(pointer: fine)').matches && editor.getWrapperElement().offsetWidth) editor.focus();"
+    }
+  ],
+  "notes": "Desktop keeps source and live preview side by side. On phones, Read preview and Back to editor switch full-width panes while file and editing actions stay visible. Browser rendering, touch reachability and download-dialog behavior await harness verification."
+}

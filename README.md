@@ -4,9 +4,11 @@
 
 [![基础检查](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**实验版；已在两个真实网页开发案例上观察到收益。** 同样的手机首屏，有 skill 的素材库能读到 4 个条目名称（无 skill：0 个），预约列表能看全 3 条记录（无 skill：1 条）。最终确认中，两位新的匿名评审均在两个项目上选择有 skill，平均高 4.25/24 分，四份网页均通过独立功能复核。复杂任务用了额外实现与评审，这不是等成本或未见项目上的结论。[逐轮结果与限制](evals/results/2026-11-04-visual-outcomes/README.md) · [测试范围与发布标准](evals/README.md) · [触屏漏检复测](evals/results/2026-11-04-touch-rerun/README.md)
+**实验版；精简候选的新项目验证仍未过明确优势门槛。** 四份设计文档约减少73%，冻结后改用未参与开发的 Markdown Editor。两边各3次代码回复、15分钟上限；盲评19/17、18/17，平均仅+1.5/24（门槛+2），两边主功能检查均通过。[分析与修订](evals/skill-revision-2026-11-05.md) · [最新完整结果与页面](evals/results/2026-11-05-heldout-markdown/README.md)。精简不等于已经证明有明显独立价值。
 
-**最新：新项目等预算验证未达到明确优势门槛。** TodoMVC 两边各 3 次代码回复、15 分钟上限、0 次模型工具调用；两位盲评都略偏好有 skill，但平均仅高 1.5/24，低于预设 2 分。两边功能检查均通过，skill 未据此调优。[完整源码、截图、用量与结果](evals/results/2026-11-05-heldout-todomvc/README.md)。当前证据仍不足以宣称在新项目上有稳定、足够大的独立增益。
+**旧候选的开发案例记录。** 同样的手机首屏，有 skill 的素材库能读到 4 个条目名称（无 skill：0 个），预约列表能看全 3 条记录（无 skill：1 条）。最终确认中，两位新的匿名评审均在两个项目上选择有 skill，平均高 4.25/24 分，四份网页均通过独立功能复核。复杂任务用了额外实现与评审，这不是等成本或未见项目上的结论。[逐轮结果与限制](evals/results/2026-11-04-visual-outcomes/README.md) · [测试范围与发布标准](evals/README.md) · [触屏漏检复测](evals/results/2026-11-04-touch-rerun/README.md)
+
+**此前的 TodoMVC 等预算验证。** TodoMVC 两边各 3 次代码回复、15 分钟上限、0 次模型工具调用；两位盲评都略偏好有 skill，但平均仅高 1.5/24，低于预设 2 分。两边功能检查均通过，skill 未据此调优。[完整源码、截图、用量与结果](evals/results/2026-11-05-heldout-todomvc/README.md)。当前证据仍不足以宣称在新项目上有稳定、足够大的独立增益。
 
 这个 skill 帮助 Codex 按网页的实际任务调整信息层级、内容尺寸和响应式布局：列表便于扫读，详情看清主体，表单便于填写和修错。它要求查看同状态的前后渲染并复测操作，也保留相同 CSS 视口下的预览差异排查。
 
@@ -31,7 +33,7 @@ h1 { font-size: clamp(30px, 7vw, 52px); }
 $skill-installer 请从 https://github.com/jinyangtang33-sys/web-preview-scaling 的 main 分支安装 skill。SKILL.md 在仓库根目录（--path .），安装名为 web-preview-scaling（--name web-preview-scaling）。
 ```
 
-要复现本次网页对照所用的 skill，在安装请求中把 `main` 换为[候选提交 059335f](https://github.com/jinyangtang33-sys/web-preview-scaling/commit/059335f9667d9777ca5d6e0cd67477f4d96100de)。默认分支与实验候选可能不同。
+要试用本次冻结的精简候选，在安装请求中把 `main` 换为[候选提交 78c5386](https://github.com/jinyangtang33-sys/web-preview-scaling/commit/78c53863050ac71050916c2cf637b2a117e1289d)。默认分支与实验候选可能不同。
 
 安装后，在你的网页项目中启动开发服务器，打开要检查的页面。把下面的网址换成自己的，再发给 Codex。
 
@@ -47,7 +49,7 @@ $web-preview-scaling 请完善 http://localhost:3000/ 的桌面和手机效果�
 
 [任务路径](references/render-quality.md) 聚焦当前最影响任务的一两个阻碍；[布局边界](references/layout-patterns.md)和[表单边界](references/form-decisions.md)仅在对应问题出现时读取。不默认追加多套完整实现或多代理评审。[精简依据](evals/skill-revision-2026-11-05.md)保留观察与假设的区别。[尺寸与预览诊断](references/preview-diagnostics.md)按需读取，采集读数不自动判定页面优劣。
 
-Codex 可以用已有浏览器工具读取页面。若要批量采样或保存截图，可在装有 Playwright 的项目中使用仓库附带的脚本。[测量脚本用法](SKILL.md#采集可复查的读数) · [OpenAI 的 skill 使用说明](https://learn.chatgpt.com/docs/build-skills)
+Codex 可以用已有浏览器工具读取页面。若要批量采样或保存截图，可在装有 Playwright 的项目中使用仓库附带的脚本。[测量脚本用法](references/preview-diagnostics.md) · [OpenAI 的 skill 使用说明](https://learn.chatgpt.com/docs/build-skills)
 
 ## 用示例验证
 

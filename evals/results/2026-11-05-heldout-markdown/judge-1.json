@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "A": { "scores": [3, 3, 3, 2, 3, 3], "total": 17 },
+    "B": { "scores": [3, 3, 3, 4, 3, 3], "total": 19 }
+  },
+  "preferred": "B",
+  "reasons": [
+    "主要差异是手机长文空间：A 的源码与预览上下各占较短面板，document/night 的两处内容都在段落中被视口截断；B 的单一编辑区域可同时展示完整长段落、引用及表格开头。",
+    "B 在手机预览中提供明确的 Back to editor，编辑中提供 Read preview，模式往返的可见线索清楚；A 使用 Reading 的高亮表达模式，返回编辑的动作提示较弱。",
+    "桌面两组均能清楚区分源码与预览，阅读模式有合理行宽，下载弹层格式清楚；这些维度未因装饰或个人风格而拉开分数。",
+    "两组顶栏均呈现任务所需的主要动作；仅凭截图不能确认原始功能、快捷键或 API 兼容性实际保持。"
+  ],
+  "coverage": {
+    "request_read": true,
+    "manifest_read": true,
+    "actual_full_size_images_viewed": 20,
+    "variants": ["A", "B"],
+    "viewports": ["1440x900", "390x844"],
+    "states_per_viewport": ["initial", "document", "reading", "night", "download"],
+    "black_box_pages_opened": false,
+    "source_or_other_reviews_read": false,
+    "dimension_order": ["辨认扫读", "层级分组/字号间距", "内容和动作支持任务", "手机连贯及操作", "桌面空间布局", "跨状态一致与克制"],
+    "frozen_after_write": true
+  },
+  "limitations": [
+    "仅评估指定静态截图；未进行键盘、触控、滚动、软键盘、下载、导入、持久化、分享、拼写或可访问性运行测试。",
+    "截图不能证明功能正确、DOM/API 兼容性、依赖和资产是否保持。",
+    "长文判断仅基于所给中英文示例，未观察更长文档及其他尺寸。"
+  ]
+}
