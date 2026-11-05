@@ -1,0 +1,75 @@
+{
+  "patches": [
+    {
+      "path": "template.js",
+      "old": "aria-describedby=\"task-{{id}}\"></button>'\n            + \"</div>\"",
+      "new": "aria-describedby=\"task-{{id}}\">Delete</button>'\n            + '</div>'\n            + '<div class=\"edit-actions\">'\n            + '<button type=\"button\" class=\"save-edit\">Save</button>'\n            + '<button type=\"button\" class=\"cancel-edit\">Cancel</button>'\n            + \"</div>\""
+    },
+    {
+      "path": "view.js",
+      "old": "        listItem.appendChild(input);\n        input.focus();\n        input.value = title;",
+      "new": "        input.value = title;\n        listItem.insertBefore(input, qs(\".edit-actions\", listItem));\n        input.focus();"
+    },
+    {
+      "path": "view.js",
+      "old": "    View.prototype._bindItemEditDone = function (handler) {",
+      "new": "    View.prototype._finishEdit = function (event, handler, cancel) {\n        var row = $parent(event.target, \"li\");\n        var input = qs(\".edit\", row);\n        if (!input || input.dataset.finishing)\n            return;\n\n        // Tabbing between the field, Save and Cancel keeps the editor open.\n        if (event.type === \"blur\" && row.contains(event.relatedTarget))\n            return;\n\n        input.dataset.finishing = \"true\";\n        var item = { id: this._itemId(input) };\n        if (!cancel)\n            item.title = input.value;\n        handler(item);\n\n        if (event.type !== \"blur\") {\n            var next = this.$todoList.contains(row) && qs(\".edit-task\", row);\n            (next || this.$newTodo).focus();\n        }\n    };\n\n    View.prototype._bindItemEditDone = function (handler) {"
+    },
+    {
+      "path": "view.js",
+      "old": "        $delegate(self.$todoList, \"li .edit\", \"blur\", function () {\n            if (!this.dataset.iscanceled) {\n                handler({\n                    id: self._itemId(this),\n                    title: this.value,\n                });\n            }\n        });",
+      "new": "        function save(event) {\n            self._finishEdit(event, handler, false);\n        }\n        $delegate(self.$todoList, \"li .edit, .edit-actions button\", \"blur\", save);\n        $delegate(self.$todoList, \".save-edit\", \"click\", save);\n        // Keep pointer presses from committing on blur before the button click.\n        $delegate(self.$todoList, \".edit-actions button\", \"pointerdown\", function (event) {\n            event.preventDefault();\n        });"
+    },
+    {
+      "path": "view.js",
+      "old": "            if (event.keyCode === self.ENTER_KEY) {\n                // Remove the cursor from the input when you hit enter just like if it\n                // were a real form\n                this.blur();",
+      "new": "            if (!event.isComposing && (event.key === \"Enter\" || event.keyCode === self.ENTER_KEY)) {\n                event.preventDefault();\n                save(event);"
+    },
+    {
+      "path": "view.js",
+      "old": "        $delegate(self.$todoList, \"li .edit\", \"keyup\", function (event) {\n            if (event.keyCode === self.ESCAPE_KEY) {\n                this.dataset.iscanceled = true;\n                this.blur();\n\n                handler({ id: self._itemId(this) });\n            }",
+      "new": "        function cancel(event) {\n            self._finishEdit(event, handler, true);\n        }\n        $delegate(self.$todoList, \".cancel-edit\", \"click\", cancel);\n        $delegate(self.$todoList, \"li .edit, .edit-actions button\", \"keyup\", function (event) {\n            if (!event.isComposing && (event.key === \"Escape\" || event.keyCode === self.ESCAPE_KEY))\n                cancel(event);"
+    },
+    {
+      "path": "controller.js",
+      "old": "self.view.render(\"toggleAll\", { checked: todos.completed === todos.total });",
+      "new": "self.view.render(\"toggleAll\", {\n                checked: todos.completed === todos.total,\n                indeterminate: todos.completed > 0 && todos.active > 0,\n            });"
+    },
+    {
+      "path": "view.js",
+      "old": "self.$toggleAllInput.checked = parameter.checked;",
+      "new": "self.$toggleAllInput.checked = parameter.checked;\n                self.$toggleAllInput.indeterminate = !!parameter.indeterminate;"
+    },
+    {
+      "path": "index.css",
+      "old": ".toggle-all + label { position: static; width: fit-content; height: 44px; gap: 9px; color: var(--muted); font-size: 14px; }\n.toggle-all + label:before { content: '✓'; padding: 0; transform: none; color: var(--muted); font-size: 17px; }",
+      "new": ".toggle-all + label { position: static; justify-content: flex-start; width: 100%; height: 44px; gap: 9px; color: var(--muted); font-size: 14px; }\n.toggle-all + label:before {\n\tcontent: ''; display: grid; place-items: center; box-sizing: border-box;\n\twidth: 18px; height: 18px; padding: 0; transform: none;\n\tborder: 2px solid #9a928c; border-radius: 4px; background: white;\n\tfont: bold 14px/1 Arial, sans-serif;\n}\n.toggle-all:checked + label:before, .toggle-all:indeterminate + label:before { content: '✓'; background: #387769; border-color: #387769; color: white; }\n.toggle-all:indeterminate + label:before { content: '−'; }"
+    },
+    {
+      "path": "index.css",
+      "old": ".todo-list li .toggle { position: relative; width: 44px; height: 44px; opacity: 1; }",
+      "new": ".todo-list li .toggle { position: relative; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; opacity: 1; }"
+    },
+    {
+      "path": "index.css",
+      "old": ".edit-task { font-size: 14px; }\n.todo-list li:hover .destroy { display: grid; }\n.todo-list li .destroy:after { height: auto; font-size: 24px; }",
+      "new": ".edit-task, .todo-list li .destroy { font-size: 14px; }\n.todo-list li:hover .destroy { display: grid; }\n.todo-list li .destroy:after { content: none; }"
+    },
+    {
+      "path": "index.css",
+      "old": ".todo-list li.editing { padding: 6px 14px; }",
+      "new": ".edit-actions { display: none; }\n.todo-list li.editing { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 8px 14px; border-bottom: 1px solid var(--line); }\n.editing .edit-actions { display: flex; gap: 6px; }\n.edit-actions button { min-height: 44px; padding: 0 14px; font-size: 14px; font-weight: 600; border-radius: 6px; }\n.save-edit { color: white; background: var(--red); }\n.save-edit:hover { background: #882c34; }\n.cancel-edit { color: var(--muted); background: #f4f1ee; }\n.cancel-edit:hover { background: var(--line); }"
+    },
+    {
+      "path": "index.css",
+      "old": ".filters { position: static; display: flex; padding: 2px;",
+      "new": ".filters { position: static; display: grid; grid-template-columns: repeat(3, 1fr); padding: 2px;"
+    },
+    {
+      "path": "index.css",
+      "old": "\t.todo-list li .view { padding: 2px 4px; }",
+      "new": "\t.todo-list li .view { padding: 2px 4px; }\n\t.todo-list li.editing { grid-template-columns: minmax(0, 1fr); padding: 8px 12px; }\n\t.edit-actions { justify-self: end; }"
+    }
+  ],
+  "notes": "Adds touch-accessible Save and Cancel controls while preserving Enter, Escape and blur editing. Centers completion indicators, shows partial completion on the bulk checkbox, labels Delete explicitly and gives each filter equal space. Reviewed against the supplied source and screenshots only."
+}

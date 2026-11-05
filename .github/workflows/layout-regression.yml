@@ -27,3 +27,5 @@ jobs:
         env:
           PLAYWRIGHT_CHANNEL: chrome
         run: node --test tests/*.test.cjs
+      - name: Verify published holdout proposals and budget ledger
+        run: python3 evals/results/2026-11-05-heldout-todomvc/verify-proposals.py

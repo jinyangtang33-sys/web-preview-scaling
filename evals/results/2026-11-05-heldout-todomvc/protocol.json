@@ -1,0 +1,74 @@
+{
+  "created_at": "2026-11-05T05:49:58.996095+00:00",
+  "source_repo": "tastejs/todomvc",
+  "source_commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+  "source_path": "examples/javascript-es5/dist",
+  "source_type": "public reference application, not production deployment",
+  "candidate_commit": "059335f9667d9777ca5d6e0cd67477f4d96100de",
+  "task": "Improve this existing TodoMVC task-management application for everyday use at desktop 1440\u00d7900 and phone 390\u00d7844 with touch. Make tasks, completion state, navigation and available actions easier to understand and use. Preserve the existing branding, task data and all current add/edit/cancel/complete/filter/delete/clear-all-completed workflows. Keep long task text understandable. Do not add invented functionality, decorative dashboards, external assets or dependencies. The upstream Store is in-memory only: retain that semantics; persistence is outside scope. Preserve author and project credits. Deliver working code within this resource budget.",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "seed": null,
+  "code_replies_per_arm": 3,
+  "max_seconds_per_reply": 300,
+  "wall_budget_per_arm_seconds": 900,
+  "common_harness_time": "included in wall deadline; recorded separately",
+  "internal_service_retries": "not observable, not claimed equal",
+  "tools": "forbidden to executors, checked in JSONL; no delegation",
+  "workflow_limit": "frozen skill supplied as text, independent implementation/review unavailable within this matched three-reply format",
+  "mapping": {
+    "lane-m": "without_skill",
+    "lane-n": "with_skill"
+  },
+  "ports": {
+    "source": 5211,
+    "lane-m": 5212,
+    "lane-n": 5213
+  },
+  "hard_gates": "Preserve all upstream task workflows and credits; no lost text, important unavailable controls, page overflow or fabricated verification. Baseline limitations documented.",
+  "visual_gate": "Two fresh independent blind reviewers both explicitly prefer with-skill, paired mean difference >=2/24 in six frozen dimensions. Hard pass required for both. Ties, failures, unequal replies and timeouts remain reported; no retry/tuning this project.",
+  "dimensions": [
+    "scannability",
+    "hierarchy",
+    "task_actions",
+    "mobile",
+    "desktop",
+    "consistency"
+  ],
+  "source_hashes": {
+    "app.js": "f4e771a6372e3a58e741452af368d116953254718f4d40c66aaa102cc9a87dba",
+    "base.css": "1a35d01487da75463926b69c2841c2f66ee44aa3751fed2f374bf3118e6862b4",
+    "base.js": "1def4b500df39764f3da91fb3353f0e58e6b62b3584dda952eceae705a8a3a6f",
+    "controller.js": "502a85fe9ea4977aba2efa20809b107ef17e276255cb3cb880208fc93dcbe4fd",
+    "helpers.js": "d38bb04b8020237f7405749a982e8fee89c75c66a464112e6dc35d9d884d3837",
+    "index.css": "8b19c96c44f8c1f387e4957ca256c33f6fbb4c46837969517692bd3fc950a6e7",
+    "index.html": "376859caa88b1f2a3ffec94cac529d635c3b588a3cc87a92616895f6591e2945",
+    "model.js": "f6b5538263a148910a995878a1fae7d8c65426601816835a7eefc59693a8edf7",
+    "store.js": "bf4679c09003752c6f3784ac5b8d4bcf7f2cfe2cf8c3694568018257ce9515e0",
+    "template.js": "11931d09f44f2c2d1a173ee3ef110d5bc2324b62073945d9b6de91f520109f41",
+    "view.js": "9746d53e7313828a81993f22bcac3e01fbf8ceba64a8e8884f10648d9b6a9856"
+  },
+  "skill_hashes": {
+    "SKILL.md": "37606ce6ca670b388346a5d336750649d29c483a8dac816742dfadfa5bf4a749",
+    "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+    "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+    "references/render-quality.md": "fc8c05ad951b246bc4f3b989a8099c5a85bcca67417818c7acb1ca4eca760e86",
+    "references/preview-diagnostics.md": "d8babbb996dae76b2a8a44c952f3f19499ac0153c29cb0539e0789b00cf13e19",
+    "references/layout-patterns.md": "a3819e23951427833132a37095a892f5ca72e6980214bbb459deeee779ca7939",
+    "references/form-decisions.md": "d0460e92d6b5ed3d81b631d4a6566646d39056e92698544de5f2e7dfb4ece31b"
+  },
+  "environment_amendment": {
+    "at": "2026-11-05T05:42:52.283470+00:00",
+    "first_attempt": "both timed out before any code reply, source unchanged; retained",
+    "probe": "same empty JSON/image request: configured 13.19s successful, ignore-user-config timed out 55s",
+    "change": "load identical existing user configuration for both arms; same explicit model, effort and read-only sandbox; tool use forbidden and audited",
+    "not_a_model_quality_result": true
+  },
+  "delivery_format": "exact old/new text patches, unique occurrence; no deletion of files; no model tools",
+  "invalid_prior_attempts": [
+    "Both ignore-config calls timed out without code; environment probe showed configured connection works",
+    "Configured full-file format: one executor timed out, the other returned one large code proposal; stopped as unequal; no outcome comparison"
+  ],
+  "change_rationale": "Reduce copying unchanged source in the output, before any blind evaluation. Frozen skill and task unchanged. Prior outputs not supplied to new sessions.",
+  "baseline_gate_interpretation": "Original limitations are reported by name. Hard failure means lost existing capability, new important inaccessible content/control, new overflow or fabricated verification; legacy limitations can still reduce quality scores."
+}

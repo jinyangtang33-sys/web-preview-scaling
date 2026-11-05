@@ -1,0 +1,39 @@
+{
+  "variants": {
+    "A": { "scores": [3, 3, 4, 3, 3, 3], "total": 19 },
+    "B": { "scores": [3, 3, 3, 3, 3, 3], "total": 18 }
+  },
+  "preferred": "A",
+  "reasons": [
+    "A has a persistent New task (required) label and explicitly states An empty title deletes this task. in both desktop and phone editing screenshots, supporting understanding of consequential editing behavior.",
+    "A places filters before the task list, retaining visible navigation in long mixed/editing views; B offers a stronger solid selected state and wider phone filter targets at the bottom. These are offsetting navigation strengths.",
+    "Both variants preserve readable wrapped long text, visible row actions, redundant completion cues, clear Save/Cancel, restrained TodoMVC branding and visible author/project credits. Neither shows a major visual usability failure.",
+    "A wins narrowly on task-supporting information; title alignment and other stylistic preferences were not treated as functional evidence."
+  ],
+  "criteriaEvidence": [
+    { "criterion": "辨认与扫读", "A": "3: Distinct completion ticks/strikethroughs, readable mixed-language and long titles, persistent row actions, filters above tasks.", "B": "3: Same strong task readability and completion cues; solid red filter selection is especially easy to identify, though navigation follows the list." },
+    { "criterion": "层级/分组/字号间距", "A": "3: Stable field label and separated toolbar/list/footer; phone toolbar is somewhat dense and some row actions wrap below short text.", "B": "3: Compact input and separately grouped bulk action/footer filters; consistent row divisions, with some empty space from wrapped phone actions." },
+    { "criterion": "内容与动作对任务支持", "A": "4: Explicit Add/Edit/Delete/Save/Cancel and navigation, plus persistent input label and in-context empty-title deletion warning in both editing sizes.", "B": "3: All core action labels visible and Mark all complete is clear; no visible empty-title deletion warning and only placeholder identification for the new input." },
+    { "criterion": "手机连贯与操作", "A": "3: No visible horizontal overflow or action/text collision; full-width editor, wrapped controls, filters before list; actual touch hit areas unverified.", "B": "3: No visible overflow or action/text collision; wide three-part footer filters and full-width editor; navigation shifts down with list length and hit areas unverified." },
+    { "criterion": "桌面空间与布局", "A": "3: Approximately 800px centered card, aligned text/actions, complete long text and credits within 900px viewport.", "B": "3: Approximately 760px centered card with similarly readable lines, stable action alignment and complete mixed/editing content within viewport." },
+    { "criterion": "跨状态一致与克制", "A": "3: Consistent restrained branding, buttons and structure; empty state omits irrelevant editing help; completed text gets more muted during editing.", "B": "3: Consistent restrained branding, buttons and structure; empty state still includes editing help with no tasks; completed text gets more muted during editing." }
+  ],
+  "coverage": {
+    "method": "Individually inspected every original-resolution screenshot through view_image; no browser interaction.",
+    "count": 16,
+    "expected": 16,
+    "viewports": [{ "width": 1440, "height": 900 }, { "width": 390, "height": 844 }],
+    "A": ["A/1440-empty.png", "A/1440-mixed.png", "A/1440-active.png", "A/1440-editing.png", "A/390-empty.png", "A/390-mixed.png", "A/390-active.png", "A/390-editing.png"],
+    "B": ["B/1440-empty.png", "B/1440-mixed.png", "B/1440-active.png", "B/1440-editing.png", "B/390-empty.png", "B/390-mixed.png", "B/390-active.png", "B/390-editing.png"],
+    "inputs": ["request.txt", "manifest.json", "16 A/B screenshots only"],
+    "sourceOrOtherReviewsRead": false,
+    "frozenAfterWrite": true
+  },
+  "limitations": [
+    "Static visual judgment only; no add/edit/cancel/complete/filter/delete/clear-all-completed execution was verified.",
+    "Actual touch hit areas, keyboard/focus behavior, accessibility semantics, scrolling below captured bounds, virtual-keyboard layout and in-memory Store semantics remain unknown.",
+    "No Completed-only, all-completed, validation-error or unbroken-long-text state was supplied or inspected.",
+    "Phone mixed/editing screenshots place credits below the captured viewport; this is not evidence that credits were removed.",
+    "A narrow visual preference does not establish functional correctness."
+  ]
+}

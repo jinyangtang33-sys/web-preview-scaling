@@ -1,0 +1,80 @@
+{
+  "patches": [
+    {
+      "path": "controller.js",
+      "old": "var page = route || \"\";",
+      "new": "var page = route === 'active' || route === 'completed' ? route : '';"
+    },
+    {
+      "path": "controller.js",
+      "old": "self.view.render(\"contentBlockVisibility\", { visible: todos.total > 0 });",
+      "new": "self.view.render(\"contentBlockVisibility\", { visible: todos.total > 0, filtered: self._activeRoute !== 'All' });"
+    },
+    {
+      "path": "view.js",
+      "old": "self.$main.style.display = self.$footer.style.display = parameter.visible ? \"block\" : \"none\";",
+      "new": "self.$main.style.display = parameter.visible || parameter.filtered ? 'block' : 'none';\n                self.$footer.style.display = parameter.visible ? 'block' : 'none';\n                self.$toggleAllInput.style.display = self.$toggleAll.style.display = parameter.visible ? '' : 'none';"
+    },
+    {
+      "path": "index.html",
+      "old": "No tasks match this filter. <a href=\"#/\">View all tasks</a>",
+      "new": "<span>No tasks match this filter.</span> <a href=\"#/\">View all tasks</a>"
+    },
+    {
+      "path": "view.js",
+      "old": "View.prototype._setFilter = function (currentPage) {\n        qsa",
+      "new": "View.prototype._setFilter = function (currentPage) {\n        var message = qs('.no-matches span', this.$main);\n        if (message) message.textContent = currentPage === 'completed' ? 'No completed tasks.' : 'No active tasks.';\n        qsa"
+    },
+    {
+      "path": "view.js",
+      "old": "input.value = title;\n        listItem.appendChild(editor);",
+      "new": "var hint = qs('.edit-hint', editor);\n        hint.id = 'edit-hint-' + id;\n        input.setAttribute('aria-describedby', hint.id);\n        input.value = title;\n        listItem.appendChild(editor);"
+    },
+    {
+      "path": "view.js",
+      "old": "View.prototype._finishEdit = function (editor, handler, returnFocus) {",
+      "new": "View.prototype._runRowAction = function (control, handler, item) {\n        var rows = this.$todoList.children;\n        var index = Array.prototype.indexOf.call(rows, $parent(control, 'li'));\n        var hadFocus = document.activeElement === control;\n        handler(item);\n        if (!hadFocus || this.$todoList.contains(control)) return;\n\n        var row = rows[Math.min(index, rows.length - 1)];\n        var next = row ? qs('.toggle', row) : qs('.no-matches a', this.$main);\n        (next && next.getClientRects().length ? next : this.$newTodo).focus();\n    };\n\n    View.prototype._finishEdit = function (editor, handler, returnFocus) {"
+    },
+    {
+      "path": "view.js",
+      "old": "$delegate(self.$todoList, \".destroy\", \"click\", function () {\n                handler({ id: self._itemId(this) });",
+      "new": "$delegate(self.$todoList, \".destroy\", \"click\", function () {\n                self._runRowAction(this, handler, { id: self._itemId(this) });"
+    },
+    {
+      "path": "view.js",
+      "old": "$delegate(self.$todoList, \".toggle\", \"click\", function () {\n                handler({",
+      "new": "$delegate(self.$todoList, \".toggle\", \"click\", function () {\n                self._runRowAction(this, handler, {"
+    },
+    {
+      "path": "index.css",
+      "old": ".no-matches { padding: 18px 22px; }\n.no-matches a { color: var(--red); }",
+      "new": ".no-matches { display: flex; align-items: center; flex-wrap: wrap; gap: 0 12px; margin: 0; padding: 8px 16px; color: var(--muted); }\n.no-matches a { display: inline-flex; align-items: center; min-height: 44px; color: var(--red); }"
+    },
+    {
+      "path": "index.css",
+      "old": ".task-actions button { border-radius: 5px; }",
+      "new": ".task-actions button { border-radius: 5px; }\n.task-actions button + button { border-inline-start: 1px solid var(--line); border-start-start-radius: 0; border-end-start-radius: 0; }\n.todo-list li .destroy:is(:hover, :focus) { color: var(--red); }"
+    },
+    {
+      "path": "index.css",
+      "old": ".todo-list li .toggle { flex: 0 0 44px; }",
+      "new": ".todo-list li .toggle { flex: 0 0 44px; align-self: flex-start; }"
+    },
+    {
+      "path": "index.html",
+      "old": "<p>Double-click to edit a todo</p>",
+      "new": "<p class=\"edit-tip\">Select Edit or double-click a task to change its title.</p>"
+    },
+    {
+      "path": "index.css",
+      "old": ".info a { text-decoration: underline; }",
+      "new": ".info a { text-decoration: underline; }\n.todoapp:has(.todo-list:empty) + .info .edit-tip { display: none; }"
+    },
+    {
+      "path": "index.html",
+      "old": "Maintenanced by the TodoMVC team",
+      "new": "Maintained by the TodoMVC team"
+    }
+  ],
+  "notes": "Empty filtered views keep their navigation and name the missing task state. When a focused row disappears, focus moves to a remaining task or a visible recovery control. On phones, the checkbox stays near the start of long titles, and a divider distinguishes Edit from Delete. Storage and task data are unchanged. Based on the supplied screenshots and source; these final changes have not been browser-tested."
+}

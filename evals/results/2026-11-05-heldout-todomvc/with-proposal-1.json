@@ -1,0 +1,80 @@
+{
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "<input class=\"new-todo\" placeholder=\"What needs to be done?\" autofocus />",
+      "new": "<form class=\"entry\">\n                    <label for=\"new-task\">New task</label>\n                    <input id=\"new-task\" class=\"new-todo\" placeholder=\"What needs to be done?\" enterkeyhint=\"done\" autofocus />\n                    <button type=\"submit\">Add</button>\n                </form>"
+    },
+    {
+      "path": "index.html",
+      "old": "<input class=\"toggle-all\" type=\"checkbox\" />",
+      "new": "<input id=\"toggle-all\" class=\"toggle-all\" type=\"checkbox\" />"
+    },
+    {
+      "path": "index.html",
+      "old": "Mark all as complete</label>\n                </div>\n                <ul class=\"todo-list\"></ul>\n            </main>\n            <footer class=\"footer\">\n                <span class=\"todo-count\"></span>\n                <ul class=\"filters\">",
+      "new": "Complete all</label>\n                    <ul class=\"filters\" aria-label=\"Filter tasks\">"
+    },
+    {
+      "path": "index.html",
+      "old": "<button class=\"clear-completed\">",
+      "new": "</div>\n                <ul class=\"todo-list\" aria-label=\"Tasks\"></ul>\n                <p class=\"no-matches\">No tasks match this filter. <a href=\"#/\">View all tasks</a></p>\n            </main>\n            <footer class=\"footer\">\n                <span class=\"todo-count\" aria-live=\"polite\"></span>\n                <button class=\"clear-completed\">"
+    },
+    {
+      "path": "template.js",
+      "old": "+ '<input class=\"toggle\" type=\"checkbox\" {{checked}}>'\n            + \"<label>{{title}}</label>\"\n            + '<button class=\"destroy\"></button>'",
+      "new": "+ '<input class=\"toggle\" type=\"checkbox\" aria-labelledby=\"task-{{id}}\" {{checked}}>'\n            + '<label id=\"task-{{id}}\">{{title}}</label>'\n            + '<button class=\"edit-task\" aria-describedby=\"task-{{id}}\">Edit</button>'\n            + '<button class=\"destroy\" aria-describedby=\"task-{{id}}\">Delete</button>'"
+    },
+    {
+      "path": "template.js",
+      "old": "template = template.replace(\"{{id}}\", data[i].id);\n            template = template.replace(\"{{title}}\", escape(data[i].title));",
+      "new": "template = template.split(\"{{id}}\").join(data[i].id);"
+    },
+    {
+      "path": "template.js",
+      "old": "view = view + template;",
+      "new": "view += template.replace(\"{{title}}\", () => escape(data[i].title));"
+    },
+    {
+      "path": "view.js",
+      "old": "qs(\".filters .selected\").className = \"\";\n        qs(`.filters [href=\"#/${currentPage}\"]`).className = \"selected\";",
+      "new": "qsa('.filters a').forEach(function (link) {\n            var selected = link.hash === '#/' + currentPage;\n            link.classList.toggle('selected', selected);\n            if (selected) link.setAttribute('aria-current', 'page');\n            else link.removeAttribute('aria-current');\n        });"
+    },
+    {
+      "path": "view.js",
+      "old": "input.className = \"edit\";",
+      "new": "input.className = \"edit\";\n        input.setAttribute('aria-label', 'Edit task');\n        input.setAttribute('enterkeyhint', 'done');"
+    },
+    {
+      "path": "view.js",
+      "old": "self.$toggleAll.checked = parameter.checked;",
+      "new": "self.$toggleAllInput.checked = parameter.checked;\n                self.$toggleAll.textContent = parameter.checked ? 'Uncheck all' : 'Complete all';"
+    },
+    {
+      "path": "view.js",
+      "old": "} else if (event === \"removeCompleted\") {",
+      "new": "    if (self.$newTodo.form) {\n                $on(self.$newTodo.form, 'submit', function (event) {\n                    event.preventDefault();\n                    if (self.$newTodo.value.trim()) handler(self.$newTodo.value);\n                    self.$newTodo.focus();\n                });\n            }\n        } else if (event === \"removeCompleted\") {"
+    },
+    {
+      "path": "view.js",
+      "old": "$on(self.$toggleAll, \"click\", function () {\n                self.$toggleAllInput.click();",
+      "new": "$on(self.$toggleAllInput, \"change\", function () {"
+    },
+    {
+      "path": "view.js",
+      "old": "$delegate(self.$todoList, \"li label\", \"dblclick\",",
+      "new": "$delegate(self.$todoList, '.edit-task', 'click', function () {\n                handler({ id: self._itemId(this) });\n            });\n            $delegate(self.$todoList, \"li label\", \"dblclick\","
+    },
+    {
+      "path": "view.js",
+      "old": "event.keyCode === self.ENTER_KEY",
+      "new": "!event.isComposing && event.keyCode === self.ENTER_KEY"
+    },
+    {
+      "path": "index.css",
+      "old": "@media (max-width: 430px) {\n\t.footer {\n\t\theight: 50px;\n\t}\n\n\t.filters {\n\t\tbottom: 10px;\n\t}\n}\n\n:focus,\n.toggle:focus + label,\n.toggle-all:focus + label {\n\tbox-shadow: 0 0 2px 2px #CF7D7D;\n\toutline: 0;\n}",
+      "new": ":root { --red: #aa3741; --line: #dfdbd6; --muted: #635f5a; }\nbody { width: calc(100% - 32px); max-width: 800px; min-width: 0; background: #f6f5f2; color: #302d2b; font-weight: 400; }\n.todoapp { margin: 124px 0 0; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 3px 0 -1px #ece9e4, 0 10px 28px #3129230c; }\n.todoapp h1 { top: auto; bottom: calc(100% + 16px); left: 0; margin: 0; font-size: 66px; line-height: 1; letter-spacing: -3px; text-align: left; }\n.header { padding: 20px 24px 24px; }\n.entry { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }\n.entry label { grid-column: 1 / -1; font-size: 15px; font-weight: 600; }\n.new-todo { height: 48px; padding: 8px 14px; border: 1px solid #aca7a2; border-radius: 5px; box-shadow: none; font-size: 18px; }\n.todoapp .new-todo::placeholder { color: #726d68; font-style: normal; }\n.entry button { background: var(--red); color: white; padding: 0 22px; border-radius: 5px; font-weight: 600; }\nbutton, .toggle-all-label { cursor: pointer; }\n.toggle-all-container { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 12px; padding: 6px 16px; background: #f9f8f6; border-bottom: 1px solid var(--line); }\n.toggle-all { right: auto; bottom: auto; }\n.toggle-all + label { position: static; width: auto; height: 44px; font-size: 14px; gap: 8px; color: var(--muted); }\n.toggle-all + label:before { content: ''; padding: 0; width: 16px; height: 16px; border: 1px solid currentColor; border-radius: 4px; transform: none; text-align: center; line-height: 16px; font-size: 14px; }\n.toggle-all:checked + label:before { content: '✓'; color: white; background: #287268; }\n.filters { position: static; margin-left: auto; display: flex; }\n.filters li a { display: flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 0 12px; margin: 0; font-weight: 500; }\n.filters li a.selected { color: var(--red); background: #faeaeb; border-color: #dbb6b8; font-weight: 600; }\n.todo-list .view { display: grid; grid-template-columns: 44px minmax(0,1fr) auto auto; align-items: center; gap: 4px; padding: 6px 16px 6px 10px; min-height: 46px; }\n.todo-list li .toggle { position: static; width: 44px; height: 44px; margin: 0; opacity: 1; cursor: pointer; display: grid; place-items: center; }\n.toggle:before { content: ''; width: 21px; height: 21px; border: 1.5px solid #918b85; border-radius: 50%; }\n.toggle:checked:before { content: '✓'; background: #287268; border-color: #287268; color: white; font: bold 16px/21px Arial, sans-serif; }\n.todo-list li .toggle + label, .todo-list li .toggle:checked + label { background: none; }\n.todo-list li label { word-break: normal; overflow-wrap: anywhere; padding: 5px 8px 5px 0; font-size: 18px; line-height: 1.45; color: #302d2b; }\n.todo-list li.completed { background: #f7f9f7; }\n.todo-list li.completed label { color: #626d68; }\n.todo-list li .destroy, .edit-task { display: block; position: static; width: auto; min-width: 44px; height: 44px; padding: 0 5px; font-size: 14px; color: var(--red); }\n.edit-task { color: var(--muted); }\n.todo-list li .destroy:after, .footer:before { display: none; }\n.todo-list li.editing { padding: 9px 16px; }\n.todo-list li.editing .edit { margin: 0; width: 100%; padding: 9px 12px; border-radius: 4px; font-size: 18px; }\n.footer { height: auto; padding: 5px 20px; text-align: right; color: var(--muted); }\n.footer:after { content: ''; display: block; clear: both; }\n.todo-count { line-height: 44px; }\n.todo-count strong { font-weight: 650; }\n.clear-completed { min-height: 44px; color: var(--red); }\n.no-matches { padding: 18px 22px; }\n.no-matches a { color: var(--red); }\n.todo-list:not(:empty) + .no-matches { display: none; }\n.info { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px 14px; margin: 24px auto; color: var(--muted); font-size: 12px; }\n.info p { margin: 0; line-height: 1.5; }\n.info p:first-child { flex-basis: 100%; }\n.info a { text-decoration: underline; }\n:focus-visible, .toggle-all:focus-visible + label { outline: 2px solid var(--red); outline-offset: 2px; }\n@media (max-width: 520px) {\n body { width: calc(100% - 24px); }\n .todoapp { margin-top: 84px; }\n .todoapp h1 { font-size: 50px; bottom: calc(100% + 10px); }\n .header { padding: 14px; }\n .entry button { padding: 0 16px; }\n .toggle-all-container { padding: 4px 10px; }\n .filters li a { padding: 0 8px; }\n .todo-list .view { padding-inline: 3px 7px; gap: 1px; }\n .todo-list li label { font-size: 17px; }\n .footer { padding-inline: 14px; }\n}"
+    }
+  ],
+  "notes": "Proposal 1 widens the desktop list, wraps task text at word boundaries, and gives Edit and Delete dedicated touch targets. Filters sit above the tasks, with a recovery link for empty filtered results. The existing controller and in-memory Store handle all task changes. Review used the supplied source and baseline screenshots only. Patched layouts and interactions await harness verification."
+}

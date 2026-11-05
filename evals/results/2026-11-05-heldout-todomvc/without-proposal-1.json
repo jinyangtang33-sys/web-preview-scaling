@@ -1,0 +1,85 @@
+{
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "<input class=\"new-todo\" placeholder=\"What needs to be done?\" autofocus />",
+      "new": "<form class=\"composer\">\n                    <input class=\"new-todo\" aria-label=\"New task\" placeholder=\"What needs to be done?\" enterkeyhint=\"done\" autofocus />\n                    <button type=\"submit\">Add</button>\n                </form>"
+    },
+    {
+      "path": "index.html",
+      "old": "<input class=\"toggle-all\" type=\"checkbox\" />",
+      "new": "<input class=\"toggle-all\" id=\"toggle-all\" type=\"checkbox\" />"
+    },
+    {
+      "path": "index.html",
+      "old": "<span class=\"todo-count\"></span>",
+      "new": "<span class=\"todo-count\" role=\"status\"></span>"
+    },
+    {
+      "path": "index.html",
+      "old": "Double-click to edit a todo",
+      "new": "Choose Edit or double-click a task to change it."
+    },
+    {
+      "path": "index.html",
+      "old": "Maintenanced by",
+      "new": "Maintained by"
+    },
+    {
+      "path": "template.js",
+      "old": "+ '<input class=\"toggle\" type=\"checkbox\" {{checked}}>'\n            + \"<label>{{title}}</label>\"\n            + '<button class=\"destroy\"></button>'",
+      "new": "+ '<input class=\"toggle\" type=\"checkbox\" aria-labelledby=\"task-{{id}}\" {{checked}}>'\n            + '<label id=\"task-{{id}}\">{{title}}</label>'\n            + '<button type=\"button\" class=\"edit-task\" aria-describedby=\"task-{{id}}\">Edit</button>'\n            + '<button type=\"button\" class=\"destroy\" aria-label=\"Delete task\" title=\"Delete task\" aria-describedby=\"task-{{id}}\"></button>'"
+    },
+    {
+      "path": "template.js",
+      "old": "template = template.replace(\"{{id}}\", data[i].id);\n            template = template.replace(\"{{title}}\", escape(data[i].title));",
+      "new": "template = template.replace(/{{id}}/g, data[i].id);"
+    },
+    {
+      "path": "template.js",
+      "old": "view = view + template;",
+      "new": "view += template.replace(\"{{title}}\", function () { return escape(data[i].title); });"
+    },
+    {
+      "path": "view.js",
+      "old": "qs(\".filters .selected\").className = \"\";\n        qs(`.filters [href=\"#/${currentPage}\"]`).className = \"selected\";",
+      "new": "var previous = qs(\".filters .selected\");\n        var current = qs(`.filters [href=\"#/${currentPage}\"]`);\n        previous.classList.remove(\"selected\");\n        previous.removeAttribute(\"aria-current\");\n        current.classList.add(\"selected\");\n        current.setAttribute(\"aria-current\", \"page\");"
+    },
+    {
+      "path": "view.js",
+      "old": "input.className = \"edit\";",
+      "new": "input.className = \"edit\";\n        input.setAttribute(\"aria-label\", \"Edit task\");\n        input.setAttribute(\"enterkeyhint\", \"done\");"
+    },
+    {
+      "path": "view.js",
+      "old": "self.$main.style.display = self.$footer.style.display = parameter.visible ? \"block\" : \"none\";",
+      "new": "self.$main.style.display = parameter.visible ? \"block\" : \"none\";\n                self.$footer.style.display = parameter.visible ? \"grid\" : \"none\";"
+    },
+    {
+      "path": "view.js",
+      "old": "self.$toggleAll.checked = parameter.checked;",
+      "new": "self.$toggleAllInput.checked = parameter.checked;\n                self.$toggleAll.textContent = parameter.checked ? \"Mark all active\" : \"Mark all complete\";"
+    },
+    {
+      "path": "view.js",
+      "old": "$on(self.$toggleAll, \"click\", function () {\n                self.$toggleAllInput.click();",
+      "new": "$on(self.$toggleAllInput, \"change\", function () {"
+    },
+    {
+      "path": "view.js",
+      "old": "$on(self.$newTodo, \"change\", function () {",
+      "new": "$on(self.$newTodo.form, \"submit\", function (event) {\n                event.preventDefault();\n                if (self.$newTodo.value.trim()) handler(self.$newTodo.value);\n                self.$newTodo.focus();\n            });\n            $on(self.$newTodo, \"change\", function () {"
+    },
+    {
+      "path": "view.js",
+      "old": "$delegate(self.$todoList, \"li label\", \"dblclick\", function () {",
+      "new": "$delegate(self.$todoList, \".edit-task\", \"click\", function () {\n                handler({ id: self._itemId(this) });\n            });\n            $delegate(self.$todoList, \"li label\", \"dblclick\", function () {"
+    },
+    {
+      "path": "index.css",
+      "old": ":focus,\n.toggle:focus + label,\n.toggle-all:focus + label {\n\tbox-shadow: 0 0 2px 2px #CF7D7D;\n\toutline: 0;\n}",
+      "new": "body {\n\t--red: #a53740;\n\t--line: #e5dfda;\n\t--muted: #665f5b;\n\twidth: calc(100% - 32px);\n\tmax-width: 760px;\n\tbackground: #f7f5f2;\n\tcolor: #312d2b;\n\tfont-weight: 400;\n}\n.todoapp {\n\tmargin: 134px 0 0;\n\tborder: 1px solid var(--line);\n\tborder-radius: 14px;\n\tbox-shadow: 0 4px 18px rgba(59,39,26,.06);\n}\n.todoapp h1 {\n\ttop: auto;\n\tbottom: 100%;\n\tmargin: 0 0 18px;\n\tfont-size: 68px;\n\tline-height: 1;\n\tletter-spacing: -.045em;\n}\n.composer { display: flex; align-items: center; gap: 10px; padding: 18px; }\n.new-todo, .todo-list li.editing .edit {\n\tmin-width: 0;\n\theight: 48px;\n\tmargin: 0;\n\tpadding: 10px 14px;\n\tborder: 1px solid #c9c1bb;\n\tborder-radius: 7px;\n\tbackground: #fff;\n\tbox-shadow: none;\n\tfont-size: 18px;\n}\n.todoapp .new-todo::placeholder { font-style: normal; color: #746c66; }\nbutton, .toggle-all-label, .toggle { cursor: pointer; }\n.composer button {\n\tmin-height: 48px;\n\tpadding: 0 21px;\n\tborder-radius: 7px;\n\tbackground: var(--red);\n\tcolor: white;\n\tfont-size: 16px;\n\tfont-weight: 600;\n}\n.composer button:hover { background: #882c34; }\n.toggle-all-container { position: relative; background: #faf8f6; padding: 0 14px; border-bottom: 1px solid var(--line); }\n.toggle-all { inset: 50% auto auto 16px; }\n.toggle-all + label { position: static; width: fit-content; height: 44px; gap: 9px; color: var(--muted); font-size: 14px; }\n.toggle-all + label:before { content: '✓'; padding: 0; transform: none; color: var(--muted); font-size: 17px; }\n.todo-list li .view { display: grid; grid-template-columns: 44px minmax(0,1fr) 44px 44px; align-items: center; padding: 3px 10px; }\n.todo-list li label { padding: 12px 8px; font-size: 18px; line-height: 1.45; word-break: normal; overflow-wrap: anywhere; color: #312d2b; }\n.todo-list li .toggle + label, .todo-list li .toggle:checked + label { background-image: none; }\n.todo-list li .toggle { position: relative; width: 44px; height: 44px; opacity: 1; }\n.todo-list li .toggle:before { content: ''; display: grid; place-items: center; box-sizing: border-box; width: 24px; height: 24px; margin: auto; border: 2px solid #9a928c; border-radius: 50%; background: white; }\n.todo-list li .toggle:checked:before { content: '✓'; color: white; background: #387769; border-color: #387769; font: bold 16px/1 Arial,sans-serif; }\n.todo-list li.completed { background: #fafaf8; }\n.todo-list li.completed label { color: #676e68; }\n.todo-list li .destroy, .edit-task { display: grid; place-items: center; position: static; width: 44px; height: 44px; margin: 0; border-radius: 6px; color: var(--muted); }\n.edit-task { font-size: 14px; }\n.todo-list li:hover .destroy { display: grid; }\n.todo-list li .destroy:after { height: auto; font-size: 24px; }\n.edit-task:hover, .todo-list li .destroy:hover { background: #f6ecea; color: var(--red); }\n.todo-list li.editing { padding: 6px 14px; }\n.todo-list li.editing .edit { width: 100%; }\n.todo-list:empty:after { display: block; padding: 24px 18px; content: 'No tasks in this view.'; color: var(--muted); }\n.footer { grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; height: auto; padding: 10px 16px; font-size: 14px; }\n.footer:before { content: none; }\n.todo-count { color: var(--muted); }\n.todo-count strong { color: #312d2b; font-weight: 700; }\n.filters { position: static; display: flex; padding: 2px; background: #f4f1ee; border-radius: 8px; }\n.filters li { flex: 1; }\n.filters li a { display: grid; place-items: center; box-sizing: border-box; min-height: 44px; margin: 0; padding: 0 12px; border-radius: 6px; }\n.filters li a.selected { background: var(--red); color: white; border-color: var(--red); }\n.clear-completed { justify-self: end; min-height: 44px; color: var(--red); }\n.info { margin: 24px auto; color: var(--muted); font-size: 12px; }\n.info p { display: inline-block; margin: 3px 5px; line-height: 1.5; }\n.info p:first-child { display: block; }\n:focus-visible, .toggle-all:focus-visible + label { outline: 2px solid var(--red); outline-offset: 1px; }\n@media (max-width: 640px) {\n\t.todoapp { margin-top: 90px; }\n\t.todoapp h1 { font-size: 52px; margin-bottom: 12px; }\n\t.composer { padding: 12px; gap: 8px; }\n\t.todo-list li .view { padding: 2px 4px; }\n\t.todo-list li label { font-size: 16px; padding: 10px 4px; }\n\t.footer { grid-template-columns: 1fr auto; padding: 6px 12px 12px; gap: 2px; }\n\t.filters { grid-column: 1 / -1; grid-row: 2; }\n}"
+    }
+  ],
+  "notes": "Adds visible Add, Edit and Delete controls, word-aware task wrapping, larger touch targets and clearer completion and filter states. Connects the bulk action to its native checkbox. Storage stays in memory. Reviewed against the supplied source and screenshots only."
+}

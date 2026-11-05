@@ -1,0 +1,89 @@
+{
+  "valid": true,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "time_limit_seconds": 900,
+  "internal_retry_counts": "unobservable",
+  "arms": {
+    "lane-m": {
+      "code_replies": 3,
+      "model_tools": 0,
+      "elapsed_seconds": 458.51956460019574,
+      "model_seconds": 453.95921180024743,
+      "harness_seconds": 4.556704000104219,
+      "usage": {
+        "input_tokens": 129631,
+        "cached_input_tokens": 14336,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 16643,
+        "reasoning_output_tokens": 10181
+      },
+      "final_hashes": {
+        "app.js": "f4e771a6372e3a58e741452af368d116953254718f4d40c66aaa102cc9a87dba",
+        "base.css": "1a35d01487da75463926b69c2841c2f66ee44aa3751fed2f374bf3118e6862b4",
+        "base.js": "1def4b500df39764f3da91fb3353f0e58e6b62b3584dda952eceae705a8a3a6f",
+        "controller.js": "131396535d19a323b0353f4b7fa0c31e02cb4f9a5dd56cd9f886c19812cd491e",
+        "helpers.js": "d38bb04b8020237f7405749a982e8fee89c75c66a464112e6dc35d9d884d3837",
+        "index.css": "be30103dbd12500c9eef20808c32592cf11ac12c098f50f04581b49b12b2de42",
+        "index.html": "210bc1c9dc70e3d054bf48bb6a00cfc2cb4718056f186d0520f579668c8c95c6",
+        "model.js": "f6b5538263a148910a995878a1fae7d8c65426601816835a7eefc59693a8edf7",
+        "store.js": "bf4679c09003752c6f3784ac5b8d4bcf7f2cfe2cf8c3694568018257ce9515e0",
+        "template.js": "ba05ecb31249989e8dd48e221cc19c82b19adffa8afaae422de9c088d0df2058",
+        "view.js": "ec4e2310ed6434865057f6fcd675b4d808037e1af590024e4ccf38514ddd4dfd"
+      },
+      "final_hashes_lf": {
+        "app.js": "9290627e7bdfee646075b232f400a297676ebbcdb7de5dfe315e42d5668fec26",
+        "base.css": "5c67ddc771b558bc07b58695c9c4b7f663d2ba813edb4810341799c47ba0822d",
+        "base.js": "84090789021f5f8206800503e18adbc38b5fddbfb0a84bfe36e86e683da60c20",
+        "controller.js": "15d697aaedafa42d20aecfb315850c63ea92a6b253061d8df3a1fc33793cb4be",
+        "helpers.js": "34db108cf9cc1399c83add4c09bd5e51f9978626e7a486d76b98097c59fcc1c8",
+        "index.css": "d0f7fe7ed3fbe45f29f11e9639567a258c073d0417eef2150eccfd910d92328d",
+        "index.html": "a89dc5d7d95aced13f305c32a922c88c8f656cbe6c50efc18a5868dcfcb468b8",
+        "model.js": "7f3dd8368e8b1aded3c004a8fe86b7594d43495aec2fa4f0a5b3933f98654ff1",
+        "store.js": "0bc9d37949d094d104a5a0050f68a0b20d2a2b536d5c31fac70c95185ff08303",
+        "template.js": "c8b0d2e568a9ab85cdb578d2463004ed75bc957c59c6eb5b21da9edb20ad17ba",
+        "view.js": "97153150ed3a9e06c7daea48c4090de4eb67e7fcced1f87b67f3da04d294db8b"
+      }
+    },
+    "lane-n": {
+      "code_replies": 3,
+      "model_tools": 0,
+      "elapsed_seconds": 502.2558698002249,
+      "model_seconds": 497.7567893001251,
+      "harness_seconds": 4.49493240006268,
+      "usage": {
+        "input_tokens": 151574,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 18484,
+        "reasoning_output_tokens": 11549
+      },
+      "final_hashes": {
+        "app.js": "f4e771a6372e3a58e741452af368d116953254718f4d40c66aaa102cc9a87dba",
+        "base.css": "1a35d01487da75463926b69c2841c2f66ee44aa3751fed2f374bf3118e6862b4",
+        "base.js": "1def4b500df39764f3da91fb3353f0e58e6b62b3584dda952eceae705a8a3a6f",
+        "controller.js": "fef3ca3938fe8bbe3064e3cc6c28cde9ab0ca3bee9d4ea967eb1e600a7e1ac95",
+        "helpers.js": "d38bb04b8020237f7405749a982e8fee89c75c66a464112e6dc35d9d884d3837",
+        "index.css": "c356bddef1054d59477922773be4084e75133d056c8704573102ded6294019d7",
+        "index.html": "688ce79a92d491409dcbdf72e2157b736263e2dce412054dbb86dace3db6067b",
+        "model.js": "f6b5538263a148910a995878a1fae7d8c65426601816835a7eefc59693a8edf7",
+        "store.js": "bf4679c09003752c6f3784ac5b8d4bcf7f2cfe2cf8c3694568018257ce9515e0",
+        "template.js": "e948cd31aadc26a89a1e7b02c188d14a807d93dfb982d4200f01b01a6a802479",
+        "view.js": "fbce6d34b20a478e478b01935030ddf9a5a7405fefe17ab3360e067ba881a9d6"
+      },
+      "final_hashes_lf": {
+        "app.js": "9290627e7bdfee646075b232f400a297676ebbcdb7de5dfe315e42d5668fec26",
+        "base.css": "5c67ddc771b558bc07b58695c9c4b7f663d2ba813edb4810341799c47ba0822d",
+        "base.js": "84090789021f5f8206800503e18adbc38b5fddbfb0a84bfe36e86e683da60c20",
+        "controller.js": "bb0d6b88096acb2fdab8307bda3473911b683a07170055d4815b6df252fdbc4e",
+        "helpers.js": "34db108cf9cc1399c83add4c09bd5e51f9978626e7a486d76b98097c59fcc1c8",
+        "index.css": "dd1649dcd92e687d33f6aa36e2003e9f35e6b26a6afa37a2b31d4b95de9c99a7",
+        "index.html": "c2dedf58259ccec031d8a5b7df2d1dda3e12451cf4b6f27c3f897cf329549321",
+        "model.js": "7f3dd8368e8b1aded3c004a8fe86b7594d43495aec2fa4f0a5b3933f98654ff1",
+        "store.js": "0bc9d37949d094d104a5a0050f68a0b20d2a2b536d5c31fac70c95185ff08303",
+        "template.js": "0483b3707f2dc75f24f488d318b7e7f7ffab24f99c5bb7fa38046dd1a85296fb",
+        "view.js": "8b2d32cd7d6c39f2bd54ed34e03e2547227618584205b4cf196c6e6ab7a851ae"
+      }
+    }
+  }
+}
