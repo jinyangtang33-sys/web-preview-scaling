@@ -1,0 +1,1276 @@
+{
+  "timestamp": "2026-11-04T05:48:57.446Z",
+  "browser": {
+    "channel": "chrome",
+    "version": "156.0.8078.80",
+    "headless": true,
+    "deviceScaleFactor": 1,
+    "zoom": "Fresh browser context, default 100%; visualViewport.scale recorded below"
+  },
+  "sources": {
+    "embedded": "Actual iframe in supplied simulated host.html, loaded in headless Chrome",
+    "sameViewport": "Independent page.html in a separate browser tab, viewport matched to measured iframe",
+    "targetViewport": "Independent page.html at requested 1280x800 CSS viewport"
+  },
+  "hostGeometry": {
+    "innerWidth": 1280,
+    "innerHeight": 800,
+    "devicePixelRatio": 1,
+    "preview": {
+      "rect": {
+        "x": 20,
+        "y": 84.875,
+        "width": 642,
+        "height": 402
+      },
+      "clientWidth": 640,
+      "clientHeight": 400,
+      "computed": {
+        "width": "640px",
+        "height": "400px",
+        "transform": "none",
+        "transformOrigin": "321px 201px",
+        "overflow": "hidden",
+        "border": "1px solid rgb(187, 187, 187)"
+      }
+    },
+    "iframe": {
+      "rect": {
+        "x": 21,
+        "y": 85.875,
+        "width": 640,
+        "height": 400
+      },
+      "clientWidth": 1280,
+      "clientHeight": 800,
+      "computed": {
+        "width": "1280px",
+        "height": "800px",
+        "transform": "matrix(0.5, 0, 0, 0.5, 0, 0)",
+        "transformOrigin": "0px 0px",
+        "overflow": "clip",
+        "border": "0px none rgb(0, 0, 0)"
+      }
+    }
+  },
+  "embedded": {
+    "url": "<run-root>/project/page.html",
+    "title": "城市观察",
+    "viewport": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "devicePixelRatio": 1,
+      "rootClientWidth": 1280,
+      "rootClientHeight": 800,
+      "rootScrollWidth": 1280,
+      "rootScrollHeight": 800,
+      "visualViewport": {
+        "width": 1280,
+        "height": 800,
+        "scale": 1
+      }
+    },
+    "fonts": {
+      "status": "loaded",
+      "entries": []
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "images": [],
+    "elements": {
+      "html": {
+        "matches": 1,
+        "text": "城市观察\n\n  * { box-sizing: border-box; }\n  body { margin: 0; font: 16px/1.6 sans-serif; color: #203b35; background: #f5f2e8; }\n  main { width: calc(100% - 32px); max-width: 1000px; margin: 40px auto; }\n  h1 { font-size: 48px; line-height: 1.2; }\n\n沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 236.9375,
+          "top": 0,
+          "right": 1280,
+          "bottom": 236.9375,
+          "left": 0
+        },
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "\"Times New Roman\"",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "width": "1280px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 0,
+            "y": 40,
+            "width": 1280,
+            "height": 156.9375,
+            "top": 40,
+            "right": 1280,
+            "bottom": 196.9375,
+            "left": 0
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "body": {
+        "matches": 1,
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "width": 1280,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1280,
+          "bottom": 196.9375,
+          "left": 0
+        },
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1280px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 156.9375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "main": {
+        "matches": 1,
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "1000px",
+          "marginTop": "40px",
+          "marginRight": "140px",
+          "marginBottom": "40px",
+          "marginLeft": "140px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 57.59375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 97.59375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 129.75,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 129.75,
+            "right": 1140,
+            "bottom": 155.34375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 171.34375,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 171.34375,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "main h1": {
+        "matches": 1,
+        "text": "沿着街道看城市",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 57.59375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 97.59375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "48px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "700",
+          "lineHeight": "57.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "32.16px",
+          "marginRight": "0px",
+          "marginBottom": "32.16px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          }
+        ]
+      },
+      "main p": {
+        "matches": 1,
+        "text": "记录建筑、树木与行人共同组成的街道。",
+        "rect": {
+          "x": 140,
+          "y": 129.75,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 129.75,
+          "right": 1140,
+          "bottom": 155.34375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "16px",
+          "marginRight": "0px",
+          "marginBottom": "16px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          }
+        ]
+      },
+      "main footer": {
+        "matches": 1,
+        "text": "联系团队",
+        "rect": {
+          "x": 140,
+          "y": 171.34375,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 171.34375,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      }
+    }
+  },
+  "sameViewport": {
+    "url": "<run-root>/project/page.html",
+    "title": "城市观察",
+    "viewport": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "devicePixelRatio": 1,
+      "rootClientWidth": 1280,
+      "rootClientHeight": 800,
+      "rootScrollWidth": 1280,
+      "rootScrollHeight": 800,
+      "visualViewport": {
+        "width": 1280,
+        "height": 800,
+        "scale": 1
+      }
+    },
+    "fonts": {
+      "status": "loaded",
+      "entries": []
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "images": [],
+    "elements": {
+      "html": {
+        "matches": 1,
+        "text": "城市观察\n\n  * { box-sizing: border-box; }\n  body { margin: 0; font: 16px/1.6 sans-serif; color: #203b35; background: #f5f2e8; }\n  main { width: calc(100% - 32px); max-width: 1000px; margin: 40px auto; }\n  h1 { font-size: 48px; line-height: 1.2; }\n\n沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 236.9375,
+          "top": 0,
+          "right": 1280,
+          "bottom": 236.9375,
+          "left": 0
+        },
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "\"Times New Roman\"",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "width": "1280px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 0,
+            "y": 40,
+            "width": 1280,
+            "height": 156.9375,
+            "top": 40,
+            "right": 1280,
+            "bottom": 196.9375,
+            "left": 0
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "body": {
+        "matches": 1,
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "width": 1280,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1280,
+          "bottom": 196.9375,
+          "left": 0
+        },
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1280px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 156.9375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "main": {
+        "matches": 1,
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "1000px",
+          "marginTop": "40px",
+          "marginRight": "140px",
+          "marginBottom": "40px",
+          "marginLeft": "140px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 57.59375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 97.59375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 129.75,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 129.75,
+            "right": 1140,
+            "bottom": 155.34375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 171.34375,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 171.34375,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "main h1": {
+        "matches": 1,
+        "text": "沿着街道看城市",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 57.59375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 97.59375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "48px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "700",
+          "lineHeight": "57.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "32.16px",
+          "marginRight": "0px",
+          "marginBottom": "32.16px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          }
+        ]
+      },
+      "main p": {
+        "matches": 1,
+        "text": "记录建筑、树木与行人共同组成的街道。",
+        "rect": {
+          "x": 140,
+          "y": 129.75,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 129.75,
+          "right": 1140,
+          "bottom": 155.34375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "16px",
+          "marginRight": "0px",
+          "marginBottom": "16px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          }
+        ]
+      },
+      "main footer": {
+        "matches": 1,
+        "text": "联系团队",
+        "rect": {
+          "x": 140,
+          "y": 171.34375,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 171.34375,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      }
+    }
+  },
+  "targetViewport": {
+    "url": "<run-root>/project/page.html",
+    "title": "城市观察",
+    "viewport": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "devicePixelRatio": 1,
+      "rootClientWidth": 1280,
+      "rootClientHeight": 800,
+      "rootScrollWidth": 1280,
+      "rootScrollHeight": 800,
+      "visualViewport": {
+        "width": 1280,
+        "height": 800,
+        "scale": 1
+      }
+    },
+    "fonts": {
+      "status": "loaded",
+      "entries": []
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "images": [],
+    "elements": {
+      "html": {
+        "matches": 1,
+        "text": "城市观察\n\n  * { box-sizing: border-box; }\n  body { margin: 0; font: 16px/1.6 sans-serif; color: #203b35; background: #f5f2e8; }\n  main { width: calc(100% - 32px); max-width: 1000px; margin: 40px auto; }\n  h1 { font-size: 48px; line-height: 1.2; }\n\n沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 236.9375,
+          "top": 0,
+          "right": 1280,
+          "bottom": 236.9375,
+          "left": 0
+        },
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "\"Times New Roman\"",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "width": "1280px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 0,
+            "y": 40,
+            "width": 1280,
+            "height": 156.9375,
+            "top": 40,
+            "right": 1280,
+            "bottom": 196.9375,
+            "left": 0
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "body": {
+        "matches": 1,
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "width": 1280,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1280,
+          "bottom": 196.9375,
+          "left": 0
+        },
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1280px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 156.9375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "main": {
+        "matches": 1,
+        "text": "沿着街道看城市记录建筑、树木与行人共同组成的街道。联系团队",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 156.9375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "1000px",
+          "marginTop": "40px",
+          "marginRight": "140px",
+          "marginBottom": "40px",
+          "marginLeft": "140px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 40,
+            "width": 1000,
+            "height": 57.59375,
+            "top": 40,
+            "right": 1140,
+            "bottom": 97.59375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 129.75,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 129.75,
+            "right": 1140,
+            "bottom": 155.34375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 171.34375,
+            "width": 1000,
+            "height": 25.59375,
+            "top": 171.34375,
+            "right": 1140,
+            "bottom": 196.9375,
+            "left": 140
+          },
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      },
+      "main h1": {
+        "matches": 1,
+        "text": "沿着街道看城市",
+        "rect": {
+          "x": 140,
+          "y": 40,
+          "width": 1000,
+          "height": 57.59375,
+          "top": 40,
+          "right": 1140,
+          "bottom": 97.59375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "48px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "700",
+          "lineHeight": "57.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "32.16px",
+          "marginRight": "0px",
+          "marginBottom": "32.16px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 36,
+            "width": 336,
+            "height": 64,
+            "top": 36,
+            "right": 476,
+            "bottom": 100,
+            "left": 140
+          }
+        ]
+      },
+      "main p": {
+        "matches": 1,
+        "text": "记录建筑、树木与行人共同组成的街道。",
+        "rect": {
+          "x": 140,
+          "y": 129.75,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 129.75,
+          "right": 1140,
+          "bottom": 155.34375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "16px",
+          "marginRight": "0px",
+          "marginBottom": "16px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 131.75,
+            "width": 288,
+            "height": 21,
+            "top": 131.75,
+            "right": 428,
+            "bottom": 152.75,
+            "left": 140
+          }
+        ]
+      },
+      "main footer": {
+        "matches": 1,
+        "text": "联系团队",
+        "rect": {
+          "x": 140,
+          "y": 171.34375,
+          "width": 1000,
+          "height": 25.59375,
+          "top": 171.34375,
+          "right": 1140,
+          "bottom": 196.9375,
+          "left": 140
+        },
+        "clientWidth": 1000,
+        "scrollWidth": 1000,
+        "computed": {
+          "fontSize": "16px",
+          "fontFamily": "sans-serif",
+          "fontWeight": "400",
+          "lineHeight": "25.6px",
+          "width": "1000px",
+          "maxWidth": "none",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "transform": "none",
+          "zoom": "1",
+          "overflowX": "visible",
+          "display": "block"
+        },
+        "textRects": [
+          {
+            "x": 140,
+            "y": 173.34375,
+            "width": 64,
+            "height": 21,
+            "top": 173.34375,
+            "right": 204,
+            "bottom": 194.34375,
+            "left": 140
+          }
+        ]
+      }
+    }
+  },
+  "comparison": {
+    "matchingViewport": true,
+    "matchingElements": true,
+    "matchingFonts": true,
+    "targetEqualsPreviewViewport": true,
+    "hostScaleX": 0.5,
+    "hostScaleY": 0.5,
+    "embeddedHorizontalOverflow": 0,
+    "independentHorizontalOverflow": 0
+  },
+  "changes": []
+}

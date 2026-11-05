@@ -1,0 +1,340 @@
+{
+  "source": "Independent headless Chrome; 390x844 is independent-browser simulation, not a measurement of the Codex preview.",
+  "previewMeasured": false,
+  "browser": "156.0.8078.80",
+  "sourceImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"400\" viewBox=\"0 0 800 400\" preserveAspectRatio=\"none\">\n  <rect width=\"800\" height=\"400\" fill=\"#f5f2e8\"/>\n  <rect x=\"420\" y=\"100\" width=\"280\" height=\"300\" fill=\"#b2b8a6\"/>\n  <circle cx=\"560\" cy=\"200\" r=\"60\" fill=\"#f5f2e8\"/>\n  <rect x=\"170\" y=\"180\" width=\"40\" height=\"220\" fill=\"#7c5944\"/>\n  <circle cx=\"190\" cy=\"140\" r=\"105\" fill=\"#6f9475\"/>\n</svg>\n",
+  "before": [
+    {
+      "url": "<run-root>/project/page.html",
+      "viewport": {
+        "innerWidth": 1280,
+        "innerHeight": 800,
+        "visualViewportWidth": 1280,
+        "visualViewportHeight": 800,
+        "visualViewportScale": 1,
+        "devicePixelRatio": 1
+      },
+      "document": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "scrollHeight": 800,
+        "overflowX": 0
+      },
+      "fonts": {
+        "status": "loaded"
+      },
+      "main": {
+        "bounds": {
+          "x": 160,
+          "y": 24,
+          "width": 960,
+          "height": 252.625,
+          "top": 24,
+          "right": 1120,
+          "bottom": 276.625,
+          "left": 160
+        },
+        "maxWidth": "960px"
+      },
+      "heading": {
+        "bounds": {
+          "x": 160,
+          "y": 24,
+          "width": 960,
+          "height": 51.1875,
+          "top": 24,
+          "right": 1120,
+          "bottom": 75.1875,
+          "left": 160
+        },
+        "fontSize": "32px"
+      },
+      "image": {
+        "complete": true,
+        "naturalWidth": 800,
+        "naturalHeight": 400,
+        "bounds": {
+          "x": 160,
+          "y": 96.625,
+          "width": 960,
+          "height": 180,
+          "top": 96.625,
+          "right": 1120,
+          "bottom": 276.625,
+          "left": 160
+        },
+        "computed": {
+          "width": "960px",
+          "height": "180px",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "display": "block"
+        },
+        "naturalRatio": 2,
+        "renderedRatio": 5.333333333333333
+      },
+      "stylesheetRules": [
+        "* { box-sizing: border-box; }",
+        "body { margin: 0px; font: 16px / 1.6 sans-serif; }",
+        "main { width: calc(100% - 32px); max-width: 960px; margin: 24px auto; }",
+        "img { display: block; width: 100%; height: 180px; object-fit: fill; }"
+      ],
+      "browserErrors": [],
+      "screenshot": "<run-root>\\before-1280x800.png"
+    },
+    {
+      "url": "<run-root>/project/page.html",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "visualViewportWidth": 390,
+        "visualViewportHeight": 844,
+        "visualViewportScale": 1,
+        "devicePixelRatio": 1
+      },
+      "document": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "scrollHeight": 844,
+        "overflowX": 0
+      },
+      "fonts": {
+        "status": "loaded"
+      },
+      "main": {
+        "bounds": {
+          "x": 16,
+          "y": 24,
+          "width": 358,
+          "height": 252.625,
+          "top": 24,
+          "right": 374,
+          "bottom": 276.625,
+          "left": 16
+        },
+        "maxWidth": "960px"
+      },
+      "heading": {
+        "bounds": {
+          "x": 16,
+          "y": 24,
+          "width": 358,
+          "height": 51.1875,
+          "top": 24,
+          "right": 374,
+          "bottom": 75.1875,
+          "left": 16
+        },
+        "fontSize": "32px"
+      },
+      "image": {
+        "complete": true,
+        "naturalWidth": 800,
+        "naturalHeight": 400,
+        "bounds": {
+          "x": 16,
+          "y": 96.625,
+          "width": 358,
+          "height": 180,
+          "top": 96.625,
+          "right": 374,
+          "bottom": 276.625,
+          "left": 16
+        },
+        "computed": {
+          "width": "358px",
+          "height": "180px",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "display": "block"
+        },
+        "naturalRatio": 2,
+        "renderedRatio": 1.988888888888889
+      },
+      "stylesheetRules": [
+        "* { box-sizing: border-box; }",
+        "body { margin: 0px; font: 16px / 1.6 sans-serif; }",
+        "main { width: calc(100% - 32px); max-width: 960px; margin: 24px auto; }",
+        "img { display: block; width: 100%; height: 180px; object-fit: fill; }"
+      ],
+      "browserErrors": [],
+      "screenshot": "<run-root>\\before-390x844.png"
+    }
+  ],
+  "after": [
+    {
+      "url": "<run-root>/project/page.html",
+      "viewport": {
+        "innerWidth": 1280,
+        "innerHeight": 800,
+        "visualViewportWidth": 1280,
+        "visualViewportHeight": 800,
+        "visualViewportScale": 1,
+        "devicePixelRatio": 1
+      },
+      "document": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "scrollHeight": 800,
+        "overflowX": 0
+      },
+      "fonts": {
+        "status": "loaded"
+      },
+      "main": {
+        "bounds": {
+          "x": 160,
+          "y": 24,
+          "width": 960,
+          "height": 552.625,
+          "top": 24,
+          "right": 1120,
+          "bottom": 576.625,
+          "left": 160
+        },
+        "maxWidth": "960px"
+      },
+      "heading": {
+        "bounds": {
+          "x": 160,
+          "y": 24,
+          "width": 960,
+          "height": 51.1875,
+          "top": 24,
+          "right": 1120,
+          "bottom": 75.1875,
+          "left": 160
+        },
+        "fontSize": "32px"
+      },
+      "image": {
+        "complete": true,
+        "naturalWidth": 800,
+        "naturalHeight": 400,
+        "bounds": {
+          "x": 160,
+          "y": 96.625,
+          "width": 960,
+          "height": 480,
+          "top": 96.625,
+          "right": 1120,
+          "bottom": 576.625,
+          "left": 160
+        },
+        "computed": {
+          "width": "960px",
+          "height": "480px",
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "display": "block"
+        },
+        "naturalRatio": 2,
+        "renderedRatio": 2
+      },
+      "stylesheetRules": [
+        "* { box-sizing: border-box; }",
+        "body { margin: 0px; font: 16px / 1.6 sans-serif; }",
+        "main { width: calc(100% - 32px); max-width: 960px; margin: 24px auto; }",
+        "img { display: block; width: 100%; height: auto; object-fit: contain; }"
+      ],
+      "browserErrors": [],
+      "screenshot": "<run-root>\\after-1280x800.png",
+      "checks": {
+        "viewportMatches": true,
+        "loaded": true,
+        "ratioPreserved": true,
+        "imageWithinMain": true,
+        "imageEntirelyInViewport": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true
+      }
+    },
+    {
+      "url": "<run-root>/project/page.html",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "visualViewportWidth": 390,
+        "visualViewportHeight": 844,
+        "visualViewportScale": 1,
+        "devicePixelRatio": 1
+      },
+      "document": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "scrollHeight": 844,
+        "overflowX": 0
+      },
+      "fonts": {
+        "status": "loaded"
+      },
+      "main": {
+        "bounds": {
+          "x": 16,
+          "y": 24,
+          "width": 358,
+          "height": 251.625,
+          "top": 24,
+          "right": 374,
+          "bottom": 275.625,
+          "left": 16
+        },
+        "maxWidth": "960px"
+      },
+      "heading": {
+        "bounds": {
+          "x": 16,
+          "y": 24,
+          "width": 358,
+          "height": 51.1875,
+          "top": 24,
+          "right": 374,
+          "bottom": 75.1875,
+          "left": 16
+        },
+        "fontSize": "32px"
+      },
+      "image": {
+        "complete": true,
+        "naturalWidth": 800,
+        "naturalHeight": 400,
+        "bounds": {
+          "x": 16,
+          "y": 96.625,
+          "width": 358,
+          "height": 179,
+          "top": 96.625,
+          "right": 374,
+          "bottom": 275.625,
+          "left": 16
+        },
+        "computed": {
+          "width": "358px",
+          "height": "179px",
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "display": "block"
+        },
+        "naturalRatio": 2,
+        "renderedRatio": 2
+      },
+      "stylesheetRules": [
+        "* { box-sizing: border-box; }",
+        "body { margin: 0px; font: 16px / 1.6 sans-serif; }",
+        "main { width: calc(100% - 32px); max-width: 960px; margin: 24px auto; }",
+        "img { display: block; width: 100%; height: auto; object-fit: contain; }"
+      ],
+      "browserErrors": [],
+      "screenshot": "<run-root>\\after-390x844.png",
+      "checks": {
+        "viewportMatches": true,
+        "loaded": true,
+        "ratioPreserved": true,
+        "imageWithinMain": true,
+        "imageEntirelyInViewport": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true
+      }
+    }
+  ]
+}

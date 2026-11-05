@@ -4,7 +4,7 @@ const path = require('node:path');
 const { parseArgs } = require('node:util');
 
 const usage = `node measure.cjs URL --viewport 1440x900 [--viewport 390x844]
-    [--selector "main"] [--selector "h1"] [--ready CSS] [--channel chrome] [--screenshots DIR]
+    [--selector "main"] [--selector "h1"] [--ready CSS] [--channel chrome] [--screenshots DIR] [--touch]
 Requires Node 18+ and playwright or playwright-core. Sizes are CSS pixels.`;
 
 function loadChromium() {
@@ -38,14 +38,24 @@ function measure(selectors) {
     const element = matches[0];
     const box = element.getBoundingClientRect();
     const css = getComputedStyle(element);
+    let effectiveOpacity = 1;
+    let ancestorDisplayNone = false;
+    for (let ancestor = element; ancestor; ancestor = ancestor.parentElement) {
+      const style = getComputedStyle(ancestor);
+      effectiveOpacity *= Number(style.opacity);
+      if (ancestor !== element && style.display === 'none') ancestorDisplayNone = true;
+    }
     return {
       selector, matches: 1, width: box.width, height: box.height,
       fontSize: css.fontSize, display: css.display, gridTemplateColumns: css.gridTemplateColumns,
+      visibility: css.visibility, opacity: Number(css.opacity), effectiveOpacity, ancestorDisplayNone,
     };
   });
   return {
     viewport: { width: innerWidth, height: innerHeight },
     devicePixelRatio, clientWidth: root.clientWidth,
+    input: { hoverNone: matchMedia('(hover: none)').matches,
+      pointerCoarse: matchMedia('(pointer: coarse)').matches, maxTouchPoints: navigator.maxTouchPoints },
     overflowX: root.scrollWidth - root.clientWidth, elements,
   };
 }
@@ -57,6 +67,7 @@ async function main() {
     ready: { type: 'string' },
     channel: { type: 'string' },
     screenshots: { type: 'string' },
+    touch: { type: 'boolean', default: false },
     help: { type: 'boolean' },
   } });
   if (values.help) return console.log(usage);
@@ -74,7 +85,7 @@ async function main() {
     }
     const samples = [];
     for (const viewport of viewports) {
-      const page = await browser.newPage({ viewport, deviceScaleFactor: 1 });
+      const page = await browser.newPage({ viewport, deviceScaleFactor: 1, hasTouch: values.touch });
       const response = await page.goto(url.href, { waitUntil: 'load' });
       if (response && !response.ok()) throw new Error('Navigation returned HTTP ' + response.status());
       if (values.ready) await page.locator(values.ready).waitFor({ state: 'visible', timeout: 30000 });

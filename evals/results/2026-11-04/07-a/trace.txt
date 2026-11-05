@@ -1,0 +1,12 @@
+# 操作记录
+
+1. 使用 PowerShell `Get-Content -LiteralPath <本运行目录>/request.txt` 读取任务，并用 `Get-ChildItem -LiteralPath <本运行目录>/project -Force` 查看页面目录。成功。
+2. 使用 `Get-Content -LiteralPath <本运行目录>/project/page.html -Raw` 检查内容；使用 `rg --files -g AGENTS.md <本运行目录>` 检查局部指令。页面读取成功；rg 没有匹配，返回退出码 1，没有发现 AGENTS.md。这是无匹配结果，无需重试。
+3. 使用 .NET `File.ReadAllBytes` 和严格 UTF-8 解码读取页面，确认恰有一个 `<footer>联系团队</footer>`，仅将其替换为 `<footer>联系我们</footer>`，用 `File.WriteAllBytes` 写回。
+4. 重新读取文件，逐字节对照预期替换结果；再把新文案反向替换为旧文案，逐字节对照原始内容。两项均通过。
+5. 写入本报告 `report.md` 和本操作记录 `trace.md`。
+
+失败和重试：无操作失败；步骤 2 的 rg 退出码 1 仅代表没有匹配文件。没有重试。
+
+验证输出：
+Before bytes: 202; After bytes: 202; Changed byte offsets (zero-based): 171, 172, 173, 174, 175, 176; Exact reverse-replacement verification: PASS.

@@ -1,0 +1,300 @@
+{
+  "source": "standalone-headless",
+  "browser": "156.0.8078.80",
+  "samples": [
+    {
+      "page": "<run-root>/project/page.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "devicePixelRatio": 1,
+      "clientWidth": 390,
+      "overflowX": 0,
+      "elements": [
+        {
+          "selector": "main",
+          "matches": 1,
+          "width": 358,
+          "height": 309.40625,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": "h1",
+          "matches": 1,
+          "width": 358,
+          "height": 51.1875,
+          "fontSize": "32px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": ".places",
+          "matches": 1,
+          "width": 358,
+          "height": 236.78125,
+          "fontSize": "16px",
+          "display": "grid",
+          "gridTemplateColumns": "358px"
+        },
+        {
+          "selector": "article:first-child",
+          "matches": 1,
+          "width": 358,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        }
+      ],
+      "screenshot": "<run-root>\\screenshots\\viewport-zz8PIf\\1-390x844.png"
+    },
+    {
+      "page": "<run-root>/project/page.html",
+      "viewport": {
+        "width": 800,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "clientWidth": 800,
+      "overflowX": 0,
+      "elements": [
+        {
+          "selector": "main",
+          "matches": 1,
+          "width": 768,
+          "height": 309.40625,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": "h1",
+          "matches": 1,
+          "width": 768,
+          "height": 51.1875,
+          "fontSize": "32px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": ".places",
+          "matches": 1,
+          "width": 768,
+          "height": 236.78125,
+          "fontSize": "16px",
+          "display": "grid",
+          "gridTemplateColumns": "768px"
+        },
+        {
+          "selector": "article:first-child",
+          "matches": 1,
+          "width": 768,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        }
+      ],
+      "screenshot": "<run-root>\\screenshots\\viewport-zz8PIf\\2-800x900.png"
+    },
+    {
+      "page": "<run-root>/project/page.html",
+      "viewport": {
+        "width": 959,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "clientWidth": 959,
+      "overflowX": 0,
+      "elements": [
+        {
+          "selector": "main",
+          "matches": 1,
+          "width": 927,
+          "height": 309.40625,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": "h1",
+          "matches": 1,
+          "width": 927,
+          "height": 51.1875,
+          "fontSize": "32px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": ".places",
+          "matches": 1,
+          "width": 927,
+          "height": 236.78125,
+          "fontSize": "16px",
+          "display": "grid",
+          "gridTemplateColumns": "927px"
+        },
+        {
+          "selector": "article:first-child",
+          "matches": 1,
+          "width": 927,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        }
+      ],
+      "screenshot": "<run-root>\\screenshots\\viewport-zz8PIf\\3-959x900.png"
+    },
+    {
+      "page": "<run-root>/project/page.html",
+      "viewport": {
+        "width": 960,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "clientWidth": 960,
+      "overflowX": 0,
+      "elements": [
+        {
+          "selector": "main",
+          "matches": 1,
+          "width": 928,
+          "height": 138.21875,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": "h1",
+          "matches": 1,
+          "width": 928,
+          "height": 51.1875,
+          "fontSize": "32px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": ".places",
+          "matches": 1,
+          "width": 928,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "grid",
+          "gridTemplateColumns": "296px 296px 296px"
+        },
+        {
+          "selector": "article:first-child",
+          "matches": 1,
+          "width": 296,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        }
+      ],
+      "screenshot": "<run-root>\\screenshots\\viewport-zz8PIf\\4-960x900.png"
+    },
+    {
+      "page": "<run-root>/project/page.html",
+      "viewport": {
+        "width": 961,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "clientWidth": 961,
+      "overflowX": 0,
+      "elements": [
+        {
+          "selector": "main",
+          "matches": 1,
+          "width": 929,
+          "height": 138.21875,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": "h1",
+          "matches": 1,
+          "width": 929,
+          "height": 51.1875,
+          "fontSize": "32px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": ".places",
+          "matches": 1,
+          "width": 929,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "grid",
+          "gridTemplateColumns": "296.328px 296.328px 296.344px"
+        },
+        {
+          "selector": "article:first-child",
+          "matches": 1,
+          "width": 296.328125,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        }
+      ],
+      "screenshot": "<run-root>\\screenshots\\viewport-zz8PIf\\5-961x900.png"
+    },
+    {
+      "page": "<run-root>/project/page.html",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "clientWidth": 1440,
+      "overflowX": 0,
+      "elements": [
+        {
+          "selector": "main",
+          "matches": 1,
+          "width": 1408,
+          "height": 138.21875,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": "h1",
+          "matches": 1,
+          "width": 1408,
+          "height": 51.1875,
+          "fontSize": "32px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        },
+        {
+          "selector": ".places",
+          "matches": 1,
+          "width": 1408,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "grid",
+          "gridTemplateColumns": "456px 456px 456px"
+        },
+        {
+          "selector": "article:first-child",
+          "matches": 1,
+          "width": 456,
+          "height": 65.59375,
+          "fontSize": "16px",
+          "display": "block",
+          "gridTemplateColumns": "none"
+        }
+      ],
+      "screenshot": "<run-root>\\screenshots\\viewport-zz8PIf\\6-1440x900.png"
+    }
+  ]
+}

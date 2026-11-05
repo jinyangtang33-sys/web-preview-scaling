@@ -1,0 +1,65 @@
+{
+  "valid": true,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "time_limit_seconds": 900,
+  "internal_retry_counts": "unobservable",
+  "arms": {
+    "lane-m": {
+      "code_replies": 3,
+      "model_tools": 0,
+      "elapsed_seconds": 406.9043187000789,
+      "model_seconds": 402.5868470999412,
+      "harness_seconds": 4.313309300225228,
+      "usage": {
+        "input_tokens": 114801,
+        "cached_input_tokens": 56832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14158,
+        "reasoning_output_tokens": 7841
+      },
+      "final_hashes": {
+        ".gitignore": "f8d60bf8d03db2a9720b37c0f5112ffc677699d9ad1597eeb6201997051b8540",
+        "favicon.png": "810cb4c9aca22886bd03b52f1a20cfb6d1df51437804b5adaf450a9723e63f42",
+        "index.css": "e32f4306e63722a1fd2dc7b28f8687a5a18b651c60dbe3cbd02f5a84d4354192",
+        "index.html": "8e76d9b9489b296b55f03ee37cb587fdc1d06858d6bbb3c983a3d7c4f566dfaf",
+        "index.js": "6efbb9379c02477d939a00f0c7542eccdce686b7f77b303d0afb32c46b1353c9",
+        "LICENSE": "3761c3618561944fe4ae40c2224641873912556352fc5f24bd264e8610e9acfd",
+        "README.md": "d1dbe7450d1753d1ba9ec6c35409a4d722ec917e4ced6b24b52908d39891ad7f"
+      },
+      "editable_hashes_lf": {
+        "index.html": "8012e0e13892fa1a0419c7c4e235640a004aeb7ab01b11410c199b2147bd896e",
+        "index.css": "d99e3a891d3346d602546a3c3f90ec53ebf280278c675ad0382ddddda2dcd139",
+        "index.js": "ef55f3fbcbae1a8749585982b8f8f1139903679375f4867c7b63ae93207769dc"
+      }
+    },
+    "lane-n": {
+      "code_replies": 3,
+      "model_tools": 0,
+      "elapsed_seconds": 490.18790889997035,
+      "model_seconds": 486.0450491993688,
+      "harness_seconds": 4.138569900300354,
+      "usage": {
+        "input_tokens": 117378,
+        "cached_input_tokens": 28672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 17477,
+        "reasoning_output_tokens": 11560
+      },
+      "final_hashes": {
+        ".gitignore": "f8d60bf8d03db2a9720b37c0f5112ffc677699d9ad1597eeb6201997051b8540",
+        "favicon.png": "810cb4c9aca22886bd03b52f1a20cfb6d1df51437804b5adaf450a9723e63f42",
+        "index.css": "4ad131893daab82953381f130b7b8dc4f4ace16157c189647d75ac0114c141cb",
+        "index.html": "872a3979e29e46f37a8ffaaf5c3fe2fe3f8a6585f9942ac57caed274358c2c2a",
+        "index.js": "03312ffcf65c9d84f8f4399fd7eae835c67bb679b0bd081f06737ea73545a3ef",
+        "LICENSE": "3761c3618561944fe4ae40c2224641873912556352fc5f24bd264e8610e9acfd",
+        "README.md": "d1dbe7450d1753d1ba9ec6c35409a4d722ec917e4ced6b24b52908d39891ad7f"
+      },
+      "editable_hashes_lf": {
+        "index.html": "95ed40e1cedad143895e1981183b4886705001738565c2be8a821f61ac39933d",
+        "index.css": "52073eee21340e072d68f8f2ca32b724cbc377953b3f0ef11cdcacdb5981b067",
+        "index.js": "e7847d3738ea086f74ab0e5ff2b2dfa05de542c5fea16174179d48d3f95f472f"
+      }
+    }
+  }
+}

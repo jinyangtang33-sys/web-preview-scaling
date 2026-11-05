@@ -1,0 +1,22 @@
+已修复 project/page.html，并通过 headless Chrome 的两个指定视口验证。
+
+改动：正文容器增加 max-width: 1040px；标题改为 font-size: clamp(32px, 4vw, 48px)。正文继续采用 width: calc(100% - 32px) 与自动水平边距。
+
+| 视口 | 标题字号（修复前 → 后） | 正文宽度（修复前 → 后） | 修复后左右边距 | 页面滚动宽度 / 视口宽度 |
+| --- | --- | --- | --- | --- |
+| 1440 × 900 | 86.4px → 48px | 1408px → 1040px | 200px / 200px | 1440px / 1440px |
+| 390 × 844 | 23.4px → 32px | 358px → 358px | 16px / 16px | 390px / 390px |
+
+两种尺寸均无横向溢出。修复后的桌面与移动端截图已目视核对，标题和正文正常显示。
+
+验证方式：通过只读现有 Playwright 依赖，以 Chrome channel、headless 模式、deviceScaleFactor: 1 加载本地 page.html。分别采集 getComputedStyle、getBoundingClientRect、clientWidth 与 scrollWidth，并执行字号、正文宽度/边距、无横向溢出的断言。所有修复后断言通过；命令无失败，无重试。未创建 Git 提交。
+
+产物（均在当前 02-control 目录）：
+
+- project/page.html：修复后的页面。
+- evidence.json：修复前后两个视口的原始 DOM 读数及断言结果。
+- verify.cjs：可重跑的浏览器验证脚本。
+- before-1440.png、before-390.png：修复前截图。
+- after-1440.png、after-390.png：修复后截图。
+- trace.md：命令、执行结果及失败/重试记录。
+- report.md：本报告。

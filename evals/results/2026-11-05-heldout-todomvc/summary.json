@@ -1,0 +1,72 @@
+{
+  "new_project": "tastejs/todomvc javascript-es5",
+  "candidate_commit": "059335f9667d9777ca5d6e0cd67477f4d96100de",
+  "resource_match_valid": true,
+  "rows": [
+    {
+      "judge": "judge-1",
+      "with_skill": {
+        "scores": [
+          3,
+          4,
+          4,
+          3,
+          3,
+          3
+        ],
+        "total": 20
+      },
+      "without_skill": {
+        "scores": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "total": 18
+      },
+      "preferred": "with_skill",
+      "difference": 2,
+      "judgment_sha256": "7975fa30d1933277f09b17ea94be44a602a514118e7264b11960de93d71c425b"
+    },
+    {
+      "judge": "judge-2",
+      "with_skill": {
+        "scores": [
+          3,
+          3,
+          4,
+          3,
+          3,
+          3
+        ],
+        "total": 19
+      },
+      "without_skill": {
+        "scores": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "total": 18
+      },
+      "preferred": "with_skill",
+      "difference": 1,
+      "judgment_sha256": "778db131cefdb228597dc9b7f17bf714f87da4b63823b76a613a433d05d70284"
+    }
+  ],
+  "average_paired_difference": 1.5,
+  "minimum_predeclared_difference": 2,
+  "visual_gate": false,
+  "hard_gates": {
+    "lane-m": "pass",
+    "lane-n": "pass"
+  },
+  "complete_gate": false,
+  "interpretation": "Both reviewers mildly preferred the skill, but the 1.5/24 mean difference did not meet the frozen 2-point threshold. One new reference application; no retuning on these results."
+}

@@ -1,0 +1,90 @@
+{
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "<form class=\"entry\">\n                    <label for=\"new-task\">New task</label>",
+      "new": "<form class=\"entry\" novalidate>\n                    <label for=\"new-task\">New task <span class=\"requirement\">(required)</span></label>"
+    },
+    {
+      "path": "index.html",
+      "old": "enterkeyhint=\"done\" autofocus />\n                    <button type=\"submit\">Add</button>",
+      "new": "enterkeyhint=\"done\" required aria-describedby=\"entry-error\" autofocus />\n                    <button type=\"submit\">Add</button>\n                    <span id=\"entry-error\" role=\"alert\"></span>"
+    },
+    {
+      "path": "view.js",
+      "old": "$on(self.$newTodo, \"change\", function () {\n                handler(self.$newTodo.value);\n            });",
+      "new": "var input = self.$newTodo;\n            var error = qs('#entry-error');\n            var addedOnChange = false;\n            function showError(invalid) {\n                input.setAttribute('aria-invalid', String(invalid));\n                if (error) error.textContent = invalid ? 'Enter a task description.' : '';\n            }\n            $on(input, 'input', function () {\n                addedOnChange = false;\n                if (input.value.trim()) showError(false);\n            });\n            $on(input, 'focus', function () { addedOnChange = false; });\n            $on(input, 'change', function () {\n                addedOnChange = Boolean(input.value.trim());\n                showError(!addedOnChange);\n                if (addedOnChange) handler(input.value);\n            });"
+    },
+    {
+      "path": "view.js",
+      "old": "if (self.$newTodo.value.trim()) handler(self.$newTodo.value);\n                    self.$newTodo.focus();",
+      "new": "// Clicking Add can commit the field's change before submit fires.\n                    showError(!input.value.trim() && !addedOnChange);\n                    if (input.value.trim()) handler(input.value);\n                    addedOnChange = false;\n                    input.focus();"
+    },
+    {
+      "path": "template.js",
+      "old": "+ '<button class=\"edit-task\"",
+      "new": "+ '<div class=\"task-actions\">'\n            + '<button class=\"edit-task\""
+    },
+    {
+      "path": "template.js",
+      "old": "Delete</button>'",
+      "new": "Delete</button></div>'"
+    },
+    {
+      "path": "controller.js",
+      "old": "{ checked: todos.completed === todos.total }",
+      "new": "{ checked: todos.completed === todos.total, mixed: todos.completed > 0 && todos.active > 0 }"
+    },
+    {
+      "path": "view.js",
+      "old": "self.$toggleAllInput.checked = parameter.checked;",
+      "new": "self.$toggleAllInput.checked = parameter.checked;\n                self.$toggleAllInput.indeterminate = Boolean(parameter.mixed);"
+    },
+    {
+      "path": "view.js",
+      "old": "var input = document.createElement(\"input\");\n        input.className = \"edit\";\n        input.setAttribute('aria-label', 'Edit task');\n        input.setAttribute('enterkeyhint', 'done');\n\n        listItem.appendChild(input);\n        input.focus();\n        input.value = title;",
+      "new": "var editor = document.createElement('form');\n        editor.className = 'task-editor';\n        this._replaceContentWithHtml(editor,\n            '<input class=\"edit\" aria-label=\"Edit task\" enterkeyhint=\"done\">' +\n            '<small class=\"edit-hint\">An empty title deletes this task.</small>' +\n            '<button class=\"save-edit\" type=\"submit\">Save</button>' +\n            '<button class=\"cancel-edit\" type=\"button\">Cancel</button>');\n        var input = qs('.edit', editor);\n        input.value = title;\n        listItem.appendChild(editor);\n        input.focus();\n        input.setSelectionRange(title.length, title.length);"
+    },
+    {
+      "path": "view.js",
+      "old": "var input = qs(\"input.edit\", listItem);\n        listItem.removeChild(input);",
+      "new": "var editor = qs('.task-editor', listItem);\n        if (editor) listItem.removeChild(editor);"
+    },
+    {
+      "path": "view.js",
+      "old": "View.prototype._bindItemEditDone = function (handler) {",
+      "new": "View.prototype._finishEdit = function (editor, handler, returnFocus) {\n        if (editor.dataset.finishing) return;\n        editor.dataset.finishing = 'true';\n        var id = this._itemId(editor);\n        handler({ id: id, title: qs('.edit', editor).value });\n        if (returnFocus) {\n            var button = qs('[data-id=\"' + id + '\"] .edit-task', this.$todoList);\n            (button || this.$newTodo).focus();\n        }\n    };\n\n    View.prototype._bindItemEditDone = function (handler) {"
+    },
+    {
+      "path": "view.js",
+      "old": "$delegate(self.$todoList, \"li .edit\", \"blur\", function () {\n            if (!this.dataset.iscanceled) {\n                handler({\n                    id: self._itemId(this),\n                    title: this.value,\n                });\n            }\n        });",
+      "new": "$delegate(self.$todoList, '.task-editor button', 'pointerdown', function (event) {\n            // Keep the input focused until the tapped action handles the edit.\n            event.preventDefault();\n        });\n        $delegate(self.$todoList, '.task-editor input, .task-editor button', 'blur', function (event) {\n            var editor = this.form;\n            if (!editor.contains(event.relatedTarget)) self._finishEdit(editor, handler, false);\n        });\n        $delegate(self.$todoList, '.task-editor', 'submit', function (event) {\n            event.preventDefault();\n            self._finishEdit(this, handler, true);\n        });"
+    },
+    {
+      "path": "view.js",
+      "old": "// Remove the cursor from the input when you hit enter just like if it\n                // were a real form\n                this.blur();",
+      "new": "event.preventDefault();\n                self._finishEdit(this.form, handler, true);"
+    },
+    {
+      "path": "view.js",
+      "old": "$delegate(self.$todoList, \"li .edit\", \"keyup\", function (event) {\n            if (event.keyCode === self.ESCAPE_KEY) {\n                this.dataset.iscanceled = true;\n                this.blur();\n\n                handler({ id: self._itemId(this) });\n            }\n        });",
+      "new": "$delegate(self.$todoList, '.cancel-edit', 'click', function () {\n            self._finishEdit(this.form, handler, true);\n        });\n        $delegate(self.$todoList, '.task-editor input, .task-editor button', 'keyup', function (event) {\n            if (!event.isComposing && event.keyCode === self.ESCAPE_KEY)\n                self._finishEdit(this.form, handler, true);\n        });"
+    },
+    {
+      "path": "index.css",
+      "old": "grid-template-columns: 44px minmax(0,1fr) auto auto;",
+      "new": "grid-template-columns: 44px minmax(0,1fr) auto;"
+    },
+    {
+      "path": "index.css",
+      "old": "@media (max-width: 520px) {",
+      "new": ".requirement { color: var(--muted); font-weight: 400; font-size: 13px; }\n#entry-error { grid-column: 1 / -1; color: var(--red); }\n#entry-error:empty { display: none; }\n.new-todo[aria-invalid=\"true\"] { border-color: var(--red); }\n.toggle-all:indeterminate + label:before { content: '−'; color: white; background: #287268; }\n.filters li a { min-width: 44px; justify-content: center; }\n.task-actions { display: flex; align-items: center; border-radius: 6px; background: #f6f4f1; }\n.task-actions button { border-radius: 5px; }\n.task-actions button:focus-visible { z-index: 1; }\n@media (hover: hover) {\n .task-actions button:hover { background: #eae6e1; }\n}\n.task-editor { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: 'field save cancel' 'hint hint hint'; gap: 5px 8px; align-items: center; }\n.task-editor .edit { grid-area: field; min-width: 0; }\n.edit-hint { grid-area: hint; color: var(--muted); font: 400 13px/1.4 inherit; font-family: inherit; font-size: 13px; line-height: 1.4; }\n.task-editor button { min-height: 44px; padding: 0 14px; border-radius: 5px; font: inherit; font-size: 14px; font-weight: 600; }\n.save-edit { grid-area: save; background: var(--red); color: white; }\n.cancel-edit { grid-area: cancel; background: #f6f4f1; }\n@media (max-width: 520px) {"
+    },
+    {
+      "path": "index.css",
+      "old": ".todo-list .view { padding-inline: 3px 7px; gap: 1px; }\n .todo-list li label { font-size: 17px; }",
+      "new": ".todo-list .view { display: flex; flex-wrap: wrap; gap: 2px 4px; padding: 6px 10px 6px 3px; }\n .todo-list li .toggle { flex: 0 0 44px; }\n .todo-list li label { flex: 1 1 auto; box-sizing: border-box; max-width: calc(100% - 48px); padding-inline: 0; font-size: 17px; }\n .task-actions { margin-left: auto; }\n .task-editor { grid-template-areas: 'field field field' 'hint save cancel'; row-gap: 8px; }\n .todo-list li.editing { padding-inline: 14px; }"
+    }
+  ],
+  "notes": "The supplied phone screenshot shows the long title wrapping through six lines beside Edit and Delete. This proposal lets the action pair wrap below longer titles while short titles can share a row. Editing gains touch-accessible Save and Cancel controls. The composer explains blank submissions, and the bulk checkbox distinguishes partial completion. Review used the supplied source and screenshots. The revised layouts and workflows await harness verification."
+}

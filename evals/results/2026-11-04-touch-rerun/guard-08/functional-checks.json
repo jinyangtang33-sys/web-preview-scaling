@@ -1,0 +1,142 @@
+{
+  "source": "independent Chrome, browser touch emulation",
+  "cases": [
+    {
+      "touch": false,
+      "links": [
+        {
+          "label": "featured all courses",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "course 1",
+          "hash": "#lesson",
+          "passed": true
+        },
+        {
+          "label": "course 2",
+          "hash": "#lesson",
+          "passed": true
+        },
+        {
+          "label": "navigation catalog",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "navigation topics",
+          "hash": "#topics",
+          "passed": true
+        },
+        {
+          "label": "topic composition",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "topic color",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "topic light",
+          "hash": "#catalog",
+          "passed": true
+        }
+      ],
+      "metadataReveal": [
+        {
+          "course": 0,
+          "hoverOpacity": "1",
+          "offOpacity": "0",
+          "focusOpacity": "1"
+        },
+        {
+          "course": 1,
+          "hoverOpacity": "1",
+          "offOpacity": "0",
+          "focusOpacity": "1"
+        },
+        {
+          "course": 2,
+          "hoverOpacity": "1",
+          "offOpacity": "0",
+          "focusOpacity": "1"
+        }
+      ],
+      "menu": {},
+      "screenshots": []
+    },
+    {
+      "touch": true,
+      "links": [
+        {
+          "label": "featured all courses",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "course 1",
+          "hash": "#lesson",
+          "passed": true
+        },
+        {
+          "label": "course 2",
+          "hash": "#lesson",
+          "passed": true
+        },
+        {
+          "label": "navigation catalog",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "navigation topics",
+          "hash": "#topics",
+          "passed": true
+        },
+        {
+          "label": "topic composition",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "topic color",
+          "hash": "#catalog",
+          "passed": true
+        },
+        {
+          "label": "topic light",
+          "hash": "#catalog",
+          "passed": true
+        }
+      ],
+      "metadataReveal": [],
+      "menu": {
+        "initial": false,
+        "opened": true,
+        "closed": false
+      },
+      "screenshots": [
+        "verified-after-mobile-390-touch-scroll.png",
+        "verified-after-mobile-390-touch-rail.png"
+      ],
+      "verticalSwipe": {
+        "scrollY": 557,
+        "hoverNone": true,
+        "pointerCoarse": true,
+        "metadata": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "horizontalSwipe": {
+        "before": 0,
+        "after": 386,
+        "lastTopicHash": "#catalog"
+      }
+    }
+  ]
+}

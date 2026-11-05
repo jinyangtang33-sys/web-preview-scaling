@@ -1,0 +1,50 @@
+{
+  "evaluation": "Independent functional holdout",
+  "date": "2026-11-05",
+  "statusRule": "An arm passes when the original working workflows are preserved and no new important hidden action, text loss, clipping, or horizontal overflow is found at either required viewport. Native baseline limitations are classified separately; keyboard improvements do not determine visual preference.",
+  "profiles": [
+    {"name": "desktop", "width": 1440, "height": 900, "touch": false},
+    {"name": "phone-touch", "width": 390, "height": 844, "touch": true}
+  ],
+  "baseline": {
+    "evidence": "baseline/results.json",
+    "checks": 30,
+    "passed": 24,
+    "nativeLimitations": [
+      {"test": "keyboard-bulk-toggle", "profiles": ["desktop", "phone-touch"], "description": "Space on the bulk checkbox did not update task completion or counts."},
+      {"test": "keyboard-edit-discoverability", "profiles": ["desktop", "phone-touch"], "description": "No edit entry was reachable with Tab."},
+      {"test": "keyboard-delete-discoverability", "profiles": ["desktop", "phone-touch"], "description": "The delete button was outside Tab order until pointer hover."}
+    ],
+    "persistence": "In-memory semantics required and retained; reload clearing is expected, not a defect."
+  },
+  "arms": [
+    {
+      "arm": "lane-m",
+      "url": "http://127.0.0.1:5212",
+      "status": "pass",
+      "sameBaselineScript": {"checks": 30, "passed": 30, "failed": 0, "evidence": "lane-m/results.json"},
+      "originalWorkingChecks": {"checks": 24, "preserved": 24, "regressions": []},
+      "importantHiddenActions": [],
+      "textLossClippingOrOverflow": [],
+      "keyboardImprovements": ["Space completes/uncompletes all tasks and updates counts", "Tab reaches Edit and Enter opens editing; Escape retains original text", "Tab reaches Delete and Enter deletes the task"],
+      "supplement": {"checks": 8, "passed": 8, "failed": 0, "evidence": "lane-m/affordance-results.json"},
+      "notes": ["Original label double-click and touch double-tap edit paths still work", "Save and Cancel buttons work by pointer and touch", "Checked completion, Edit, Delete and filter hit targets have visible, unobscured centers and at least 44 by 44 CSS pixels", "Long task text wraps completely; its trailing actions remain reachable by normal page scrolling"],
+      "screenshots": ["lane-m/desktop-normal.png", "lane-m/desktop-long-text.png", "lane-m/phone-touch-normal.png", "lane-m/phone-touch-long-text.png"]
+    },
+    {
+      "arm": "lane-n",
+      "url": "http://127.0.0.1:5213",
+      "status": "pass",
+      "sameBaselineScript": {"checks": 30, "passed": 30, "failed": 0, "evidence": "lane-n/results.json"},
+      "originalWorkingChecks": {"checks": 24, "preserved": 24, "regressions": []},
+      "importantHiddenActions": [],
+      "textLossClippingOrOverflow": [],
+      "keyboardImprovements": ["Space completes/uncompletes all tasks and updates counts", "Tab reaches Edit and Enter opens editing; Escape retains original text", "Tab reaches Delete and Enter deletes the task"],
+      "supplement": {"checks": 8, "passed": 8, "failed": 0, "evidence": "lane-n/affordance-results.json"},
+      "notes": ["Original label double-click and touch double-tap edit paths still work", "Save and Cancel buttons work by pointer and touch", "Checked completion, Edit, Delete and filter hit targets have visible, unobscured centers and at least 44 by 44 CSS pixels", "Long task text wraps completely; its trailing actions remain reachable by normal page scrolling"],
+      "screenshots": ["lane-n/desktop-normal.png", "lane-n/desktop-long-text.png", "lane-n/phone-touch-normal.png", "lane-n/phone-touch-long-text.png"]
+    }
+  ],
+  "independence": "Candidate testing began after freeze notification. No skill, protocol/group mapping, model plan/reply, other review, or visual preference score was read. No product files were modified. The unchanged baseline script was run against both arms; a separate identical supplemental script verified exposed controls and the original label edit path.",
+  "limits": ["Chrome touch emulation is not a physical phone or on-screen keyboard test", "Finite UI cases do not establish absence of all possible bugs", "No visual preference grade or relative design ranking is assigned"]
+}

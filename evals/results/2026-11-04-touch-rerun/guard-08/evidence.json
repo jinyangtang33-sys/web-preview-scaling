@@ -1,0 +1,908 @@
+{
+  "generatedAt": "2026-11-04T07:18:23.523Z",
+  "result": "Fixed one reproducible touch-content defect; passed within measured scope.",
+  "scope": {
+    "target": "project/page.html",
+    "request": "request.txt",
+    "skill": "skill/SKILL.md",
+    "isolation": "Only guard-08 task files read/written; explicitly supplied shared Playwright runtime used; no commits or publication."
+  },
+  "source": {
+    "browser": "Google Chrome",
+    "version": "156.0.8078.80",
+    "automation": "Playwright chromium.launch({channel:\"chrome\",headless:true})",
+    "transport": "file://",
+    "preview": "Unavailable; no IAB launch retried.",
+    "narrowView": "Independent browser simulation",
+    "physicalDevice": false,
+    "zoom": "Fresh context, no page zoom or CSS scaling; deviceScaleFactor=1"
+  },
+  "fix": {
+    "file": "project/page.html",
+    "line": 25,
+    "before": "@media (hover:none) { .featured .course-meta { opacity: 1; } }",
+    "after": "@media (hover:none) { .course-meta { opacity: 1; } }",
+    "onlySourceChange": true,
+    "originalSnapshot": "page.before.html",
+    "originalSha256": "c67d90639d2e2b3897a5f8c6dc1c59c3e6ec8de2b79a488669b5ffaea2b87883",
+    "finalSha256": "8476f111cc9467a507150a32112243715a6a8259b96c18f37837775f5ae6807e"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "status": "fixed",
+      "impact": "On touch, catalog titles, levels and durations were invisible before card interaction. Visible links did not identify which course would open.",
+      "evidence": "390x844: hover:none=true, pointer:coarse=true; featured opacity 1, catalog opacities 0. After fix all are 1 and screenshot after ordinary scroll shows both catalog titles and durations."
+    }
+  ],
+  "before": [
+    {
+      "name": "desktop-1440",
+      "requestedViewport": [
+        1440,
+        900
+      ],
+      "actualViewport": [
+        1440,
+        900
+      ],
+      "rootClientWidth": 1440,
+      "rootScrollWidth": 1440,
+      "media": {
+        "hoverNone": false,
+        "hoverHover": true,
+        "pointerCoarse": false,
+        "pointerFine": true,
+        "maxTouchPoints": 10
+      },
+      "devicePixelRatio": 1,
+      "mainWidth": 1000,
+      "h1FontSize": "30px",
+      "gridColumns": "490px 490px",
+      "metadata": [
+        {
+          "text": "认识自然光入门 · 30分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 237,
+            "y": 357.28125,
+            "width": 966,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "构图基础入门 · 45分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 237,
+            "y": 721.65625,
+            "width": 456,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "色彩练习进阶 · 60分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 747,
+            "y": 721.65625,
+            "width": 456,
+            "height": 70.59375
+          }
+        }
+      ],
+      "desktopNavDisplay": "flex",
+      "compactMenuDisplay": "none",
+      "futureNoteHidden": true,
+      "scriptErrors": []
+    },
+    {
+      "name": "mobile-390",
+      "requestedViewport": [
+        390,
+        844
+      ],
+      "actualViewport": [
+        390,
+        844
+      ],
+      "rootClientWidth": 390,
+      "rootScrollWidth": 390,
+      "media": {
+        "hoverNone": true,
+        "hoverHover": false,
+        "pointerCoarse": true,
+        "pointerFine": false,
+        "maxTouchPoints": 1
+      },
+      "devicePixelRatio": 1,
+      "mainWidth": 358,
+      "h1FontSize": "30px",
+      "gridColumns": "358px",
+      "metadata": [
+        {
+          "text": "认识自然光入门 · 30分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 357.28125,
+            "width": 324,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "构图基础入门 · 45分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 721.65625,
+            "width": 324,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "色彩练习进阶 · 60分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 1042.84375,
+            "width": 324,
+            "height": 70.59375
+          }
+        }
+      ],
+      "desktopNavDisplay": "none",
+      "compactMenuDisplay": "block",
+      "futureNoteHidden": true,
+      "scriptErrors": []
+    }
+  ],
+  "after": [
+    {
+      "name": "desktop-1440",
+      "requestedViewport": [
+        1440,
+        900
+      ],
+      "actualViewport": [
+        1440,
+        900
+      ],
+      "rootClientWidth": 1440,
+      "rootScrollWidth": 1440,
+      "media": {
+        "hoverNone": false,
+        "hoverHover": true,
+        "pointerCoarse": false,
+        "pointerFine": true,
+        "maxTouchPoints": 10
+      },
+      "devicePixelRatio": 1,
+      "mainWidth": 1000,
+      "h1FontSize": "30px",
+      "gridColumns": "490px 490px",
+      "metadata": [
+        {
+          "text": "认识自然光入门 · 30分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 237,
+            "y": 357.28125,
+            "width": 966,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "构图基础入门 · 45分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 237,
+            "y": 721.65625,
+            "width": 456,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "色彩练习进阶 · 60分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 747,
+            "y": 721.65625,
+            "width": 456,
+            "height": 70.59375
+          }
+        }
+      ],
+      "desktopNavDisplay": "flex",
+      "compactMenuDisplay": "none",
+      "futureNoteHidden": true,
+      "scriptErrors": []
+    },
+    {
+      "name": "mobile-390",
+      "requestedViewport": [
+        390,
+        844
+      ],
+      "actualViewport": [
+        390,
+        844
+      ],
+      "rootClientWidth": 390,
+      "rootScrollWidth": 390,
+      "media": {
+        "hoverNone": true,
+        "hoverHover": false,
+        "pointerCoarse": true,
+        "pointerFine": false,
+        "maxTouchPoints": 1
+      },
+      "devicePixelRatio": 1,
+      "mainWidth": 358,
+      "h1FontSize": "30px",
+      "gridColumns": "358px",
+      "metadata": [
+        {
+          "text": "认识自然光入门 · 30分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 357.28125,
+            "width": 324,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "构图基础入门 · 45分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 721.65625,
+            "width": 324,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "色彩练习进阶 · 60分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 1042.84375,
+            "width": 324,
+            "height": 70.59375
+          }
+        }
+      ],
+      "desktopNavDisplay": "none",
+      "compactMenuDisplay": "block",
+      "futureNoteHidden": true,
+      "scriptErrors": []
+    },
+    {
+      "name": "touch-600",
+      "requestedViewport": [
+        600,
+        844
+      ],
+      "actualViewport": [
+        600,
+        844
+      ],
+      "rootClientWidth": 600,
+      "rootScrollWidth": 600,
+      "media": {
+        "hoverNone": true,
+        "hoverHover": false,
+        "pointerCoarse": true,
+        "pointerFine": false,
+        "maxTouchPoints": 1
+      },
+      "devicePixelRatio": 1,
+      "mainWidth": 568,
+      "h1FontSize": "30px",
+      "gridColumns": "568px",
+      "metadata": [
+        {
+          "text": "认识自然光入门 · 30分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 357.28125,
+            "width": 534,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "构图基础入门 · 45分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 721.65625,
+            "width": 534,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "色彩练习进阶 · 60分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 1042.84375,
+            "width": 534,
+            "height": 70.59375
+          }
+        }
+      ],
+      "desktopNavDisplay": "none",
+      "compactMenuDisplay": "block",
+      "futureNoteHidden": true,
+      "scriptErrors": []
+    },
+    {
+      "name": "touch-601",
+      "requestedViewport": [
+        601,
+        844
+      ],
+      "actualViewport": [
+        601,
+        844
+      ],
+      "rootClientWidth": 601,
+      "rootScrollWidth": 601,
+      "media": {
+        "hoverNone": true,
+        "hoverHover": false,
+        "pointerCoarse": true,
+        "pointerFine": false,
+        "maxTouchPoints": 1
+      },
+      "devicePixelRatio": 1,
+      "mainWidth": 569,
+      "h1FontSize": "30px",
+      "gridColumns": "274.5px 274.5px",
+      "metadata": [
+        {
+          "text": "认识自然光入门 · 30分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 357.28125,
+            "width": 535,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "构图基础入门 · 45分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 721.65625,
+            "width": 240.5,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "色彩练习进阶 · 60分钟",
+          "effectiveOpacity": 1,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 327.5,
+            "y": 721.65625,
+            "width": 240.5,
+            "height": 70.59375
+          }
+        }
+      ],
+      "desktopNavDisplay": "flex",
+      "compactMenuDisplay": "none",
+      "futureNoteHidden": true,
+      "scriptErrors": []
+    },
+    {
+      "name": "mouse-390",
+      "requestedViewport": [
+        390,
+        844
+      ],
+      "actualViewport": [
+        390,
+        844
+      ],
+      "rootClientWidth": 390,
+      "rootScrollWidth": 390,
+      "media": {
+        "hoverNone": false,
+        "hoverHover": true,
+        "pointerCoarse": false,
+        "pointerFine": true,
+        "maxTouchPoints": 10
+      },
+      "devicePixelRatio": 1,
+      "mainWidth": 358,
+      "h1FontSize": "30px",
+      "gridColumns": "358px",
+      "metadata": [
+        {
+          "text": "认识自然光入门 · 30分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 357.28125,
+            "width": 324,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "构图基础入门 · 45分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 721.65625,
+            "width": 324,
+            "height": 70.59375
+          }
+        },
+        {
+          "text": "色彩练习进阶 · 60分钟",
+          "effectiveOpacity": 0,
+          "visibility": "visible",
+          "display": "block",
+          "hiddenAncestor": false,
+          "box": {
+            "x": 33,
+            "y": 1042.84375,
+            "width": 324,
+            "height": 70.59375
+          }
+        }
+      ],
+      "desktopNavDisplay": "none",
+      "compactMenuDisplay": "block",
+      "futureNoteHidden": true,
+      "scriptErrors": []
+    }
+  ],
+  "beforeAfter": {
+    "mobileMetadataOpacity": {
+      "before": [
+        1,
+        0,
+        0
+      ],
+      "after": [
+        1,
+        1,
+        1
+      ]
+    },
+    "desktopMetadataOpacity": {
+      "before": [
+        0,
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0,
+        0
+      ],
+      "hoveredFirstCatalogBefore": [
+        0,
+        1,
+        0
+      ],
+      "hoveredFirstCatalogAfter": [
+        0,
+        1,
+        0
+      ]
+    },
+    "layoutUnchangedForPrimaryViewports": true
+  },
+  "functionalChecks": {
+    "source": "independent Chrome, browser touch emulation",
+    "cases": [
+      {
+        "touch": false,
+        "links": [
+          {
+            "label": "featured all courses",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "course 1",
+            "hash": "#lesson",
+            "passed": true
+          },
+          {
+            "label": "course 2",
+            "hash": "#lesson",
+            "passed": true
+          },
+          {
+            "label": "navigation catalog",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "navigation topics",
+            "hash": "#topics",
+            "passed": true
+          },
+          {
+            "label": "topic composition",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "topic color",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "topic light",
+            "hash": "#catalog",
+            "passed": true
+          }
+        ],
+        "metadataReveal": [
+          {
+            "course": 0,
+            "hoverOpacity": "1",
+            "offOpacity": "0",
+            "focusOpacity": "1"
+          },
+          {
+            "course": 1,
+            "hoverOpacity": "1",
+            "offOpacity": "0",
+            "focusOpacity": "1"
+          },
+          {
+            "course": 2,
+            "hoverOpacity": "1",
+            "offOpacity": "0",
+            "focusOpacity": "1"
+          }
+        ],
+        "menu": {},
+        "screenshots": []
+      },
+      {
+        "touch": true,
+        "links": [
+          {
+            "label": "featured all courses",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "course 1",
+            "hash": "#lesson",
+            "passed": true
+          },
+          {
+            "label": "course 2",
+            "hash": "#lesson",
+            "passed": true
+          },
+          {
+            "label": "navigation catalog",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "navigation topics",
+            "hash": "#topics",
+            "passed": true
+          },
+          {
+            "label": "topic composition",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "topic color",
+            "hash": "#catalog",
+            "passed": true
+          },
+          {
+            "label": "topic light",
+            "hash": "#catalog",
+            "passed": true
+          }
+        ],
+        "metadataReveal": [],
+        "menu": {
+          "initial": false,
+          "opened": true,
+          "closed": false
+        },
+        "screenshots": [
+          "verified-after-mobile-390-touch-scroll.png",
+          "verified-after-mobile-390-touch-rail.png"
+        ],
+        "verticalSwipe": {
+          "scrollY": 557,
+          "hoverNone": true,
+          "pointerCoarse": true,
+          "metadata": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        "horizontalSwipe": {
+          "before": 0,
+          "after": 386,
+          "lastTopicHash": "#catalog"
+        }
+      }
+    ]
+  },
+  "screenshotVerification": {
+    "method": "Viewport screenshots only; hover/pointer captured immediately before and after each audit screenshot.",
+    "allAuditScreenshotsKeptInputMedia": true,
+    "diagnostic": {
+      "initial": {
+        "hoverNone": true,
+        "pointerCoarse": true,
+        "opacity": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "afterCDP": {
+        "hoverNone": true,
+        "pointerCoarse": true,
+        "opacity": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "afterPlaywrightViewport": {
+        "hoverNone": true,
+        "pointerCoarse": true,
+        "opacity": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "afterPlaywrightFullpage": {
+        "hoverNone": false,
+        "pointerCoarse": false,
+        "opacity": [
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "excludedArtifacts": "Initial before-*.png / after-*.png and unprefixed measurements are superseded because fullPage screenshot changed Chrome hover/pointer emulation."
+  },
+  "rawEvidence": [
+    "verified-before-measurements.json",
+    "verified-after-measurements.json",
+    "functional-checks.json",
+    "screenshot-diagnostic.json"
+  ],
+  "scripts": [
+    "audit-verified.cjs",
+    "functional-checks.cjs",
+    "screenshot-diagnostic.cjs"
+  ],
+  "screenshots": [
+    {
+      "file": "verified-after-desktop-1440-catalog-hovered.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": true,
+      "sha256": "7605e2562ff0c62fd4b11d4fd4c404814ba09fe178851db94a4a3aa2bce765ee"
+    },
+    {
+      "file": "verified-after-desktop-1440-catalog-unhovered.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": false,
+      "sha256": "21976604a62e8c165a756962bcb02070c6c01f37064fd47c3f8f0c77243814db"
+    },
+    {
+      "file": "verified-after-desktop-1440-initial.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": true,
+      "sha256": "436faf2205a92a8a84ea40c247361f2884d72dc9e6b2fd1f90043584b01a4300"
+    },
+    {
+      "file": "verified-after-desktop-1440-lesson.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": false,
+      "sha256": "21976604a62e8c165a756962bcb02070c6c01f37064fd47c3f8f0c77243814db"
+    },
+    {
+      "file": "verified-after-mobile-390-catalog-unhovered.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": true,
+      "sha256": "f1ffc237d713e3540375d6f6c62c43df647fa18767a2d47debc9a2c9c4978fed"
+    },
+    {
+      "file": "verified-after-mobile-390-initial.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": false,
+      "sha256": "a93316dc995a6edbb69248beb45437d09ed163053c22a4319908a6f943a3d07e"
+    },
+    {
+      "file": "verified-after-mobile-390-lesson.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": false,
+      "sha256": "1e5c1c21a57592dcb6390cdeeb8cb8d5df5faf578e9bd07a5ddeecbacfb8b1b0"
+    },
+    {
+      "file": "verified-after-mobile-390-menu-open.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": true,
+      "sha256": "4084bbb374ef9c9e755b2829fdecbf7a775c5f78d26dda4b4d845b83f484f2e5"
+    },
+    {
+      "file": "verified-after-mobile-390-topics-scrolled.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": true,
+      "sha256": "dba76fd2c6afcc58e5cc71561b04c9b17c4632124eb727b65c31457ce89cddbb"
+    },
+    {
+      "file": "verified-after-mobile-390-touch-rail.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": true,
+      "sha256": "dba76fd2c6afcc58e5cc71561b04c9b17c4632124eb727b65c31457ce89cddbb"
+    },
+    {
+      "file": "verified-after-mobile-390-touch-scroll.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": true,
+      "sha256": "99d6ee5734bd24720e5445ae2b09f66aea711cb5527024f26006effe28933a0e"
+    },
+    {
+      "file": "verified-before-desktop-1440-catalog-hovered.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": false,
+      "sha256": "7605e2562ff0c62fd4b11d4fd4c404814ba09fe178851db94a4a3aa2bce765ee"
+    },
+    {
+      "file": "verified-before-desktop-1440-catalog-unhovered.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": false,
+      "sha256": "21976604a62e8c165a756962bcb02070c6c01f37064fd47c3f8f0c77243814db"
+    },
+    {
+      "file": "verified-before-desktop-1440-initial.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": false,
+      "sha256": "436faf2205a92a8a84ea40c247361f2884d72dc9e6b2fd1f90043584b01a4300"
+    },
+    {
+      "file": "verified-before-desktop-1440-lesson.png",
+      "width": 1440,
+      "height": 900,
+      "visuallyInspected": false,
+      "sha256": "21976604a62e8c165a756962bcb02070c6c01f37064fd47c3f8f0c77243814db"
+    },
+    {
+      "file": "verified-before-mobile-390-catalog-unhovered.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": true,
+      "sha256": "d1d0edb218d4f24b783bdc07b32328aeeac5e480659030a08efeeaa89449ed92"
+    },
+    {
+      "file": "verified-before-mobile-390-initial.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": false,
+      "sha256": "976449051a705270622abb82f18b80edba5621fa8e62c18becee68c70717295a"
+    },
+    {
+      "file": "verified-before-mobile-390-lesson.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": false,
+      "sha256": "a8fad139911b7d5f4084f5e975f9b46ff72902148a42c0cea6b4e32dfb06bf51"
+    },
+    {
+      "file": "verified-before-mobile-390-menu-open.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": false,
+      "sha256": "de2d3fe4eeaa7df00c4130d38c818f97a0ec1e270263ea0aa17b82051332daed"
+    },
+    {
+      "file": "verified-before-mobile-390-topics-scrolled.png",
+      "width": 390,
+      "height": 844,
+      "visuallyInspected": false,
+      "sha256": "64103aa2b0c92590231f247a48d8dc003f3c3bf0c37da019fa74c8d58dbf9c82"
+    }
+  ],
+  "limitations": [
+    "No Codex preview or same-viewport host comparison.",
+    "No physical phone, Safari, Firefox or hybrid-device validation.",
+    "600/601 touch and 390 mouse checks cover DOM/media/geometry, not complete visual or interaction acceptance.",
+    "Lesson links reach the supplied future-content placeholder; playback is not implemented or tested.",
+    "Verified baseline replay opens preserved page.before.html; initial original-page measurements are retained separately.",
+    "Desktop intentionally retains supplied hover/focus reveal."
+  ]
+}

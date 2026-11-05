@@ -1,0 +1,37 @@
+# 操作记录
+
+范围：仅访问指定 `06-b/request.txt`、`06-b/skill/SKILL.md` 和 `06-b/project/`，并在 `06-b/` 输出交付记录。未访问其他运行目录或原仓库评测文件。所有检查均为静态检查，未启动网页服务、浏览器、截图或 Playwright；未提交 Git。
+
+1. 使用 `exec_command` 读取请求和指定 skill，退出码 0：
+
+   ```powershell
+   Get-Content -LiteralPath '<run-root>/request.txt'; Get-Content -LiteralPath '<run-root>/skill/SKILL.md'
+   ```
+
+2. 在 `06-b/project/` 使用 `exec_command` 枚举源码，退出码 0，仅返回 `page.html`：
+
+   ```powershell
+   rg --files --hidden -g '!node_modules' -g '!.git'
+   ```
+
+3. 在 `06-b/project/` 使用 `exec_command` 逐行读取全部源码，退出码 0：
+
+   ```powershell
+   $lineNumber = 0; Get-Content -LiteralPath 'page.html' | ForEach-Object { $lineNumber++; '{0,4}: {1}' -f $lineNumber, $_ }
+   ```
+
+   发现第 8 行仅有 `h1 { font-size: 6vw; }`，第 10 行为目标标题。整个文件共 11 行，没有其他字号规则、外部 CSS 或脚本。
+
+4. 使用 `exec_command` 计算源码 SHA-256 和静态公式，退出码 0：
+
+   ```powershell
+   $pagePath = '<run-root>/project/page.html'; [pscustomobject]@{ source = $pagePath; sha256 = (Get-FileHash -LiteralPath $pagePath -Algorithm SHA256).Hash.ToLowerInvariant(); analysisType = 'static_source_inference'; targetWidth = 1440; targetHeight = 900; inferredFontSizePx = 1440 * 0.06; designMaximumPx = 48; excessPx = 1440 * 0.06 - 48; excessPercent = ((1440 * 0.06 / 48) - 1) * 100; capThresholdWidthPx = 48 / 0.06 } | ConvertTo-Json
+   ```
+
+   输出 SHA-256 为 `dddf69b3f09a5953e2a1b4822942f8c1e3fdd228ddf4ecc422cd5fa163171aed`。浮点运算输出约 86.4px、38.4px、80%、800px；交付证据采用正常十进制表达。这些不是 DOM 测量。
+
+5. 使用 `apply_patch` 新建 `report.md`、`evidence.json`、`trace.md`。原因排查不修改 `project/page.html`；建议的 CSS 仅写入报告。
+
+失败与重试：截至上述步骤无失败，无重试。交付后的静态复核结果记录如下。
+
+6. 使用 exec_command 做最终静态复核：通过 Get-Content -Raw 与 ConvertFrom-Json 解析 evidence.json；通过 Get-FileHash 验证 page.html 的 SHA-256 与初始值一致；通过 Get-Item 验证三个交付文件存在且非空；确认 browserUsed、playwrightUsed、screenshotsTaken 全为 false。全部通过，退出码 0。没有浏览器实测，视觉验收仍待完成。最终无失败或重试。

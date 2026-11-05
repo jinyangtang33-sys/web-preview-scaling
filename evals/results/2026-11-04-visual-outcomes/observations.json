@@ -1,0 +1,1878 @@
+{
+  "schema_version": 1,
+  "period": "2026-11-04 through 2026-11-05",
+  "base_commit": "0ef904bcf18d1b7e490b2124e7542a93301933e9",
+  "source_data": "Private real frontend snapshots; booking uses synthetic isolated harness",
+  "scope": "Development cases; repeated adaptive iterations. Not held-out generalization or a cost-matched trial.",
+  "rounds": [
+    {
+      "round": 1,
+      "aggregated_at": "2026-11-05T01:20:43.595202+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              2,
+              3,
+              3,
+              2,
+              2,
+              3
+            ],
+            "total": 15
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": -3,
+          "preferred": "without_skill"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              4,
+              3,
+              3
+            ],
+            "total": 19
+          },
+          "paired_difference": 1,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              2,
+              3
+            ],
+            "total": 16
+          },
+          "paired_difference": -2,
+          "preferred": "without_skill"
+        }
+      ],
+      "missing": [
+        "judge-2/booking/visual-review.json"
+      ],
+      "average_paired_difference": null,
+      "visual_gate": false,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "pass",
+        "booking-p": "pass",
+        "booking-q": "pass"
+      },
+      "complete_gate": false,
+      "partial_observations_mean": -1.3333333333333333,
+      "candidate_sha256_raw": {
+        "SKILL.md": "f2f1670397005ececf15e37c5302d4e84454e71b1ee75c17511c5f58c884f351",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "372f25cef891ed00aac5d8fd08ed34686a8237ee35e8c37e718b9b96647cc5bc"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "f2f1670397005ececf15e37c5302d4e84454e71b1ee75c17511c5f58c884f351",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "372f25cef891ed00aac5d8fd08ed34686a8237ee35e8c37e718b9b96647cc5bc"
+      },
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": false,
+      "independent_implementation_review": false,
+      "two_independent_implementations_before_selection": false,
+      "behavior_checks": {},
+      "judgment_files_sha256": {
+        "judge-1/asset": "ef61561ea205253c789c433b5bb83b75f249c7f10c794243198ed2683c6a8dab",
+        "judge-1/booking": "f79a6949958c318665beac687af018c35397e87732e48913ed4dc723aaaf2621",
+        "judge-2/asset": "f75bab365ed3a9170122a061e8eae4cdc91cd3756da94c8041fb0334cb243dc9"
+      }
+    },
+    {
+      "round": 2,
+      "aggregated_at": "2026-11-05T01:26:58.166470+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 0,
+          "preferred": "without_skill"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 0,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              2,
+              3,
+              3
+            ],
+            "total": 17
+          },
+          "paired_difference": -1,
+          "preferred": "without_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "booking",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 0,
+          "preferred": "tie"
+        }
+      ],
+      "missing": [],
+      "average_paired_difference": -0.25,
+      "visual_gate": false,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "pass",
+        "booking-p": "pass",
+        "booking-q": "pass"
+      },
+      "complete_gate": false,
+      "candidate_sha256_raw": {
+        "SKILL.md": "f2f1670397005ececf15e37c5302d4e84454e71b1ee75c17511c5f58c884f351",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "09998f2a3d651b23d35bef9f841e2bd3fd9c6bbf5f018debebae9976cbc8f249"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "f2f1670397005ececf15e37c5302d4e84454e71b1ee75c17511c5f58c884f351",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "09998f2a3d651b23d35bef9f841e2bd3fd9c6bbf5f018debebae9976cbc8f249"
+      },
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": true,
+      "independent_implementation_review": false,
+      "two_independent_implementations_before_selection": false,
+      "behavior_checks": {},
+      "judgment_files_sha256": {
+        "judge-1/asset": "aae5383739dd6b7307e916f668e835330a86c50ce417f176586d6b7919a70649",
+        "judge-1/booking": "f6d0de947b4b4f5c189401375eafc7aa6d9df26de856a8f96c0c4907524e3db2",
+        "judge-2/asset": "ddc85ae7751ad8b16aed215cc87915aae99033e685a443e4c26c768fa2fa4de9",
+        "judge-2/booking": "224ece2be7c81ba93a61a567ec82884723b74208e5a243b24246c7378fc93928"
+      }
+    },
+    {
+      "round": 3,
+      "aggregated_at": "2026-11-05T01:51:59.389466+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              4,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 19
+          },
+          "paired_difference": -1,
+          "preferred": "without_skill"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              3,
+              4,
+              3,
+              3,
+              4,
+              3
+            ],
+            "total": 20
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": -2,
+          "preferred": "without_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 0,
+          "preferred": "tie"
+        },
+        {
+          "judge": "judge-2",
+          "case": "booking",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              4,
+              3,
+              3,
+              4,
+              3
+            ],
+            "total": 20
+          },
+          "paired_difference": -2,
+          "preferred": "without_skill"
+        }
+      ],
+      "missing": [],
+      "average_paired_difference": -1.25,
+      "visual_gate": false,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "pass",
+        "booking-p": "pass",
+        "booking-q": "pass"
+      },
+      "complete_gate": false,
+      "candidate_sha256_raw": {
+        "SKILL.md": "a0270b22873b878b9ae7f381b4d0bd1ecc40d06e64a5fefe08d77a83be3ac626",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "7b86c6cf1c4fccf9d30a7acb16bafdad79e3007932bf907b175f13fa5ad6a0d5"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "a0270b22873b878b9ae7f381b4d0bd1ecc40d06e64a5fefe08d77a83be3ac626",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "7b86c6cf1c4fccf9d30a7acb16bafdad79e3007932bf907b175f13fa5ad6a0d5"
+      },
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": true,
+      "independent_implementation_review": true,
+      "two_independent_implementations_before_selection": false,
+      "behavior_checks": {
+        "07": {
+          "checked_at": "2026-11-05T01:33:38.434418+00:00",
+          "case": "07",
+          "status": "pass",
+          "only_requested_text_changed": true,
+          "before_sha256": "2eb39f0c701caaac36bffeae1cac201a14016b1417704f111491a310b95416be",
+          "after_sha256": "f14f2f698c219cda123c3407bc4265c132fa46180fdb48ddbf78ffca38669e1c"
+        }
+      },
+      "judgment_files_sha256": {
+        "judge-1/asset": "38a9a3c93e6e45a3ca89cfb5a7d13c5d8a405d8a555e6fd1a4a56466dfb7ec9f",
+        "judge-1/booking": "868922d708296457fc4f121d47f01172fa814c4b89ae16dfcb5c499cc5bf6b03",
+        "judge-2/asset": "60ec614216676d904343f80c26b6fe9f4b6f3f829348cb575a6f7bce5f0184aa",
+        "judge-2/booking": "0b6617511841719fe1d5f6aab2c942c49cee683b428c61ea58b7e44d1fef029c"
+      }
+    },
+    {
+      "round": 4,
+      "aggregated_at": "2026-11-05T02:14:12.546167+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 0,
+          "preferred": "tie"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              4,
+              3,
+              3,
+              3
+            ],
+            "total": 19
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": -1,
+          "preferred": "without_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              4,
+              3
+            ],
+            "total": 19
+          },
+          "paired_difference": 1,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "booking",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              4,
+              3
+            ],
+            "total": 19
+          },
+          "paired_difference": -1,
+          "preferred": "without_skill"
+        }
+      ],
+      "missing": [],
+      "average_paired_difference": -0.25,
+      "visual_gate": false,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "pass",
+        "booking-p": "pass",
+        "booking-q": "pass"
+      },
+      "complete_gate": false,
+      "candidate_sha256_raw": {
+        "SKILL.md": "8e507831dc00c9c994de57f0b634878b0980fa19abf6a3dc5ff13aadd0e5ec30",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "a856cfcd8e6aed5e43a4c942aa155c50bec679bf5563802a85f90173de11dc93"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "8e507831dc00c9c994de57f0b634878b0980fa19abf6a3dc5ff13aadd0e5ec30",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "a856cfcd8e6aed5e43a4c942aa155c50bec679bf5563802a85f90173de11dc93"
+      },
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": true,
+      "independent_implementation_review": true,
+      "two_independent_implementations_before_selection": false,
+      "behavior_checks": {
+        "06": {
+          "case": "06",
+          "candidate": "round-4",
+          "status": "pass",
+          "scope": "Single fresh execution, not the two executions required for stable release",
+          "source_unchanged": true,
+          "static_inference_explicit": true,
+          "visual_acceptance": "untested",
+          "report_sha256": "b83767afec4e00b5e553112890df56f3f4ecac715091a9c300dda0cfb438578c",
+          "trace_sha256": "bf6de6ef37242ec3958e731c08515aee79da0278da55d66aa2223954c733393f"
+        },
+        "07": {
+          "case": "07",
+          "candidate": "round-4",
+          "status": "pass",
+          "only_requested_text_changed": true,
+          "skill_selected": false,
+          "review_note": "Initial parent comparison assumed LF; corrected to original setup Windows newline translation, without editing output.",
+          "report_sha256": "161afb3e389ec0a8638589a2ed3b83c9c3c61f95dbc034dbffe5b74d8419e3a3",
+          "trace_sha256": "b2503582f80081ef55847866d55612329dfe5915184e5793b8925c33b2060e54"
+        }
+      },
+      "judgment_files_sha256": {
+        "judge-1/asset": "3d0d94f1486656d981a4298618b935f7a66bcde1dd5adc0d9c882ba226e46628",
+        "judge-1/booking": "feb424932a7abbe218a534b41e1e3ddfb5eee00652d1e7ec7889810d024f6c79",
+        "judge-2/asset": "bbd2f75d261a8c5a4321142ad2f18963835d153d35748e3989cdcfce91184104",
+        "judge-2/booking": "02b2e1a9771a7b57b0b26917175543fcf240279e9b57ae8d424c03d01cdfa6a7"
+      }
+    },
+    {
+      "round": 5,
+      "aggregated_at": "2026-11-05T02:53:35.090570+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              4,
+              3,
+              3,
+              3
+            ],
+            "total": 19
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 1,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              3,
+              4,
+              3,
+              3,
+              4,
+              3
+            ],
+            "total": 20
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": -2,
+          "preferred": "without_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              4,
+              3,
+              4,
+              3
+            ],
+            "total": 20
+          },
+          "paired_difference": 2,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "booking",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              4,
+              4,
+              3,
+              4,
+              3
+            ],
+            "total": 21
+          },
+          "paired_difference": -3,
+          "preferred": "without_skill"
+        }
+      ],
+      "missing": [],
+      "average_paired_difference": -0.5,
+      "visual_gate": false,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "pass",
+        "booking-p": "pass",
+        "booking-q": "pass"
+      },
+      "complete_gate": false,
+      "candidate_sha256_raw": {
+        "SKILL.md": "37606ce6ca670b388346a5d336750649d29c483a8dac816742dfadfa5bf4a749",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "539f2fdc6b0baea22055e41ed44211b379b3467ef6dad0d5e88afda31a09a4a6",
+        "references/preview-diagnostics.md": "d8babbb996dae76b2a8a44c952f3f19499ac0153c29cb0539e0789b00cf13e19"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "8165da5231384f6d1a761b7058bbca5b9466fd48296b13e047607452b38524c1",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "0e2b5bb47bdfc46cd3402a6902ea73daa10e4cd39ec9b96e01f64d7d5ffe551a",
+        "references/preview-diagnostics.md": "a6762b3de4e962e93cfacee684637112c37b42c5ccf2a2f752ab4b2c4aec7950"
+      },
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": true,
+      "independent_implementation_review": true,
+      "two_independent_implementations_before_selection": true,
+      "behavior_checks": {
+        "06": {
+          "case": "06",
+          "candidate": "round-5",
+          "status": "pass",
+          "scope": "one fresh execution",
+          "source_unchanged": true,
+          "only_requested_text_changed": false,
+          "visual_acceptance": "untested",
+          "report_sha256": "c3ab2b207662e13a2474654dcbeab49a70490c7497bd1236a7399867f29cbabb",
+          "trace_sha256": "3aae458139c4eba2105d5799b05dbf49663918717eb6d31e346a7ce995de7fba"
+        },
+        "07": {
+          "case": "07",
+          "candidate": "round-5",
+          "status": "pass",
+          "scope": "one fresh execution",
+          "source_unchanged": false,
+          "only_requested_text_changed": true,
+          "visual_acceptance": "not applicable",
+          "report_sha256": "9ec53501d4344c6b2a861ef12db9d0e1283480e943cf13725d1b76a3013fb052",
+          "trace_sha256": "6c19f3ea95b4c7d5c68aa007447750356c06b99af24ecb170c9ce8f048d3eefe"
+        },
+        "08": {
+          "case": "08",
+          "candidate": "round-5",
+          "status": "pass",
+          "automated_evaluator": "verify-output.cjs 08: passed, Chrome 156.0.8078.80",
+          "only_change": "Touch media rule selector broadened from .featured .course-meta to .course .course-meta",
+          "report_review": "Initial touch opacity regression fixed; desktop behavior, closed menus, draft hiding and internal scroll retained; simulation and retries disclosed",
+          "report_sha256": "ef1ecb9341563631d736b0772d14a2f052f1d2cbf4213cd987d5e8fecb8df9ff",
+          "trace_sha256": "ee5ff70ac11ebdf77995ee2e130b049c4ca82b01200e47351616131e0ec5abbe"
+        }
+      },
+      "judgment_files_sha256": {
+        "judge-1/asset": "a039a693de982a41f4f5d79a7bd644cb083b7628a0a6b15b1bed9d1ec934169c",
+        "judge-1/booking": "1d5d41a0060a839e2c7ed4e225420aa751b3dcabd123be5643be3eb5c450ae47",
+        "judge-2/asset": "cb7698e21041d4ec0966ec1e4250af268d4541f774934ffbf89f5ff59713d6a7",
+        "judge-2/booking": "6b0e6d9b0e39d4382ad075438f4c72e2d7386b743a7bd26d6504867ad88d7599"
+      }
+    },
+    {
+      "round": 6,
+      "aggregated_at": "2026-11-05T03:36:17.370380+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              4,
+              4,
+              3,
+              4
+            ],
+            "total": 22
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              4,
+              3
+            ],
+            "total": 19
+          },
+          "paired_difference": 3,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              3,
+              4,
+              4,
+              3,
+              3,
+              3
+            ],
+            "total": 20
+          },
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              3,
+              4,
+              4,
+              3
+            ],
+            "total": 21
+          },
+          "paired_difference": 1,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              4,
+              3,
+              4,
+              3
+            ],
+            "total": 21
+          },
+          "paired_difference": 3,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "booking",
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              4,
+              3,
+              3
+            ],
+            "total": 19
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              4,
+              4,
+              3,
+              3,
+              3
+            ],
+            "total": 20
+          },
+          "paired_difference": -1,
+          "preferred": "without_skill"
+        }
+      ],
+      "missing": [],
+      "average_paired_difference": 1.5,
+      "visual_gate": false,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "fail",
+        "booking-p": "pass",
+        "booking-q": "pass"
+      },
+      "complete_gate": false,
+      "candidate_sha256_raw": {
+        "SKILL.md": "37606ce6ca670b388346a5d336750649d29c483a8dac816742dfadfa5bf4a749",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "3eb2b39c1914d3b2666912332ebbdfe73102e1209e58fccc36ce87101bbc2d36",
+        "references/preview-diagnostics.md": "d8babbb996dae76b2a8a44c952f3f19499ac0153c29cb0539e0789b00cf13e19",
+        "references/layout-patterns.md": "174c34907f49e1548c188608a616ef08ccd0f94ebb2b23c542fc3ad2504d9b3f"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "8165da5231384f6d1a761b7058bbca5b9466fd48296b13e047607452b38524c1",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "d0b9e46bd7a1f75a85abff04dec134f57585a8123341effc8fa6c816c8f0e4de",
+        "references/preview-diagnostics.md": "a6762b3de4e962e93cfacee684637112c37b42c5ccf2a2f752ab4b2c4aec7950",
+        "references/layout-patterns.md": "174c34907f49e1548c188608a616ef08ccd0f94ebb2b23c542fc3ad2504d9b3f"
+      },
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": true,
+      "independent_implementation_review": true,
+      "two_independent_implementations_before_selection": true,
+      "matched_viewport_observations": [
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "home",
+          "firstTop": 1091,
+          "firstBottom": 1118,
+          "lastBottom": 1987,
+          "fullyVisible": 0,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "portrait",
+          "firstTop": 304,
+          "firstBottom": 350,
+          "lastBottom": 404,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "home",
+          "firstTop": 783,
+          "firstBottom": 805,
+          "lastBottom": 1435,
+          "fullyVisible": 4,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "portrait",
+          "firstTop": 295,
+          "firstBottom": 339,
+          "lastBottom": 339,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "list",
+          "firstTop": 338,
+          "firstBottom": 399,
+          "lastBottom": 827,
+          "fullyVisible": 8,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "form",
+          "firstTop": 650,
+          "firstBottom": 694,
+          "lastBottom": 694,
+          "fullyVisible": 1,
+          "count": 1
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "list",
+          "firstTop": 391,
+          "firstBottom": 452,
+          "lastBottom": 884,
+          "fullyVisible": 8,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "form",
+          "firstTop": 731,
+          "firstBottom": 774,
+          "lastBottom": 774,
+          "fullyVisible": 1,
+          "count": 1
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "home",
+          "firstTop": 976,
+          "firstBottom": 999,
+          "lastBottom": 2043,
+          "fullyVisible": 0,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "portrait",
+          "firstTop": 762,
+          "firstBottom": 808,
+          "lastBottom": 808,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "home",
+          "firstTop": 620,
+          "firstBottom": 640,
+          "lastBottom": 1405,
+          "fullyVisible": 4,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "portrait",
+          "firstTop": 761,
+          "firstBottom": 805,
+          "lastBottom": 805,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "list",
+          "firstTop": 327,
+          "firstBottom": 541,
+          "lastBottom": 2123,
+          "fullyVisible": 2,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "form",
+          "firstTop": 977,
+          "firstBottom": 1021,
+          "lastBottom": 1021,
+          "fullyVisible": 0,
+          "count": 1
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "list",
+          "firstTop": 473,
+          "firstBottom": 662,
+          "lastBottom": 2075,
+          "fullyVisible": 1,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "form",
+          "firstTop": 1082,
+          "firstBottom": 1126,
+          "lastBottom": 1126,
+          "fullyVisible": 0,
+          "count": 1
+        }
+      ],
+      "behavior_checks": {
+        "02": {
+          "case": "02",
+          "candidate": "round-6",
+          "status": "pass",
+          "checked_at": "2026-11-05T03:06:47.779440+00:00",
+          "scope": "one fresh explicit-fault execution; no no-skill contrast for this guard",
+          "only_changes": "main max-width and h1 clamp",
+          "source_claims": "Standalone Chrome and simulated touch, actual preview untested",
+          "report_sha256": "5b30ee40282282105a62e2c1877af7f0f45a82b1ba8bcf857d1fd0c87d2df4fc",
+          "trace_sha256": "fc6e50c8224ace4c756beae2bca7a6299ee86d64cadc10b5d81763a34536bc53"
+        }
+      },
+      "judgment_files_sha256": {
+        "judge-1/asset": "896473b50507bc7f6d3a44420a5903f1ee6d225bdba2705b4ff1fa8f8a6e949e",
+        "judge-1/booking": "134ed1730a729fbd65ab6052c77cb599690d13e55417557073fd481a218e6f56",
+        "judge-2/asset": "23eee7e4046159e49059b4f07125444a5b3dc32d86929c92c105c153c38f2d7c",
+        "judge-2/booking": "89d357afe1091df1878d5536c6b9b84bcddc4fced21ca656462a00e5f051bfce"
+      }
+    },
+    {
+      "round": 7,
+      "aggregated_at": "2026-11-05T05:08:19.756522+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              4,
+              3,
+              4,
+              4
+            ],
+            "total": 22
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              2,
+              3,
+              3
+            ],
+            "total": 17
+          },
+          "paired_difference": 5,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              4,
+              2,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "with_skill": {
+            "scores": [
+              4,
+              4,
+              3,
+              4,
+              4,
+              3
+            ],
+            "total": 22
+          },
+          "paired_difference": 4,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              2,
+              3,
+              3
+            ],
+            "total": 17
+          },
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              4,
+              3,
+              4,
+              4
+            ],
+            "total": 22
+          },
+          "paired_difference": 5,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "booking",
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              4,
+              4,
+              4,
+              3
+            ],
+            "total": 22
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              4,
+              3,
+              3,
+              3
+            ],
+            "total": 19
+          },
+          "paired_difference": 3,
+          "preferred": "with_skill"
+        }
+      ],
+      "missing": [],
+      "average_paired_difference": 4.25,
+      "visual_gate": true,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "pass",
+        "booking-p": "pass",
+        "booking-q": "fail"
+      },
+      "complete_gate": false,
+      "candidate_sha256_raw": {
+        "SKILL.md": "37606ce6ca670b388346a5d336750649d29c483a8dac816742dfadfa5bf4a749",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "fc8c05ad951b246bc4f3b989a8099c5a85bcca67417818c7acb1ca4eca760e86",
+        "references/preview-diagnostics.md": "d8babbb996dae76b2a8a44c952f3f19499ac0153c29cb0539e0789b00cf13e19",
+        "references/layout-patterns.md": "a3819e23951427833132a37095a892f5ca72e6980214bbb459deeee779ca7939",
+        "references/form-decisions.md": "d0460e92d6b5ed3d81b631d4a6566646d39056e92698544de5f2e7dfb4ece31b"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "8165da5231384f6d1a761b7058bbca5b9466fd48296b13e047607452b38524c1",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "b83726bad13d133108c1d8a082873719a6ffce6ecd926e8fe5ce09e9f2c4a6db",
+        "references/preview-diagnostics.md": "a6762b3de4e962e93cfacee684637112c37b42c5ccf2a2f752ab4b2c4aec7950",
+        "references/layout-patterns.md": "17a61707adb0df4fb5773c3b9180114b836d46e2b208a27e2125d9a7108baaf9",
+        "references/form-decisions.md": "d0460e92d6b5ed3d81b631d4a6566646d39056e92698544de5f2e7dfb4ece31b"
+      },
+      "candidate_commit": "059335f9667d9777ca5d6e0cd67477f4d96100de",
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": true,
+      "independent_implementation_review": true,
+      "two_independent_implementations_before_selection": true,
+      "matched_viewport_observations": [
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "home",
+          "firstTop": 1091,
+          "firstBottom": 1118,
+          "lastBottom": 1987,
+          "fullyVisible": 0,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "portrait",
+          "firstTop": 304,
+          "firstBottom": 350,
+          "lastBottom": 404,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "home",
+          "firstTop": 722,
+          "firstBottom": 745,
+          "lastBottom": 1342,
+          "fullyVisible": 4,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "portrait",
+          "firstTop": 285,
+          "firstBottom": 329,
+          "lastBottom": 329,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "list",
+          "firstTop": 397,
+          "firstBottom": 458,
+          "lastBottom": 891,
+          "fullyVisible": 8,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "form",
+          "firstTop": 438,
+          "firstBottom": 479,
+          "lastBottom": 479,
+          "fullyVisible": 1,
+          "count": 1
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "list",
+          "firstTop": 391,
+          "firstBottom": 452,
+          "lastBottom": 884,
+          "fullyVisible": 8,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "form",
+          "firstTop": 731,
+          "firstBottom": 774,
+          "lastBottom": 774,
+          "fullyVisible": 1,
+          "count": 1
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "home",
+          "firstTop": 976,
+          "firstBottom": 999,
+          "lastBottom": 2043,
+          "fullyVisible": 0,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "portrait",
+          "firstTop": 762,
+          "firstBottom": 808,
+          "lastBottom": 808,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "home",
+          "firstTop": 576,
+          "firstBottom": 598,
+          "lastBottom": 1442,
+          "fullyVisible": 4,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "portrait",
+          "firstTop": 727,
+          "firstBottom": 771,
+          "lastBottom": 771,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "list",
+          "firstTop": 246,
+          "firstBottom": 398,
+          "lastBottom": 1530,
+          "fullyVisible": 3,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "form",
+          "firstTop": 931,
+          "firstBottom": 975,
+          "lastBottom": 975,
+          "fullyVisible": 0,
+          "count": 1
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "list",
+          "firstTop": 473,
+          "firstBottom": 662,
+          "lastBottom": 2075,
+          "fullyVisible": 1,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "form",
+          "firstTop": 1082,
+          "firstBottom": 1126,
+          "lastBottom": 1126,
+          "fullyVisible": 0,
+          "count": 1
+        }
+      ],
+      "behavior_checks": {
+        "08": {
+          "case": "08",
+          "candidate": "round-7",
+          "status": "pass",
+          "scope": "one fresh execution; independent verify-output case 08 passed",
+          "only_changes": "one touch selector; desktop, intentional hidden elements and internal scrolling preserved",
+          "source_claims": "standalone Chrome and simulated touch; no physical phone or actual preview by executor",
+          "report_sha256": "5a792811e49a0a04edeb41a03f30411d53a7a33886952d813a48f4e5a76d1d2c",
+          "trace_sha256": "98c432ecc2c9a99e7b79cea263f9393c4c3b7a5cc3baedb1397dbd467e803bd3",
+          "checked_at": "2026-11-05T03:48:55.373355+00:00"
+        }
+      },
+      "judgment_files_sha256": {
+        "judge-1/asset": "9225b54e99ab0ebf5a8a48bba671d80ef47ce0dfd55fcfcbd4070e3725440b06",
+        "judge-1/booking": "337132fe8aac44123d9b6bfad39610cbf90edc089bb118af0c484963bfe31e23",
+        "judge-2/asset": "ee28d9edc33aef6a141987f1aeb959983b04613dfef5cd359b793b3fdd5f272d",
+        "judge-2/booking": "8a446b59e4da50db51ba0643d4b2467621a185556fb332afae74127416a8f3cb"
+      }
+    },
+    {
+      "round": 8,
+      "aggregated_at": "2026-11-05T05:20:42.087220+00:00",
+      "rows": [
+        {
+          "judge": "judge-1",
+          "case": "asset",
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              4,
+              3,
+              4,
+              4
+            ],
+            "total": 22
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 4,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-1",
+          "case": "booking",
+          "without_skill": {
+            "scores": [
+              2,
+              3,
+              3,
+              2,
+              3,
+              3
+            ],
+            "total": 16
+          },
+          "with_skill": {
+            "scores": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              3
+            ],
+            "total": 23
+          },
+          "paired_difference": 7,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "asset",
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              3,
+              2,
+              3,
+              3
+            ],
+            "total": 17
+          },
+          "with_skill": {
+            "scores": [
+              3,
+              3,
+              4,
+              3,
+              4,
+              3
+            ],
+            "total": 20
+          },
+          "paired_difference": 3,
+          "preferred": "with_skill"
+        },
+        {
+          "judge": "judge-2",
+          "case": "booking",
+          "with_skill": {
+            "scores": [
+              4,
+              3,
+              3,
+              4,
+              4,
+              3
+            ],
+            "total": 21
+          },
+          "without_skill": {
+            "scores": [
+              3,
+              3,
+              4,
+              2,
+              3,
+              3
+            ],
+            "total": 18
+          },
+          "paired_difference": 3,
+          "preferred": "with_skill"
+        }
+      ],
+      "missing": [],
+      "average_paired_difference": 4.25,
+      "visual_gate": true,
+      "hard_gates": {
+        "asset-p": "pass",
+        "asset-q": "pass",
+        "booking-p": "pass",
+        "booking-q": "pass"
+      },
+      "complete_gate": true,
+      "candidate_sha256_raw": {
+        "SKILL.md": "37606ce6ca670b388346a5d336750649d29c483a8dac816742dfadfa5bf4a749",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "fc8c05ad951b246bc4f3b989a8099c5a85bcca67417818c7acb1ca4eca760e86",
+        "references/preview-diagnostics.md": "d8babbb996dae76b2a8a44c952f3f19499ac0153c29cb0539e0789b00cf13e19",
+        "references/layout-patterns.md": "a3819e23951427833132a37095a892f5ca72e6980214bbb459deeee779ca7939",
+        "references/form-decisions.md": "d0460e92d6b5ed3d81b631d4a6566646d39056e92698544de5f2e7dfb4ece31b"
+      },
+      "candidate_sha256_lf": {
+        "SKILL.md": "8165da5231384f6d1a761b7058bbca5b9466fd48296b13e047607452b38524c1",
+        "scripts/measure.cjs": "9cf735171ec29b5d984b23b038764961b61fd224029be96fed0776d439113538",
+        "scripts/render-inspect.cjs": "d7135faeb88b425d17ae797172ed0141fd7dba3f6e5eaa078e8e95f85d8e065a",
+        "references/render-quality.md": "b83726bad13d133108c1d8a082873719a6ffce6ecd926e8fe5ce09e9f2c4a6db",
+        "references/preview-diagnostics.md": "a6762b3de4e962e93cfacee684637112c37b42c5ccf2a2f752ab4b2c4aec7950",
+        "references/layout-patterns.md": "17a61707adb0df4fb5773c3b9180114b836d46e2b208a27e2125d9a7108baaf9",
+        "references/form-decisions.md": "d0460e92d6b5ed3d81b631d4a6566646d39056e92698544de5f2e7dfb4ece31b"
+      },
+      "candidate_commit": "059335f9667d9777ca5d6e0cd67477f4d96100de",
+      "source_snapshot_fingerprint": "980886996474d358d405ccee580bf069f4d85548e83ac64153718284870c4cab",
+      "booking_source_fingerprint": "6586d12a3d99e62c1ebe2b09ed1fdede5049aeecf408e4061863fdeeb093c71c",
+      "fixed_controls": false,
+      "independent_implementation_review": true,
+      "two_independent_implementations_before_selection": true,
+      "confirmation": {
+        "question": "Do the unchanged round-seven skill outputs still win against controls after a no-skill repair to the booking error summary?",
+        "locked_before_repair": true,
+        "change_allowed": "Only remove stale error-summary destinations that point to inapplicable/removed fields and restore them when applicable. No layout change, content deletion, weakening of validation or changes to the skill arms.",
+        "gate": "Identical: four explicit with-skill preferences, mean difference at least 2/24, all four products hard pass.",
+        "blind_evaluation": "Two fresh reviewers, all states, counterbalanced labels; no previous ratings. Recheck all four products independently.",
+        "screenshot_comparison": "Compare every fixed booking-control state with round seven. Account for each change; record differences whether or not favorable.",
+        "scope": "Reference repair confirmation on two development cases, not fresh skill executions or held-out generalization. Round seven remains an overall failure."
+      },
+      "inherited_skill_outputs_from_round": 7,
+      "control_composition": "unchanged round-1 asset; round-1 booking with isolated error-summary fix",
+      "confirmation_integrity": {
+        "asset-p": {
+          "frontend_files": 40,
+          "changed_file_count": 0,
+          "screenshots": 16,
+          "pixel_identical_screenshots": 15
+        },
+        "asset-q": {
+          "frontend_files": 41,
+          "changed_file_count": 0,
+          "screenshots": 16,
+          "pixel_identical_screenshots": 15
+        },
+        "booking-p": {
+          "frontend_files": 15,
+          "changed_file_count": 0,
+          "screenshots": 18,
+          "pixel_identical_screenshots": 17
+        },
+        "booking-q": {
+          "frontend_files": 14,
+          "changed_file_count": 1,
+          "screenshots": 18,
+          "pixel_identical_screenshots": 18
+        }
+      },
+      "matched_viewport_observations": [
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "home",
+          "firstTop": 1091,
+          "firstBottom": 1118,
+          "lastBottom": 1987,
+          "fullyVisible": 0,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "portrait",
+          "firstTop": 304,
+          "firstBottom": 350,
+          "lastBottom": 404,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "home",
+          "firstTop": 722,
+          "firstBottom": 745,
+          "lastBottom": 1342,
+          "fullyVisible": 4,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "portrait",
+          "firstTop": 285,
+          "firstBottom": 329,
+          "lastBottom": 329,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "list",
+          "firstTop": 397,
+          "firstBottom": 458,
+          "lastBottom": 891,
+          "fullyVisible": 8,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 1440,
+          "state": "form",
+          "firstTop": 438,
+          "firstBottom": 479,
+          "lastBottom": 479,
+          "fullyVisible": 1,
+          "count": 1
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "list",
+          "firstTop": 391,
+          "firstBottom": 452,
+          "lastBottom": 884,
+          "fullyVisible": 8,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 1440,
+          "state": "form",
+          "firstTop": 731,
+          "firstBottom": 774,
+          "lastBottom": 774,
+          "fullyVisible": 1,
+          "count": 1
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "home",
+          "firstTop": 976,
+          "firstBottom": 999,
+          "lastBottom": 2043,
+          "fullyVisible": 0,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "portrait",
+          "firstTop": 762,
+          "firstBottom": 808,
+          "lastBottom": 808,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "home",
+          "firstTop": 576,
+          "firstBottom": 598,
+          "lastBottom": 1442,
+          "fullyVisible": 4,
+          "count": 9
+        },
+        {
+          "case": "asset",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "portrait",
+          "firstTop": 727,
+          "firstBottom": 771,
+          "lastBottom": 771,
+          "fullyVisible": 2,
+          "count": 2
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "list",
+          "firstTop": 246,
+          "firstBottom": 398,
+          "lastBottom": 1530,
+          "fullyVisible": 3,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "with_skill",
+          "width": 390,
+          "state": "form",
+          "firstTop": 931,
+          "firstBottom": 975,
+          "lastBottom": 975,
+          "fullyVisible": 0,
+          "count": 1
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "list",
+          "firstTop": 473,
+          "firstBottom": 662,
+          "lastBottom": 2075,
+          "fullyVisible": 1,
+          "count": 8
+        },
+        {
+          "case": "booking",
+          "condition": "without_skill",
+          "width": 390,
+          "state": "form",
+          "firstTop": 1082,
+          "firstBottom": 1126,
+          "lastBottom": 1126,
+          "fullyVisible": 0,
+          "count": 1
+        }
+      ],
+      "behavior_checks": {},
+      "judgment_files_sha256": {
+        "judge-1/asset": "2dbafa5515828d7b3723de1c11b54a0365e984b8b8ebaa2c895d50d92fc20f2e",
+        "judge-1/booking": "ce03812be4e19cb4b08f391e97b65b9c53680e834cf2926700df5e81d397d85d",
+        "judge-2/asset": "6289fc8eee8fc8d11c6d2697fdac65cd01aa86ae2d13252cf55bf43934074e8b",
+        "judge-2/booking": "307d9721675cd9dc6c0f61996a481ca2439bc751bab01dc02f8d447b9ccb683c"
+      }
+    }
+  ]
+}

@@ -2,52 +2,60 @@
 
 [简体中文](README.md) | **English**
 
-[![Layout regression tests](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
+[![Diagnostics and regression checks](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-Does your page look right in Codex's side preview, but feel oversized or too wide in a standalone browser? This skill guides Codex to measure the same elements at matching CSS viewport sizes, then widen the viewport to identify differences caused by scrollbars, font-size rules, or responsive breakpoints.
+Browser diagnostics for CSS viewports, element geometry, computed font sizes, breakpoints, overflow and touch visibility candidates. Use the readings to reproduce a reported problem and inspect the rules behind it.
 
-![Before and after screenshots at 1440 × 900 CSS px. Before the fix, the title is 100.8 px and the content is 1400 px wide. After the fix, the title is 52 px and the content is 960 px wide.](docs/example-before-after.en.png)
+**The scope is now diagnostics.** This repository no longer provides a general webpage beautification workflow or promises better-looking pages. Neither matched-budget new-project experiment reached its predefined advantage threshold. [All experimental records remain available](evals/README.md#历史实验记录).
 
-Both panels are actual first-viewport captures of the example in standalone headless Chrome, at **1440 × 900 CSS px**, displayed at the same scale. On the left, the `7vw` title grows to **100.8 px** and the content spans **1400 px**. On the right, upper limits bring the title to **52 px** and the content width to **960 px**. These limits are the example's design targets. Use your project's own design specifications when applying the skill.
+## Tools and limits
 
-The fix consists of two CSS rules. Switch between **修复前 (Before)** and **修复后 (After)** at the top of the example to reproduce it.
+| Tool | Output | Limit |
+| --- | --- | --- |
+| [measure.cjs](scripts/measure.cjs) | Actual CSS viewport, horizontal overflow, selected element bounds, computed typography, grid tracks and input features | Requires the right state and selectors; does not rate layout quality |
+| [render-inspect.cjs](scripts/render-inspect.cjs) | Hidden/clipped candidates, action positions, image frames and fitted dimensions | Intentional hiding and internal scrolling need context; not an accessibility certification |
+| [Responsive return check](evals/check-responsive-return.cjs) | Resize, navigate back and exercise a control in project tests | Requires project-specific navigation and assertions |
+| [Codex entry point](SKILL.md) | Matching-state evidence, candidate causes and unverified scope | Diagnostics and explicitly authorized local fault repairs; no whole-page design workflow |
 
-```css
-main { max-width: 960px; }
-h1 { font-size: clamp(30px, 7vw, 52px); }
+Suitable questions include preview/browser differences, unexpected font sizes or breakpoint behavior, image sizing, root overflow, and essential content available only on hover. The user or project supplies design targets; measurements do not choose a visual style.
+
+## Run the scripts
+
+Run from a project with Playwright or playwright-core installed. Use `--channel chrome` for an installed Chrome browser. Replace the paths, URL, viewports and selectors.
+
+```sh
+node "<repo>/scripts/measure.cjs" http://localhost:3000/ --viewport 1440x900 --viewport 390x844 --selector main --selector h1 --channel chrome
+node "<repo>/scripts/render-inspect.cjs" http://localhost:3000/ --viewport 390x844 --touch --channel chrome --screenshots ./diagnostic-captures
 ```
 
-## Get started in Codex
+Output is JSON; `--ready CSS` waits for a target. CLI results come from a standalone headless browser. To compare a Codex preview, measure that actual preview's CSS viewport, then match the standalone browser's dimensions and state. CLI readings do not establish that the host was inspected. Touch emulation is not physical-device testing.
 
-Send this installation request to Codex.
+Use existing authorized browser sessions or project fixtures for authentication, dialogs and dynamic data. See the [diagnostic instructions (Chinese)](references/preview-diagnostics.md) for usage and limitations.
+
+## Diagnose with Codex
+
+The diagnostic tool is maintained on the `main` branch.
 
 ```text
-$skill-installer Install the skill from the main branch of https://github.com/jinyangtang33-sys/web-preview-scaling. SKILL.md is at the repository root (--path .). Use web-preview-scaling as the installation name (--name web-preview-scaling).
+$skill-installer Install the root skill from the main branch of https://github.com/jinyangtang33-sys/web-preview-scaling (--path .), named web-preview-scaling.
 ```
-
-After installation, start your project's development server and open the page you want to check. Replace the URL below with your own, then send this request to Codex.
 
 ```text
-$web-preview-scaling Check http://localhost:3000/ . The title looks right in the side preview but too large in a standalone browser. First compare at the preview's actual viewport size, then check 1440 × 900. Report the title's font size, the content width, and the CSS rules responsible for any differences.
+$web-preview-scaling Diagnose why the title at http://localhost:3000/ differs between the side preview and a standalone browser. Keep the code unchanged. Record font sizes and container widths in matching states at the same CSS viewport; identify candidate causes and unverified scope.
 ```
 
-Codex can inspect the page with its existing browser tools. For measurements across multiple viewports or saved screenshots, run the bundled script from a project that has Playwright installed. [Script instructions (Chinese)](SKILL.md#采集可复查的读数) · [OpenAI skill guide](https://learn.chatgpt.com/docs/build-skills)
+When a separate request authorizes fixing a confirmed fault, keep the change within that fault and repeat the same measurements and operations. There is no whole-page optimization or automatic visual-rating entry point.
 
-## Try the example
+## Example and regression checks
 
-The example is a riverside walking-route page. Download and extract the repository ZIP, then open `example/index.html` in your browser. The strip at the top shows the CSS viewport size, title font size, content width, and column count in real time. [Download ZIP](https://github.com/jinyangtang33-sys/web-preview-scaling/archive/refs/heads/main.zip)
+The [example](example/index.html) checks measurements: at 1440×900, its two CSS presets produce 100.8px/52px headings and 1400px/960px content widths. The grid changes from one to three columns at 759/760px. These are fixture targets, not universal design recommendations.
 
-1. Set the browser's responsive viewport to **1440 × 900** and switch from **修复前 (Before)** to **修复后 (After)**. The title shrinks from **100.8 px** to **52 px**, and the content width is capped at **960 px**. The font-size change comes from the new limit in `clamp(30px, 7vw, 52px)`.
+The [scrollbar case](docs/viewport-comparison.svg) records different usable widths at the same 1280×720 viewport with a 15px scrollbar; title sizes are equal. It demonstrates interpretation of measurements.
 
-2. Change the viewport width from **759 px** to **760 px**. The section labeled **沿途停留 (Stops along the way)** changes from one column to three. Both the Before and After versions should switch at the same width.
+On pushes to main and PRs targeting main, [CI](.github/workflows/layout-regression.yml) runs 14 browser checks and replays archived public proposals and fingerprints. **It does not judge aesthetics, call models to rerun experiments or certify arbitrary pages.** See [validation scope (Chinese)](evals/README.md).
 
-On pushes to `main` and pull requests targeting `main`, GitHub Actions uses Chrome to check the title font sizes and column counts around the breakpoint in both versions. [Example source](example/index.html) · [Regression tests](tests/layout.test.cjs) · [CI runs](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
+## Why the experiments remain
 
-<details>
-<summary>Another case · How can a scrollbar change content width at the same viewport size?</summary>
+Earlier versions attempted general design guidance. The TodoMVC and subsequent Markdown Editor experiments each allowed three code replies and a 15-minute limit per arm. Both mean blind-score differences were +1.5/24, below the predefined +2 threshold. They used different candidates and projects and cannot be pooled as repeated trials of one version.
 
-![At 1280 × 720 CSS px, the side preview reserves 15 px for a scrollbar and has a 1225 px content area. Standalone headless Chrome has a 1240 px content area. Both titles are 89.6 px.](docs/viewport-comparison.svg)
-
-This is another measurement of the example before the fix. The top bar is Codex's side preview, with a **1225 px** content area and a **15 px** scrollbar. The bottom bar is standalone headless Chrome, with a **1240 px** content area and no width reserved for a scrollbar. Both leave 20 px on each side of the content. Both titles use `7vw`, which resolves to **89.6 px** at this viewport size. This width difference alone calls for no font-size change. Compare `window.innerWidth` with `document.documentElement.clientWidth` to measure the scrollbar space in your own environment.
-
-</details>
+These records explain the narrower scope. They retain observed gains, failures and limits, rather than advertise the current diagnostic tool's effect on page quality. See the [retired design guides](evals/archive/design-guides-78c5386/README.md) and [complete experimental index](evals/README.md#历史实验记录).

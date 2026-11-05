@@ -1,0 +1,75 @@
+{
+  "case": "01",
+  "passed": true,
+  "browser": "156.0.8078.80",
+  "samples": [
+    {
+      "source": "independent-headless",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "overflowX": 0,
+      "main": {
+        "x": 140,
+        "width": 1000,
+        "height": 156.9375,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 1000,
+        "scrollWidth": 1000
+      },
+      "title": {
+        "x": 140,
+        "width": 1000,
+        "height": 57.59375,
+        "fontSize": 48,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 1000,
+        "scrollWidth": 1000
+      },
+      "grid": null,
+      "image": null,
+      "table": null,
+      "columnCount": 0
+    },
+    {
+      "source": "simulated-host-iframe",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "overflowX": 0,
+      "main": {
+        "x": 140,
+        "width": 1000,
+        "height": 156.9375,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 1000,
+        "scrollWidth": 1000
+      },
+      "title": {
+        "x": 140,
+        "width": 1000,
+        "height": 57.59375,
+        "fontSize": 48,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 1000,
+        "scrollWidth": 1000
+      },
+      "grid": null,
+      "image": null,
+      "table": null,
+      "columnCount": 0
+    }
+  ]
+}

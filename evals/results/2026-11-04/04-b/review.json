@@ -1,0 +1,99 @@
+{
+  "case": "04",
+  "passed": true,
+  "browser": "156.0.8078.80",
+  "samples": [
+    {
+      "source": "independent-headless",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "overflowX": 0,
+      "main": {
+        "x": 160,
+        "width": 960,
+        "height": 552.625,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 960,
+        "scrollWidth": 960
+      },
+      "title": {
+        "x": 160,
+        "width": 960,
+        "height": 51.1875,
+        "fontSize": 32,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 960,
+        "scrollWidth": 960
+      },
+      "grid": null,
+      "image": {
+        "x": 160,
+        "width": 960,
+        "height": 480,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "clip",
+        "objectFit": "contain",
+        "clientWidth": 960,
+        "scrollWidth": 960,
+        "naturalWidth": 800,
+        "naturalHeight": 400
+      },
+      "table": null,
+      "columnCount": 0
+    },
+    {
+      "source": "independent-headless",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflowX": 0,
+      "main": {
+        "x": 16,
+        "width": 358,
+        "height": 251.625,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 358,
+        "scrollWidth": 358
+      },
+      "title": {
+        "x": 16,
+        "width": 358,
+        "height": 51.1875,
+        "fontSize": 32,
+        "columns": "none",
+        "overflowX": "visible",
+        "objectFit": "fill",
+        "clientWidth": 358,
+        "scrollWidth": 358
+      },
+      "grid": null,
+      "image": {
+        "x": 16,
+        "width": 358,
+        "height": 179,
+        "fontSize": 16,
+        "columns": "none",
+        "overflowX": "clip",
+        "objectFit": "contain",
+        "clientWidth": 358,
+        "scrollWidth": 358,
+        "naturalWidth": 800,
+        "naturalHeight": 400
+      },
+      "table": null,
+      "columnCount": 0
+    }
+  ]
+}

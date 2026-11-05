@@ -1,0 +1,55 @@
+{
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "onclick=\"updateHash()\"",
+      "new": "aria-controls=\"share-panel\" aria-expanded=\"false\" onclick=\"toggleShareLink()\""
+    },
+    {
+      "path": "index.html",
+      "old": "        <p id=\"sharebutton\" class=\"navbutton left selected hidden\">Share</p>\n      </div>",
+      "new": "      </div>\n      <div id=\"share-panel\" hidden>\n        <label for=\"share-url\">Shareable link</label>\n        <input id=\"share-url\" type=\"text\" readonly spellcheck=\"false\">\n        <button id=\"close-share\" type=\"button\" aria-label=\"Close shareable link\">&times;</button>\n      </div>"
+    },
+    {
+      "path": "index.css",
+      "old": " @media print {",
+      "new": "@media screen {\n #share-panel:not([hidden]) {display:flex;align-items:center;gap:10px;padding:5px clamp(12px,2vw,24px);background:var(--sheet);color:var(--ink);border-top:1px solid var(--rule)}\n #share-panel label {font-size:13px;font-weight:600}\n #share-url {flex:1;min-width:0;max-width:62ch;box-sizing:border-box;height:40px;padding:0 10px;border:1px solid var(--rule);border-radius:5px;background:var(--source);color:var(--ink);font:16px Consolas,monospace}\n #close-share {width:44px;height:44px;flex:none;background:transparent;border:0;border-radius:5px;color:var(--ink);font-size:23px;cursor:pointer}\n #close-share:hover {background:var(--desk)}\n #out,.CodeMirror-scroll {overscroll-behavior:contain}\n body.nightmode {color-scheme:dark}\n .nightmode #in :is(.cm-atom,.cm-number,.cm-def,.cm-variable,.cm-variable-3,.cm-property,.cm-tag,.cm-attribute,.cm-string-2,.cm-meta,.cm-builtin) {color:#b7d0bf}\n .nightmode #out :not(pre)>code {color:var(--ink);background:var(--desk)}\n}\n@media screen and (max-width:680px) and (max-height:620px) {\n #workspace:has(#in :focus) {grid-template-rows:minmax(0,2fr) minmax(0,1fr)}\n}\n @media print {"
+    },
+    {
+      "path": "index.js",
+      "old": "var hashto;\n\nfunction update(e, change) {",
+      "new": "var hashto;\nvar sharePanel = document.getElementById('share-panel');\n\nfunction update(e, change) {\n    if (!sharePanel.hidden) closeShareLink(false);"
+    },
+    {
+      "path": "index.js",
+      "old": "function processQueryParams() {",
+      "new": "function closeShareLink(restoreFocus) {\n    sharePanel.hidden = true;\n    var button = document.getElementById('sharebutton');\n    button.setAttribute('aria-expanded', 'false');\n    if (restoreFocus) button.focus();\n    editor.refresh();\n}\n\nfunction toggleShareLink() {\n    if (!sharePanel.hidden) {\n        closeShareLink(true);\n        return;\n    }\n    updateHash();\n    var field = document.getElementById('share-url');\n    field.value = window.location.href;\n    sharePanel.hidden = false;\n    document.getElementById('sharebutton').setAttribute('aria-expanded', 'true');\n    field.focus();\n    field.select();\n    editor.refresh();\n}\n\ndocument.getElementById('close-share').onclick = function() { closeShareLink(true); };\nsharePanel.addEventListener('keydown', function(e) {\n    if (e.key === 'Escape') {\n        e.preventDefault();\n        closeShareLink(true);\n    }\n});\n\nfunction processQueryParams() {"
+    },
+    {
+      "path": "index.js",
+      "old": "document.addEventListener('drop', function(e) {\n    e.preventDefault();\n    e.stopPropagation();\n\n    var reader = new FileReader();\n    reader.onload = function(e) {\n        editor.setValue(e.target.result);\n    };\n\n    reader.readAsText(e.dataTransfer.files[0]);\n}, false);",
+      "new": "var pendingFileReader;\n\nfunction readDocumentFile(file) {\n    if (!file) return;\n    if (pendingFileReader && pendingFileReader.readyState === FileReader.LOADING) pendingFileReader.abort();\n    var reader = new FileReader();\n    pendingFileReader = reader;\n    reader.onload = function() {\n        if (pendingFileReader === reader) editor.setValue(reader.result);\n    };\n    reader.onerror = function() {\n        swal('Could not open file', file.name, 'error');\n    };\n    reader.readAsText(file);\n}\n\ndocument.addEventListener('dragover', function(e) {\n    if (e.dataTransfer && Array.prototype.indexOf.call(e.dataTransfer.types, 'Files') !== -1) e.preventDefault();\n});\ndocument.addEventListener('drop', function(e) {\n    if (!e.dataTransfer || !e.dataTransfer.files.length) return;\n    e.preventDefault();\n    readDocumentFile(e.dataTransfer.files[0]);\n});"
+    },
+    {
+      "path": "index.js",
+      "old": "        var files = evt.target.files;\n        console.log(files);\n        var reader = new FileReader();\n        reader.onload = function(file) {\n            console.log(file.target.result);\n            editor.setValue(file.target.result);\n            return true;\n        };\n        reader.readAsText(files[0]);",
+      "new": "        readDocumentFile(evt.target.files[0]);\n        evt.target.value = '';"
+    },
+    {
+      "path": "index.js",
+      "old": "    if (localStorage.getItem('content')) {",
+      "new": "    if (localStorage.getItem('content') !== null) {"
+    },
+    {
+      "path": "index.js",
+      "old": "            function() {\n                localStorage.setItem('content', text);",
+      "new": "            function(confirmed) {\n                if (confirmed === false) return;\n                localStorage.setItem('content', text);"
+    },
+    {
+      "path": "index.js",
+      "old": "    console.log(\"Saved\");\n",
+      "new": ""
+    }
+  ],
+  "notes": "Share selects the generated URL for copying and dismisses it when the document changes. On short phone viewports, the focused editor gets more space while the preview stays visible. The proposal also improves night-mode syntax contrast, supports reopening the same file, and honors cancellation during browser-save overwrite. These changes were not browser-tested."
+}

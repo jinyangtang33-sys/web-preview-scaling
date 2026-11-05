@@ -1,0 +1,38 @@
+{
+  "initial": {
+    "hoverNone": true,
+    "pointerCoarse": true,
+    "opacity": [
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "afterCDP": {
+    "hoverNone": true,
+    "pointerCoarse": true,
+    "opacity": [
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "afterPlaywrightViewport": {
+    "hoverNone": true,
+    "pointerCoarse": true,
+    "opacity": [
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "afterPlaywrightFullpage": {
+    "hoverNone": false,
+    "pointerCoarse": false,
+    "opacity": [
+      "0",
+      "0",
+      "0"
+    ]
+  }
+}

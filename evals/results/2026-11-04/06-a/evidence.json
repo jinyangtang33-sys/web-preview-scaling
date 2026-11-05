@@ -1,0 +1,49 @@
+{
+  "evidence_type": "static_source_inspection",
+  "browser_measurement_performed": false,
+  "screenshot_taken": false,
+  "playwright_used": false,
+  "source": {
+    "path": "project/page.html",
+    "sha256": "DDDF69B3F09A5953E2A1B4822942F8C1E3FDD228DDF4ECC422CD5FA163171AED",
+    "rule_line": 8,
+    "rule": "h1 { font-size: 6vw; }",
+    "heading_line": 10,
+    "body_rule_line": 7,
+    "source_modified": false
+  },
+  "target_viewport": {
+    "width_css_px": 1440,
+    "height_css_px": 900,
+    "source": "user request; target only; not measured"
+  },
+  "calculation": {
+    "kind": "static inference from CSS rule and user target width",
+    "formula": "1440 * 6 / 100",
+    "inferred_font_size_px": 86.4,
+    "design_max_px": 48,
+    "excess_px": 38.4,
+    "excess_percent": 80,
+    "equals_limit_at_viewport_width_css_px": 800,
+    "exceeds_limit_when": "viewport width > 800 CSS px"
+  },
+  "recommendation": {
+    "applied": false,
+    "rule": "h1 { font-size: min(6vw, 48px); }",
+    "predicted_target_font_size_px": 48,
+    "prediction_source": "CSS arithmetic only, not computed style"
+  },
+  "validation": {
+    "static_status": "source read and arithmetic checked",
+    "visual_status": "pending",
+    "actual_preview_viewport": null,
+    "actual_browser_viewport": null,
+    "computed_font_size": null,
+    "measured_bounds": null,
+    "pending": [
+      "1440 x 900 CSS px actual browser measurement and visual inspection",
+      "Measure actual preview CSS viewport, then compare same viewport in independent browser",
+      "If recommendation is applied, verify preview-size behavior and 799/800/801 CSS px widths"
+    ]
+  }
+}

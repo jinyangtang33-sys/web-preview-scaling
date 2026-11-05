@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "A": { "scores": [3, 3, 3, 3, 3, 3], "total": 18 },
+    "B": { "scores": [3, 3, 3, 2, 3, 3], "total": 17 }
+  },
+  "preferred": "A",
+  "reasons": [
+    "A narrowly better supports long phone writing: its normal phone view uses the full content area for source, whereas B divides it into two roughly 360-pixel-high panes that each truncate the long sample text.",
+    "A labels the phone transition explicitly as Read preview and Back to editor. B offers Reading and retains both panes in normal mode; this exposes the relationship but fragments long-document work.",
+    "Both variants show all named actions and clear Markdown/HTML download choices, readable document hierarchy, balanced desktop columns and constrained desktop reading widths. No preference was awarded merely for colors, decoration or panel style."
+  ],
+  "coverage": {
+    "screenshotsViewed": 20,
+    "variants": ["A", "B"],
+    "dimensions": ["1440x900", "390x844"],
+    "states": ["initial", "document", "reading", "night", "download"],
+    "method": "Viewed each supplied PNG individually at its original dimensions with view_image.",
+    "additionalInputs": ["request.txt", "manifest.json"],
+    "blackBoxPagesUsed": false,
+    "excludedInputs": ["source code", "skills", "group identities", "budgets", "prior results", "other reviews"]
+  },
+  "limitations": [
+    "Screenshots do not establish functional correctness for rendering, import/export, persistence, sharing, shortcuts or spell check.",
+    "Touch hitboxes, focus behavior, scroll behavior and software keyboard effects were not exercised.",
+    "Longer documents than the visible sample were not observed.",
+    "API/DOM/vendor compatibility and fidelity to the original brand cannot be verified from the supplied images.",
+    "The preference is narrow and rests principally on observed phone workspace allocation."
+  ]
+}

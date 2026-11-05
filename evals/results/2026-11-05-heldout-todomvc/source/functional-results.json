@@ -1,0 +1,644 @@
+{
+  "label": "baseline",
+  "url": "http://127.0.0.1:5111",
+  "createdAt": "2026-11-05T05:39:43.101Z",
+  "scope": "Independent functional verification; no visual preference scoring; native baseline limitations distinguished by comparison.",
+  "results": [
+    {
+      "profile": "desktop",
+      "test": "add-trim-blank",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "html-literal-escaping",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "long-text-layout",
+      "status": "pass",
+      "detail": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "label": {
+          "x": 445,
+          "y": 196,
+          "width": 550,
+          "height": 605.9375
+        },
+        "textRects": [
+          {
+            "x": 505,
+            "y": 211,
+            "width": 474.90625,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 239.796875,
+            "width": 469.625,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 268.59375,
+            "width": 474.890625,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 297.390625,
+            "width": 456.28125,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 326.1875,
+            "width": 469.546875,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 354.984375,
+            "width": 464.25,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 383.78125,
+            "width": 468.234375,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 412.578125,
+            "width": 470.90625,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 441.375,
+            "width": 470.90625,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 470.171875,
+            "width": 456,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 498.96875,
+            "width": 456,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 527.765625,
+            "width": 456,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 556.5625,
+            "width": 456,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 585.359375,
+            "width": 456,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 614.15625,
+            "width": 456,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 642.953125,
+            "width": 432,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 671.75,
+            "width": 472.03125,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 700.546875,
+            "width": 468,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 729.34375,
+            "width": 468,
+            "height": 27
+          },
+          {
+            "x": 505,
+            "y": 758.140625,
+            "width": 216,
+            "height": 27
+          }
+        ],
+        "style": {
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "whiteSpace": "normal"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "test": "edit-enter-escape-blur",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "edit-empty-removes",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "complete-count-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "toggle-all-across-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "delete-single",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "clear-completed",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-complete-filter-clear",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-bulk-toggle",
+      "status": "fail",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(await ui.rows().first().locator('.toggle').isChecked())\n",
+      "browserErrors": []
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-edit-discoverability",
+      "status": "fail",
+      "error": "No keyboard edit entry: [{\"tag\":\"INPUT\",\"cls\":\"toggle-all\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"toggle\",\"text\":\"\",\"label\":null},{\"tag\":\"A\",\"cls\":\"selected\",\"text\":\"All\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Active\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Completed\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Oscar Godson\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Christoph Burgmer\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"TodoMVC\",\"label\":null},{\"tag\":\"BODY\",\"cls\":\"\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"new-todo\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"toggle-all\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"toggle\",\"text\":\"\",\"label\":null},{\"tag\":\"A\",\"cls\":\"selected\",\"text\":\"All\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Active\",\"label\":null}]",
+      "browserErrors": []
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-delete-discoverability",
+      "status": "fail",
+      "error": "Delete button is not reachable via Tab without pointer hover",
+      "browserErrors": []
+    },
+    {
+      "profile": "desktop",
+      "test": "credits-branding-actions-layout",
+      "status": "pass",
+      "detail": [
+        {
+          "selector": "new-todo",
+          "text": "",
+          "x": 445,
+          "y": 130,
+          "width": 550,
+          "height": 65,
+          "display": "inline-block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "toggle-all-label",
+          "text": "Mark all as complete",
+          "x": 445,
+          "y": 131,
+          "width": 45,
+          "height": 65,
+          "display": "flex",
+          "visibility": "visible"
+        },
+        {
+          "selector": "todo-count",
+          "text": "1 item left",
+          "x": 460,
+          "y": 325.59375,
+          "width": 65.03125,
+          "height": 19.59375,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "selected",
+          "text": "All",
+          "x": 620.78125,
+          "y": 322.59375,
+          "width": 32.671875,
+          "height": 25,
+          "display": "inline",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Active",
+          "text": "Active",
+          "x": 663.625,
+          "y": 322.59375,
+          "width": 56.859375,
+          "height": 25,
+          "display": "inline",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Completed",
+          "text": "Completed",
+          "x": 730.65625,
+          "y": 322.59375,
+          "width": 88.546875,
+          "height": 25,
+          "display": "inline",
+          "visibility": "visible"
+        },
+        {
+          "selector": "clear-completed",
+          "text": "Clear completed",
+          "x": 870.78125,
+          "y": 325.59375,
+          "width": 109.21875,
+          "height": 19,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "test": "in-memory-reload-semantics",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "add-trim-blank",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "html-literal-escaping",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "long-text-layout",
+      "status": "pass",
+      "detail": {
+        "viewportWidth": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "label": {
+          "x": 0,
+          "y": 196,
+          "width": 390,
+          "height": 865.109375
+        },
+        "textRects": [
+          {
+            "x": 60,
+            "y": 211,
+            "width": 310.828125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 239.796875,
+            "width": 310.828125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 268.59375,
+            "width": 309.53125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 297.390625,
+            "width": 302.78125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 326.1875,
+            "width": 309.5,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 354.984375,
+            "width": 312.21875,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 383.78125,
+            "width": 305.453125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 412.578125,
+            "width": 314.859375,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 441.375,
+            "width": 313.515625,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 470.171875,
+            "width": 310.828125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 498.96875,
+            "width": 310.828125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 527.765625,
+            "width": 310.828125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 556.5625,
+            "width": 309.53125,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 585.359375,
+            "width": 305.375,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 614.15625,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 642.953125,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 671.75,
+            "width": 288,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 700.546875,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 729.34375,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 758.140625,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 786.9375,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 815.734375,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 844.53125,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 873.328125,
+            "width": 305.34375,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 902.125,
+            "width": 310.6875,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 930.921875,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 959.71875,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 988.515625,
+            "width": 312,
+            "height": 27
+          },
+          {
+            "x": 60,
+            "y": 1017.3125,
+            "width": 312,
+            "height": 27
+          }
+        ],
+        "style": {
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "whiteSpace": "normal"
+        }
+      }
+    },
+    {
+      "profile": "phone-touch",
+      "test": "edit-enter-escape-blur",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "edit-empty-removes",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "complete-count-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "toggle-all-across-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "delete-single",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "clear-completed",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-complete-filter-clear",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-bulk-toggle",
+      "status": "fail",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(await ui.rows().first().locator('.toggle').isChecked())\n",
+      "browserErrors": []
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-edit-discoverability",
+      "status": "fail",
+      "error": "No keyboard edit entry: [{\"tag\":\"INPUT\",\"cls\":\"toggle-all\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"toggle\",\"text\":\"\",\"label\":null},{\"tag\":\"A\",\"cls\":\"selected\",\"text\":\"All\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Active\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Completed\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Oscar Godson\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Christoph Burgmer\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"TodoMVC\",\"label\":null},{\"tag\":\"BODY\",\"cls\":\"\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"new-todo\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"toggle-all\",\"text\":\"\",\"label\":null},{\"tag\":\"INPUT\",\"cls\":\"toggle\",\"text\":\"\",\"label\":null},{\"tag\":\"A\",\"cls\":\"selected\",\"text\":\"All\",\"label\":null},{\"tag\":\"A\",\"cls\":\"\",\"text\":\"Active\",\"label\":null}]",
+      "browserErrors": []
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-delete-discoverability",
+      "status": "fail",
+      "error": "Delete button is not reachable via Tab without pointer hover",
+      "browserErrors": []
+    },
+    {
+      "profile": "phone-touch",
+      "test": "credits-branding-actions-layout",
+      "status": "pass",
+      "detail": [
+        {
+          "selector": "new-todo",
+          "text": "",
+          "x": 0,
+          "y": 130,
+          "width": 390,
+          "height": 65,
+          "display": "inline-block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "toggle-all-label",
+          "text": "Mark all as complete",
+          "x": 0,
+          "y": 131,
+          "width": 45,
+          "height": 65,
+          "display": "flex",
+          "visibility": "visible"
+        },
+        {
+          "selector": "todo-count",
+          "text": "1 item left",
+          "x": 15,
+          "y": 325.59375,
+          "width": 65.03125,
+          "height": 19.59375,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "selected",
+          "text": "All",
+          "x": 95.78125,
+          "y": 353,
+          "width": 32.671875,
+          "height": 25,
+          "display": "inline",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Active",
+          "text": "Active",
+          "x": 138.625,
+          "y": 353,
+          "width": 56.859375,
+          "height": 25,
+          "display": "inline",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Completed",
+          "text": "Completed",
+          "x": 205.65625,
+          "y": 353,
+          "width": 88.546875,
+          "height": 25,
+          "display": "inline",
+          "visibility": "visible"
+        },
+        {
+          "selector": "clear-completed",
+          "text": "Clear completed",
+          "x": 265.78125,
+          "y": 325.59375,
+          "width": 109.21875,
+          "height": 19,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ]
+    },
+    {
+      "profile": "phone-touch",
+      "test": "in-memory-reload-semantics",
+      "status": "pass"
+    }
+  ]
+}

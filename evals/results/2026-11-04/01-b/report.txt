@@ -1,0 +1,32 @@
+预览看起来小一半的原因是宿主对 iframe 应用了 `transform: scale(.5)`，页面字号和布局没有发现异常。保留 `project/host.html` 和 `project/page.html` 原样，无需修复页面。
+
+测量使用 headless Chrome 的全新浏览器上下文、默认 100% 缩放、deviceScaleFactor=1。预览来源是题目提供的模拟宿主 host.html 中实际加载的 iframe，所有页面读数均在 iframe 内取得；独立来源是另一个标签页直接打开同一个 page.html。两端均等待内容与字体就绪，滚动位置均为 (0, 0)。本次没有访问真实 Codex 侧栏。
+
+| 指标 | 实际 iframe 内页面 | 独立标签页同视口 | 独立目标视口 |
+| --- | --- | --- | --- |
+| window.innerWidth × innerHeight | 1280 × 800 | 1280 × 800 | 1280 × 800 |
+| documentElement.clientWidth / scrollWidth | 1280 / 1280 | 1280 / 1280 | 1280 / 1280 |
+| 标题计算字号 / 行高 | 48px / 57.6px | 48px / 57.6px | 48px / 57.6px |
+| 正文计算字号 / 行高 | 16px / 25.6px | 16px / 25.6px | 16px / 25.6px |
+| main 的 x / y / width / height | 140 / 40 / 1000 / 156.9375 | 140 / 40 / 1000 / 156.9375 | 140 / 40 / 1000 / 156.9375 |
+| 标题与正文行数 | 各 1 行 | 各 1 行 | 各 1 行 |
+| 页面横向溢出 | 0px | 0px | 0px |
+
+先把独立标签页设为实测 iframe 的 1280 × 800 CSS 视口，再按用户指定的 1280 × 800 目标视口复读，二者恰好相同。没有把可见的 640 × 400 显示区域误认为页面 CSS 视口。html、body、main、h1、p 和 footer 的全部已采集边界、计算样式、内容与文本行矩形均完全相同，断言通过。
+
+原因对应 `project/host.html:8`：`iframe { width: 1280px; height: 800px; border: 0; transform: scale(.5); transform-origin: top left; }`。宿主实测 iframe 的布局尺寸为 1280 × 800，变换后的边界为 640 × 400，宽高比例均为 0.5。`host.html:7` 的 `.preview` 内容区域恰为 640 × 400；完整页面缩小后适配该区域。页面布局并未因此变成窄屏布局。
+
+页面规则 `page.html:9` 是 `main { width: calc(100% - 32px); max-width: 1000px; margin: 40px auto; }`，`page.html:10` 是 `h1 { font-size: 48px; line-height: 1.2; }`。48px 标题在宿主中视觉上约为 24px，1000px 版心视觉上约为 500px，正好解释“小一半”。截图复核显示标题、正文和页脚均完整且换行一致；页面无图片，未涉及图片比例。
+
+未修改任何页面 CSS，所以没有人为制造的修复前后差异：检查前与交付时均为标题 48px、版心 1000px、页面横向溢出 0px，宿主显示缩放维持 0.5。没有对页面增加 zoom、scale 或隐藏根节点溢出。本结论仅覆盖提供的静态内容、模拟宿主及指定 1280 × 800 独立视口。
+
+交付文件：
+
+- `evidence.json`：原始 DOM 读数、宿主 iframe 变换、三个测量状态、浏览器信息和比较结果。
+- `trace.md`：执行命令、工具步骤、退出状态与失败/重试记录。
+- `measure.cjs`：可重跑的测量和断言脚本。
+- `host.png`：模拟宿主原始截图，1280 × 800 像素。
+- `embedded-visible.png`：宿主中 iframe 的显示区域截图，640 × 400 像素。
+- `independent-1280x800.png`：独立浏览器原始截图，1280 × 800 像素。
+
+没有 Git 提交。

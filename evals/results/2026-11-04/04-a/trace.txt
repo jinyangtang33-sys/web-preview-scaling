@@ -1,0 +1,49 @@
+# 执行记录
+
+运行目录：`<run-root>`。
+
+仅读取本运行目录的请求、skill、页面和素材；Playwright 从授权的已有依赖目录只读加载。未访问其他评测运行目录，未提交 Git。
+
+1. PowerShell 读取请求和 skill，退出码 0：
+
+   ```powershell
+   Get-Content -LiteralPath '<run-root>/request.txt'; Get-Content -LiteralPath '<run-root>/skill/SKILL.md'
+   ```
+
+2. PowerShell 列出项目并读取页面及测量参考脚本，退出码 0：
+
+   ```powershell
+   rg --files -g AGENTS.md -g '*.*' project; Get-Content -LiteralPath 'project/page.html'; Get-Content -LiteralPath 'skill/scripts/measure.cjs'
+   ```
+
+3. PowerShell 读取原图并查看运行目录，退出码 0：
+
+   ```powershell
+   Get-Content -LiteralPath 'project/scene.svg'; Get-ChildItem -Force -Name
+   ```
+
+4. 通过 apply_patch 新建 `probe.cjs`。使用绝对路径加载 `<playwright-project>/node_modules/playwright`，启动 `headless: true, channel: 'chrome'`，直接打开本运行目录 `project/page.html` 的 file URL。两个视口分别新建浏览器页面，等待字体和图片解码，采集原始 DOM 并保存截图。
+
+5. PowerShell 修复前测量，退出码 0：
+
+   ```powershell
+   node .\probe.cjs before
+   ```
+
+   产出 `evidence.json` 的 before 数据以及两张 before 截图。使用 view_image 查看 `before-1280x800.png`，确认 SVG 图案实际是等比缩小居中，不把图片元素框的 5.3333 比例误当作内部图案被拉伸的证据。
+
+6. 通过 apply_patch 修改 `project/page.html:10`：将 `height: 180px; object-fit: fill` 替换为 `height: auto; object-fit: contain`，其他页面规则不变。
+
+7. PowerShell 修复后测量，退出码 0：
+
+   ```powershell
+   node .\probe.cjs after
+   ```
+
+   添加 evidence.json 的 after 数据，保存两张 after 截图。脚本同时断言图片元素比例与固有比例误差低于 0.0001、根节点 scrollWidth 等于 clientWidth、页面错误数为 0，均通过。
+
+8. 使用 view_image 查看 `after-1280x800.png` 和 `after-390x844.png`。图片完整显示，圆形正常，两种视口均无横向裁切，标题单行。
+
+9. 通过 apply_patch 写入 `report.md` 和本执行记录。
+
+失败／重试：无。未运行服务进程；浏览器在脚本结束时关闭。可在本目录执行 `node .\probe.cjs after` 复核当前页面。不要直接重跑 before 阶段覆盖历史记录；它采集的是运行时页面，重现旧版需先恢复报告中记载的原始 CSS。

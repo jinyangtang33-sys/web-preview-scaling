@@ -1,0 +1,720 @@
+{
+  "label": "lane-m",
+  "url": "http://127.0.0.1:5212",
+  "createdAt": "2026-11-05T05:59:25.170Z",
+  "scope": "Independent functional verification; no visual preference scoring; native baseline limitations distinguished by comparison.",
+  "results": [
+    {
+      "profile": "desktop",
+      "test": "add-trim-blank",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "html-literal-escaping",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "long-text-layout",
+      "status": "pass",
+      "detail": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "label": {
+          "x": 395,
+          "y": 268,
+          "width": 594,
+          "height": 363.21875
+        },
+        "textRects": [
+          {
+            "x": 403,
+            "y": 283,
+            "width": 575.328125,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 309.09375,
+            "width": 577.265625,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 335.1875,
+            "width": 571.3125,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 361.28125,
+            "width": 547.3125,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 387.375,
+            "width": 500.234375,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 413.46875,
+            "width": 553.203125,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 439.5625,
+            "width": 576,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 465.65625,
+            "width": 576,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 491.75,
+            "width": 576,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 517.84375,
+            "width": 504,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 543.9375,
+            "width": 570.015625,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 570.03125,
+            "width": 576,
+            "height": 20
+          },
+          {
+            "x": 403,
+            "y": 596.125,
+            "width": 36,
+            "height": 20
+          }
+        ],
+        "style": {
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "whiteSpace": "normal"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "test": "edit-enter-escape-blur",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "edit-empty-removes",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "complete-count-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "toggle-all-across-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "delete-single",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "clear-completed",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-complete-filter-clear",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-bulk-toggle",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-edit-discoverability",
+      "status": "pass",
+      "detail": [
+        {
+          "tag": "BUTTON",
+          "cls": "",
+          "text": "Add",
+          "label": null
+        },
+        {
+          "tag": "INPUT",
+          "cls": "toggle-all",
+          "text": "",
+          "label": null
+        },
+        {
+          "tag": "INPUT",
+          "cls": "toggle",
+          "text": "",
+          "label": null
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "edit-task",
+          "text": "Edit",
+          "label": null
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "destroy",
+          "text": "Delete",
+          "label": "Delete task"
+        },
+        {
+          "tag": "A",
+          "cls": "selected",
+          "text": "All",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Active",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Completed",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Oscar Godson",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Christoph Burgmer",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "TodoMVC",
+          "label": null
+        },
+        {
+          "tag": "BODY",
+          "cls": "",
+          "text": "",
+          "label": null
+        },
+        {
+          "tag": "INPUT",
+          "cls": "new-todo",
+          "text": "",
+          "label": "New task"
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "",
+          "text": "Add",
+          "label": null
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "test": "keyboard-delete-discoverability",
+      "status": "pass"
+    },
+    {
+      "profile": "desktop",
+      "test": "credits-branding-actions-layout",
+      "status": "pass",
+      "detail": [
+        {
+          "selector": "new-todo",
+          "text": "",
+          "x": 359,
+          "y": 153,
+          "width": 638.890625,
+          "height": 48,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "toggle-all-label",
+          "text": "Mark all complete",
+          "x": 355,
+          "y": 220,
+          "width": 730,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible"
+        },
+        {
+          "selector": "todo-count",
+          "text": "1 item left",
+          "x": 357,
+          "y": 403.390625,
+          "width": 212.4375,
+          "height": 19.59375,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "selected",
+          "text": "All",
+          "x": 579.4375,
+          "y": 391.1875,
+          "width": 93.703125,
+          "height": 44,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Active",
+          "text": "Active",
+          "x": 673.140625,
+          "y": 391.1875,
+          "width": 93.703125,
+          "height": 44,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Completed",
+          "text": "Completed",
+          "x": 766.84375,
+          "y": 391.1875,
+          "width": 93.703125,
+          "height": 44,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "selector": "clear-completed",
+          "text": "Clear completed",
+          "x": 981.0625,
+          "y": 391.1875,
+          "width": 101.9375,
+          "height": 44,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "test": "in-memory-reload-semantics",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "add-trim-blank",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "html-literal-escaping",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "long-text-layout",
+      "status": "pass",
+      "detail": {
+        "viewportWidth": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "label": {
+          "x": 65,
+          "y": 213,
+          "width": 300,
+          "height": 530.125
+        },
+        "textRects": [
+          {
+            "x": 69,
+            "y": 226,
+            "width": 266.8125,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 249.1875,
+            "width": 240.15625,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 272.375,
+            "width": 259.671875,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 295.5625,
+            "width": 281.90625,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 318.75,
+            "width": 269.515625,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 341.9375,
+            "width": 267.671875,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 365.125,
+            "width": 291.75,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 388.3125,
+            "width": 259.671875,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 411.5,
+            "width": 281.90625,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 434.6875,
+            "width": 269.515625,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 457.875,
+            "width": 276.46875,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 481.0625,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 504.25,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 527.4375,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 550.625,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 573.8125,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 597,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 620.1875,
+            "width": 224,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 643.375,
+            "width": 290.6875,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 666.5625,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 689.75,
+            "width": 288,
+            "height": 17
+          },
+          {
+            "x": 69,
+            "y": 712.9375,
+            "width": 184,
+            "height": 17
+          }
+        ],
+        "style": {
+          "overflow": "visible",
+          "textOverflow": "clip",
+          "whiteSpace": "normal"
+        }
+      }
+    },
+    {
+      "profile": "phone-touch",
+      "test": "edit-enter-escape-blur",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "edit-empty-removes",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "complete-count-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "toggle-all-across-filter",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "delete-single",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "clear-completed",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-complete-filter-clear",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-bulk-toggle",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-edit-discoverability",
+      "status": "pass",
+      "detail": [
+        {
+          "tag": "BUTTON",
+          "cls": "",
+          "text": "Add",
+          "label": null
+        },
+        {
+          "tag": "INPUT",
+          "cls": "toggle-all",
+          "text": "",
+          "label": null
+        },
+        {
+          "tag": "INPUT",
+          "cls": "toggle",
+          "text": "",
+          "label": null
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "edit-task",
+          "text": "Edit",
+          "label": null
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "destroy",
+          "text": "Delete",
+          "label": "Delete task"
+        },
+        {
+          "tag": "A",
+          "cls": "selected",
+          "text": "All",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Active",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Completed",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Oscar Godson",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Christoph Burgmer",
+          "label": null
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "TodoMVC",
+          "label": null
+        },
+        {
+          "tag": "BODY",
+          "cls": "",
+          "text": "",
+          "label": null
+        },
+        {
+          "tag": "INPUT",
+          "cls": "new-todo",
+          "text": "",
+          "label": "New task"
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "",
+          "text": "Add",
+          "label": null
+        }
+      ]
+    },
+    {
+      "profile": "phone-touch",
+      "test": "keyboard-delete-discoverability",
+      "status": "pass"
+    },
+    {
+      "profile": "phone-touch",
+      "test": "credits-branding-actions-layout",
+      "status": "pass",
+      "detail": [
+        {
+          "selector": "new-todo",
+          "text": "",
+          "x": 29,
+          "y": 103,
+          "width": 250.890625,
+          "height": 48,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "toggle-all-label",
+          "text": "Mark all complete",
+          "x": 31,
+          "y": 164,
+          "width": 328,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible"
+        },
+        {
+          "selector": "todo-count",
+          "text": "1 item left",
+          "x": 29,
+          "y": 337.203125,
+          "width": 228.0625,
+          "height": 19.59375,
+          "display": "block",
+          "visibility": "visible"
+        },
+        {
+          "selector": "selected",
+          "text": "All",
+          "x": 31,
+          "y": 373,
+          "width": 109.328125,
+          "height": 44,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Active",
+          "text": "Active",
+          "x": 140.328125,
+          "y": 373,
+          "width": 109.328125,
+          "height": 44,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "selector": "Completed",
+          "text": "Completed",
+          "x": 249.65625,
+          "y": 373,
+          "width": 109.34375,
+          "height": 44,
+          "display": "grid",
+          "visibility": "visible"
+        },
+        {
+          "selector": "clear-completed",
+          "text": "Clear completed",
+          "x": 259.0625,
+          "y": 325,
+          "width": 101.9375,
+          "height": 44,
+          "display": "block",
+          "visibility": "visible"
+        }
+      ]
+    },
+    {
+      "profile": "phone-touch",
+      "test": "in-memory-reload-semantics",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="javascript-es5">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="A TodoMVC written with JavaScript es5 features." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>TodoMVC: JavaScript Es5</title>
+        <link rel="stylesheet" href="base.css" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <section class="todoapp">
+            <header class="header">
+                <h1>todos</h1>
+                <form class="entry" novalidate>
+                    <label for="new-task">New task <span class="requirement">(required)</span></label>
+                    <input id="new-task" class="new-todo" placeholder="What needs to be done?" enterkeyhint="done" required aria-describedby="entry-error" autofocus />
+                    <button type="submit">Add</button>
+                    <span id="entry-error" role="alert"></span>
+                </form>
+            </header>
+            <main class="main">
+                <div class="toggle-all-container">
+                    <input id="toggle-all" class="toggle-all" type="checkbox" />
+                    <label class="toggle-all-label" for="toggle-all">Complete all</label>
+                    <ul class="filters" aria-label="Filter tasks">
+                    <li>
+                        <a href="#/" class="selected">All</a>
+                    </li>
+                    <li>
+                        <a href="#/active">Active</a>
+                    </li>
+                    <li>
+                        <a href="#/completed">Completed</a>
+                    </li>
+                </ul>
+                </div>
+                <ul class="todo-list" aria-label="Tasks"></ul>
+                <p class="no-matches"><span>No tasks match this filter.</span> <a href="#/">View all tasks</a></p>
+            </main>
+            <footer class="footer">
+                <span class="todo-count" aria-live="polite"></span>
+                <button class="clear-completed">Clear completed</button>
+            </footer>
+        </section>
+        <footer class="info">
+			<p class="edit-tip">Select Edit or double-click a task to change its title.</p>
+			<p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
+			<p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
+            <p>Maintained by the TodoMVC team</p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+		</footer>
+		<script src="base.js"></script>
+        <script src="helpers.js"></script>
+        <script src="store.js"></script>
+        <script src="model.js"></script>
+        <script src="template.js"></script>
+        <script src="view.js"></script>
+        <script src="controller.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

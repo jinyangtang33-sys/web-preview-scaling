@@ -1,4 +1,4 @@
-name: Layout regression
+name: Browser diagnostics and archive checks
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   layout:
-    name: Font size and grid breakpoint
+    name: Browser diagnostics and archived evidence
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -23,7 +23,11 @@ jobs:
           node-version: 24
       - name: Install Playwright Core
         run: npm install --no-save --no-package-lock --ignore-scripts playwright-core@1.62.1
-      - name: Run layout regression tests in Chrome
+      - name: Run base checks in Chrome
         env:
           PLAYWRIGHT_CHANNEL: chrome
-        run: node --test tests/layout.test.cjs
+        run: node --test tests/*.test.cjs
+      - name: Verify published holdout proposals and budget ledger
+        run: python3 evals/results/2026-11-05-heldout-todomvc/verify-proposals.py
+      - name: Verify slim candidate holdout proposals and vendors
+        run: python3 evals/results/2026-11-05-heldout-markdown/verify-proposals.py

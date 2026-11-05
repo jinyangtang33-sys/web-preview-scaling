@@ -1,0 +1,55 @@
+本轮仅读取 01-b 的 request.txt、skill/SKILL.md 和 project 文件；执行测量时只引用已授权的现有 Playwright 依赖。没有读取其他运行目录或原仓库评测文件。没有改动 project 或依赖，没有 Git 操作。
+
+以下 PowerShell 命令按执行顺序记录；全部退出码为 0，无失败、无重试、无权限升级。
+
+1. 读取任务和指定 skill。
+
+```powershell
+Get-Content -LiteralPath '<run-root>/request.txt'; Get-Content -LiteralPath '<run-root>/skill/SKILL.md'
+```
+
+2. 列出工作页面并读取源代码。
+
+```powershell
+Get-ChildItem -Force -LiteralPath '<run-root>/project' | Select-Object Name,Length; Get-Content -LiteralPath '<run-root>/project/host.html'; Get-Content -LiteralPath '<run-root>/project/page.html'
+```
+
+发现宿主固定 iframe 为 1280 × 800，并应用 scale(.5)；页面标题固定 48px、main 最大宽度 1000px。
+
+3. 使用 apply_patch 创建 `01-b/measure.cjs`，然后运行：
+
+```powershell
+node '<run-root>/measure.cjs'
+```
+
+工作目录：`<run-root>`。
+
+脚本通过绝对路径 require 现有 Playwright，并用 `chromium.launch({channel:'chrome',headless:true})` 启动。以 file URL 打开本地静态页面，先测实际 iframe，再测同视口独立标签页，最后复读用户目标视口。写出 evidence.json 和三张 PNG。所有匹配及溢出断言通过，输出摘要：
+
+```json
+{
+  "matchingViewport": true,
+  "matchingElements": true,
+  "matchingFonts": true,
+  "targetEqualsPreviewViewport": true,
+  "hostScaleX": 0.5,
+  "hostScaleY": 0.5,
+  "embeddedHorizontalOverflow": 0,
+  "independentHorizontalOverflow": 0
+}
+```
+
+4. 使用 view_image 分别检查 `host.png` 与 `independent-1280x800.png`。两次工具读取均成功，看到内容一致、整体视觉比例为一半、无内容裁切。
+
+5. 读取正文测量细节并记录页面 SHA256：
+
+```powershell
+$e = Get-Content -Raw -LiteralPath '<run-root>/evidence.json' | ConvertFrom-Json; $e.targetViewport.elements.'main p' | ConvertTo-Json -Depth 8; Get-FileHash -Algorithm SHA256 -LiteralPath '<run-root>/project/host.html','<run-root>/project/page.html' | Format-List
+```
+
+- host.html：`52DC2C52164165A23224231A4596F73AD77A4AB5A1075C814F54D185DC224E22`
+- page.html：`25B5AA82284206B3B311B19247BA3B60F3FD456F6E83649814ABB95EC2A69C78`
+
+正文为 16px、line-height 25.6px、文本矩形仅一个（单行）。页面源文件从未写入；上面的哈希为交付内容标识，不声称执行过独立的前后哈希对比。
+
+6. 使用 apply_patch 写出 report.md 和本 trace.md。完成检查与证据交付，无页面修复需求。

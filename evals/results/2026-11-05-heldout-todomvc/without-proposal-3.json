@@ -1,0 +1,80 @@
+{
+  "patches": [
+    {
+      "path": "template.js",
+      "old": "            + '<button type=\"button\" class=\"edit-task\"",
+      "new": "            + '<span class=\"row-actions\">'\n            + '<button type=\"button\" class=\"edit-task\""
+    },
+    {
+      "path": "template.js",
+      "old": ">Delete</button>'\n            + '</div>'",
+      "new": ">Delete</button>'\n            + '</span>'\n            + '</div>'"
+    },
+    {
+      "path": "index.css",
+      "old": "grid-template-columns: 44px minmax(0,1fr) 44px 44px;",
+      "new": "grid-template-columns: 44px minmax(0,1fr) auto;"
+    },
+    {
+      "path": "index.css",
+      "old": ".edit-task, .todo-list li .destroy { font-size: 14px; }",
+      "new": ".row-actions { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 7px; background: #fff; }\n.edit-task, .todo-list li .destroy { font-size: 14px; }\n.todo-list li .destroy { width: 54px; color: var(--red); }\n.row-actions .edit-task { border-right: 1px solid var(--line); border-radius: 6px 0 0 6px; }"
+    },
+    {
+      "path": "index.css",
+      "old": "\t.todo-list li .view { padding: 2px 4px; }",
+      "new": "\t.todo-list li .view { display: flex; flex-wrap: wrap; padding: 4px 8px 4px 4px; }\n\t.todo-list li .toggle { flex: 0 0 44px; align-self: flex-start; margin: 0; }\n\t.todo-list li .view label { flex: 1 1 auto; box-sizing: border-box; min-width: 0; max-width: calc(100% - 44px); }\n\t.row-actions { flex: none; margin-left: auto; }"
+    },
+    {
+      "path": "index.html",
+      "old": "                <ul class=\"todo-list\"></ul>",
+      "new": "                <ul class=\"todo-list\"></ul>\n                <p class=\"filter-empty\" role=\"status\"></p>"
+    },
+    {
+      "path": "index.css",
+      "old": ".todo-list:empty:after { display: block; padding: 24px 18px; content: 'No tasks in this view.'; color: var(--muted); }",
+      "new": ".filter-empty { display: none; margin: 0; padding: 24px 18px; color: var(--muted); }\n.todo-list:empty + .filter-empty:not(:empty) { display: block; }"
+    },
+    {
+      "path": "index.html",
+      "old": "                <ul class=\"filters\">",
+      "new": "                <nav class=\"filter-nav\" aria-label=\"Task filters\">\n                    <ul class=\"filters\">"
+    },
+    {
+      "path": "index.html",
+      "old": "                </ul>\n                <button class=\"clear-completed\">",
+      "new": "                    </ul>\n                </nav>\n                <button class=\"clear-completed\">"
+    },
+    {
+      "path": "index.css",
+      "old": "\t.filters { grid-column: 1 / -1; grid-row: 2; }",
+      "new": "\t.filter-nav { grid-column: 1 / -1; grid-row: 2; }"
+    },
+    {
+      "path": "view.js",
+      "old": "        current.setAttribute(\"aria-current\", \"page\");",
+      "new": "        current.setAttribute(\"aria-current\", \"page\");\n        var emptyMessage = qs(\".filter-empty\");\n        if (emptyMessage)\n            emptyMessage.textContent = currentPage ? \"No \" + currentPage + \" tasks.\" : \"\";"
+    },
+    {
+      "path": "view.js",
+      "old": "    View.prototype._finishEdit = function (event, handler, cancel) {",
+      "new": "    View.prototype._runRowAction = function (control, handler, item) {\n        var focused = document.activeElement === control;\n        var rows = this.$todoList.children;\n        var index = Array.prototype.indexOf.call(rows, $parent(control, \"li\"));\n        handler(item);\n\n        if (focused && !this.$todoList.contains(control)) {\n            var nextRow = rows[Math.min(index, rows.length - 1)];\n            if (nextRow)\n                qs(\".toggle\", nextRow).focus();\n            else if (this.$footer.style.display === \"none\")\n                this.$newTodo.focus();\n            else\n                qs(\".filters .selected\").focus();\n        }\n    };\n\n    View.prototype._finishEdit = function (event, handler, cancel) {"
+    },
+    {
+      "path": "view.js",
+      "old": "            $delegate(self.$todoList, \".destroy\", \"click\", function () {\n                handler({ id: self._itemId(this) });",
+      "new": "            $delegate(self.$todoList, \".destroy\", \"click\", function () {\n                self._runRowAction(this, handler, { id: self._itemId(this) });"
+    },
+    {
+      "path": "view.js",
+      "old": "            $delegate(self.$todoList, \".toggle\", \"click\", function () {\n                handler({",
+      "new": "            $delegate(self.$todoList, \".toggle\", \"click\", function () {\n                self._runRowAction(this, handler, {"
+    },
+    {
+      "path": "view.js",
+      "old": "            $on(self.$clearCompleted, \"click\", function () {\n                handler();",
+      "new": "            $on(self.$clearCompleted, \"click\", function () {\n                var focused = document.activeElement === self.$clearCompleted;\n                handler();\n                if (focused && self.$clearCompleted.style.display === \"none\") {\n                    var target = self.$footer.style.display === \"none\" ? self.$newTodo : qs(\".filters .selected\");\n                    target.focus();\n                }"
+    }
+  ],
+  "notes": "Edit and Delete share a bordered control group. On phones, the group can move below a long title so the text gets the row’s width. Empty filters identify which tasks are missing, and keyboard focus moves to a usable control when an action removes the focused row. Reviewed against the supplied source and screenshots only. Live verification was unavailable."
+}

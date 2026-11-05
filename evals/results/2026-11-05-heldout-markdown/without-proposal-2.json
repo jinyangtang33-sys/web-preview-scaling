@@ -1,0 +1,70 @@
+{
+  "patches": [
+    {
+      "path": "index.css",
+      "old": "     #in {\n        z-index: 1000;\n     }\n\n",
+      "new": ""
+    },
+    {
+      "path": "index.css",
+      "old": "#workspace {display:grid;grid-template-columns:1fr 1fr;",
+      "new": "#workspace {display:grid;isolation:isolate;grid-template-columns:1fr 1fr;"
+    },
+    {
+      "path": "index.css",
+      "old": " #navcontent {display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0;padding:3px 8px 4px}a#logo {grid-column:span 6;margin:0}#title {font-size:17px}.navbutton {min-height:44px;grid-column:span 3;grid-row:2;gap:4px;font-size:12px}.navbutton span {display:inline}#nightbutton,#readbutton,#spellbutton {grid-row:1;grid-column:span 2;margin:0!important}#nightbutton span,#readbutton span,#spellbutton span {display:none}",
+      "new": " #navcontent {display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3px 0;padding:4px 8px}\n a#logo {grid-row:1;grid-column:1 / 7;margin:0;padding-left:5px}\n #title {font-size:clamp(15px,4.4vw,18px)}\n .navbutton {min-height:44px;grid-column:span 3;grid-row:2;gap:4px;font-size:12px}\n .navbutton span {display:inline}\n #nightbutton,#readbutton,#spellbutton {grid-row:1;grid-column:span 2;margin:0 1px!important;padding:2px;flex-direction:column;gap:1px;font-size:11px;line-height:1.2}"
+    },
+    {
+      "path": "index.css",
+      "old": " .nightmode #out,.nightmode #in,.nightmode img {filter:none}",
+      "new": " body:not(.nightmode) #in .cm-variable-2 {color:#306684}\n body:not(.nightmode) #in :is(.cm-quote,.cm-variable,.cm-def) {color:#536635}\n body:not(.nightmode) #in :is(.cm-string,.cm-string-2,.cm-comment) {color:#88551f}\n body:not(.nightmode) #in .cm-link {color:#785078}\n .nightmode #out,.nightmode #in,.nightmode img {filter:none}"
+    },
+    {
+      "path": "index.html",
+      "old": "<div id=\"saveas-markdown\">\n        <svg height=\"64\" width=\"64\"",
+      "new": "<div id=\"saveas-markdown\">\n        <svg viewBox=\"0 0 64 64\" aria-hidden=\"true\" height=\"64\" width=\"64\""
+    },
+    {
+      "path": "index.html",
+      "old": "<div id=\"saveas-html\">\n        <svg height=\"64\" width=\"64\"",
+      "new": "<div id=\"saveas-html\">\n        <svg viewBox=\"0 0 64 64\" aria-hidden=\"true\" height=\"64\" width=\"64\""
+    },
+    {
+      "path": "index.html",
+      "old": "width=device-width, initial-scale=1",
+      "new": "width=device-width, initial-scale=1, interactive-widget=resizes-content"
+    },
+    {
+      "path": "index.js",
+      "old": "function update(e) {\n    setOutput(e.getValue());",
+      "new": "function update(e, change) {\n    setOutput(e.getValue(), change && change.origin === 'setValue');"
+    },
+    {
+      "path": "index.js",
+      "old": "function setOutput(val) {",
+      "new": "function setOutput(val, resetScroll) {"
+    },
+    {
+      "path": "index.js",
+      "old": "    var old = out.cloneNode(true);\n    out.innerHTML = md.render(val);\n    emojify.run(out);\n    console.log(out.innerHTML);\n    // Checks if there are any task-list present in out.innerHTML\n    out.innerHTML = render_tasklist(out.innerHTML);\n\n    var allold = old.getElementsByTagName(\"*\");\n    if (allold === undefined) return;\n\n    var allnew = out.getElementsByTagName(\"*\");\n    if (allnew === undefined) return;\n\n    for (var i = 0, max = Math.min(allold.length, allnew.length); i < max; i++) {\n        if (!allold[i].isEqualNode(allnew[i])) {\n            out.scrollTop = allnew[i].offsetTop;\n            return;\n        }\n    }",
+      "new": "    var previous = resetScroll ? [] : Array.from(out.children);\n    var scrollTop = out.scrollTop;\n    out.innerHTML = render_tasklist(md.render(val));\n    emojify.run(out);\n    out.scrollTop = resetScroll ? 0 : scrollTop;\n    if (!previous.length) return;\n\n    for (var i = 0; i < out.children.length; i++) {\n        var block = out.children[i];\n        if (previous[i] && previous[i].isEqualNode(block)) continue;\n        var bounds = block.getBoundingClientRect();\n        var viewport = out.getBoundingClientRect();\n        if (bounds.bottom <= viewport.top || bounds.top >= viewport.bottom) {\n            out.scrollTop += bounds.top - viewport.top - 12;\n        }\n        break;\n    }"
+    },
+    {
+      "path": "index.js",
+      "old": "    var isApplied = selection.slice(0, 2) === operator && selection.slice(-2) === endoperator;\n    var finaltext = isApplied ? selection.slice(2, -2) : operator + selection + endoperator;",
+      "new": "    var isApplied = selection.length >= operator.length + endoperator.length &&\n        selection.startsWith(operator) && selection.endsWith(endoperator);\n    var finaltext = isApplied ? selection.slice(operator.length, -endoperator.length) : operator + selection + endoperator;"
+    },
+    {
+      "path": "index.js",
+      "old": "        if (obj.reading === 'false') {",
+      "new": "        if (obj.reading === 'false' && document.getElementById('readbutton').classList.contains('selected')) {"
+    },
+    {
+      "path": "index.js",
+      "old": "        if (h.slice(0, 5) == 'view:') {\n            setOutput(decodeURIComponent(escape(RawDeflate.inflate(atob(h.slice(5))))));\n            document.body.className = 'view';\n        } else {\n            editor.setValue(\n                decodeURIComponent(escape(\n                    RawDeflate.inflate(\n                        atob(\n                            h\n                        )\n                    )\n                ))\n            );\n        }\n    } else if (localStorage.getItem('content')) {",
+      "new": "        if (h.slice(0, 5) === 'view:') h = h.slice(5);\n        editor.setValue(decodeURIComponent(escape(RawDeflate.inflate(atob(h)))));\n    } else if (localStorage.getItem('content') !== null) {"
+    }
+  ],
+  "notes": "The phone toolbar puts the editor name first and labels all three mode controls. The download dialog layers above both panes, and its export icons scale to fit. Opening a document starts the preview at the top. Edits keep visible text in place and bring offscreen changes into view. The proposal also improves source contrast and corrects formatting shortcut toggles and legacy share-link loading. Browser verification remains pending."
+}

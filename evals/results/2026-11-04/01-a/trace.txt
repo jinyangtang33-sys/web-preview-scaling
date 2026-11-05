@@ -1,0 +1,32 @@
+本次执行仅使用 01-a 运行目录的任务、skill、页面及授权只读 Playwright 依赖。没有读取其他运行目录、原仓库评测文件或其他执行结果。
+
+1. PowerShell 读取任务与指定 skill（成功，退出码 0）：
+
+```powershell
+Get-Content -LiteralPath '<run-root>/request.txt'
+Get-Content -LiteralPath '<run-root>/skill/SKILL.md'
+```
+
+2. 列出并读取本次 project（成功，退出码 0）：
+
+```powershell
+rg --files '<run-root>/project'
+Get-Content -LiteralPath '<run-root>/project/host.html'
+Get-Content -LiteralPath '<run-root>/project/page.html'
+```
+
+3. 使用 PowerShell 单引号 here-string 和 Set-Content -Encoding utf8 写入 measure.cjs，然后执行（成功，退出码 0，首次执行完成，无重试）：
+
+```powershell
+node '<run-root>/measure.cjs'
+```
+
+脚本通过绝对路径 require 只读的 `<playwright-project>/node_modules/playwright`，以 `chromium.launch({channel:'chrome',headless:true})` 启动已安装 Chrome。使用 file URL 打开本目录 host.html 及 page.html，无需 HTTP 服务或网络。实际浏览器版本和测量时间在 evidence.json。上下文 viewport 为 1280 × 800、deviceScaleFactor 为 1；在真实 iframe 与独立标签内分别等待 document.fonts.ready，然后采集 innerWidth/innerHeight、根节点 clientWidth/scrollWidth、元素计算样式、边界和文字 Range。另在宿主采集 iframe 变换前尺寸及变换后边界。
+
+结果：两侧全部页面读数相等；iframe CSS 尺寸 1280 × 800，显示边界 640 × 400，transform scale 为 0.5。生成 evidence.json 与两张 PNG。
+
+4. 使用 view_image 工具查看 host-preview.png 与 standalone-1280x800.png（两张均成功显示），确认内容完整且预览整体缩小，没有换行差异。图像仅作视觉辅助，视口依据为 DOM 原始读数。
+
+5. 使用 PowerShell 单引号 here-string 和 Set-Content -Encoding utf8 写入 report.md 与 trace.md，读取 evidence.json 根节点指标核对报告。
+
+本次没有命令失败、浏览器失败或重试；没有安装依赖，没有修改 project 下任何文件，没有 Git 提交。
