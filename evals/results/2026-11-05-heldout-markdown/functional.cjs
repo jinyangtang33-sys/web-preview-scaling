@@ -156,5 +156,3 @@ let browser;
   await browser.close();
   console.log(`Completed ${results.length} checks; ${results.filter(r=>!r.pass).length} failed.`);
 })().catch(async e=>{console.error(e);if(browser)await browser.close();process.exitCode=1;});
-
-
