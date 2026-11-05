@@ -2,70 +2,60 @@
 
 **简体中文** | [English](README.en.md)
 
-[![基础检查](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
+[![诊断与回归检查](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**实验版；精简候选的新项目验证仍未过明确优势门槛。** 四份设计文档约减少73%，冻结后改用未参与开发的 Markdown Editor。两边各3次代码回复、15分钟上限；盲评19/17、18/17，平均仅+1.5/24（门槛+2），两边主功能检查均通过。[分析与修订](evals/skill-revision-2026-11-05.md) · [最新完整结果与页面](evals/results/2026-11-05-heldout-markdown/README.md)。精简不等于已经证明有明显独立价值。
+网页呈现问题的诊断工具：记录 CSS 视口、元素尺寸、字号、断点、溢出与触屏可见性线索，帮助复现问题并定位相关规则。
 
-**旧候选的开发案例记录。** 同样的手机首屏，有 skill 的素材库能读到 4 个条目名称（无 skill：0 个），预约列表能看全 3 条记录（无 skill：1 条）。最终确认中，两位新的匿名评审均在两个项目上选择有 skill，平均高 4.25/24 分，四份网页均通过独立功能复核。复杂任务用了额外实现与评审，这不是等成本或未见项目上的结论。[逐轮结果与限制](evals/results/2026-11-04-visual-outcomes/README.md) · [测试范围与发布标准](evals/README.md) · [触屏漏检复测](evals/results/2026-11-04-touch-rerun/README.md)
+**定位已收缩为诊断。** 本仓库不再提供通用网页美化流程，也不承诺使用后网页效果更好。此前两次新项目等预算实验均未达到预设的明确优势门槛；[全部实验记录](evals/README.md#历史实验记录)保留。
 
-**此前的 TodoMVC 等预算验证。** TodoMVC 两边各 3 次代码回复、15 分钟上限、0 次模型工具调用；两位盲评都略偏好有 skill，但平均仅高 1.5/24，低于预设 2 分。两边功能检查均通过，skill 未据此调优。[完整源码、截图、用量与结果](evals/results/2026-11-05-heldout-todomvc/README.md)。当前证据仍不足以宣称在新项目上有稳定、足够大的独立增益。
+## 能做什么
 
-这个 skill 帮助 Codex 按网页的实际任务调整信息层级、内容尺寸和响应式布局：列表便于扫读，详情看清主体，表单便于填写和修错。它要求查看同状态的前后渲染并复测操作，也保留相同 CSS 视口下的预览差异排查。
+| 工具 | 输出 | 边界 |
+| --- | --- | --- |
+| [measure.cjs](scripts/measure.cjs) | 实际 CSS 视口、横向溢出、指定元素边界、计算字号、网格轨道及输入特征 | 需要正确的页面状态和选择器；不判断布局好坏 |
+| [render-inspect.cjs](scripts/render-inspect.cjs) | 隐藏/截断候选、操作位置、图片元素框与拟合尺寸 | 候选可能是正常隐藏或内部滚动；不是缺陷或可访问性认证 |
+| [跨尺寸返回检查](evals/check-responsive-return.cjs) | 在项目测试中切换尺寸、返回并实际使用控件 | 需要项目自己的导航与断言，不自动适配任意网站 |
+| [Codex 入口](SKILL.md) | 按同状态、同视口取证，解释候选原因和未验证范围 | 仅用于诊断与已明确授权的局部故障修复，不启动整页设计 |
 
-下面是字号与版心约束的基础示例，展示测量方法；它本身不是有 skill / 无 skill 的效果证据。
+适合排查“小窗和独立浏览器显示不同”、宽屏字号异常、断点未按预期切换、图片尺寸异常、整页横向溢出，以及必要内容仅悬停可见等问题。设计目标需要由用户或项目给出，读数不替用户选择视觉风格。
 
-![同一页面在 1440 × 900 CSS 像素下的修复前后截图。左侧标题为 100.8 px、正文宽 1400 px，右侧标题为 52 px、正文宽 960 px。](docs/example-before-after.png)
+## 直接使用脚本
 
-两张图都来自示例页在独立无头 Chrome 中的真实首屏截图，CSS 视口均为 **1440 × 900**，按相同比例展示。左侧的 `7vw` 标题长到 **100.8 px**，正文铺到 **1400 px**；右侧为标题和正文加上上限，分别收至 **52 px** 和 **960 px**。这两个上限是示例的设计目标，实际项目应沿用自己的设计规范。
+从已有 Playwright 或 playwright-core 的项目目录执行，安装了 Chrome 时传 `--channel chrome`。把路径、URL、视口和选择器换成当前项目的值。
 
-对应的修复只有两条 CSS 规则，可以在示例顶部切换「修复前 / 修复后」复现。
-
-```css
-main { max-width: 960px; }
-h1 { font-size: clamp(30px, 7vw, 52px); }
+```sh
+node "<repo>/scripts/measure.cjs" http://localhost:3000/ --viewport 1440x900 --viewport 390x844 --selector main --selector h1 --channel chrome
+node "<repo>/scripts/render-inspect.cjs" http://localhost:3000/ --viewport 390x844 --touch --channel chrome --screenshots ./diagnostic-captures
 ```
 
-## 在 Codex 里开始用
+脚本输出 JSON；`--ready CSS` 可等待目标出现。CLI 的来源是独立无头浏览器。要比较 Codex 预览，先在真实预览页面读取实际 CSS 视口，再将独立浏览器设为相同尺寸与状态；不能把 CLI 的读数当成已测过宿主。触屏模拟也不等于真机。
 
-把下面的安装请求发给 Codex。
+登录态、弹层和动态数据可用项目已有的授权浏览器会话复现，再读取相同属性。完整用法与限制见[诊断说明](references/preview-diagnostics.md)。
+
+## 在 Codex 中诊断
+
+诊断版本目前位于 [PR #5](https://github.com/jinyangtang33-sys/web-preview-scaling/pull/5) 的 `codex/skill-acceptance` 分支，合并前不要把旧 main 当作此版本。可向 Codex 提交安装请求：
 
 ```text
-$skill-installer 请从 https://github.com/jinyangtang33-sys/web-preview-scaling 的 main 分支安装 skill。SKILL.md 在仓库根目录（--path .），安装名为 web-preview-scaling（--name web-preview-scaling）。
+$skill-installer 请从 https://github.com/jinyangtang33-sys/web-preview-scaling 的 codex/skill-acceptance 分支安装仓库根目录的 skill（--path .），安装名 web-preview-scaling。
 ```
-
-要试用本次冻结的精简候选，在安装请求中把 `main` 换为[候选提交 78c5386](https://github.com/jinyangtang33-sys/web-preview-scaling/commit/78c53863050ac71050916c2cf637b2a117e1289d)。默认分支与实验候选可能不同。
-
-安装后，在你的网页项目中启动开发服务器，打开要检查的页面。把下面的网址换成自己的，再发给 Codex。
 
 ```text
-$web-preview-scaling 请检查 http://localhost:3000/ 。侧边预览里标题大小合适，浏览器打开后显得太大。先按预览的实际视口对照，再看 1440 × 900。告诉我标题字号、正文宽度和造成差异的 CSS 规则。
+$web-preview-scaling 请诊断 http://localhost:3000/ 的标题为何在侧边预览和独立浏览器里大小不同。保持代码不变，记录同状态、同 CSS 视口的字号和容器宽度，指出候选原因及未验证项。
 ```
 
-需要完善整个页面时，可以这样提出任务：
+如果另行要求修复已确认故障，按故障范围修改并用同一读数和操作复测。这里没有“优化整页”或自动视觉评分入口。
 
-```text
-$web-preview-scaling 请完善 http://localhost:3000/ 的桌面和手机效果。沿用现有品牌、内容和功能，让主要信息更容易辨认，操作更清楚。实际查看修改前后页面，验证关键流程，并给出同状态的效果证据和取舍。
-```
+## 示例与回归
 
-[任务路径](references/render-quality.md) 聚焦当前最影响任务的一两个阻碍；[布局边界](references/layout-patterns.md)和[表单边界](references/form-decisions.md)仅在对应问题出现时读取。不默认追加多套完整实现或多代理评审。[精简依据](evals/skill-revision-2026-11-05.md)保留观察与假设的区别。[尺寸与预览诊断](references/preview-diagnostics.md)按需读取，采集读数不自动判定页面优劣。
+[示例页](example/index.html)用于核对测量：1440×900 下，两组预设 CSS 的标题分别为100.8px和52px，内容宽度1400px和960px；759/760px处网格从一列切到三列。这些是示例约定，不是推荐给所有项目的设计值。
 
-Codex 可以用已有浏览器工具读取页面。若要批量采样或保存截图，可在装有 Playwright 的项目中使用仓库附带的脚本。[测量脚本用法](references/preview-diagnostics.md) · [OpenAI 的 skill 使用说明](https://learn.chatgpt.com/docs/build-skills)
+[滚动条案例](docs/viewport-comparison.svg)记录同为1280×720时可用宽度因15px滚动条而不同，标题字号相同。它演示如何解释读数，不是网页效果增益证明。
 
-## 用示例验证
+推送 main 或向 main 提 PR 时，[CI](.github/workflows/layout-regression.yml)运行13项浏览器基础检查，并重放公开实验的补丁与指纹。**CI不评判美观、不调用模型复做实验，也不证明任意页面已通过验收。** [诊断验证范围](evals/README.md)。
 
-示例是一张河岸步行路线页。下载仓库 ZIP，解压后用浏览器打开 `example/index.html`。页面顶部会实时显示 CSS 视口、标题字号、正文宽度和列数。[下载仓库 ZIP](https://github.com/jinyangtang33-sys/web-preview-scaling/archive/refs/heads/main.zip)
+## 为什么保留实验记录
 
-1. 将浏览器的响应式视口设为 **1440 × 900**，切换「修复前 / 修复后」。标题会从 **100.8 px** 降到 **52 px**，正文宽度会收至 **960 px**。这次字号差来自标题新增的上限 `clamp(30px, 7vw, 52px)`。
+仓库曾尝试用通用设计指导改善网页效果。TodoMVC 和随后冻结精简候选的 Markdown Editor 测试中，两边各三次代码回复、十五分钟上限，平均盲评分差均为+1.5/24，低于事前+2门槛。不同候选和项目不能合并为同一版本的重复实验。
 
-2. 将视口宽度从 **759 px** 调到 **760 px**。「沿途停留」会从一列变为三列。切换修复前后，两种样式都应在同一个宽度换列。
-
-推送到 `main` 或向 `main` 提交 PR 时，GitHub Actions 会用 Chrome 核对两个版本的标题字号和断点列数。[示例源码](example/index.html) · [回归测试](tests/layout.test.cjs) · [CI 运行记录](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
-
-<details>
-<summary>补充案例 · 同一视口下，滚动条为什么会影响正文宽度？</summary>
-
-![视口同为 1280 × 720，侧边预览的滚动条占 15 px，正文宽 1225 px。独立无头 Chrome 的正文宽 1240 px。两边标题都是 89.6 px。](docs/viewport-comparison.svg)
-
-这是示例页「修复前」的另一次实测。正文两侧各留 20 px，预览滚动条又占了 15 px，因此正文恰好窄了 15 px。标题在两处都是 `7vw`，同一视口下算出来都是 89.6 px。仅凭这次宽度差，无需调整字号。比较 `window.innerWidth` 和 `document.documentElement.clientWidth`，可以查看自己环境中的滚动条占宽。
-
-</details>
+这些记录用于说明为何收缩定位，保留原有收益、失败与局限，不作为现行诊断工具的效果宣传。原设计指南见[归档](evals/archive/design-guides-78c5386/README.md)，源码、截图、预算及全部历史结果见[实验索引](evals/README.md#历史实验记录)。

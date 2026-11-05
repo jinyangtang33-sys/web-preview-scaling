@@ -1,4 +1,4 @@
-name: Skill base checks
+name: Browser diagnostics and archive checks
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   layout:
-    name: Measurement, layout and evaluator checks
+    name: Browser diagnostics and archived evidence
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
