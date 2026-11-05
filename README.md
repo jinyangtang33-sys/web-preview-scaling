@@ -45,7 +45,7 @@ $web-preview-scaling 请检查 http://localhost:3000/ 。侧边预览里标题�
 $web-preview-scaling 请完善 http://localhost:3000/ 的桌面和手机效果。沿用现有品牌、内容和功能，让主要信息更容易辨认，操作更清楚。实际查看修改前后页面，验证关键流程，并给出同状态的效果证据和取舍。
 ```
 
-[呈现质量判断](references/render-quality.md) 区分列表、详情和表单的任务，[布局与状态模式](references/layout-patterns.md) 提供字段并排、卡片操作与错误对齐的具体规则。复杂页面优化在工具允许时比较两份独立实现，再选择、修正和复查；这会增加执行时间与模型调用，不用于宣称更省成本。单一文案和明确故障保持原任务范围。[尺寸与预览诊断](references/preview-diagnostics.md) 按需读取；`render-inspect.cjs` 辅助记录图片拟合尺寸、内容可见性候选和操作位置，读数不自动判定页面优劣。
+[任务路径](references/render-quality.md) 聚焦当前最影响任务的一两个阻碍；[布局边界](references/layout-patterns.md)和[表单边界](references/form-decisions.md)仅在对应问题出现时读取。不默认追加多套完整实现或多代理评审。[精简依据](evals/skill-revision-2026-11-05.md)保留观察与假设的区别。[尺寸与预览诊断](references/preview-diagnostics.md)按需读取，采集读数不自动判定页面优劣。
 
 Codex 可以用已有浏览器工具读取页面。若要批量采样或保存截图，可在装有 Playwright 的项目中使用仓库附带的脚本。[测量脚本用法](SKILL.md#采集可复查的读数) · [OpenAI 的 skill 使用说明](https://learn.chatgpt.com/docs/build-skills)
 
