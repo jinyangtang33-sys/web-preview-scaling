@@ -4,9 +4,11 @@
 
 [![基础检查](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**当前为实验版。** 针对真实项目的触屏文字漏检，已补充内容可见性检查。新一轮有 skill 与无 skill 各两次执行都修复了问题：已知漏检已补回，尚未证明相对无 skill 的额外收益。CI 覆盖触屏测量、示例布局及产物检查器正反例。[测试范围与发布标准](evals/README.md) · [最新对照复测](evals/results/2026-11-04-touch-rerun/README.md)
+**当前为实验版。** 第六轮中，有 skill 的手机素材首页首屏能看全 4 个条目名称，固定无 skill 对照为 0 个；但预约页盲评分歧，且素材页在换尺寸返回后出现筛选不可用的退化。整体门槛未通过。基础 CI、行为回归与真实页面结果分开报告。[真实网页效果对照](evals/results/2026-11-04-visual-outcomes/README.md) · [测试范围与发布标准](evals/README.md) · [触屏漏检复测](evals/results/2026-11-04-touch-rerun/README.md)
 
-网页在 Codex 侧边预览里看着刚好，换到浏览器却觉得标题太大、正文太宽？这个 skill 让 Codex 在相同的 CSS 视口下测量同一个元素，再拉宽窗口，找出差异来自滚动条、字号规则还是响应式断点。
+这个 skill 帮助 Codex 按网页的实际任务调整信息层级、内容尺寸和响应式布局：列表便于扫读，详情看清主体，表单便于填写和修错。它要求查看同状态的前后渲染并复测操作，也保留相同 CSS 视口下的预览差异排查。
+
+下面是字号与版心约束的基础示例，展示测量方法；它本身不是有 skill / 无 skill 的效果证据。
 
 ![同一页面在 1440 × 900 CSS 像素下的修复前后截图。左侧标题为 100.8 px、正文宽 1400 px，右侧标题为 52 px、正文宽 960 px。](docs/example-before-after.png)
 
@@ -32,6 +34,14 @@ $skill-installer 请从 https://github.com/jinyangtang33-sys/web-preview-scaling
 ```text
 $web-preview-scaling 请检查 http://localhost:3000/ 。侧边预览里标题大小合适，浏览器打开后显得太大。先按预览的实际视口对照，再看 1440 × 900。告诉我标题字号、正文宽度和造成差异的 CSS 规则。
 ```
+
+需要完善整个页面时，可以这样提出任务：
+
+```text
+$web-preview-scaling 请完善 http://localhost:3000/ 的桌面和手机效果。沿用现有品牌、内容和功能，让主要信息更容易辨认，操作更清楚。实际查看修改前后页面，验证关键流程，并给出同状态的效果证据和取舍。
+```
+
+[呈现质量判断](references/render-quality.md) 区分列表、详情和表单的任务，[布局与状态模式](references/layout-patterns.md) 提供字段并排、卡片操作与错误对齐的具体规则。复杂页面优化在工具允许时比较两份独立实现，再选择、修正和复查；这会增加执行时间与模型调用，不用于宣称更省成本。单一文案和明确故障保持原任务范围。[尺寸与预览诊断](references/preview-diagnostics.md) 按需读取；`render-inspect.cjs` 辅助记录图片拟合尺寸、内容可见性候选和操作位置，读数不自动判定页面优劣。
 
 Codex 可以用已有浏览器工具读取页面。若要批量采样或保存截图，可在装有 Playwright 的项目中使用仓库附带的脚本。[测量脚本用法](SKILL.md#采集可复查的读数) · [OpenAI 的 skill 使用说明](https://learn.chatgpt.com/docs/build-skills)
 

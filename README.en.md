@@ -4,9 +4,11 @@
 
 [![Base checks](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**Experimental.** Content-visibility checks now address a touch-screen omission found in a real project. In a fresh comparison, both runs with the updated skill and both runs without it fixed the issue. The known omission was recovered; an advantage over no skill has not been demonstrated. CI covers touch measurements, example layout, and positive and negative output checks. [Test scope and release criteria (Chinese)](evals/README.md) · [Latest comparison (Chinese)](evals/results/2026-11-04-touch-rerun/README.md)
+**Experimental.** In round six, four complete asset names appeared on the first mobile screen with the skill, versus none in the fixed no-skill control. Reviewers split on the booking page, and the asset page lost access to filters after resizing and returning from a detail view. The overall gate was not met. Base CI, behavior checks, and real-page results are reported separately. [Real-page comparison (Chinese)](evals/results/2026-11-04-visual-outcomes/README.md) · [Test scope and release criteria (Chinese)](evals/README.md) · [Touch omission retest (Chinese)](evals/results/2026-11-04-touch-rerun/README.md)
 
-Does your page look right in Codex's side preview, but feel oversized or too wide in a standalone browser? This skill guides Codex to measure the same elements at matching CSS viewport sizes, then widen the viewport to identify differences caused by scrollbars, font-size rules, or responsive breakpoints.
+This skill helps Codex improve hierarchy, content sizing, and responsive layout around the task a page serves: scanning lists, inspecting a subject, or completing and correcting a form. It calls for reviewing before-and-after renders in matching states and checking the original interactions. It also retains viewport-matched diagnosis of preview differences.
+
+The image below is a basic example of font and content-width constraints. It demonstrates measurement; it is not evidence of an advantage over using no skill.
 
 ![Before and after screenshots at 1440 × 900 CSS px. Before the fix, the title is 100.8 px and the content is 1400 px wide. After the fix, the title is 52 px and the content is 960 px wide.](docs/example-before-after.en.png)
 
@@ -32,6 +34,14 @@ After installation, start your project's development server and open the page yo
 ```text
 $web-preview-scaling Check http://localhost:3000/ . The title looks right in the side preview but too large in a standalone browser. First compare at the preview's actual viewport size, then check 1440 × 900. Report the title's font size, the content width, and the CSS rules responsible for any differences.
 ```
+
+For a broader page improvement, use a request such as:
+
+```text
+$web-preview-scaling Improve the desktop and mobile experience at http://localhost:3000/ . Preserve the existing brand, content, and functionality. Make the main information easier to recognize and the actions clearer. Inspect the actual page before and after, verify the key workflows, and provide matching-state evidence and tradeoffs.
+```
+
+The [render-quality guide (Chinese)](references/render-quality.md) distinguishes lists, details, and forms. [Layout and state patterns (Chinese)](references/layout-patterns.md) provide concrete rules for field grids, card actions, and error alignment. For complex page improvements, the workflow compares two independent implementations, then selects, revises, and rechecks when delegation is available. This adds execution time and model calls; no cost-saving claim is made. Copy changes and specific faults retain their original scope. [Sizing and preview diagnostics (Chinese)](references/preview-diagnostics.md) are loaded as needed. `render-inspect.cjs` records fitted image sizes, visibility candidates, and action positions; those observations do not automatically determine page quality.
 
 Codex can inspect the page with its existing browser tools. For measurements across multiple viewports or saved screenshots, run the bundled script from a project that has Playwright installed. [Script instructions (Chinese)](SKILL.md#采集可复查的读数) · [OpenAI skill guide](https://learn.chatgpt.com/docs/build-skills)
 
