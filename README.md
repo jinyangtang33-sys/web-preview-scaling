@@ -4,7 +4,7 @@
 
 [![基础检查](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**当前为实验版。** 第六轮中，有 skill 的手机素材首页首屏能看全 4 个条目名称，固定无 skill 对照为 0 个；但预约页盲评分歧，且素材页在换尺寸返回后出现筛选不可用的退化。整体门槛未通过。基础 CI、行为回归与真实页面结果分开报告。[真实网页效果对照](evals/results/2026-11-04-visual-outcomes/README.md) · [测试范围与发布标准](evals/README.md) · [触屏漏检复测](evals/results/2026-11-04-touch-rerun/README.md)
+**实验版；已在两个真实网页开发案例上观察到收益。** 同样的手机首屏，有 skill 的素材库能读到 4 个条目名称（无 skill：0 个），预约列表能看全 3 条记录（无 skill：1 条）。最终确认中，两位新的匿名评审均在两个项目上选择有 skill，平均高 4.25/24 分，四份网页均通过独立功能复核。复杂任务用了额外实现与评审，这不是等成本或未见项目上的结论。[逐轮结果与限制](evals/results/2026-11-04-visual-outcomes/README.md) · [测试范围与发布标准](evals/README.md) · [触屏漏检复测](evals/results/2026-11-04-touch-rerun/README.md)
 
 这个 skill 帮助 Codex 按网页的实际任务调整信息层级、内容尺寸和响应式布局：列表便于扫读，详情看清主体，表单便于填写和修错。它要求查看同状态的前后渲染并复测操作，也保留相同 CSS 视口下的预览差异排查。
 
@@ -28,6 +28,8 @@ h1 { font-size: clamp(30px, 7vw, 52px); }
 ```text
 $skill-installer 请从 https://github.com/jinyangtang33-sys/web-preview-scaling 的 main 分支安装 skill。SKILL.md 在仓库根目录（--path .），安装名为 web-preview-scaling（--name web-preview-scaling）。
 ```
+
+要复现本次网页对照所用的 skill，在安装请求中把 `main` 换为[候选提交 059335f](https://github.com/jinyangtang33-sys/web-preview-scaling/commit/059335f9667d9777ca5d6e0cd67477f4d96100de)。默认分支与实验候选可能不同。
 
 安装后，在你的网页项目中启动开发服务器，打开要检查的页面。把下面的网址换成自己的，再发给 Codex。
 

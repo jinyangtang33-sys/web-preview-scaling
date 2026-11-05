@@ -4,7 +4,7 @@
 
 [![Base checks](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml/badge.svg?branch=main)](https://github.com/jinyangtang33-sys/web-preview-scaling/actions/workflows/layout-regression.yml)
 
-**Experimental.** In round six, four complete asset names appeared on the first mobile screen with the skill, versus none in the fixed no-skill control. Reviewers split on the booking page, and the asset page lost access to filters after resizing and returning from a detail view. The overall gate was not met. Base CI, behavior checks, and real-page results are reported separately. [Real-page comparison (Chinese)](evals/results/2026-11-04-visual-outcomes/README.md) · [Test scope and release criteria (Chinese)](evals/README.md) · [Touch omission retest (Chinese)](evals/results/2026-11-04-touch-rerun/README.md)
+**Experimental; the workflow improved two real frontend development cases.** The mobile asset library showed four complete item names on the first screen (none without the skill); the booking list showed three complete records (one without it). In the final confirmation, two new blind reviewers preferred the skill on both projects, with a mean paired advantage of 4.25 points out of 24. All four pages passed independent functional checks. The workflow used extra implementation and review effort; these are development cases, not a cost-matched or held-out trial. [Results and limitations (Chinese)](evals/results/2026-11-04-visual-outcomes/README.md) · [Test scope and release criteria (Chinese)](evals/README.md) · [Touch omission retest (Chinese)](evals/results/2026-11-04-touch-rerun/README.md)
 
 This skill helps Codex improve hierarchy, content sizing, and responsive layout around the task a page serves: scanning lists, inspecting a subject, or completing and correcting a form. It calls for reviewing before-and-after renders in matching states and checking the original interactions. It also retains viewport-matched diagnosis of preview differences.
 
@@ -28,6 +28,8 @@ Send this installation request to Codex.
 ```text
 $skill-installer Install the skill from the main branch of https://github.com/jinyangtang33-sys/web-preview-scaling. SKILL.md is at the repository root (--path .). Use web-preview-scaling as the installation name (--name web-preview-scaling).
 ```
+
+To reproduce the skill version used in the comparison, replace `main` in the installation request with [candidate commit 059335f](https://github.com/jinyangtang33-sys/web-preview-scaling/commit/059335f9667d9777ca5d6e0cd67477f4d96100de). The default branch may differ from the evaluated candidate.
 
 After installation, start your project's development server and open the page you want to check. Replace the URL below with your own, then send this request to Codex.
 
