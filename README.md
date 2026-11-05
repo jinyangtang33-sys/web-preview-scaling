@@ -34,10 +34,10 @@ node "<repo>/scripts/render-inspect.cjs" http://localhost:3000/ --viewport 390x8
 
 ## 在 Codex 中诊断
 
-诊断版本目前位于 [PR #5](https://github.com/jinyangtang33-sys/web-preview-scaling/pull/5) 的 `codex/skill-acceptance` 分支，合并前不要把旧 main 当作此版本。可向 Codex 提交安装请求：
+诊断工具在 `main` 分支维护。可向 Codex 提交安装请求：
 
 ```text
-$skill-installer 请从 https://github.com/jinyangtang33-sys/web-preview-scaling 的 codex/skill-acceptance 分支安装仓库根目录的 skill（--path .），安装名 web-preview-scaling。
+$skill-installer 请从 https://github.com/jinyangtang33-sys/web-preview-scaling 的 main 分支安装仓库根目录的 skill（--path .），安装名 web-preview-scaling。
 ```
 
 ```text

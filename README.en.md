@@ -34,10 +34,10 @@ Use existing authorized browser sessions or project fixtures for authentication,
 
 ## Diagnose with Codex
 
-The diagnostic version is on the `codex/skill-acceptance` branch in [PR #5](https://github.com/jinyangtang33-sys/web-preview-scaling/pull/5). Until merged, the old main branch is not this version.
+The diagnostic tool is maintained on the `main` branch.
 
 ```text
-$skill-installer Install the root skill from the codex/skill-acceptance branch of https://github.com/jinyangtang33-sys/web-preview-scaling (--path .), named web-preview-scaling.
+$skill-installer Install the root skill from the main branch of https://github.com/jinyangtang33-sys/web-preview-scaling (--path .), named web-preview-scaling.
 ```
 
 ```text
